@@ -1,4 +1,4 @@
-"""TOPSIS estendido (critérios-alvo) — passos 1-8 da secção 2.6 de Petković et al. 2025."""
+"""TOPSIS estendido (critérios-alvo): passos 1-8 da secção 2.6 de Petković et al. 2025."""
 from __future__ import annotations
 import numpy as np
 from scipy.stats import rankdata

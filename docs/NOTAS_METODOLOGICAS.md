@@ -1,4 +1,4 @@
-# Notas metodológicas (ir preenchendo — vira a secção de Métodos)
+# Notas metodológicas (ir preenchendo, vira a secção de Métodos)
 
 ## Âmbito
 - MCDM quantitativo: haste femoral, stent coronário expansível por balão, scaffold ósseo.
@@ -10,7 +10,7 @@
 |---|---|---|
 | Verificação de código | O algoritmo está bem implementado? | Reproduz Petković et al. 2025 dentro de tolerância definida |
 | Robustez interna | O ranking muda com pesos, método, η, incerteza, alvos? | A seleção é robusta/frágil nos cenários testados |
-| Validação clínica | O ranking prevê desempenho clínico? | NÃO demonstrado — trabalho futuro |
+| Validação clínica | O ranking prevê desempenho clínico? | NÃO demonstrado: trabalho futuro |
 
 A "% de vitórias" no Monte Carlo NÃO é probabilidade de sucesso clínico: é a frequência com que um material fica em 1.º nas hipóteses do modelo.
 

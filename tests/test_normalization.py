@@ -1,4 +1,4 @@
-"""Valores esperados calculados à mão com a eq. (2) — servem de especificação."""
+"""Valores esperados calculados à mão com a eq. (2): servem de especificação."""
 import numpy as np
 import pytest
 from biomat_mcdm.normalization import normalize_column, normalize_matrix, reference_value

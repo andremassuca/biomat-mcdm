@@ -2,7 +2,7 @@
 
 TODO: copiar para aqui a matriz de decisão, tipos, alvos e pesos publicados no artigo
 (tabelas do caso de estudo 2) e o ranking TOPSIS que os autores obtiveram.
-Se o teu ranking coincidir, o código está validado — isto vai para a secção de Métodos.
+Se o teu ranking coincidir, o código está validado: isto vai para a secção de Métodos.
 """
 import pytest
 

@@ -57,4 +57,4 @@ Todos os valores estão marcados **"A verificar"** em `data/materiais.csv`. Nenh
 
 ## Autor
 
-André Oliveira Massuça — ORCID [0009-0005-1527-843X](https://orcid.org/0009-0005-1527-843X)
+André Oliveira Massuça, ORCID [0009-0005-1527-843X](https://orcid.org/0009-0005-1527-843X)
