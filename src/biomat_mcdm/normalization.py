@@ -17,14 +17,31 @@ import numpy as np
 
 def reference_value(column: np.ndarray, ctype: str, target: float | None = None) -> float:
     """Devolve T_j para uma coluna, consoante o tipo ("benefit", "cost", "target")."""
-    raise NotImplementedError
+    if ctype == "benefit":
+        return float(np.max(column))
+    if ctype == "cost":
+        return float(np.min(column))
+    if ctype == "target":
+        if target is None:
+            raise ValueError("critério-alvo sem valor-alvo")
+        return float(target)
+    raise ValueError(f"tipo de critério desconhecido: {ctype!r}")
 
 
 def normalize_column(column: np.ndarray, ctype: str, target: float | None = None) -> np.ndarray:
     """Aplica a eq. (2) a uma coluna. Cuidado com o denominador nulo (coluna constante)."""
-    raise NotImplementedError
+    x = np.asarray(column, float)
+    T = reference_value(x, ctype, target)
+    # O intervalo inclui o próprio T, por isso |x - T| nunca excede o denominador e r fica em [0, 1].
+    denom = max(x.max(), T) - min(x.min(), T)
+    if denom == 0:
+        # Coluna constante e igual a T: todas as alternativas estão no ótimo.
+        return np.ones_like(x)
+    return 1 - np.abs(x - T) / denom
 
 
 def normalize_matrix(X: np.ndarray, types: list[str], targets: list[float | None]) -> np.ndarray:
     """Normaliza a matriz (m, n) coluna a coluna."""
-    raise NotImplementedError
+    X = np.asarray(X, float)
+    return np.column_stack([normalize_column(X[:, j], types[j], targets[j])
+                            for j in range(X.shape[1])])

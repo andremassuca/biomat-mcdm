@@ -17,3 +17,13 @@ def test_topsis_scores():
 
 def test_rank():
     assert list(rank(np.array([0.817198, 0.0, 0.510249]))) == [1, 3, 2]
+
+
+def test_rank_empates_e_custo():
+    assert list(rank(np.array([0.5, 0.9, 0.5]))) == [2, 1, 2]
+    assert list(rank(np.array([3.0, 1.0, 2.0]), higher_is_better=False)) == [3, 1, 2]
+
+
+def test_topsis_scores_entre_0_e_1():
+    C = topsis(X, W, TYPES, TARGETS)
+    assert C.min() >= 0 and C.max() <= 1
