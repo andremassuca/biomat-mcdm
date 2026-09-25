@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Se usar este software, cite-o como indicado abaixo."
+title: "biomat-mcdm: seleção multicritério de biomateriais com critérios-alvo e análise de robustez"
+version: 0.1.0
+authors:
+  - family-names: Massuça
+    given-names: André Oliveira
+    orcid: "https://orcid.org/0009-0005-1527-843X"
+    affiliation: "Universidade Lusófona, Lisboa"
+license: MIT

@@ -1,0 +1,48 @@
+caso_componente,criterio,tipo,alvo,unidade,peso,justificacao
+Prótese da anca | Haste femoral,Biocompatibilidade (ISO 10993),Estrito,Aprovado,—,,Triagem: elimina não biocompatíveis
+Prótese da anca | Haste femoral,Módulo de Young,Alvo,17,GPa,0.2,Aproximar do osso cortical → reduzir stress shielding
+Prótese da anca | Haste femoral,Limite de fadiga (10^7 ciclos),Benefício,,MPa,0.25,Carga cíclica (~1-2 milhões de passos/ano)
+Prótese da anca | Haste femoral,Tensão de cedência,Benefício,,MPa,0.1,Evitar deformação plástica
+Prótese da anca | Haste femoral,Resistência à corrosão (ordinal 1-5),Benefício,,—,0.15,Libertação iónica
+Prótese da anca | Haste femoral,Densidade,Custo,,g/cm³,0.05,Critério secundário
+Prótese da anca | Haste femoral,Compatibilidade com RM (ordinal 1-5),Benefício,,—,0.1,Doentes idosos precisam frequentemente de RM
+Prótese da anca | Haste femoral,"Custo relativo de material e fabrico (1-5, 5 = mais caro)",Custo,,—,0.05,Perspetiva do hospital (enunciado)
+Prótese da anca | Haste femoral,Fabricabilidade (ordinal 1-5),Benefício,,—,0.1,Inclui fabrico aditivo de hastes porosas
+Prótese da anca | Par articular,Segurança iónica / risco ALTR (ordinal 1-5),Estrito,≥ 2,—,,Triagem: elimina o MoM (segurança não é compensável)
+Prótese da anca | Par articular,Risco de fratura da cabeça cerâmica,Estrito,Avaliação qualitativa,—,,K_IC retirado da matriz; discutido no texto
+Prótese da anca | Par articular,Taxa de desgaste linear,Custo,,mm/ano,0.35,SEMIQUANTITATIVO (ordinais > 50 %). Partículas → osteólise
+Prótese da anca | Par articular,Segurança iónica / risco ALTR (ordinal 1-5),Benefício,,—,0.25,Lição do MoM
+Prótese da anca | Par articular,Dureza da cabeça,Benefício,,HV,0.05,Riscos por terceiro corpo
+Prótese da anca | Par articular,Compatibilidade galvânica cabeça-cone (ordinal 1-5),Benefício,,—,0.15,Corrosão na junção (trunnionosis)
+Prótese da anca | Par articular,Compatibilidade com esterilização (ordinal 1-5),Benefício,,—,0.05,Oxidação do PE irradiado
+Prótese da anca | Par articular,Compatibilidade com RM (ordinal 1-5),Benefício,,—,0.05,
+Prótese da anca | Par articular,"Custo relativo de material e fabrico (1-5, 5 = mais caro)",Custo,,—,0.1,
+Implante dentário,Resistência/fadiga do sistema implante-pilar (ISO 14801),Estrito,Cumpre para a geometria,—,,Tração (metais) e flexão (cerâmicos) não são comparáveis
+Implante dentário,Módulo de Young,Alvo,15,GPa,0.2,SEMIQUANTITATIVO (ordinais > 50 %). Osso mandibular ~10-20 GPa
+Implante dentário,Tenacidade à fratura (K_IC),Benefício,,MPa·m^0.5,0.15,Fratura (relevante para Y-TZP)
+Implante dentário,Evidência clínica de osteointegração (ordinal 1-5),Benefício,,—,0.25,Função principal
+Implante dentário,Estética (ordinal 1-5),Benefício,,—,0.15,Sombra cinzenta em gengiva fina
+Implante dentário,Densidade,Custo,,g/cm³,0.05,
+Implante dentário,Compatibilidade com RM (ordinal 1-5),Benefício,,—,0.05,
+Implante dentário,"Custo relativo de material e fabrico (1-5, 5 = mais caro)",Custo,,—,0.1,
+Implante dentário,Maquinabilidade / fabricabilidade (ordinal 1-5),Benefício,,—,0.05,
+Stent vascular,Tipo de expansão,Estrito,Expansível por balão,—,,Exclui Nitinol (autoexpansível) do ranking
+Stent vascular,Índice material de recuo elástico σy/E (proxy) — ver folha Indices,Custo,,—,0.1,"Proxy ao nível do material, não do dispositivo; menor = menos recuo"
+Stent vascular,Espessura típica de strut,Custo,,µm,0.2,Struts finos → menos reestenose/trombose
+Stent vascular,Alongamento na rotura,Benefício,,%,0.1,Expansão sem fratura
+Stent vascular,Resistência à tração,Benefício,,MPa,0.1,Resistência radial e fadiga pulsátil
+Stent vascular,Módulo de Young,Benefício,,GPa,0.05,Rigidez radial com struts finos
+Stent vascular,Radiopacidade (ordinal 1-5),Benefício,,—,0.1,Visibilidade em fluoroscopia (substitui a densidade)
+Stent vascular,Compatibilidade com RM (ordinal 1-5),Benefício,,—,0.05,Seguimento por RM/angio-RM
+Stent vascular,Compatibilidade com esterilização (ordinal 1-5),Benefício,,—,0.05,Fármaco e polímero limitam o método
+Stent vascular,"Custo relativo de material e fabrico (1-5, 5 = mais caro)",Custo,,—,0.05,
+Stent vascular,Fabricabilidade (ordinal 1-5),Benefício,,—,0.05,"Corte laser, memória de forma"
+Stent vascular,Tempo de reabsorção (só cenário B),Alvo,12,meses,0.15,Suporte ~3-6 meses; reabsorção completa desejável em ~1 ano
+Scaffold (regeneração óssea),Resistência à compressão (scaffold),Alvo,7,MPa,0.15,"Osso trabecular ~2-12 MPa — CENÁRIO de referência, ver folha Cenarios"
+Scaffold (regeneração óssea),Módulo de compressão (scaffold),Alvo,250,MPa,0.1,"Osso trabecular ~50-500 MPa — CENÁRIO de referência, ver folha Cenarios"
+Scaffold (regeneração óssea),Porosidade,Alvo,70,%,0.15,"Poros interligados >100 µm; trabecular 50-90% — CENÁRIO de referência, ver folha Cenarios"
+Scaffold (regeneração óssea),Tempo de degradação,Alvo,9,meses,0.15,"Acompanhar a regeneração óssea — CENÁRIO de referência, ver folha Cenarios"
+Scaffold (regeneração óssea),Bioatividade (ordinal 1-5),Benefício,,—,0.15,Osteocondução/ligação ao osso
+Scaffold (regeneração óssea),Imprimibilidade 3D (ordinal 1-5),Benefício,,—,0.1,Controlo da arquitetura porosa
+Scaffold (regeneração óssea),Compatibilidade com esterilização (ordinal 1-5),Benefício,,—,0.1,Polímeros de baixa Tf e hidrolisáveis
+Scaffold (regeneração óssea),"Custo relativo de material e fabrico (1-5, 5 = mais caro)",Custo,,—,0.1,
