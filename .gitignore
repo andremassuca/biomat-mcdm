@@ -7,3 +7,6 @@ results/*.csv
 fontes/
 dist/
 build/
+
+# Notas locais de desenvolvimento
+CLAUDE.md
