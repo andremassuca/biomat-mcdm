@@ -69,9 +69,14 @@ Legenda das origens: `docs/` notas e fontes; `data/` dados; `results/` resultado
   - Origem: `src/biomat_mcdm/weights.py` (tarefa 5)
 - [ ] Métodos: normalização alvo (eq. 2), TOPSIS (2.6), WASPAS (2.7, eqs. 9-16), VIKOR (2.8)
   - Origem: `src/biomat_mcdm/normalization.py`, `src/biomat_mcdm/methods/`
-- [ ] Verificação do código: reprodução do caso 2 de Petković et al. 2025
+- [ ] Verificação do código: reprodução dos casos 1 e 2 de Petković et al. 2025 (TOPSIS, WASPAS, VIKOR, pesos com η, solução de compromisso do VIKOR)
   - Dados do software (Figura A6) em vez da Tabela A3; incoerência M1-C9 (0,41 vs 0,59)
   - Tolerância: 1e-5 (C_i e pesos publicados com 5 casas)
+  - Pormenores não escritos no artigo, reconstituídos a partir dos resultados publicados:
+    - desvio-padrão dos pesos objetivos sobre x/máx (benefício e alvo) e mín/x (custo);
+    - WASPAS: alvo igual ao máximo da coluna usa a eq. 9; igual ao mínimo, a eq. 10;
+    - VIKOR: A_j = max{x_max, T} - min{x_min, T} em todas as colunas (dados em bruto)
+  - Origem: docs/NOTAS_METODOLOGICAS.md (Reprodução de Petković et al. 2025)
   - Origem: `tests/test_reproduce_petkovic.py`, `docs/NOTAS_METODOLOGICAS.md` (Reprodução de Petković et al. 2025)
 - [ ] Cenários de robustez: A, B, Q, W, η, M, T-scaffold, T-haste, MC (10 000 iterações, seed 42), custo com peso baixo vs elevado
   - Origem: `data/base_dados_biomateriais.xlsx` (folha Cenarios), `src/biomat_mcdm/robustness.py` (tarefa 9)
@@ -103,6 +108,8 @@ Legenda das origens: `docs/` notas e fontes; `data/` dados; `results/` resultado
 - [ ] Resposta direta à pergunta de investigação, caso a caso (robusto vs frágil)
 - [ ] Comparação com Petković et al. 2025 e com a prática clínica
 - [ ] Reprodutibilidade em MCDM: a reprodução exata só foi possível com os dados da captura do software; incoerência na Tabela A3; importância de publicar dados e código
+  - Três pormenores de implementação só se recuperam por reprodução (desvio-padrão dos pesos, fronteiras do WASPAS, A_j do VIKOR): o texto do método não chega para reimplementar
+  - Os pesos publicados com 3 casas bastam para trocar posições próximas (η = 0,7: M10/M11); publicar pesos com mais casas
   - Origem: `docs/NOTAS_METODOLOGICAS.md`, `docs/backlog_artigo.md` (Validação)
 - [ ] Casos históricos como validação qualitativa: o modelo teria penalizado estes materiais? (Tabela 4)
   - Origem: `docs/TP2_fisiopatologia_da_falha.md` (Casos históricos de falha e lições de seleção)
