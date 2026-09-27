@@ -122,6 +122,7 @@ Formulação segura sobre a classificação: "A classe de risco depende da final
 - 🟡 Huiskes, R., Weinans, H., & van Rietbergen, B. (1992). The relationship between stress shielding and bone resorption around total hip stems and the effects of flexible materials. *Clinical Orthopaedics and Related Research, 274*, 124–134.
 - 🟡 Goodman, S. B., & Gallo, J. (2019). Periprosthetic osteolysis: Mechanisms, prevention and treatment. *Journal of Clinical Medicine, 8*(12), 2091.
 - 🟡 Masonis, J. L., et al. (2004). Zirconia femoral head fractures: A clinical and retrieval analysis. *The Journal of Arthroplasty, 19*(7), 898–905.
+- 🟡 Silva, M., Shepherd, E. F., Jackson, W. O., Dorey, F. J., & Schmalzried, T. P. (2002). Average patient walking activity approaches 2 million cycles per year. *Journal of Arthroplasty, 17*(6), 693–697. [confirmar] (Número de ciclos de marcha por ano: justificação da fadiga da haste.)
 - 🟡 Relatório anual mais recente do NJR (hips) e do AOANJRR: citar edição e ano exatos.
 
 ### 6.4 Implante dentário
