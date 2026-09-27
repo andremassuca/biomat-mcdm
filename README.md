@@ -28,8 +28,8 @@ src/biomat_mcdm/
   normalization.py      normalização benefício/custo/alvo         [implementado]
   weights.py            pesos objetivos e combinação com η         [implementado]
   methods/topsis.py     TOPSIS estendido                           [implementado]
-  methods/waspas.py     WASPAS estendido                           [TODO]
-  methods/vikor.py      VIKOR abrangente                           [TODO]
+  methods/waspas.py     WASPAS estendido                           [implementado]
+  methods/vikor.py      VIKOR abrangente                           [implementado]
   robustness.py         Monte Carlo + Spearman                     [TODO]
   plots.py              figuras para relatório e poster            [TODO]
 tests/                  testes = especificação das funções

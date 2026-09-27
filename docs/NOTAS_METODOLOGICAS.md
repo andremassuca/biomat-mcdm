@@ -53,7 +53,20 @@ Caso de estudo 2 (haste da prótese da anca), TOPSIS; testes em tests/test_repro
   - caso 1 (placa, Tabela A2 = Figura A4): diferença máxima 0,0005; o custo relativo (C10)
     só se reproduz com min/x (com x/max: 0,0024).
   - Implementação: src/biomat_mcdm/weights.py; testes em tests/test_reproduce_petkovic.py.
-- WASPAS e VIKOR: por verificar quando forem implementados (secções 2.7 e 2.8).
+- WASPAS (eqs. 9-16) e VIKOR (eqs. 17-20), com os dados do software:
+  - reproduzem os 15 Q_i e os 15 P_i publicados nos casos 1 e 2 (diferença < 1e-5);
+  - o TOPSIS reproduz também os 15 C_i do caso 1;
+  - com os pesos combinados calculados por weights.py (sem arredondamento), os três métodos
+    reproduzem as 60 posições da Tabela 4 cada um, incluindo η = 0,7 (a troca M10/M11 vinha
+    só do arredondamento dos pesos publicados a 3 casas);
+  - solução de compromisso do VIKOR (passo 6): reproduz o conjunto M12, M15, M13, M7 do texto (p. 21).
+- Pormenores RECONSTITUÍDOS a partir dos resultados publicados (o artigo não os escreve):
+  - WASPAS: alvo igual ao máximo da coluna usa a eq. 9; igual ao mínimo usa a eq. 10
+    (com a eq. 13 nesses casos a diferença chega a 0,41);
+  - VIKOR: A_j = max{x_max, T} - min{x_min, T} em todas as colunas; o "A_j = 1 para valores
+    normalizados" não se aplica a dados em bruto (com A_j = 1 nas colunas em [0, 1], diferença até 0,42).
+- Com a Tabela A3 (M1-C9 = 0,41), o WASPAS falha só em M1 (14 de 15 Q_i), o que explica a
+  afirmação antiga "14 de 15", agora com código que a demonstra.
 
 ## Valores a verificar (fora de data/materiais.csv)
 Os valores de propriedades "A verificar" estão na base e serão listados por

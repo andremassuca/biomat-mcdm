@@ -29,14 +29,19 @@ dados do software (diferença máxima 0,0005, arredondamento a 3 casas), mas nã
 Tabela A3 (0,003): segunda confirmação independente de M1-C9 = 0,59. O caso de estudo 1
 (placa; Tabela A2 e Figura A4, matrizes iguais) confirma a normalização do custo (C10).
 
-A reprodução dos Q_i do WASPAS fica por verificar quando o WASPAS for implementado
-(eqs. 9-13 da secção 2.7).
+WASPAS (eqs. 9-16) e VIKOR (eqs. 17-20), com os dados do software: reproduzem os 15 Q_i e os
+15 P_i publicados nos casos 1 (Tabela 1, Figura A4) e 2 (Tabela 3) com diferença < 1e-5.
+Com os pesos combinados calculados (weights.py, sem arredondamento), os três métodos
+reproduzem as 60 posições da Tabela 4 cada um (4 valores de η x 15 materiais), incluindo
+η = 0,7. Com a Tabela A3, o WASPAS só falha em M1 (14 de 15 Q_i).
 """
 import numpy as np
 import pytest
 from scipy.stats import spearmanr
 
 from biomat_mcdm.methods.topsis import rank, topsis
+from biomat_mcdm.methods.vikor import compromise_set, vikor
+from biomat_mcdm.methods.waspas import waspas
 from biomat_mcdm.weights import combine_weights, std_dev_weights
 
 # M1-M4 aços inoxidáveis; M5-M9 ligas de Co; M10-M15 titânio e ligas de Ti (Tabela A1)
@@ -203,3 +208,72 @@ def test_pesos_combinados_caso1(eta):
     w_obj = std_dev_weights(X_CASO1, TIPOS_CASO1)
     w = combine_weights(np.array(PESOS_SOFTWARE_CASO1), w_obj, eta)
     assert w == pytest.approx(PESOS_CASO1[eta], abs=6e-4)
+
+
+# Resultados publicados do caso 1 (Tabela 1, η = 1; P também na Figura A4)
+C_CASO1 = [0.36091, 0.43561, 0.51072, 0.41394, 0.46863, 0.56775, 0.57665, 0.54337, 0.42652,
+           0.52587, 0.52614, 0.58704, 0.55505, 0.48953, 0.57799]
+Q_WASPAS_CASO1 = [0.47867, 0.54989, 0.6405, 0.5391, 0.46466, 0.51537, 0.51996, 0.5081,
+                  0.44765, 0.56698, 0.55239, 0.59301, 0.55713, 0.53661, 0.60526]
+P_VIKOR_CASO1 = [0.96259, 0.53136, 0.34875, 0.61966, 0.53465, 0.28385, 0.25942, 0.36803,
+                 0.73832, 0.50918, 0.33352, 0.00151, 0.20215, 0.65273, 0.08705]
+
+# Tabela 4 (p. 21): posições WASPAS e VIKOR do caso 2 por η
+RANK_WASPAS_PUBLICADO = {
+    0.7: [13, 11, 7, 12, 15, 8, 3, 9, 14, 4, 5, 2, 6, 10, 1],
+    0.8: [13, 11, 7, 12, 15, 8, 3, 9, 14, 6, 5, 2, 4, 10, 1],
+    0.9: [14, 11, 7, 12, 15, 9, 3, 8, 13, 6, 5, 2, 4, 10, 1],
+    1.0: [14, 11, 9, 12, 15, 8, 3, 7, 13, 6, 5, 2, 4, 10, 1],
+}
+RANK_VIKOR_PUBLICADO = {
+    0.7: [13, 12, 8, 14, 15, 5, 1, 10, 9, 6, 7, 2, 4, 11, 3],
+    0.8: [13, 12, 8, 14, 15, 5, 1, 9, 10, 7, 6, 2, 4, 11, 3],
+    0.9: [13, 12, 8, 15, 14, 5, 1, 9, 10, 7, 6, 2, 4, 11, 3],
+    1.0: [14, 13, 8, 15, 12, 6, 4, 9, 11, 7, 5, 1, 3, 10, 2],
+}
+
+# Tolerância 1e-5 nos valores: publicados com 5 casas (arredondamento até 5e-6).
+CASOS = {
+    "caso1": (X_CASO1, PESOS_SOFTWARE_CASO1, TIPOS_CASO1, ALVOS_CASO1, C_CASO1, Q_WASPAS_CASO1, P_VIKOR_CASO1),
+    "caso2": (X_SOFTWARE, PESOS_SOFTWARE, TIPOS, ALVOS, C_PUBLICADO, Q_WASPAS_PUBLICADO, P_VIKOR_PUBLICADO),
+}
+
+
+@pytest.mark.parametrize("caso", CASOS)
+def test_topsis_valores_publicados(caso):
+    Xc, w, tipos, alvos, C, _, _ = CASOS[caso]
+    assert topsis(Xc, np.array(w), tipos, alvos) == pytest.approx(C, abs=1e-5)
+
+
+@pytest.mark.parametrize("caso", CASOS)
+def test_waspas_valores_publicados(caso):
+    Xc, w, tipos, alvos, _, Q, _ = CASOS[caso]
+    assert waspas(Xc, np.array(w), tipos, alvos) == pytest.approx(Q, abs=1e-5)
+
+
+@pytest.mark.parametrize("caso", CASOS)
+def test_vikor_valores_publicados(caso):
+    Xc, w, tipos, alvos, _, _, P = CASOS[caso]
+    assert vikor(Xc, np.array(w), tipos, alvos)["P"] == pytest.approx(P, abs=1e-5)
+
+
+@pytest.mark.xfail(strict=True, reason="Tabela A3 tem M1-C9 = 0,41; o software usou 0,59 (Figura A6)")
+def test_waspas_tabela_A3():
+    assert waspas(X, np.array(PESOS_SOFTWARE), TIPOS, ALVOS) == pytest.approx(Q_WASPAS_PUBLICADO, abs=1e-5)
+
+
+@pytest.mark.parametrize("eta", [0.7, 0.8, 0.9, 1.0])
+def test_tabela_4_tres_metodos_com_pesos_calculados(eta):
+    w = combine_weights(np.array(PESOS_SOFTWARE), std_dev_weights(X_SOFTWARE, TIPOS), eta)
+    assert list(rank(topsis(X_SOFTWARE, w, TIPOS, ALVOS))) == RANK_TOPSIS_PUBLICADO[eta]
+    assert list(rank(waspas(X_SOFTWARE, w, TIPOS, ALVOS))) == RANK_WASPAS_PUBLICADO[eta]
+    P = vikor(X_SOFTWARE, w, TIPOS, ALVOS)["P"]
+    assert list(rank(P, higher_is_better=False)) == RANK_VIKOR_PUBLICADO[eta]
+
+
+def test_vikor_compromisso_caso2():
+    # Texto da p. 21: P(7) - P(12) = 0,07027 < 1/(m - 1) = 0,071, logo M12, M15, M13 e M7
+    # são considerados as alternativas de 1.º lugar.
+    out = vikor(X_SOFTWARE, np.array(PESOS_SOFTWARE), TIPOS, ALVOS)
+    idx = compromise_set(out["S"], out["R"], out["P"])
+    assert sorted(MATERIAIS[i] for i in idx) == sorted(["M12", "M15", "M13", "M7"])
