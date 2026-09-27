@@ -43,15 +43,19 @@ def build_problem(case: str, scenario: str = "A", data_dir: Path = DATA) -> Deci
     """Constrói o problema para um caso (valor de `caso_componente` em criterios.csv).
 
     scenario "A": só materiais em uso clínico; "B": inclui investigação e bioabsorvíveis retirados.
-    Materiais com estatuto "Excluído" nunca entram (ficam só para a discussão).
+    Antes disso aplica a triagem estrita (screening.screen_case): materiais eliminados
+    (estatuto "Excluído", regras numéricas como segurança iónica ≥ 2) nunca entram.
     Nota: par articular e implante dentário são SEMIQUANTITATIVOS (ordinais > 50 % do peso);
     o MCDM quantitativo principal é para haste, stent e scaffold.
     Critérios estritos e critérios sem dados para todas as alternativas são ignorados aqui
     (a triagem trata dos estritos; índices derivados como σy/E calculam-se à parte).
     """
+    from biomat_mcdm.screening import screen_case  # import local: screening importa io
+
     mat, crit = load_data(data_dir)
     m = mat[mat["caso_componente"] == case]
-    m = m[~m["estatuto"].str.startswith("Excluído")]  # ex.: Nitinol (autoexpansível) nunca entra no ranking
+    aprovados, _ = screen_case(case, data_dir)  # triagem estrita (ex.: Nitinol, MoM)
+    m = m[m["material"].isin(aprovados)]
     if scenario == "A":
         m = m[m["estatuto"].str.startswith("Clínico")
               & ~m["estatuto"].str.contains("abandonado", case=False)]

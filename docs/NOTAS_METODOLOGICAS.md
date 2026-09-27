@@ -18,6 +18,12 @@ A "% de vitórias" no Monte Carlo NÃO é probabilidade de sucesso clínico: é 
 - σy/E: proxy ao nível do material da deformação elástica na cedência. Em stents expansíveis por balão, maior σy/E → maior recuo elástico → critério de CUSTO. Não é o recuo do dispositivo (depende da geometria do padrão, struts, processamento).
 - E_implante/E_osso: indicador exploratório de risco relativo de stress shielding; a transferência de carga real depende de geometria, fixação e contacto (FEA = trabalho futuro).
 - Alvo E = 17 GPa na haste: todos os candidatos estão acima do alvo → na prática funciona como "menor é melhor" com escala comprimida; testar vs critério de custo com limiar de fadiga (cenário T-haste). O cenário T-haste inclui também a comparação do alvo 14 GPa (Petković et al. 2025, Tabela A3, C5) vs 17 GPa.
+- Triagem estrita (src/biomat_mcdm/screening.py), antes dos métodos:
+  - regras numéricas avaliadas no pior caso do intervalo (mín. para "≥", máx. para "≤"): a segurança não é compensável;
+  - estatuto "Excluído" na base elimina (Nitinol: autoexpansível, outra classe de dispositivo);
+  - regras qualitativas (ISO 10993 da haste, fratura da cabeça cerâmica, ISO 14801) não eliminam: ficam "não avaliado" no registo e são discutidas no texto;
+  - material sem dados para uma regra numérica não é eliminado: fica "não avaliado (sem dados)";
+  - resultado atual: eliminados o MoM (segurança iónica 1 < 2) e o Nitinol (estatuto).
 - Alvos do scaffold = cenário de referência para osso trabecular, não ótimo universal (cenário T-scaffold).
 - Densidade removida como proxy de radiopacidade (depende do número atómico efetivo e da espessura).
 - K_IC removido do par articular (valor metálico arbitrário); fratura cerâmica tratada como requisito estrito/discussão.
