@@ -41,11 +41,12 @@ Caso de estudo 2 (haste da prótese da anca), TOPSIS; testes em tests/test_repro
   mantém-se.
 - Os pesos da Figura A6 correspondem a frações n/180 (21, 18, 25, 13, 16, 11, 17, 24, 26, 9;
   soma 180). Observação, não usada nos testes.
-- Estado: email ao autor correspondente por enviar (rascunho em docs/email_petkovic_M1C9.md).
+- Estado: email ao autor correspondente por enviar (rascunho em docs/email_petkovic.md).
 - Para a secção de Métodos: a verificação usa os dados do software (Figura A6) e declara a
   incoerência da Tabela A3.
-- Pesos (eq. 1, secção 2.4): o artigo não diz sobre que matriz se calcula o desvio-padrão.
-  Reconstituído a partir dos pesos publicados para η = 0,7; 0,8; 0,9:
+- Pesos (eq. 1, secção 2.4): o artigo não descreve sobre que matriz se calcula o desvio-padrão.
+  A normalização abaixo foi RECONSTITUÍDA a partir dos resultados publicados (pesos para
+  η = 0,7; 0,8; 0,9), não descrita no artigo; pergunta ao autor no email (docs/email_petkovic.md):
   - benefício e alvo: x_ij / max x_j; custo: min x_j / x_ij; w_j^O = σ_j / Σ σ_k;
   - caso 2 com os dados do software: diferença máxima 0,0005 (arredondamento a 3 casas);
     com a Tabela A3 (M1-C9 = 0,41): 0,003. Segunda confirmação independente de M1-C9 = 0,59;
