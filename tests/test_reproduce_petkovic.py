@@ -10,12 +10,16 @@ Resultado da verificação (tolerância definida para a secção de Métodos):
   - o 1.º lugar do TOPSIS (M7) é reproduzido para os quatro valores de η;
   - correlação de Spearman com o ranking publicado ≥ 0,95 para todos os η;
   - os valores C_i das ligas de Ti M10, M12 e M13 coincidem com os publicados (±0,001).
-Os valores C_i dos restantes materiais ficam acima dos publicados (até +0,05), o que não se
-explica pelo arredondamento dos pesos nem por variantes da solução ideal ou dos tipos de
-critério. Com os mesmos dados, a normalização do WASPAS (eqs. 9-13) reproduz os Q_i publicados
-em 14 de 15 materiais (±0,0005), o que indica que os dados foram bem transcritos e que a
-diferença está num pormenor de implementação do TOPSIS no software dos autores que o artigo
-não descreve. Fica registado como limitação da verificação (test_topsis_valores_exatos).
+Os valores C_i dos restantes materiais ficam acima dos publicados (até +0,05) e só 4 das 15
+posições coincidem com a Tabela 4 (η = 1). As equações do TOPSIS (secção 2.6) são as mesmas
+do nosso código; o diagnóstico de 27 set 2026 exclui tipos, alvos e pesos e aponta para uma
+única célula: com M1-C9 = 0,59 em vez de 0,41, as 15 posições coincidem para η = 0,8; 0,9; 1
+(η = 0,7: só M10 e M11 trocam, com C a 0,00005 de distância) e a diferença máxima nos C_i
+desce para 0,0008. Por confirmar no PDF (fontes/petkovic2025.pdf) se o erro está na nossa
+transcrição ou no artigo. Até lá: test_topsis_valores_exatos e test_topsis_posicoes_exatas
+ficam como xfail.
+A reprodução dos Q_i do WASPAS fica por verificar quando o WASPAS for implementado
+(eqs. 9-13 da secção 2.7).
 """
 import numpy as np
 import pytest
@@ -93,3 +97,10 @@ def test_topsis_valores_exatos_ligas_ti():
 def test_topsis_valores_exatos():
     C = topsis(X, np.array(PESOS[1.0]), TIPOS, ALVOS)
     assert C == pytest.approx(C_PUBLICADO, abs=1e-3)
+
+
+@pytest.mark.xfail(strict=True, reason="só 4/15 posições coincidem; suspeita em M1-C9, ver docstring do módulo")
+@pytest.mark.parametrize("eta", PESOS)
+def test_topsis_posicoes_exatas(eta):
+    r = rank(topsis(X, np.array(PESOS[eta]), TIPOS, ALVOS))
+    assert list(r) == RANK_TOPSIS_PUBLICADO[eta]
