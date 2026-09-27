@@ -21,12 +21,14 @@ dados (CSV) → triagem (critérios estritos) → matriz de decisão
 ## Estrutura
 
 ```
-data/                   materiais.csv, criterios.csv (+ .xlsx editável)
+data/                   materiais.csv, criterios.csv, tecido.csv (+ .xlsx editável)
 src/biomat_mcdm/
   io.py                 leitura dos dados e construção da matriz  [implementado]
-  screening.py          triagem por critérios estritos            [TODO]
+  screening.py          triagem por critérios estritos            [implementado]
   normalization.py      normalização benefício/custo/alvo         [implementado]
   weights.py            pesos objetivos e combinação com η         [implementado]
+  indices.py            σy/E (stent) e E_implante/E_osso (haste)  [implementado]
+  pipeline.py           ponto de entrada por caso (3 métodos)     [implementado]
   methods/topsis.py     TOPSIS estendido                           [implementado]
   methods/waspas.py     WASPAS estendido                           [implementado]
   methods/vikor.py      VIKOR abrangente                           [implementado]

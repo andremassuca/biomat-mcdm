@@ -70,9 +70,25 @@ def test_par_articular_elimina_so_o_mom():
     assert elim["material"].tolist() == ["CoCrMo / CoCrMo (MoM)"]
 
 
-def test_stent_elimina_nitinol():
-    aprovados, _ = screen_case("Stent vascular")
+def test_stent_elimina_nitinol_pela_regra_do_tipo_de_expansao():
+    aprovados, reg = screen_case("Stent vascular")
     assert not any("Nitinol" in a for a in aprovados)
+    assert len(aprovados) == 6
+    regra = reg[reg["criterio"] == "Tipo de expansão"]
+    nit = regra[regra["material"] == "Nitinol (autoexpansível)"].iloc[0]
+    assert nit["resultado"] == "eliminado"
+    assert nit["valor"] == "autoexpansível"
+    assert set(regra[regra["material"] != "Nitinol (autoexpansível)"]["resultado"]) == {"aprovado"}
+
+
+def test_regra_categorica_por_texto():
+    m = pd.DataFrame([["A", "Clínico", "Tipo", None, None, "balão"],
+                      ["B", "Clínico", "Tipo", None, None, "autoexpansível"],
+                      ["C", "Clínico", "outra", 1, 1, ""]],
+                     columns=["material", "estatuto", "propriedade", "min", "max", "valor_texto"])
+    aprovados, reg = apply_strict(m, [parse_rule("Tipo", "Expansível por balão")])
+    assert aprovados == ["A", "C"]
+    assert reg[reg["material"] == "C"].iloc[0]["motivo"] == "sem dados na base"
 
 
 def test_haste_nao_elimina_ninguem():

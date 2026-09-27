@@ -27,7 +27,7 @@ Implante dentário,Compatibilidade com RM (ordinal 1-5),Benefício,,-,0.05,
 Implante dentário,"Custo relativo de material e fabrico (1-5, 5 = mais caro)",Custo,,-,0.1,
 Implante dentário,Maquinabilidade / fabricabilidade (ordinal 1-5),Benefício,,-,0.05,
 Stent vascular,Tipo de expansão,Estrito,Expansível por balão,-,,Exclui Nitinol (autoexpansível) do ranking
-Stent vascular,Índice material de recuo elástico σy/E (proxy): ver folha Indices,Custo,,-,0.1,"Proxy ao nível do material, não do dispositivo; menor = menos recuo"
+Stent vascular,Índice material de recuo elástico σy/E (proxy),Custo,,-,0.1,"Proxy ao nível do material, não do dispositivo; menor = menos recuo"
 Stent vascular,Espessura típica de strut,Custo,,µm,0.2,Struts finos → menos reestenose/trombose
 Stent vascular,Alongamento na rotura,Benefício,,%,0.1,Expansão sem fratura
 Stent vascular,Resistência à tração,Benefício,,MPa,0.1,Resistência radial e fadiga pulsátil

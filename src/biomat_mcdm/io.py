@@ -7,6 +7,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from biomat_mcdm.indices import sigma_y_over_e
+
 DATA = Path(__file__).resolve().parents[2] / "data"
 
 _TYPE_MAP = {"Benefício": "benefit", "Custo": "cost", "Alvo": "target"}
@@ -30,13 +32,22 @@ class DecisionProblem:
 
 
 def load_data(data_dir: Path = DATA) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Lê materiais e critérios; acrescenta os índices derivados (σy/E do stent)."""
     mat = pd.read_csv(data_dir / "materiais.csv")
     crit = pd.read_csv(data_dir / "criterios.csv")
+    derivados = sigma_y_over_e(mat)
+    if not derivados.empty:
+        mat = pd.concat([mat, derivados], ignore_index=True)
     mat["caso_componente"] = mat["caso"]
     anca = mat["caso"] == "Prótese da anca"
     mat.loc[anca & mat["componente"].str.startswith("Haste"), "caso_componente"] = "Prótese da anca | Haste femoral"
     mat.loc[anca & mat["componente"].str.startswith("Par"), "caso_componente"] = "Prótese da anca | Par articular"
     return mat, crit
+
+
+def load_tissue(data_dir: Path = DATA) -> pd.DataFrame:
+    """Propriedades de referência dos tecidos (osso cortical, trabecular, mandibular)."""
+    return pd.read_csv(data_dir / "tecido.csv")
 
 
 def build_problem(case: str, scenario: str = "A", data_dir: Path = DATA) -> DecisionProblem:

@@ -1,0 +1,9 @@
+tecido,propriedade,unidade,min,max,notas,fonte,estado
+Osso cortical,Módulo de Young,GPa,15.0,20.0,Longitudinal; anisotrópico (slide 10),Ratner et al. 2020; Navarro et al. 2008; Karageorgiou & Kaplan 2005: confirmar,A verificar
+Osso cortical,Resistência à tração,MPa,50.0,150.0,,Ratner et al. 2020; Navarro et al. 2008; Karageorgiou & Kaplan 2005: confirmar,A verificar
+Osso cortical,Resistência à compressão,MPa,130.0,220.0,,Ratner et al. 2020; Navarro et al. 2008; Karageorgiou & Kaplan 2005: confirmar,A verificar
+Osso cortical,Densidade,g/cm³,1.8,2.1,,Ratner et al. 2020; Navarro et al. 2008; Karageorgiou & Kaplan 2005: confirmar,A verificar
+Osso trabecular,Módulo de Young,MPa,50.0,500.0,Varia muito com a localização e a densidade,Ratner et al. 2020; Navarro et al. 2008; Karageorgiou & Kaplan 2005: confirmar,A verificar
+Osso trabecular,Resistência à compressão,MPa,2.0,12.0,,Ratner et al. 2020; Navarro et al. 2008; Karageorgiou & Kaplan 2005: confirmar,A verificar
+Osso trabecular,Porosidade,%,50.0,90.0,,Ratner et al. 2020; Navarro et al. 2008; Karageorgiou & Kaplan 2005: confirmar,A verificar
+Osso cortical mandibular,Módulo de Young,GPa,10.0,20.0,Referência para o implante dentário,Ratner et al. 2020; Navarro et al. 2008; Karageorgiou & Kaplan 2005: confirmar,A verificar

@@ -3,8 +3,11 @@
 Três tipos de regra estrita em data/criterios.csv (tipo "Estrito"):
   - numérica (alvo "≥ 2", "<= 5", ...): avaliada com os dados da base, no pior caso do
     intervalo (mín. para "≥", máx. para "≤"), porque a segurança não é compensável;
-  - categórica pelo estatuto: materiais com estatuto "Excluído (...)" na base (ex.: Nitinol,
-    autoexpansível) são eliminados, com o estatuto como motivo;
+  - categórica (alvo em texto e valores em texto na coluna valor_texto da base): passa se o
+    valor do material aparece no alvo (ex.: "balão" em "Expansível por balão"); o Nitinol
+    ("autoexpansível") é eliminado pela regra "Tipo de expansão";
+  - pelo estatuto: materiais com estatuto "Excluído (...)" na base também são eliminados, com o
+    estatuto como motivo (redundante com a regra categórica no caso do Nitinol);
   - qualitativa (alvo em texto, sem dados): não elimina ninguém; fica no registo como
     "não avaliado (avaliação qualitativa no texto)".
 Um material sem dados para uma regra numérica não é eliminado: fica "não avaliado (sem dados)".
@@ -61,7 +64,7 @@ def apply_strict(materials: pd.DataFrame, rules: list[StrictRule]) -> tuple[list
     se foi aprovado, eliminado ou não avaliado, e porquê: é a tabela da triagem do relatório.
 
     `materials` está no formato longo da base (colunas material, estatuto, propriedade,
-    min, max), só com o caso em causa.
+    min, max e, para regras categóricas, valor_texto), só com o caso em causa.
     """
     materiais = list(dict.fromkeys(materials["material"]))
     estatuto = materials.drop_duplicates("material").set_index("material")["estatuto"]
@@ -72,7 +75,22 @@ def apply_strict(materials: pd.DataFrame, rules: list[StrictRule]) -> tuple[list
             eliminados.add(mat)
             linhas.append([mat, "Estatuto na base", "não 'Excluído'", None, "eliminado", estatuto[mat]])
 
+    texto = materials["valor_texto"] if "valor_texto" in materials else pd.Series("", index=materials.index)
     for r in rules:
+        cat = materials[(materials["propriedade"] == r.criterio) & texto.fillna("").ne("")]
+        if not r.numerica and not cat.empty:
+            valores = cat.set_index("material")["valor_texto"]
+            for mat in materiais:
+                if mat not in valores.index:
+                    linhas.append([mat, r.criterio, r.alvo, None, "não avaliado", "sem dados na base"])
+                    continue
+                v = str(valores[mat])
+                ok = v.strip().lower() in r.alvo.lower()
+                if not ok:
+                    eliminados.add(mat)
+                linhas.append([mat, r.criterio, r.alvo, v, "aprovado" if ok else "eliminado",
+                               f"valor '{v}' {'está' if ok else 'não está'} no alvo '{r.alvo}'"])
+            continue
         if not r.numerica:
             for mat in materiais:
                 linhas.append([mat, r.criterio, r.alvo, None, "não avaliado",

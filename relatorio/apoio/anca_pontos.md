@@ -257,6 +257,7 @@ Dados de apoio:
 - Pesos subjetivos definidos pelo André, com justificação por critério em data/criterios.csv (coluna "justificacao"); ainda sem o η (weights.py, tarefa 5).
 - Ordinais pesam 0,40 do total (regra da base: ≤ 0,50).
 - Alvo de 17 GPa: justificação "aproximar do osso cortical" (data/criterios.csv); a base não tem fonte para os 17 GPa: fica "A verificar".
+- Pista: a folha Tecido da base (data/tecido.csv) dá E do osso cortical = 15-20 GPa (nota "slide 10"; fonte sugerida Ratner et al. 2020, Navarro et al. 2008 [confirmar]); o ponto médio é 17,5 GPa, provável origem dos 17 GPa.
 - Petković et al. 2025 usam 14 GPa como alvo do módulo na haste (Tabela A3, C5; confirmado no PDF).
 - Registado em docs/NOTAS_METODOLOGICAS.md (valores a verificar; cenário T-haste passa a comparar 14 vs 17 GPa).
 
