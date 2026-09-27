@@ -23,6 +23,12 @@ Resultado da verificação com X (tolerância definida para a secção de Métod
   - correlação de Spearman com o ranking publicado ≥ 0,95 para todos os η;
   - os valores C_i das ligas de Ti M10, M12 e M13 coincidem com os publicados (±0,001).
 
+Pesos (eq. 1, secção 2.4): com os pesos subjetivos da Figura A6 (η = 1), os pesos objetivos
+do desvio-padrão (weights.py) reproduzem os pesos publicados para η = 0,7; 0,8; 0,9 com os
+dados do software (diferença máxima 0,0005, arredondamento a 3 casas), mas não com a
+Tabela A3 (0,003): segunda confirmação independente de M1-C9 = 0,59. O caso de estudo 1
+(placa; Tabela A2 e Figura A4, matrizes iguais) confirma a normalização do custo (C10).
+
 A reprodução dos Q_i do WASPAS fica por verificar quando o WASPAS for implementado
 (eqs. 9-13 da secção 2.7).
 """
@@ -31,6 +37,7 @@ import pytest
 from scipy.stats import spearmanr
 
 from biomat_mcdm.methods.topsis import rank, topsis
+from biomat_mcdm.weights import combine_weights, std_dev_weights
 
 # M1-M4 aços inoxidáveis; M5-M9 ligas de Co; M10-M15 titânio e ligas de Ti (Tabela A1)
 MATERIAIS = ["M%d" % i for i in range(1, 16)]
@@ -138,3 +145,61 @@ def test_software_posicoes_pesos_publicados(eta):
     # Pesos da Tabela A3 (3 casas); para η ≠ 1 o artigo não mostra os pesos com mais casas.
     r = rank(topsis(X_SOFTWARE, np.array(PESOS[eta]), TIPOS, ALVOS))
     assert list(r) == RANK_TOPSIS_PUBLICADO[eta]
+
+
+# Pesos (eq. 1). Tolerância 6e-4: os pesos da Tabela A3 estão publicados com 3 casas
+# (erro de arredondamento até 5e-4) e os subjetivos da Figura A6 com 5 casas.
+@pytest.mark.parametrize("eta", [0.7, 0.8, 0.9])
+def test_pesos_combinados_caso2_software(eta):
+    w_obj = std_dev_weights(X_SOFTWARE, TIPOS)
+    w = combine_weights(np.array(PESOS_SOFTWARE), w_obj, eta)
+    assert w == pytest.approx(PESOS[eta], abs=6e-4)
+
+
+@pytest.mark.xfail(strict=True, reason="Tabela A3 tem M1-C9 = 0,41; o software usou 0,59 (Figura A6)")
+def test_pesos_combinados_caso2_tabela_A3():
+    w = combine_weights(np.array(PESOS_SOFTWARE), std_dev_weights(X, TIPOS), 0.7)
+    assert w == pytest.approx(PESOS[0.7], abs=6e-4)
+
+
+# Caso de estudo 1 (placa): Tabela A2 (p. 28), igual à matriz da Figura A4 (p. 27).
+# C1-C9 alvo (C1-C3, C6-C9 com o alvo no melhor valor da coluna; C4 módulo 18 GPa, C5
+# densidade 2,1 g/cm³); C10 custo relativo (alvo 1 = mínimo da coluna, tratado como custo).
+X_CASO1 = np.array([
+    [250, 585, 57, 193, 7.95, 0.865, 0.41, 0.41, 0.865, 2.4],
+    [450, 825, 45, 193, 7.86, 0.865, 0.5, 0.59, 0.865, 3.1],
+    [580, 930, 52, 200, 7.64, 0.865, 0.5, 0.745, 0.865, 1],
+    [450, 840, 39, 195, 7.75, 0.745, 0.5, 0.59, 0.865, 2.6],
+    [585, 1035, 25, 241, 8.28, 0.59, 0.745, 0.745, 0.335, 21.9],
+    [880, 1350, 22, 241, 8.28, 0.59, 0.745, 0.745, 0.41, 23.1],
+    [1115, 1420, 28, 241, 8.29, 0.59, 0.745, 0.745, 0.335, 87],
+    [1340, 1400, 21, 235, 8.43, 0.59, 0.665, 0.59, 0.255, 37.5],
+    [415, 1035, 60, 243, 9.22, 0.59, 0.665, 0.665, 0.335, 36.2],
+    [550, 670, 22, 103, 4.51, 0.335, 0.955, 0.955, 0.5, 13.1],
+    [710, 880, 12, 105, 4.43, 0.335, 0.865, 0.865, 0.41, 18],
+    [850, 950, 12, 105, 4.52, 0.335, 0.955, 0.955, 0.41, 15.5],
+    [820, 900, 6, 112, 4.45, 0.335, 0.865, 0.955, 0.41, 16],
+    [570, 690, 15, 103, 4.48, 0.335, 0.865, 0.865, 0.5, 16.5],
+    [920, 960, 25, 78, 5.06, 0.335, 0.865, 0.865, 0.41, 19.4],
+], float)
+ALVOS_CASO1 = [1340, 1420, 60, 18, 2.1, 0.865, 0.955, 0.955, 0.865, None]
+TIPOS_CASO1 = ["target"] * 9 + ["cost"]
+PESOS_SOFTWARE_CASO1 = [0.12778, 0.13889, 0.07222, 0.10000, 0.06111, 0.09444, 0.12778,
+                        0.13889, 0.07778, 0.06111]  # Figura A4, η = 1
+PESOS_CASO1 = {
+    0.7: [0.118, 0.121, 0.088, 0.105, 0.070, 0.098, 0.114, 0.120, 0.089, 0.078],
+    0.8: [0.121, 0.127, 0.083, 0.103, 0.067, 0.097, 0.119, 0.126, 0.085, 0.072],
+    0.9: [0.125, 0.133, 0.078, 0.102, 0.064, 0.096, 0.123, 0.132, 0.081, 0.067],
+    1.0: [0.128, 0.139, 0.072, 0.100, 0.061, 0.094, 0.128, 0.139, 0.078, 0.061],
+}
+
+
+def test_pesos_software_caso1_arredondados_dao_tabela_A2():
+    assert list(np.round(PESOS_SOFTWARE_CASO1, 3)) == PESOS_CASO1[1.0]
+
+
+@pytest.mark.parametrize("eta", [0.7, 0.8, 0.9])
+def test_pesos_combinados_caso1(eta):
+    w_obj = std_dev_weights(X_CASO1, TIPOS_CASO1)
+    w = combine_weights(np.array(PESOS_SOFTWARE_CASO1), w_obj, eta)
+    assert w == pytest.approx(PESOS_CASO1[eta], abs=6e-4)

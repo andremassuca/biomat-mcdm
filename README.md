@@ -25,9 +25,9 @@ data/                   materiais.csv, criterios.csv (+ .xlsx editável)
 src/biomat_mcdm/
   io.py                 leitura dos dados e construção da matriz  [implementado]
   screening.py          triagem por critérios estritos            [TODO]
-  normalization.py      normalização benefício/custo/alvo         [TODO]
-  weights.py            pesos objetivos e combinação com η         [TODO]
-  methods/topsis.py     TOPSIS estendido                           [TODO]
+  normalization.py      normalização benefício/custo/alvo         [implementado]
+  weights.py            pesos objetivos e combinação com η         [implementado]
+  methods/topsis.py     TOPSIS estendido                           [implementado]
   methods/waspas.py     WASPAS estendido                           [TODO]
   methods/vikor.py      VIKOR abrangente                           [TODO]
   robustness.py         Monte Carlo + Spearman                     [TODO]

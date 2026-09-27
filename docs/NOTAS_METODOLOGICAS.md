@@ -44,6 +44,14 @@ Caso de estudo 2 (haste da prótese da anca), TOPSIS; testes em tests/test_repro
 - Estado: email ao autor correspondente por enviar (rascunho em docs/email_petkovic_M1C9.md).
 - Para a secção de Métodos: a verificação usa os dados do software (Figura A6) e declara a
   incoerência da Tabela A3.
+- Pesos (eq. 1, secção 2.4): o artigo não diz sobre que matriz se calcula o desvio-padrão.
+  Reconstituído a partir dos pesos publicados para η = 0,7; 0,8; 0,9:
+  - benefício e alvo: x_ij / max x_j; custo: min x_j / x_ij; w_j^O = σ_j / Σ σ_k;
+  - caso 2 com os dados do software: diferença máxima 0,0005 (arredondamento a 3 casas);
+    com a Tabela A3 (M1-C9 = 0,41): 0,003. Segunda confirmação independente de M1-C9 = 0,59;
+  - caso 1 (placa, Tabela A2 = Figura A4): diferença máxima 0,0005; o custo relativo (C10)
+    só se reproduz com min/x (com x/max: 0,0024).
+  - Implementação: src/biomat_mcdm/weights.py; testes em tests/test_reproduce_petkovic.py.
 - WASPAS e VIKOR: por verificar quando forem implementados (secções 2.7 e 2.8).
 
 ## Valores a verificar (fora de data/materiais.csv)
