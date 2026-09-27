@@ -12,6 +12,7 @@ from biomat_mcdm.indices import sigma_y_over_e
 DATA = Path(__file__).resolve().parents[2] / "data"
 
 _TYPE_MAP = {"Benefício": "benefit", "Custo": "cost", "Alvo": "target"}
+SO_PERMANENTES_EM_A = {"Stent vascular"}  # casos em que o cenário A exclui os bioabsorvíveis
 
 
 @dataclass
@@ -54,6 +55,8 @@ def build_problem(case: str, scenario: str = "A", data_dir: Path = DATA) -> Deci
     """Constrói o problema para um caso (valor de `caso_componente` em criterios.csv).
 
     scenario "A": só materiais em uso clínico; "B": inclui investigação e bioabsorvíveis retirados.
+    No stent (SO_PERMANENTES_EM_A), o cenário A exclui também os bioabsorvíveis (classe
+    "biodegradável"): A = 316L, L605, MP35N, Pt-Cr; B = A + Mg WE43 e PLLA.
     Antes disso aplica a triagem estrita (screening.screen_case): materiais eliminados
     (estatuto "Excluído", regras numéricas como segurança iónica ≥ 2) nunca entram.
     Nota: par articular e implante dentário são SEMIQUANTITATIVOS (ordinais > 50 % do peso);
@@ -70,6 +73,8 @@ def build_problem(case: str, scenario: str = "A", data_dir: Path = DATA) -> Deci
     if scenario == "A":
         m = m[m["estatuto"].str.startswith("Clínico")
               & ~m["estatuto"].str.contains("abandonado", case=False)]
+        if case in SO_PERMANENTES_EM_A:  # stent: bioabsorvíveis só no cenário B
+            m = m[~m["classe"].fillna("").str.contains("biodegradável", case=False)]
     c = crit[(crit["caso_componente"] == case) & (crit["tipo"] != "Estrito")].copy()
     c["prop"] = c["criterio"].str.replace(r" \(só cenário B\)", "", regex=True)
 

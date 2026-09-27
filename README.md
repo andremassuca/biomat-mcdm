@@ -21,7 +21,7 @@ dados (CSV) → triagem (critérios estritos) → matriz de decisão
 ## Estrutura
 
 ```
-data/                   materiais.csv, criterios.csv, tecido.csv (+ .xlsx editável)
+data/                   CSV (fonte de verdade) + leia_me.md; .xlsx gerado por scripts/exportar_xlsx.py
 src/biomat_mcdm/
   io.py                 leitura dos dados e construção da matriz  [implementado]
   screening.py          triagem por critérios estritos            [implementado]

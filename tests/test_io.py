@@ -34,3 +34,16 @@ def test_stent_usa_radiopacidade_e_nao_densidade():
     p = build_problem("Stent vascular", "A")
     assert "Radiopacidade (ordinal 1-5)" in p.criteria
     assert "Densidade" not in p.criteria
+
+
+def test_stent_cenario_A_so_permanentes_e_B_com_bioabsorviveis():
+    from biomat_mcdm.io import build_problem
+    a = build_problem("Stent vascular", "A").alternatives
+    b = build_problem("Stent vascular", "B").alternatives
+    assert a == ["Aço inox 316L", "Co-Cr L605", "Co-Ni-Cr-Mo MP35N", "Pt-Cr"]
+    assert b == a + ["Liga de Mg WE43 (bioabsorvível)", "PLLA (bioabsorvível)"]
+
+
+def test_scaffold_cenario_A_mantem_os_biodegradaveis():
+    from biomat_mcdm.io import build_problem
+    assert len(build_problem("Scaffold (regeneração óssea)", "A").alternatives) == 8

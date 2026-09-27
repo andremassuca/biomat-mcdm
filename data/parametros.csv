@@ -1,0 +1,2 @@
+parametro,valor,descricao
+eta,0.5,η: confiança do decisor nos pesos subjetivos (0 = só pesos objetivos; 1 = só subjetivos); eq. 1 de Petković et al. 2025
