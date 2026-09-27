@@ -103,7 +103,7 @@ acetábulo em HXLPE estabilizado com vitamina E (vitamina E: [fonte a indicar], 
   - [ ] Módulo 112 GPa vs 195 (316L) e 225 (Co-Cr) GPa: menos stress shielding (2.1)
   - [ ] Melhor corrosão e RM do que o 316L (2.1: 5 vs 3; 4 vs 2)
   - [ ] Fadiga inferior ao Co-Cr (575 vs 750 MPa): desvantagem a declarar
-  - [ ] Resultado TOPSIS PRELIMINAR (results/topsis_haste_preliminar.md): 1.º nos cenários A e B; ver secção 4
+  - [ ] Resultado PRELIMINAR com os três métodos (results/haste_preliminar.md): 1.º em TOPSIS, WASPAS e VIKOR nos cenários A e B; ver secção 4
 - Par articular (ZTA/HXLPE vs MoP convencional e MoM):
   - [ ] Desgaste 0,025 vs 0,15 mm/ano (MoP) (2.2)
   - [ ] Sem par metálico na junção cabeça-cone (galvânica 5 vs 3) (2.2; Fisiopat. 1.4.7)
@@ -223,10 +223,13 @@ e RM 0,05 cada. Estritos: segurança iónica ≥ 2; risco de fratura da cabeça 
 
 ---
 
-## 4. Perguntas prováveis na reunião (TOPSIS preliminar da haste)
+## 4. Perguntas prováveis na reunião (resultado preliminar da haste)
 
-Resultado em results/topsis_haste_preliminar.md (cenário A): Ti-6Al-4V ELI 0,744; Ti-13Nb-13Zr
-0,652; Co-Cr-Mo 0,611; Ti cp grau 4 0,517; 316L 0,251. PRELIMINAR: dados por verificar.
+Resultado em results/haste_preliminar.md e results/figures/haste_preliminar.png (η = 1).
+PRELIMINAR: dados por verificar.
+- Cenário A, TOPSIS: Ti-6Al-4V ELI 0,744; Ti-13Nb-13Zr 0,652; Co-Cr-Mo 0,611; Ti cp grau 4 0,517; 316L 0,251.
+- Posições A (TOPSIS / WASPAS / VIKOR): Ti-6Al-4V 1/1/1; Ti-13Nb-13Zr 2/2/2; Co-Cr 3/4/3; Ti cp 4/3/4; 316L 5/5/5.
+- Spearman entre métodos: cenário A 0,90 a 1,00; cenário B 0,83 a 1,00 (o WASPAS é o que discorda).
 
 ### P1. Porque é que o Co-Cr fica em 3.º apesar de ser muito mais rígido do que o osso?
 Dados de apoio:
@@ -267,3 +270,10 @@ Dados de apoio:
 Dados de apoio:
 - Reprodução do caso 2 de Petković et al. 2025: 15 de 15 C_i (diferença máxima 5e-6) e 15 de 15 posições (tests/test_reproduce_petkovic.py).
 - Encontrada uma incoerência no artigo: Tabela A3 M1-C9 = 0,41; Figura A6 (software) = 0,59; os resultados publicados usam 0,59 (docs/NOTAS_METODOLOGICAS.md). Email ao autor por enviar.
+
+### P6. Porque é que o WASPAS põe o Co-Cr abaixo do Ti cp grau 4 (4.º no cenário A, 5.º no B)?
+Dados de apoio (cálculo de 28 set com waspas.normalize_waspas, cenário A; EXPLORATÓRIO):
+- Normalização diferente (eqs. 9-13 vs eq. 2 do TOPSIS): nos critérios de benefício o WASPAS usa x/máx, o TOPSIS usa o intervalo. Fadiga do Ti cp grau 4: r = 0,51 no WASPAS (385/750) vs 0,22 no TOPSIS; a vantagem do Co-Cr na fadiga pesa menos.
+- Módulo (alvo abaixo de todos, eq. 11): r_E do Co-Cr = 0,076 (Ti cp: 0,602).
+- A parte de produto (WPM, eq. 15) castiga valores baixos: r_E^0,20 = 0,60 no Co-Cr vs 0,90 no Ti cp; WPM Co-Cr 0,501 vs Ti cp 0,685 (soma pesada, WSM: 0,681 vs 0,712).
+- Leitura para a resposta: a concordância entre métodos (cenário M) é parte da análise de robustez; o 1.º e o 2.º lugar não mudam com o método.
