@@ -13,6 +13,7 @@ Regra: até à entrega, uma ideia nova só entra no relatório se (1) responder 
 - [ ] Subcaso de stent autoexpansível (Nitinol)
 
 ## Validação
+- [ ] Reprodução exata de Petković et al. 2025 (caso 2, TOPSIS) com identificação de uma incoerência na Tabela A3 (M1-C9): parágrafo sobre reprodutibilidade em MCDM na discussão; referir no poster como validação.
 - [ ] Validação externa quantitativa com registos (NJR, AOANJRR, Registo Português de Artroplastias), controlando confundidores
 - [ ] Dados clínicos de stents (ABSORB, BIOSOLVE)
 

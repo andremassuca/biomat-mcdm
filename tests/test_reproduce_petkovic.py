@@ -6,18 +6,23 @@ das Tabelas 3 (η = 1) e 4 (posições para η = 0,7; 0,8; 0,9; 1). Todos os cri
 valor-alvo T_j (para os de benefício, T_j é o melhor valor da coluna); C5 (módulo, T = 14 GPa)
 e C6 (densidade, T = 2,1 g/cm³) são critérios-alvo com o alvo abaixo de todos os materiais.
 
-Resultado da verificação (tolerância definida para a secção de Métodos):
+Incoerência no artigo (verificada no PDF a 27 set 2026): a Tabela A3 dá M1-C9
+(biocompatibilidade) = 0,41, mas a Figura A6 (captura do software MCSl, η = 1) mostra
+M1-C9 = 0,59; todas as outras células, os alvos, os C_i e as posições coincidem. Os C_i
+publicados (Tabela 3, Figura A6) foram calculados com 0,59. A Figura A6 mostra também os pesos
+com 5 casas decimais (arredondados a 3 casas dão os da Tabela A3 para η = 1).
+
+Por isso há dois conjuntos de dados:
+  - X (fiel à Tabela A3, M1-C9 = 0,41): verifica que os resultados publicados NÃO se obtêm
+    a partir da tabela; os testes exatos com X ficam como xfail (strict).
+  - X_SOFTWARE (M1-C9 = 0,59, como na Figura A6) com PESOS_SOFTWARE: reproduz os 15 C_i
+    publicados com diferença máxima de 5e-6 e as 15 posições.
+
+Resultado da verificação com X (tolerância definida para a secção de Métodos):
   - o 1.º lugar do TOPSIS (M7) é reproduzido para os quatro valores de η;
   - correlação de Spearman com o ranking publicado ≥ 0,95 para todos os η;
   - os valores C_i das ligas de Ti M10, M12 e M13 coincidem com os publicados (±0,001).
-Os valores C_i dos restantes materiais ficam acima dos publicados (até +0,05) e só 4 das 15
-posições coincidem com a Tabela 4 (η = 1). As equações do TOPSIS (secção 2.6) são as mesmas
-do nosso código; o diagnóstico de 27 set 2026 exclui tipos, alvos e pesos e aponta para uma
-única célula: com M1-C9 = 0,59 em vez de 0,41, as 15 posições coincidem para η = 0,8; 0,9; 1
-(η = 0,7: só M10 e M11 trocam, com C a 0,00005 de distância) e a diferença máxima nos C_i
-desce para 0,0008. Por confirmar no PDF (fontes/petkovic2025.pdf) se o erro está na nossa
-transcrição ou no artigo. Até lá: test_topsis_valores_exatos e test_topsis_posicoes_exatas
-ficam como xfail.
+
 A reprodução dos Q_i do WASPAS fica por verificar quando o WASPAS for implementado
 (eqs. 9-13 da secção 2.7).
 """
@@ -57,6 +62,12 @@ PESOS = {
     1.0: [0.117, 0.100, 0.139, 0.072, 0.089, 0.061, 0.094, 0.133, 0.144, 0.050],
 }
 
+# Dados usados pelo software dos autores (Figura A6, η = 1): igual a X exceto M1-C9 = 0,59
+X_SOFTWARE = X.copy()
+X_SOFTWARE[0, 8] = 0.59
+PESOS_SOFTWARE = [0.11667, 0.10000, 0.13889, 0.07222, 0.08889, 0.06111, 0.09444, 0.13333,
+                  0.14444, 0.05000]
+
 # Tabela 3 (η = 1)
 C_PUBLICADO = [0.31059, 0.32923, 0.41753, 0.30558, 0.37383, 0.56664, 0.60806, 0.51629,
                0.37006, 0.52711, 0.53481, 0.59714, 0.58041, 0.44623, 0.59240]
@@ -93,14 +104,37 @@ def test_topsis_valores_exatos_ligas_ti():
         assert C[i] == pytest.approx(C_PUBLICADO[i], abs=1e-3)
 
 
-@pytest.mark.xfail(strict=True, reason="diferença de implementação no software dos autores; ver docstring do módulo")
+@pytest.mark.xfail(strict=True, reason="Tabela A3 tem M1-C9 = 0,41; o software usou 0,59 (Figura A6)")
 def test_topsis_valores_exatos():
     C = topsis(X, np.array(PESOS[1.0]), TIPOS, ALVOS)
     assert C == pytest.approx(C_PUBLICADO, abs=1e-3)
 
 
-@pytest.mark.xfail(strict=True, reason="só 4/15 posições coincidem; suspeita em M1-C9, ver docstring do módulo")
+@pytest.mark.xfail(strict=True, reason="Tabela A3 tem M1-C9 = 0,41; o software usou 0,59 (Figura A6)")
 @pytest.mark.parametrize("eta", PESOS)
 def test_topsis_posicoes_exatas(eta):
     r = rank(topsis(X, np.array(PESOS[eta]), TIPOS, ALVOS))
+    assert list(r) == RANK_TOPSIS_PUBLICADO[eta]
+
+
+def test_software_valores_exatos():
+    # Tolerância 1e-5: os C_i estão publicados com 5 casas (erro de arredondamento até 5e-6)
+    # e os pesos da Figura A6 também estão arredondados a 5 casas.
+    C = topsis(X_SOFTWARE, np.array(PESOS_SOFTWARE), TIPOS, ALVOS)
+    assert C == pytest.approx(C_PUBLICADO, abs=1e-5)
+
+
+def test_software_posicoes_eta_1():
+    r = rank(topsis(X_SOFTWARE, np.array(PESOS_SOFTWARE), TIPOS, ALVOS))
+    assert list(r) == RANK_TOPSIS_PUBLICADO[1.0]
+
+
+@pytest.mark.parametrize("eta", [
+    pytest.param(0.7, marks=pytest.mark.xfail(strict=True, reason=(
+        "M10 e M11 trocam (C a 0,00005 de distância); os pesos só estão publicados com 3 casas"))),
+    0.8, 0.9, 1.0,
+])
+def test_software_posicoes_pesos_publicados(eta):
+    # Pesos da Tabela A3 (3 casas); para η ≠ 1 o artigo não mostra os pesos com mais casas.
+    r = rank(topsis(X_SOFTWARE, np.array(PESOS[eta]), TIPOS, ALVOS))
     assert list(r) == RANK_TOPSIS_PUBLICADO[eta]
