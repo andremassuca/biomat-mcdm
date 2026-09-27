@@ -15,8 +15,13 @@
 A "% de vitórias" no Monte Carlo NÃO é probabilidade de sucesso clínico: é a frequência com que um material fica em 1.º nas hipóteses do modelo.
 
 ## Decisões e justificações
-- Dados: fonte de verdade = CSV em data/ (+ data/leia_me.md); o .xlsx é gerado por scripts/exportar_xlsx.py (só valores, sem fórmulas). η = 0,5 por omissão (data/parametros.csv, vindo da folha Criterios do .xlsx).
+- Dados: fonte de verdade = CSV em data/ (+ data/leia_me.md); o .xlsx é gerado por scripts/exportar_xlsx.py (só valores, sem fórmulas). η = 1 por omissão (data/parametros.csv; antes 0,5, vindo da folha Criterios do .xlsx).
 - Cenários (data/cenarios.csv): A = só materiais em uso clínico; B = inclui investigação e bioabsorvíveis. No stent, A = só permanentes (316L, L605, MP35N, Pt-Cr); B = A + Mg WE43 e PLLA.
+- Tempo de reabsorção do stent (critério só do cenário B; alvo 12 meses):
+  - B (opção O2): os permanentes recebem o pior valor observado (48 meses, máximo do PLLA). Interpretação: "não reabsorver é pelo menos tão mau como o pior bioabsorvível". Limitação: subestima o caso permanente (um permanente nunca reabsorve). Coerente nos três métodos, que usam os valores em bruto.
+  - B-bio (opção O3): só Mg WE43 e PLLA, com o critério; apresentar como comparação, não como ranking (2 materiais).
+  - R-sentinela (opção O1): sensibilidade a 60, 120, 600 e 1200 meses para os permanentes. TOPSIS e VIKOR não dependem do valor acima de 48 meses; o WASPAS depende (a eq. 13 leva r para 0 e o produto arrasta os permanentes): com 1200 meses o 316L cai para 5.º.
+- η: resultado principal com η = 1 (só pesos subjetivos, justificados pelos mecanismos de falha). Os pesos objetivos (desvio-padrão) dependem da dispersão do conjunto de candidatos e mudam com o cenário (A vs B), por isso o η entra só como análise de sensibilidade (0 a 1, passo 0,1). O η = 0,5 vinha do valor inicial sugerido no artigo (secção 2.4).
 - σy/E (src/biomat_mcdm/indices.py, calculado a partir de σy e E da base; intervalo = σy mín./E máx. a σy máx./E mín.): proxy ao nível do material da deformação elástica na cedência. Em stents expansíveis por balão, maior σy/E → maior recuo elástico → critério de CUSTO. Não é o recuo do dispositivo (depende da geometria do padrão, struts, processamento).
 - E_implante/E_osso (indices.stiffness_ratio; osso cortical 15-20 GPa de data/tecido.csv): indicador exploratório de risco relativo de stress shielding, não é critério (o módulo já é critério-alvo); a transferência de carga real depende de geometria, fixação e contacto (FEA = trabalho futuro).
 - Alvo E = 17 GPa na haste: todos os candidatos estão acima do alvo → na prática funciona como "menor é melhor" com escala comprimida; testar vs critério de custo com limiar de fadiga (cenário T-haste). O cenário T-haste inclui também a comparação do alvo 14 GPa (Petković et al. 2025, Tabela A3, C5) vs 17 GPa.

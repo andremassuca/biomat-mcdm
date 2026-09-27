@@ -54,4 +54,4 @@ def test_indices_e_parametros(livro):
     assert livro["Indices_stent"].max_row == 8   # cabeçalho + 7 materiais
     assert livro["Indices_haste"].max_row == 7   # cabeçalho + 6 materiais
     assert livro["Parametros"]["A2"].value == "eta"
-    assert livro["Parametros"]["B2"].value == 0.5
+    assert livro["Parametros"]["B2"].value == 1.0

@@ -1,9 +1,11 @@
 cenario,descricao,casos
 A,"Só materiais em uso clínico (stent: só permanentes, 316L, L605, MP35N, Pt-Cr)",Todos
-B,"Inclui investigação e bioabsorvíveis (stent: A + Mg WE43 e PLLA)",Todos
+B,"Inclui investigação e bioabsorvíveis (stent: A + Mg WE43 e PLLA; permanentes com o pior valor observado no tempo de reabsorção, opção O2)",Todos
+B-bio,"Só bioabsorvíveis (Mg WE43 e PLLA) com o tempo de reabsorção; comparação, não ranking (opção O3)",Stent
+R-sentinela,"Sensibilidade do tempo de reabsorção atribuído aos permanentes: 60, 120, 600 e 1200 meses (opção O1)",Stent
 Q,Só critérios quantitativos (sem ordinais),"Haste, stent, scaffold"
 W,Sensibilidade dos pesos,Todos os quantitativos
-η,Nível de confiança,Todos os quantitativos
+η,"Sensibilidade ao nível de confiança η de 0 a 1, passo 0,1 (resultado principal: η = 1)",Todos os quantitativos
 M,Concordância entre métodos,Todos os quantitativos
 T-scaffold,Sensibilidade dos alvos,Scaffold
 T-haste,"Sensibilidade do alvo de E (inclui 14 GPa, Petković et al. 2025, vs 17 GPa)",Haste

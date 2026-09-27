@@ -13,6 +13,10 @@ DATA = Path(__file__).resolve().parents[2] / "data"
 
 _TYPE_MAP = {"Benefício": "benefit", "Custo": "cost", "Alvo": "target"}
 SO_PERMANENTES_EM_A = {"Stent vascular"}  # casos em que o cenário A exclui os bioabsorvíveis
+# Critérios em que um material sem valor recebe o PIOR valor observado nos outros (opção O2):
+# os stents permanentes não reabsorvem; "não reabsorver é pelo menos tão mau como o pior
+# bioabsorvível". Limitação: subestima o caso permanente (ver NOTAS_METODOLOGICAS.md).
+PIOR_OBSERVADO = {("Stent vascular", "Tempo de reabsorção")}
 
 
 @dataclass
@@ -51,10 +55,23 @@ def load_tissue(data_dir: Path = DATA) -> pd.DataFrame:
     return pd.read_csv(data_dir / "tecido.csv")
 
 
-def build_problem(case: str, scenario: str = "A", data_dir: Path = DATA) -> DecisionProblem:
+def _pior_observado(sub: pd.DataFrame, tipo: str, alvo: float | None) -> float:
+    """Pior valor observado num critério: o mais afastado do alvo, o maior (custo) ou o menor (benefício)."""
+    vals = pd.concat([sub["min"], sub["max"]]).dropna().to_numpy(float)
+    if tipo == "Alvo":
+        return float(vals[np.argmax(np.abs(vals - alvo))])
+    return float(vals.max() if tipo == "Custo" else vals.min())
+
+
+def build_problem(case: str, scenario: str = "A", data_dir: Path = DATA,
+                  valor_em_falta: dict[str, float] | None = None) -> DecisionProblem:
     """Constrói o problema para um caso (valor de `caso_componente` em criterios.csv).
 
-    scenario "A": só materiais em uso clínico; "B": inclui investigação e bioabsorvíveis retirados.
+    scenario "A": só materiais em uso clínico; "B": inclui investigação e bioabsorvíveis retirados;
+    "B-bio": só os bioabsorvíveis do cenário B (classe "biodegradável"), para comparação.
+    Critérios marcados "(só cenário B)" só entram em B e B-bio.
+    Critérios em PIOR_OBSERVADO: materiais sem valor recebem o pior valor observado, ou o valor
+    dado em `valor_em_falta` ({propriedade: valor}), usado na análise de sensibilidade (O1).
     No stent (SO_PERMANENTES_EM_A), o cenário A exclui também os bioabsorvíveis (classe
     "biodegradável"): A = 316L, L605, MP35N, Pt-Cr; B = A + Mg WE43 e PLLA.
     Antes disso aplica a triagem estrita (screening.screen_case): materiais eliminados
@@ -75,14 +92,26 @@ def build_problem(case: str, scenario: str = "A", data_dir: Path = DATA) -> Deci
               & ~m["estatuto"].str.contains("abandonado", case=False)]
         if case in SO_PERMANENTES_EM_A:  # stent: bioabsorvíveis só no cenário B
             m = m[~m["classe"].fillna("").str.contains("biodegradável", case=False)]
+    elif scenario == "B-bio":
+        m = m[m["classe"].fillna("").str.contains("biodegradável", case=False)]
+    elif scenario != "B":
+        raise ValueError(f"cenário desconhecido: {scenario!r} (use 'A', 'B' ou 'B-bio')")
     c = crit[(crit["caso_componente"] == case) & (crit["tipo"] != "Estrito")].copy()
+    if scenario == "A":
+        c = c[~c["criterio"].str.contains(r"\(só cenário B\)", regex=True)]
     c["prop"] = c["criterio"].str.replace(r" \(só cenário B\)", "", regex=True)
 
     alts = list(dict.fromkeys(m["material"]))
     cols_min, cols_max, keep = [], [], []
     for _, cr in c.iterrows():
         sub = m[m["propriedade"] == cr["prop"]].set_index("material")
-        if sub.empty or len(sub) < len(alts) or sub[["min", "max"]].isna().any().any():
+        sub = sub[sub[["min", "max"]].notna().all(axis=1)]
+        if (case, cr["prop"]) in PIOR_OBSERVADO and not sub.empty and len(sub) < len(alts):
+            alvo = float(cr["alvo"]) if cr["tipo"] == "Alvo" else None
+            v = (valor_em_falta or {}).get(cr["prop"], _pior_observado(sub, cr["tipo"], alvo))
+            falta = pd.DataFrame({"min": v, "max": v}, index=[a for a in alts if a not in sub.index])
+            sub = pd.concat([sub[["min", "max"]], falta])
+        if sub.empty or len(sub) < len(alts):
             continue
         keep.append(cr)
         cols_min.append(sub.loc[alts, "min"].to_numpy(float))

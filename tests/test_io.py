@@ -16,7 +16,32 @@ def test_par_articular_cenario_A_exclui_mom():
 def test_stent_cenario_B_inclui_bioabsorviveis():
     p = build_problem("Stent vascular", "B")
     assert "Liga de Mg WE43 (bioabsorvível)" in p.alternatives
-    assert "Tempo de reabsorção" not in p.criteria  # permanentes sem valor → tratar à parte
+    # opção O2: os permanentes recebem o pior valor observado (48 meses, máximo do PLLA)
+    j = p.criteria.index("Tempo de reabsorção")
+    perm = [i for i, a in enumerate(p.alternatives) if "bioabsorvível" not in a]
+    assert set(p.X[perm, j]) == {48.0}
+
+
+def test_reabsorcao_so_entra_em_B():
+    assert "Tempo de reabsorção" not in build_problem("Stent vascular", "A").criteria
+
+
+def test_cenario_B_bio_so_bioabsorviveis_com_o_criterio():
+    p = build_problem("Stent vascular", "B-bio")
+    assert p.alternatives == ["Liga de Mg WE43 (bioabsorvível)", "PLLA (bioabsorvível)"]
+    assert "Tempo de reabsorção" in p.criteria
+
+
+def test_valor_em_falta_explicito_para_sensibilidade():
+    p = build_problem("Stent vascular", "B", valor_em_falta={"Tempo de reabsorção": 600})
+    j = p.criteria.index("Tempo de reabsorção")
+    assert p.X[0, j] == 600
+
+
+def test_cenario_desconhecido_da_erro():
+    import pytest
+    with pytest.raises(ValueError):
+        build_problem("Stent vascular", "Z")
 
 
 def test_nitinol_nunca_entra_no_ranking():
