@@ -32,7 +32,7 @@ src/biomat_mcdm/
   methods/topsis.py     TOPSIS estendido                           [implementado]
   methods/waspas.py     WASPAS estendido                           [implementado]
   methods/vikor.py      VIKOR abrangente                           [implementado]
-  robustness.py         Monte Carlo + Spearman                     [TODO]
+  robustness.py         Monte Carlo, variantes de cenário, Spearman [implementado]
   plots.py              figuras para relatório e poster            [TODO]
 tests/                  testes = especificação das funções
 docs/                   notas metodológicas (viram a secção de Métodos)

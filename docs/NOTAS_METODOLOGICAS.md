@@ -82,6 +82,18 @@ Caso de estudo 2 (haste da prótese da anca), TOPSIS; testes em tests/test_repro
 - Com a Tabela A3 (M1-C9 = 0,41), o WASPAS falha só em M1 (14 de 15 Q_i), o que explica a
   afirmação antiga "14 de 15", agora com código que a demonstra.
 
+## Robustez (src/biomat_mcdm/robustness.py, scripts/run_all.py)
+- Resultado principal: cenário A, η = 1. As análises de sensibilidade partem do cenário A.
+- MC propriedades: cada valor sorteado com distribuição uniforme entre mín. e máx. da base; 10 000 iterações, seed 42; a mesma seed para os três métodos (mesmos sorteios).
+- W pesos: cada peso multiplicado por um fator uniforme em [0,8; 1,2] e renormalizado (±20 %).
+- η: 0 a 1, passo 0,1, com os pesos objetivos do desvio-padrão calculados sobre a matriz do cenário A.
+- T-haste: alvo de E = 14 (Petković et al. 2025), 15, 17, 20 GPa (osso cortical 15-20, tecido.csv) e módulo como critério de custo.
+- T-scaffold: alvos no mínimo e no máximo do osso trabecular (tecido.csv) para compressão (2-12 MPa), módulo (50-500 MPa) e porosidade (50-90 %); tempo de degradação sem referência no tecido: fatores de sensibilidade x0,5 e x2 sobre o alvo (não são valores da literatura).
+- C-custo: peso do custo relativo 0,01 (baixo) e 0,25 (elevado), restantes pesos redistribuídos proporcionalmente (valores de desenho da análise, não da literatura).
+- M: Spearman entre os três métodos em cada cenário e variante (não calculado com 2 materiais: B-bio).
+- A "% de 1.º lugar" é a frequência nas hipóteses do modelo, não a probabilidade de sucesso clínico.
+- Scaffold: a fragilidade do ranking reflete em parte a incerteza dos dados (propriedades muito dependentes da porosidade, intervalos largos na base) e não só o método. Na discussão, separar as duas causas, por exemplo comparando a % de 1.º lugar do MC propriedades (incerteza dos dados) com a do W pesos (incerteza das preferências): PCL/β-TCP 66,5 % vs 56,6 % no TOPSIS; no WASPAS 48,5 % vs 5,1 % (o β-TCP ganha 94,8 % com os pesos perturbados).
+
 ## Valores a verificar (fora de data/materiais.csv)
 Os valores de propriedades "A verificar" estão na base e serão listados por
 scripts/listar_por_verificar.py (tarefa 12). Aqui ficam os que não estão nessa coluna:
