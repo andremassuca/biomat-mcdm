@@ -3,7 +3,7 @@
 # Em cada destino ficam só as $Manter cópias mais recentes.
 # Uso: powershell -ExecutionPolicy Bypass -File scripts\backup_local.ps1 [-Destinos <pasta1>,<pasta2>] [-Manter 15]
 param(
-    [string[]]$Destinos = @("D:\SCHOOL\_backup_biomat", "C:\Users\aomas\OneDrive\_backup_biomat"),
+    [string[]]$Destinos = @("D:\LAB\_backup_biomat", "C:\Users\aomas\OneDrive\_backup_biomat"),
     [int]$Manter = 15
 )
 $ErrorActionPreference = "Stop"
