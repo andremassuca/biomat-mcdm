@@ -69,6 +69,9 @@ def test_stent_cenario_A_so_permanentes_e_B_com_bioabsorviveis():
     assert b == a + ["Liga de Mg WE43 (bioabsorvível)", "PLLA (bioabsorvível)"]
 
 
-def test_scaffold_cenario_A_mantem_os_biodegradaveis():
+def test_scaffold_cenario_A_so_uso_clinico_mas_mantem_biodegradaveis():
     from biomat_mcdm.io import build_problem
-    assert len(build_problem("Scaffold (regeneração óssea)", "A").alternatives) == 8
+    a = build_problem("Scaffold (regeneração óssea)", "A").alternatives
+    assert sorted(a) == sorted(["Hidroxiapatite (HA) porosa", "β-TCP poroso", "Vidro bioativo 45S5 poroso",
+                                "PCL", "Compósito PCL/β-TCP (impressão 3D)"])  # PCL é biodegradável e fica
+    assert len(build_problem("Scaffold (regeneração óssea)", "B").alternatives) == 8

@@ -92,7 +92,8 @@ Caso de estudo 2 (haste da prótese da anca), TOPSIS; testes em tests/test_repro
 - C-custo: peso do custo relativo 0,01 (baixo) e 0,25 (elevado), restantes pesos redistribuídos proporcionalmente (valores de desenho da análise, não da literatura).
 - M: Spearman entre os três métodos em cada cenário e variante (não calculado com 2 materiais: B-bio).
 - A "% de 1.º lugar" é a frequência nas hipóteses do modelo, não a probabilidade de sucesso clínico.
-- Scaffold: a fragilidade do ranking reflete em parte a incerteza dos dados (propriedades muito dependentes da porosidade, intervalos largos na base) e não só o método. Na discussão, separar as duas causas, por exemplo comparando a % de 1.º lugar do MC propriedades (incerteza dos dados) com a do W pesos (incerteza das preferências): PCL/β-TCP 66,5 % vs 56,6 % no TOPSIS; no WASPAS 48,5 % vs 5,1 % (o β-TCP ganha 94,8 % com os pesos perturbados).
+- Reversão de ranking observada (scaffold, 28 set 2026): ao retirar PLLA, PLGA e quitosano/HA (cenário A com os estatutos novos), o β-TCP e o PCL/β-TCP trocam de posição (TOPSIS e VIKOR: PCL/β-TCP 1.º com 8 materiais, β-TCP 1.º com 5), porque as normalizações dependem do mínimo e do máximo de cada coluna. Exemplo concreto para o item "Testes formais de reversão de ranking" do backlog e para a secção de limitações.
+- Scaffold: a fragilidade do ranking reflete em parte a incerteza dos dados (propriedades muito dependentes da porosidade, intervalos largos na base) e não só o método. Na discussão, separar as duas causas, por exemplo comparando a % de 1.º lugar do MC propriedades (incerteza dos dados) com a do W pesos (incerteza das preferências). Cenário A com os estatutos novos (5 materiais): β-TCP 53,6 % / 31,6 % / 37,4 % (T/W/V) no MC propriedades, mas 91,7 % / 100 % / 85,3 % no W pesos; ou seja, o 1.º lugar é estável face aos pesos e frágil face aos dados.
 
 ## Valores a verificar (fora de data/materiais.csv)
 Os valores de propriedades "A verificar" estão na base e serão listados por
@@ -100,6 +101,7 @@ scripts/listar_por_verificar.py (tarefa 12). Aqui ficam os que não estão nessa
 - [ ] Fonte para o alvo de E do osso cortical femoral (17 GPa) ou alinhamento com os 14 GPa do artigo-base (Petković et al. 2025).
   Pista: a folha Tecido da base (data/tecido.csv) dá 15-20 GPa (nota "slide 10"; fonte sugerida Ratner et al. 2020, Navarro et al. 2008: confirmar); o ponto médio é 17,5 GPa.
 - [ ] Tipo de expansão dos stents (data/materiais.csv, 7 linhas "A verificar", sem referência).
+- [ ] Estatuto clínico dos 8 materiais do scaffold (Clínico (substituto ósseo) / Clínico (uso limitado) / Investigação), proposto a 28 set 2026; fonte a verificar indicada na coluna notas de data/materiais.csv (Rezwan et al. 2006, Bose et al. 2012, Hench 1991, Woodruff & Hutmacher 2010, Athanasiou et al. 1996, base 510(k) da FDA; PCL/β-TCP e quitosano/HA sem fonte).
 
 ## Por preencher
 - Fontes dos dados e critério de inclusão:
