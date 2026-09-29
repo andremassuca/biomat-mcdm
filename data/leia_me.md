@@ -23,6 +23,12 @@ Par articular e implante dentário ficam SEMIQUANTITATIVOS (ordinais > 50 % do p
 
 ## Legenda
 - min e max alimentam o Monte Carlo (distribuição entre mín. e máx.); tipico = ponto médio.
+- Estados da coluna estado:
+  - "A verificar": valor de partida (manual, revisão ou fonte secundária) ainda não confirmado na fonte original.
+  - "Verificado": valor confirmado na fonte indicada em doi_url (artigo ou norma).
+  - "Verificado (fornecedor)": valor confirmado numa página de fornecedor que declara cumprir a norma, não no texto da norma.
+  - "Verificado (composição química)": valor que resulta da composição química do material (ex.: 0 % de níquel num polímero sem metais).
+- Teor de níquel (stent): % em massa; no WE43 é um limite máximo de impureza e tipico = máximo (pior caso).
 
 ## Tipos de critério (Petković et al., Appl Sci 2025;15:9198)
 Estrito = triagem passa/falha · Benefício = maior é melhor · Custo = menor é melhor · Alvo = mais próximo do valor-alvo é melhor
