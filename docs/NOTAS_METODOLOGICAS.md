@@ -160,11 +160,15 @@ Caso de estudo 2 (haste da prótese da anca), TOPSIS; testes em tests/test_repro
   walking activity approaches 2 million cycles per year: pedometers under-record walking activity.
   J Arthroplasty 2002;17(6):693-697, doi:10.1054/arth.2002.32699. "The SAM recorded an average of
   1.9 million cycles/y" (33 doentes, acelerómetro no tornozelo). Só resumo.
-- Q2, forças na marcha (marca ainda por resolver): Bergmann G, Deuretzbacher G, Heller M, Graichen F,
+- Q2, forças na marcha: Bergmann G, Deuretzbacher G, Heller M, Graichen F,
   Rohlmann A, Strauss J, Duda GN. Hip contact forces and gait patterns from routine activities.
   J Biomech 2001;34(7):859-871, doi:10.1016/S0021-9290(01)00040-9. O resumo dá 238 % do peso
   corporal na marcha a cerca de 4 km/h (4 doentes), 251 % a subir e 260 % a descer escadas, e só
   menciona o tropeção ("except during stumbling") sem valor. Só resumo.
+- Q2, tropeção: Bergmann G, Graichen F, Rohlmann A. Hip joint contact forces during stumbling.
+  Langenbecks Arch Surg 2004;389(1):53-59, doi:10.1007/s00423-003-0434-y (PMID 14625775): "Peak forces
+  are approximately twice as high during real stumbling as during any other activity and may range
+  higher than eight-times the body weight". Só resumo.
 - Q3, artefactos de RM: Månsson S, Müller GM, Wellman F, Nittka M, Lundin B. Phantom based
   qualitative and quantitative evaluation of artifacts in MR images of metallic hip prostheses.
   Phys Med 2015;31(2):173-178, doi:10.1016/j.ejmp.2014.12.001: haste de Ti com pontuações de
@@ -175,8 +179,9 @@ Caso de estudo 2 (haste da prótese da anca), TOPSIS; testes em tests/test_repro
   - Goldberg JR, Gilbert JL, Jacobs JJ, Bauer TW, Paprosky W, Leurgans S. A multicenter retrieval
     study of the taper interfaces of modular hip prostheses. Clin Orthop Relat Res 2002;(401):149-161,
     doi:10.1097/00003086-200208000-00018: 231 explantes; corrosão moderada a grave em 42 % das
-    cabeças de ligas mistas vs 28 % de ligas iguais. Só resumo; a definição de "mixed alloy" fica
-    [confirmar no texto completo].
+    cabeças de ligas mistas vs 28 % de ligas iguais. Lido só no resumo; o resultado (mais corrosão
+    com ligas mistas) está no resumo; "mixed alloy" na literatura de explantes = cabeça CoCr sobre
+    colo de Ti (definição não escrita no resumo do Goldberg nem no texto do Cooper 2012 [fonte a indicar]).
   - Cooper HJ, Della Valle CJ, Berger RA, Tetreault M, Paprosky WG, Sporer SM, Jacobs JJ. Corrosion
     at the head-neck taper as a cause for adverse local tissue reactions after total hip arthroplasty.
     J Bone Joint Surg Am 2012;94(18):1655-1661, doi:10.2106/JBJS.K.01352 (PMC3444948): ALTR em pares

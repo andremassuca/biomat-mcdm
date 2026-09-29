@@ -10,7 +10,7 @@ Por isso, a seleção de material é feita em separado. Na haste o que conta é 
 
 ## 2. Propriedades mecânicas necessárias
 
-Na marcha normal, a articulação da anca suporta forças de cerca de 2,5 a 3 vezes o peso corporal. Em tropeções, essas forças podem chegar a valores muito superiores [confirmar: Bergmann et al. 2001, J Biomech]. Um doente com prótese da anca faz, em média, cerca de 1,9 milhões de ciclos de marcha por ano (Silva et al. 2002), pelo que a haste tem de resistir a dezenas de milhões de ciclos ao longo da sua vida útil.
+Na marcha a cerca de 4 km/h, a força de contacto na anca é, em média, cerca de 2,4 vezes o peso corporal, e a subir e descer escadas cerca de 2,5 a 2,6 vezes (Bergmann et al. 2001). Em tropeções, as forças podem ser muito superiores (mais de 8 vezes o peso corporal; Bergmann et al. 2004). Um doente com prótese da anca faz, em média, cerca de 1,9 milhões de ciclos de marcha por ano (Silva et al. 2002), pelo que a haste tem de resistir a dezenas de milhões de ciclos ao longo da sua vida útil.
 
 Para a haste, as propriedades determinantes são:
 - Limite de fadiga elevado a 10^7 ciclos, porque a fratura por fadiga é a falha mecânica crítica.
@@ -54,7 +54,7 @@ No par articular, a cerâmica (alumina ou compósito alumina-zircónia) e o poli
 
 Os principais mecanismos de falha são:
 - **Desgaste do par articular e osteólise.** O desgaste do polietileno produz partículas submicrométricas que desencadeiam uma resposta inflamatória crónica (questão 7). Essa resposta reabsorve o osso à volta do implante e acaba por causar o descolamento asséptico, a principal causa de revisão a longo prazo.
-- **Corrosão por fretting na junção modular.** No cone entre a cabeça e a haste, micromovimentos repetidos rompem o filme passivo, e dentro da fenda o meio acidifica-se (corrosão em fresta). Com cabeças Co-Cr sobre hastes de titânio, este mecanismo liberta iões de cobalto e crómio mesmo sem par metal-metal (Goldberg et al. 2002, em explantes [confirmar no texto completo]; Cooper et al. 2012).
+- **Corrosão por fretting na junção modular.** No cone entre a cabeça e a haste, micromovimentos repetidos rompem o filme passivo, e dentro da fenda o meio acidifica-se (corrosão em fresta). Com cabeças Co-Cr sobre hastes de titânio, este mecanismo liberta iões de cobalto e crómio mesmo sem par metal-metal (Goldberg et al. 2002, em explantes; Cooper et al. 2012).
 - **Pares metal-metal.** Produzem partículas e iões de Co e Cr em quantidade. Estão associados a reações adversas aos detritos metálicos (pseudotumores) (Chalmers et al. 2016), o que levou, por exemplo, à recolha do sistema DePuy ASR em 2010 (MHRA, MDA/2010/069).
 - **Fratura por fadiga da haste.** É rara com as ligas atuais, mas possível em hastes subdimensionadas ou com defeitos de fabrico. É especialmente relevante em peças produzidas por fabrico aditivo sem pós-processamento (questão 9).
 - **Fratura das cabeças cerâmicas.** É rara, mas grave quando ocorre. Num registo nacional, a fratura levou à revisão em cerca de 0,01 % das cabeças de ZTA, contra 0,15 % das de alumina (Hallan et al. 2020). O registo só conta fraturas que levaram a revisão.
