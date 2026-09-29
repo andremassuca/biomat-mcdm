@@ -112,6 +112,17 @@ Caso de estudo 2 (haste da prótese da anca), TOPSIS; testes em tests/test_repro
 - Os módulos vêm de Li et al. 2014 (ligas de Ti) e de Navarro et al. 2008 (316L e Co-Cr-Mo).
   O Niinomi 1998 só tem ligas de Ti e deixou de ser fonte do 316L e do Co-Cr-Mo.
 
+## Posições próximas no TOPSIS (regra de desempate, 30 set 2026)
+- Se a diferença de C (coeficiente de proximidade do TOPSIS) entre duas posições consecutivas for
+  < 0,01, essas posições consideram-se indistinguíveis e reportam-se como empate.
+- Haste, cenário A (depois do commit 80ef2a3): 2.º Co-Cr-Mo forjado C = 0,577; 3.º Ti-13Nb-13Zr
+  C = 0,532; diferença 0,045 (> 0,01), por isso os dois lugares distinguem-se. No WASPAS e no VIKOR
+  o 2.º lugar é o Ti-13Nb-13Zr: o 2.º lugar depende do método.
+- η = 0 na eq. 1 (w_j = η · w_j^S + (1 - η) · w_j^O) corresponde a pesos só objetivos (método do
+  desvio-padrão); η = 1 a pesos só subjetivos (src/biomat_mcdm/weights.py, combine_weights).
+- O Monte Carlo (propriedades e W pesos ±20 %) corre só no cenário A; o TNZT (só no cenário B)
+  não entra no Monte Carlo.
+
 ## Valores a verificar (fora de data/materiais.csv)
 Os valores de propriedades "A verificar" estão na base e serão listados por
 scripts/listar_por_verificar.py (tarefa 12). Aqui ficam os que não estão nessa coluna:

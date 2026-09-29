@@ -72,7 +72,7 @@ Paralelamente, o stress shielding altera a distribuição de cargas no fémur. C
 
 ## 8. Vantagem face aos materiais atuais
 
-Para a haste, propõe-se a **liga Ti-6Al-4V ELI** (ASTM F136). Na análise multicritério (TOPSIS, WASPAS e VIKOR, com critérios-alvo segundo Petković et al. 2025), ficou em 1.º lugar nos cenários A e B com os três métodos, também depois da verificação dos dados [confirmar após as alíneas c e g].
+Para a haste, propõe-se a **liga Ti-6Al-4V ELI** (ASTM F136). Na análise multicritério (TOPSIS, WASPAS e VIKOR, com critérios-alvo segundo Petković et al. 2025), ficou em 1.º lugar nos cenários A e B com os três métodos, depois da verificação das propriedades mecânicas nas fontes. O 2.º lugar depende do método: no cenário A, o TOPSIS coloca o Co-Cr-Mo forjado, enquanto o WASPAS e o VIKOR colocam o Ti-13Nb-13Zr.
 
 Face ao aço 316L e às ligas Co-Cr-Mo, as vantagens são:
 - módulo de Young cerca de metade, logo menos stress shielding;
@@ -81,9 +81,13 @@ Face ao aço 316L e às ligas Co-Cr-Mo, as vantagens são:
 - menos artefactos em ressonância magnética;
 - décadas de historial clínico em hastes.
 
-A liga não é ideal. O módulo continua a ser cerca de seis vezes o do osso cortical, e o vanádio é uma limitação conhecida. As ligas β (Ti-13Nb-13Zr, Ti-35Nb-7Zr-5Ta) resolvem melhor ambos os problemas, mas têm menor historial clínico, maior custo e, no caso do Ti-35Nb-7Zr-5Ta, ainda não são usadas clinicamente. São a evolução natural desta escolha. Na análise de robustez, o Ti-13Nb-13Zr só passa para 1.º lugar em condições específicas: no cenário sem critérios ordinais, com o WASPAS, e numa fração minoritária das iterações de Monte Carlo. O Ti-35Nb-7Zr-5Ta nunca fica em 1.º lugar [confirmar depois de gerar de novo o resumo de robustez].
+A liga não é ideal. O módulo continua a ser cerca de seis vezes o do osso cortical, e o vanádio é uma limitação conhecida. As ligas β (Ti-13Nb-13Zr, Ti-35Nb-7Zr-5Ta) resolvem melhor ambos os problemas, mas têm menor historial clínico, maior custo e, no caso do Ti-35Nb-7Zr-5Ta, ainda não são usadas clinicamente. São a evolução natural desta escolha. Na análise de robustez, o 1.º lugar do Ti-6Al-4V ELI mantém-se em quase todas as variantes e só muda em dois casos. Com η = 0 na combinação de pesos (pesos só objetivos, pelo método do desvio-padrão), o VIKOR coloca o Ti cp grau 4 em 1.º. Com o custo com peso elevado (0,25), o TOPSIS coloca o aço 316L em 1.º. O segundo caso é relevante para o hospital: se o custo for o fator dominante, o aço encruado torna-se competitivo, à custa de uma rigidez muito maior e da presença de níquel. No Monte Carlo (cenário A, 10 000 iterações), com variação aleatória das propriedades e dos pesos, o Ti-6Al-4V ELI ficou em 1.º lugar em 100 % das iterações com os três métodos [confirmar após rever o tratamento dos valores únicos]. O Ti-13Nb-13Zr nunca fica em 1.º lugar, e o Ti-35Nb-7Zr-5Ta, que só entra no cenário B, também não.
 
-Para o par articular, propõe-se uma **cabeça em cerâmica compósita de alumina reforçada com zircónia (ZTA)** contra um **inserto de polietileno de ultra-alto peso molecular altamente reticulado (HXLPE)** [confirmar com o caso semi-quantitativo]. Face ao polietileno convencional, o desgaste é muito menor. Face às cabeças Co-Cr, elimina a libertação de iões de Co e Cr na junção modular e no par. Face ao metal-metal, evita as reações adversas aos detritos metálicos.
+Para o par articular, propõe-se uma **cabeça cerâmica de alumina reforçada com zircónia (ZTA)** contra um **inserto de polietileno altamente reticulado (HXLPE)**. A escolha não se baseia numa comparação direta das taxas de desgaste entre estudos, porque os valores disponíveis vêm de estudos com polietilenos, doentes e métodos de medição diferentes. Baseia-se em três argumentos:
+- O polietileno altamente reticulado desgasta-se muito menos do que o convencional: cerca de 0,016 mm/ano contra 0,077 mm/ano (Higuchi et al. 2019, por radiografia; Teeter et al. 2017, por radiostereometria).
+- Num estudo por radiostereometria com polietileno convencional, o desgaste foi menos de metade contra cabeças cerâmicas do que contra cabeças CoCr (Dahl et al. 2013). Os próprios autores notam que, com polietileno reticulado, a diferença pode ser menor, por isso este argumento é mais fraco para o HXLPE.
+- A cabeça cerâmica elimina a libertação de iões de Co e Cr, tanto na junção modular como no par.
+Face ao metal-metal, evita as reações adversas aos detritos metálicos; por isso o par MoM foi eliminado na triagem. O par cerâmica-cerâmica tem o desgaste mais baixo, mas acrescenta o risco de fratura e de ruído (squeaking) [confirmar fonte]. Além disso, a diferença de desgaste entre CoC e MoM (cerca de 0,004 e 0,005 mm/ano) está abaixo da resolução da radiografia simples.
 
 ## 9. Fabrico
 
