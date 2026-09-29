@@ -155,6 +155,55 @@ Caso de estudo 2 (haste da prótese da anca), TOPSIS; testes em tests/test_repro
 - O risco de fratura é um critério estrito sem regra numérica: estas fontes ficam na tabela de
   apoio do par articular e no texto, não em data/materiais.csv.
 
+## Fontes do texto da anca (30 set 2026)
+- Q2, ciclos de marcha: Silva M, Shepherd EF, Jackson WO, Dorey FJ, Schmalzried TP. Average patient
+  walking activity approaches 2 million cycles per year: pedometers under-record walking activity.
+  J Arthroplasty 2002;17(6):693-697, doi:10.1054/arth.2002.32699. "The SAM recorded an average of
+  1.9 million cycles/y" (33 doentes, acelerómetro no tornozelo). Só resumo.
+- Q2, forças na marcha (marca ainda por resolver): Bergmann G, Deuretzbacher G, Heller M, Graichen F,
+  Rohlmann A, Strauss J, Duda GN. Hip contact forces and gait patterns from routine activities.
+  J Biomech 2001;34(7):859-871, doi:10.1016/S0021-9290(01)00040-9. O resumo dá 238 % do peso
+  corporal na marcha a cerca de 4 km/h (4 doentes), 251 % a subir e 260 % a descer escadas, e só
+  menciona o tropeção ("except during stumbling") sem valor. Só resumo.
+- Q3, artefactos de RM: Månsson S, Müller GM, Wellman F, Nittka M, Lundin B. Phantom based
+  qualitative and quantitative evaluation of artifacts in MR images of metallic hip prostheses.
+  Phys Med 2015;31(2):173-178, doi:10.1016/j.ejmp.2014.12.001: haste de Ti com pontuações de
+  artefacto 3 a 4 vezes mais baixas do que as de CoCr e aço (1,5 T, fantoma). Só resumo. Apoio:
+  Radzi S et al. Quant Imaging Med Surg 2014;4(3):163-172 (PMC4032923): parafusos, 3,7 mm (Ti) vs
+  10,9 mm (aço) a 1,5 T. Só resumo.
+- Q6, corrosão no cone:
+  - Goldberg JR, Gilbert JL, Jacobs JJ, Bauer TW, Paprosky W, Leurgans S. A multicenter retrieval
+    study of the taper interfaces of modular hip prostheses. Clin Orthop Relat Res 2002;(401):149-161,
+    doi:10.1097/00003086-200208000-00018: 231 explantes; corrosão moderada a grave em 42 % das
+    cabeças de ligas mistas vs 28 % de ligas iguais. Só resumo; a definição de "mixed alloy" fica
+    [confirmar no texto completo].
+  - Cooper HJ, Della Valle CJ, Berger RA, Tetreault M, Paprosky WG, Sporer SM, Jacobs JJ. Corrosion
+    at the head-neck taper as a cause for adverse local tissue reactions after total hip arthroplasty.
+    J Bone Joint Surg Am 2012;94(18):1655-1661, doi:10.2106/JBJS.K.01352 (PMC3444948): ALTR em pares
+    metal-polietileno por corrosão no cone; 3 dos 10 casos com haste de Ti e cabeça de Co. Texto completo.
+- Q6, MoM:
+  - MHRA. Medical Device Alert MDA/2010/069: DePuy ASR hip replacement implants, 7 set 2010
+    ("Recall of ASR hip replacement implants due to increased rates of revision"; substitui a
+    MDA/2010/044). Lido na cópia em PDF alojada pela Medsafe (Nova Zelândia):
+    https://www.medsafe.govt.nz/hot/RecallActionNoticesNew/MetalOnMetalHipImplants/MHRA%20MDA-2010-069.pdf
+    O URL original no gov.uk ou no UK Government Web Archive não foi encontrado.
+  - FDA, Class 2 Device Recall, evento 57177 (ex.: Z-1749-2011), iniciada a 23 ago 2010:
+    https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=95530
+  - Chalmers BP, Perry KI, Taunton MJ, Mabry TM, Abdel MP. Diagnosis of adverse local tissue reactions
+    following metal-on-metal hip arthroplasty. Curr Rev Musculoskelet Med 2016;9(1):67-74,
+    doi:10.1007/s12178-016-9321-3 (PMC4762796). Texto completo.
+- Q9, fadiga do Ti-6Al-4V por EBM: Hrabe N, Gnäupel-Herold T, Quinn T. Fatigue properties of a
+  titanium alloy (Ti-6Al-4V) fabricated via electron beam melting (EBM): effects of internal defects
+  and residual stress. Int J Fatigue 2017;94(Part 2):202-210, doi:10.1016/j.ijfatigue.2016.04.022
+  (NIST, https://www.nist.gov/node/1186311): 200-250 MPa no estado de fabrico, 550-600 MPa após HIP;
+  20 Hz, R = 0,1. Resumo na página do NIST; texto completo na versão de conferência do NIST
+  (https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=921698).
+- Q10 e Q11, normas (iso.org e store.astm.org, consultadas a 30 set 2026): ISO 7206-4:2010 + Amd 1:2016;
+  ISO 7206-6:2013; ISO 7206-10:2018 + Amd 1:2021; ISO 14242-1:2014 + Amd 1:2018; ISO 14242-2:2016;
+  ASTM F2129-25, F1875-26, F2052-21, F2213-25, F2182-19e2, F2119-24; ASTM F2102-17(2026) (guia).
+  - ISO 7206-6:2013 em revisão (DIS em votação desde jul 2026): voltar a verificar a 7 out.
+  - ISO 14242-1 e 14242-2 também na etapa "to be revised"; voltar a verificar a 7 out.
+
 ## Valores a verificar (fora de data/materiais.csv)
 Os valores de propriedades "A verificar" estão na base e serão listados por
 scripts/listar_por_verificar.py (tarefa 12). Aqui ficam os que não estão nessa coluna:

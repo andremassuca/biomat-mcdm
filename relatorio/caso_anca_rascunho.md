@@ -10,7 +10,7 @@ Por isso, a seleção de material é feita em separado. Na haste o que conta é 
 
 ## 2. Propriedades mecânicas necessárias
 
-Na marcha normal, a articulação da anca suporta forças de cerca de 2,5 a 3 vezes o peso corporal. Em tropeções, essas forças podem chegar a valores muito superiores [confirmar: Bergmann et al. 2001, J Biomech]. Um doente ativo faz 1 a 2 milhões de ciclos de carga por ano [confirmar: Silva et al. 2002, J Arthroplasty], pelo que a haste tem de resistir a dezenas de milhões de ciclos ao longo da sua vida útil.
+Na marcha normal, a articulação da anca suporta forças de cerca de 2,5 a 3 vezes o peso corporal. Em tropeções, essas forças podem chegar a valores muito superiores [confirmar: Bergmann et al. 2001, J Biomech]. Um doente com prótese da anca faz, em média, cerca de 1,9 milhões de ciclos de marcha por ano (Silva et al. 2002), pelo que a haste tem de resistir a dezenas de milhões de ciclos ao longo da sua vida útil.
 
 Para a haste, as propriedades determinantes são:
 - Limite de fadiga elevado a 10^7 ciclos, porque a fratura por fadiga é a falha mecânica crítica.
@@ -29,7 +29,7 @@ No par articular, as propriedades determinantes são diferentes:
 - **Resistência à corrosão.** Os fluidos corporais contêm cloretos e são um meio agressivo. Os metais usados resistem porque formam um filme passivo de óxido: TiO2 nas ligas de titânio, Cr2O3 no aço e nas ligas Co-Cr. A estabilidade desse filme, e a sua capacidade de se refazer depois de ser riscado, determina a libertação de iões.
 - **Densidade.** Tem uma relevância secundária no desempenho, mas as ligas de titânio (cerca de 4,4-4,5 g/cm³) são quase metade do aço e das ligas Co-Cr (cerca de 8 g/cm³).
 - **Energia de superfície, rugosidade e molhabilidade.** Condicionam a adsorção de proteínas e a adesão de osteoblastos, e por isso a osseointegração nas hastes não cimentadas.
-- **Comportamento magnético.** Os doentes com prótese da anca são geralmente idosos e fazem frequentemente ressonância magnética. Materiais não ferromagnéticos e de baixa suscetibilidade magnética (ligas de titânio) produzem menos artefactos de imagem do que as ligas Co-Cr e o aço [confirmar fonte].
+- **Comportamento magnético.** Os doentes com prótese da anca são geralmente idosos e fazem frequentemente ressonância magnética. Materiais não ferromagnéticos e de baixa suscetibilidade magnética (ligas de titânio) produzem menos artefactos de imagem do que as ligas Co-Cr e o aço: em hastes femorais num fantoma, a de titânio teve pontuações de artefacto 3 a 4 vezes mais baixas (Månsson et al. 2015).
 - **No polietileno do inserto:** o grau de reticulação e a resistência à oxidação, que determinam o desgaste a longo prazo.
 
 ## 4. Biocompatibilidade
@@ -54,8 +54,8 @@ No par articular, a cerâmica (alumina ou compósito alumina-zircónia) e o poli
 
 Os principais mecanismos de falha são:
 - **Desgaste do par articular e osteólise.** O desgaste do polietileno produz partículas submicrométricas que desencadeiam uma resposta inflamatória crónica (questão 7). Essa resposta reabsorve o osso à volta do implante e acaba por causar o descolamento asséptico, a principal causa de revisão a longo prazo.
-- **Corrosão por fretting na junção modular.** No cone entre a cabeça e a haste, micromovimentos repetidos rompem o filme passivo, e dentro da fenda o meio acidifica-se (corrosão em fresta). Com cabeças Co-Cr sobre hastes de titânio, este mecanismo liberta iões de cobalto e crómio mesmo sem par metal-metal [confirmar fonte].
-- **Pares metal-metal.** Produzem partículas e iões de Co e Cr em quantidade. Estão associados a reações adversas aos detritos metálicos (pseudotumores), o que levou à retirada de vários sistemas do mercado [confirmar fonte].
+- **Corrosão por fretting na junção modular.** No cone entre a cabeça e a haste, micromovimentos repetidos rompem o filme passivo, e dentro da fenda o meio acidifica-se (corrosão em fresta). Com cabeças Co-Cr sobre hastes de titânio, este mecanismo liberta iões de cobalto e crómio mesmo sem par metal-metal (Goldberg et al. 2002, em explantes [confirmar no texto completo]; Cooper et al. 2012).
+- **Pares metal-metal.** Produzem partículas e iões de Co e Cr em quantidade. Estão associados a reações adversas aos detritos metálicos (pseudotumores) (Chalmers et al. 2016), o que levou, por exemplo, à recolha do sistema DePuy ASR em 2010 (MHRA, MDA/2010/069).
 - **Fratura por fadiga da haste.** É rara com as ligas atuais, mas possível em hastes subdimensionadas ou com defeitos de fabrico. É especialmente relevante em peças produzidas por fabrico aditivo sem pós-processamento (questão 9).
 - **Fratura das cabeças cerâmicas.** É rara, mas grave quando ocorre. Num registo nacional, a fratura levou à revisão em cerca de 0,01 % das cabeças de ZTA, contra 0,15 % das de alumina (Hallan et al. 2020). O registo só conta fraturas que levaram a revisão.
 - **Oxidação do polietileno reticulado.** A reticulação por radiação deixa radicais livres que, com o tempo, oxidam o material e o tornam frágil. Por isso se usa recozimento, refusão ou a adição de vitamina E como antioxidante.
@@ -91,7 +91,7 @@ Face ao metal-metal, evita as reações adversas aos detritos metálicos; por is
 
 ## 9. Fabrico
 
-- **Haste em Ti-6Al-4V ELI:** fabrico convencional por forjamento a quente e maquinagem, seguido de tratamento de superfície. O fabrico aditivo (fusão em leito de pó por laser ou feixe de eletrões) permite hastes com zonas porosas de rigidez reduzida, mas exige prensagem isostática a quente (HIP) para eliminar porosidade interna. Em Ti-6Al-4V produzido por feixe de eletrões, a resistência à fadiga a 10^7 ciclos foi cerca de 200-250 MPa no estado de fabrico e 550-600 MPa após HIP (NIST [confirmar referência completa]).
+- **Haste em Ti-6Al-4V ELI:** fabrico convencional por forjamento a quente e maquinagem, seguido de tratamento de superfície. O fabrico aditivo (fusão em leito de pó por laser ou feixe de eletrões) permite hastes com zonas porosas de rigidez reduzida, mas exige prensagem isostática a quente (HIP) para eliminar porosidade interna. Em Ti-6Al-4V produzido por feixe de eletrões, a resistência à fadiga a 10^7 ciclos foi cerca de 200-250 MPa no estado de fabrico e 550-600 MPa após HIP (Hrabe et al. 2017, NIST; ensaio de tração-tração com R = 0,1). Segundo os autores, o valor baixo no estado de fabrico deve-se em parte a defeitos do processo usado.
 - **Superfície para fixação não cimentada:** jateamento abrasivo para criar rugosidade e revestimento de hidroxiapatite por projeção de plasma, ou camada porosa de titânio.
 - **Cabeça cerâmica:** prensagem do pó, sinterização e HIP para máxima densidade, seguidas de retificação e polimento até rugosidade muito baixa.
 - **Inserto de polietileno:** consolidação do pó por moldagem ou extrusão, reticulação por radiação gama ou feixe de eletrões, estabilização (vitamina E incorporada ou tratamento térmico), maquinagem final e esterilização.
@@ -99,11 +99,11 @@ Face ao metal-metal, evita as reações adversas aos detritos metálicos; por is
 ## 10. Testes antes da utilização clínica
 
 - **Biocompatibilidade:** série ISO 10993 (citotoxicidade, sensibilização, irritação, toxicidade sistémica, genotoxicidade, implantação).
-- **Fadiga da haste:** ISO 7206-4 (haste) e ISO 7206-6 (zona do colo) [confirmar edições].
-- **Resistência da cabeça:** ISO 7206-10 (carga estática em cabeças modulares) [confirmar].
-- **Desgaste do par articular:** ensaio em simulador de anca segundo ISO 14242 [confirmar edição].
-- **Corrosão:** polarização potenciodinâmica (ASTM F2129) e corrosão por fretting na junção modular (ASTM F1875) [confirmar].
-- **Ressonância magnética:** ensaios de força, binário, aquecimento e artefactos (ASTM F2052, F2213, F2182, F2119) [confirmar].
+- **Fadiga da haste:** ISO 7206-4:2010 (haste) e ISO 7206-6:2013 (zona do colo).
+- **Resistência da cabeça:** ISO 7206-10:2018 (carga estática em cabeças modulares).
+- **Desgaste do par articular:** ensaio em simulador de anca segundo a ISO 14242-1:2014 (condições de ensaio) e a ISO 14242-2:2016 (medição).
+- **Corrosão:** polarização potenciodinâmica (ASTM F2129-25) e corrosão por fretting na junção modular (ASTM F1875-26).
+- **Ressonância magnética:** ensaios de força, binário, aquecimento e artefactos (ASTM F2052-21, F2213-25, F2182-19e2, F2119-24).
 - **Esterilização:** validação segundo ISO 11137 (radiação) ou ISO 11135 (óxido de etileno), consoante o componente.
 - **Clínica:** ensaios pré-clínicos em animal e investigação clínica. Depois da colocação no mercado, seguimento em registos de artroplastia.
 
@@ -129,7 +129,7 @@ Face ao metal-metal, evita as reações adversas aos detritos metálicos; por is
 
 **Inserto de polietileno:**
 - Grau de reticulação.
-- Índice de oxidação por FTIR (ASTM F2102 [confirmar]).
+- Índice de oxidação por FTIR (guia ASTM F2102-17(2026)).
 - Cristalinidade por calorimetria diferencial (DSC).
 - Propriedades de tração.
 - Taxa de desgaste em simulador.

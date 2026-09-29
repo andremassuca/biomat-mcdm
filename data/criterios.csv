@@ -1,7 +1,7 @@
 caso_componente,criterio,tipo,alvo,unidade,peso,justificacao
 Prótese da anca | Haste femoral,Biocompatibilidade (ISO 10993),Estrito,Aprovado,-,,Triagem: elimina não biocompatíveis
 Prótese da anca | Haste femoral,Módulo de Young,Alvo,17,GPa,0.2,Aproximar do osso cortical → reduzir stress shielding
-Prótese da anca | Haste femoral,Limite de fadiga (10^7 ciclos),Benefício,,MPa,0.25,Carga cíclica (~1-2 milhões de passos/ano)
+Prótese da anca | Haste femoral,Limite de fadiga (10^7 ciclos),Benefício,,MPa,0.25,"~1,9 milhões de ciclos de marcha/ano (Silva et al. 2002)"
 Prótese da anca | Haste femoral,Tensão de cedência,Benefício,,MPa,0.1,Evitar deformação plástica
 Prótese da anca | Haste femoral,Resistência à corrosão (ordinal 1-5),Benefício,,-,0.15,Libertação iónica
 Prótese da anca | Haste femoral,Densidade,Custo,,g/cm³,0.05,Critério secundário
