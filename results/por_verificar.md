@@ -1,0 +1,184 @@
+# Valores "A verificar" por influência no resultado
+
+Cada valor típico varia ±20 % com o resto fixo (TOPSIS, η = 1). Ordem: primeiro os que mudam o vencedor do TOPSIS; depois pela maior variação do C do próprio material (ΔC material). ΔC máx. = maior variação do C de qualquer material. Cenário B: só as células que não entram no A. Tipo ordinal: escala 1-5 do trabalho (a variação de ±20 % é só indicativa).
+
+## Haste
+
+Vencedor do TOPSIS: cenário A: Ti-6Al-4V ELI; cenário B: Ti-6Al-4V ELI.
+Células a verificar: 31 (0 mudam o vencedor com ±20 %).
+
+| # | Cenário | Material | Critério | Tipo | Típico | ΔC material | ΔC máx. | Muda vencedor | Fonte atual |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | A | Ti-13Nb-13Zr | Limite de fadiga (10^7 ciclos) | quantitativo | 550,0000 | 0,117 | 0,117 | não | Geetha M et al. Prog Mater Sci 2009;54:397-425 |
+| 2 | A | Ti-6Al-4V ELI | Resistência à corrosão (ordinal 1-5) | ordinal | 5,0000 | 0,065 | 0,065 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 3 | A | Ti cp grau 4 | Resistência à corrosão (ordinal 1-5) | ordinal | 5,0000 | 0,057 | 0,057 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 4 | A | Ti-13Nb-13Zr | Resistência à corrosão (ordinal 1-5) | ordinal | 5,0000 | 0,050 | 0,050 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 5 | B | Ti-35Nb-7Zr-5Ta (TNZT) | Resistência à corrosão (ordinal 1-5) | ordinal | 5,0000 | 0,048 | 0,048 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 6 | A | Co-Cr-Mo forjado | Resistência à corrosão (ordinal 1-5) | ordinal | 4,0000 | 0,043 | 0,043 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 7 | A | Ti-6Al-4V ELI | Fabricabilidade (ordinal 1-5) | ordinal | 5,0000 | 0,030 | 0,030 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 8 | A | Aço inox 316L | Fabricabilidade (ordinal 1-5) | ordinal | 5,0000 | 0,028 | 0,028 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 9 | A | Ti-6Al-4V ELI | Compatibilidade com RM (ordinal 1-5) | ordinal | 4,0000 | 0,021 | 0,021 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 10 | A | Co-Cr-Mo forjado | Fabricabilidade (ordinal 1-5) | ordinal | 4,0000 | 0,020 | 0,020 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 11 | A | Ti cp grau 4 | Compatibilidade com RM (ordinal 1-5) | ordinal | 4,0000 | 0,019 | 0,019 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 12 | A | Ti cp grau 4 | Fabricabilidade (ordinal 1-5) | ordinal | 4,0000 | 0,017 | 0,017 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 13 | A | Ti-13Nb-13Zr | Compatibilidade com RM (ordinal 1-5) | ordinal | 4,0000 | 0,017 | 0,017 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 14 | B | Ti-35Nb-7Zr-5Ta (TNZT) | Compatibilidade com RM (ordinal 1-5) | ordinal | 4,0000 | 0,016 | 0,016 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 15 | A | Co-Cr-Mo forjado | Compatibilidade com RM (ordinal 1-5) | ordinal | 3,0000 | 0,015 | 0,015 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 16 | A | Ti-6Al-4V ELI | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 3,0000 | 0,007 | 0,007 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 17 | A | Co-Cr-Mo forjado | Densidade | quantitativo | 8,4000 | 0,005 | 0,005 | não | [fonte a indicar] (o Niinomi 1998 é só de ligas de Ti) |
+| 18 | A | Aço inox 316L | Densidade | quantitativo | 7,9500 | 0,005 | 0,005 | não | [fonte a indicar] (o Niinomi 1998 é só de ligas de Ti) |
+| 19 | B | Ti-35Nb-7Zr-5Ta (TNZT) | Densidade | quantitativo | 5,7000 | 0,003 | 0,003 | não | Geetha M et al. Prog Mater Sci 2009;54:397-425 |
+| 20 | A | Co-Cr-Mo forjado | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 3,0000 | 0,003 | 0,003 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 21 | A | Ti cp grau 4 | Densidade | quantitativo | 4,5100 | 0,003 | 0,003 | não | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
+| 22 | A | Ti-13Nb-13Zr | Densidade | quantitativo | 5,0000 | 0,003 | 0,003 | não | Geetha M et al. Prog Mater Sci 2009;54:397-425 |
+| 23 | A | Ti-6Al-4V ELI | Densidade | quantitativo | 4,4300 | 0,002 | 0,002 | não | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
+| 24 | A | Ti cp grau 4 | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 2,0000 | 0,001 | 0,001 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 25 | A | Aço inox 316L | Resistência à corrosão (ordinal 1-5) | ordinal | 3,0000 | 0,000 | 0,023 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 26 | A | Ti-13Nb-13Zr | Fabricabilidade (ordinal 1-5) | ordinal | 3,0000 | 0,000 | 0,011 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 27 | A | Ti-13Nb-13Zr | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 4,0000 | 0,000 | 0,009 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 28 | B | Ti-35Nb-7Zr-5Ta (TNZT) | Fabricabilidade (ordinal 1-5) | ordinal | 2,0000 | 0,000 | 0,009 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 29 | B | Ti-35Nb-7Zr-5Ta (TNZT) | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 5,0000 | 0,000 | 0,006 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 30 | A | Aço inox 316L | Compatibilidade com RM (ordinal 1-5) | ordinal | 2,0000 | 0,000 | 0,006 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 31 | A | Aço inox 316L | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 1,0000 | 0,000 | 0,001 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+
+## Stent
+
+Vencedor do TOPSIS: cenário A: Co-Cr L605; cenário B: Co-Cr L605.
+Células a verificar: 62 (0 mudam o vencedor com ±20 %).
+
+| # | Cenário | Material | Critério | Tipo | Típico | ΔC material | ΔC máx. | Muda vencedor | Fonte atual |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | A | Co-Cr L605 | Alongamento na rotura | quantitativo | 52,5000 | 0,105 | 0,105 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 2 | A | Pt-Cr | Espessura típica de strut | quantitativo | 77,5000 | 0,091 | 0,091 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 3 | A | Co-Cr L605 | Espessura típica de strut | quantitativo | 75,0000 | 0,086 | 0,086 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 4 | A | Co-Ni-Cr-Mo MP35N | Alongamento na rotura | quantitativo | 45,0000 | 0,083 | 0,083 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 5 | A | Co-Ni-Cr-Mo MP35N | Espessura típica de strut | quantitativo | 75,0000 | 0,081 | 0,081 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 6 | B | Liga de Mg WE43 (bioabsorvível) | Espessura típica de strut | quantitativo | 135,0000 | 0,080 | 0,080 | não | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |
+| 7 | A | Pt-Cr | Alongamento na rotura | quantitativo | 45,0000 | 0,072 | 0,072 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 8 | A | Co-Cr L605 | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0020 | 0,066 | 0,066 | não | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
+| 9 | A | Co-Cr L605 | Radiopacidade (ordinal 1-5) | ordinal | 4,0000 | 0,060 | 0,060 | não | Radiopacidade depende sobretudo do número atómico efetivo e da espessura: confirmar com literatura de stents |
+| 10 | B | PLLA (bioabsorvível) | Tempo de reabsorção | quantitativo | 42,0000 | 0,050 | 0,050 | não | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
+| 11 | A | Aço inox 316L | Alongamento na rotura | quantitativo | 50,0000 | 0,043 | 0,043 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 12 | B | PLLA (bioabsorvível) | Espessura típica de strut | quantitativo | 155,0000 | 0,034 | 0,048 | não | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
+| 13 | B | PLLA (bioabsorvível) | Compatibilidade com RM (ordinal 1-5) | ordinal | 5,0000 | 0,034 | 0,034 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 14 | A | Co-Cr L605 | Fabricabilidade (ordinal 1-5) | ordinal | 5,0000 | 0,032 | 0,032 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 15 | A | Co-Ni-Cr-Mo MP35N | Radiopacidade (ordinal 1-5) | ordinal | 3,0000 | 0,031 | 0,031 | não | Radiopacidade depende sobretudo do número atómico efetivo e da espessura: confirmar com literatura de stents |
+| 16 | A | Co-Cr L605 | Módulo de Young | quantitativo | 243,0000 | 0,030 | 0,030 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 17 | A | Co-Ni-Cr-Mo MP35N | Resistência à tração | quantitativo | 945,0000 | 0,029 | 0,029 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 18 | A | Co-Cr L605 | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 4,0000 | 0,028 | 0,028 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 19 | A | Co-Ni-Cr-Mo MP35N | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0018 | 0,027 | 0,027 | não | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
+| 20 | A | Pt-Cr | Resistência à tração | quantitativo | 834,0000 | 0,026 | 0,026 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 21 | A | Co-Cr L605 | Resistência à tração | quantitativo | 1025,0000 | 0,023 | 0,023 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 22 | A | Aço inox 316L | Fabricabilidade (ordinal 1-5) | ordinal | 5,0000 | 0,020 | 0,020 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 23 | A | Co-Ni-Cr-Mo MP35N | Fabricabilidade (ordinal 1-5) | ordinal | 5,0000 | 0,018 | 0,018 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 24 | A | Co-Ni-Cr-Mo MP35N | Módulo de Young | quantitativo | 233,0000 | 0,015 | 0,015 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 25 | B | Liga de Mg WE43 (bioabsorvível) | Tempo de reabsorção | quantitativo | 10,5000 | 0,015 | 0,023 | não | Haude M et al. Lancet 2016;387:31-39 (BIOSOLVE-II, Magmaris) |
+| 26 | A | Aço inox 316L | Radiopacidade (ordinal 1-5) | ordinal | 3,0000 | 0,014 | 0,024 | não | Radiopacidade depende sobretudo do número atómico efetivo e da espessura: confirmar com literatura de stents |
+| 27 | A | Aço inox 316L | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 4,0000 | 0,014 | 0,028 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 28 | A | Co-Cr L605 | Compatibilidade com RM (ordinal 1-5) | ordinal | 3,0000 | 0,014 | 0,014 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 29 | A | Pt-Cr | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0024 | 0,013 | 0,066 | não | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
+| 30 | A | Pt-Cr | Módulo de Young | quantitativo | 203,0000 | 0,013 | 0,013 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 31 | B | Liga de Mg WE43 (bioabsorvível) | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 4,0000 | 0,013 | 0,013 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 32 | A | Co-Ni-Cr-Mo MP35N | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 4,0000 | 0,012 | 0,028 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 33 | A | Aço inox 316L | Módulo de Young | quantitativo | 193,0000 | 0,011 | 0,011 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 34 | A | Pt-Cr | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 4,0000 | 0,010 | 0,028 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 35 | A | Co-Cr L605 | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 3,0000 | 0,010 | 0,010 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 36 | A | Co-Ni-Cr-Mo MP35N | Compatibilidade com RM (ordinal 1-5) | ordinal | 3,0000 | 0,009 | 0,009 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 37 | A | Pt-Cr | Compatibilidade com RM (ordinal 1-5) | ordinal | 3,0000 | 0,009 | 0,009 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 38 | B | Liga de Mg WE43 (bioabsorvível) | Compatibilidade com RM (ordinal 1-5) | ordinal | 5,0000 | 0,006 | 0,026 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 39 | B | PLLA (bioabsorvível) | Fabricabilidade (ordinal 1-5) | ordinal | 3,0000 | 0,005 | 0,005 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 40 | A | Co-Ni-Cr-Mo MP35N | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 3,0000 | 0,004 | 0,004 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 41 | B | Liga de Mg WE43 (bioabsorvível) | Fabricabilidade (ordinal 1-5) | ordinal | 3,0000 | 0,004 | 0,004 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 42 | B | PLLA (bioabsorvível) | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 5,0000 | 0,004 | 0,004 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 43 | B | Liga de Mg WE43 (bioabsorvível) | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 5,0000 | 0,003 | 0,003 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 44 | B | Liga de Mg WE43 (bioabsorvível) | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0039 | 0,003 | 0,003 | não | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
+| 45 | B | Liga de Mg WE43 (bioabsorvível) | Alongamento na rotura | quantitativo | 13,5000 | 0,003 | 0,003 | não | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |
+| 46 | B | Liga de Mg WE43 (bioabsorvível) | Resistência à tração | quantitativo | 250,0000 | 0,003 | 0,003 | não | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |
+| 47 | B | Liga de Mg WE43 (bioabsorvível) | Radiopacidade (ordinal 1-5) | ordinal | 1,0000 | 0,002 | 0,002 | não | Radiopacidade depende sobretudo do número atómico efetivo e da espessura: confirmar com literatura de stents |
+| 48 | B | PLLA (bioabsorvível) | Radiopacidade (ordinal 1-5) | ordinal | 1,0000 | 0,001 | 0,002 | não | Radiopacidade depende sobretudo do número atómico efetivo e da espessura: confirmar com literatura de stents |
+| 49 | B | Liga de Mg WE43 (bioabsorvível) | Módulo de Young | quantitativo | 44,5000 | 0,000 | 0,000 | não | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |
+| 50 | A | Pt-Cr | Radiopacidade (ordinal 1-5) | ordinal | 5,0000 | 0,000 | 0,045 | não | Radiopacidade depende sobretudo do número atómico efetivo e da espessura: confirmar com literatura de stents |
+| 51 | A | Aço inox 316L | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0014 | 0,000 | 0,027 | não | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
+| 52 | A | Aço inox 316L | Espessura típica de strut | quantitativo | 120,0000 | 0,000 | 0,013 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 53 | A | Pt-Cr | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 4,0000 | 0,000 | 0,012 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 54 | A | Aço inox 316L | Resistência à tração | quantitativo | 592,5000 | 0,000 | 0,011 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 55 | B | PLLA (bioabsorvível) | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0182 | 0,000 | 0,003 | não | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
+| 56 | A | Aço inox 316L | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 1,0000 | 0,000 | 0,001 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 57 | B | PLLA (bioabsorvível) | Alongamento na rotura | quantitativo | 4,0000 | 0,000 | 0,001 | não | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
+| 58 | B | PLLA (bioabsorvível) | Resistência à tração | quantitativo | 65,0000 | 0,000 | 0,001 | não | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
+| 59 | B | PLLA (bioabsorvível) | Módulo de Young | quantitativo | 3,3500 | 0,000 | 0,000 | não | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
+| 60 | A | Aço inox 316L | Compatibilidade com RM (ordinal 1-5) | ordinal | 2,0000 | 0,000 | 0,000 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 61 | A | Pt-Cr | Fabricabilidade (ordinal 1-5) | ordinal | 4,0000 | 0,000 | 0,000 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 62 | B | PLLA (bioabsorvível) | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 3,0000 | 0,000 | 0,000 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+
+## Scaffold
+
+Vencedor do TOPSIS: cenário B: Compósito PCL/β-TCP (impressão 3D); cenário A: β-TCP poroso.
+Células a verificar: 64 (3 mudam o vencedor com ±20 %).
+
+| # | Cenário | Material | Critério | Tipo | Típico | ΔC material | ΔC máx. | Muda vencedor | Fonte atual |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | B | Quitosano/HA (liofilizado) | Porosidade | quantitativo | 87,5000 | 0,040 | 0,041 | sim → β-TCP poroso | Karageorgiou V, Kaplan D. Biomaterials 2005;26:5474-5491 (porosidade) |
+| 2 | B | Quitosano/HA (liofilizado) | Imprimibilidade 3D (ordinal 1-5) | ordinal | 2,0000 | 0,010 | 0,017 | sim → β-TCP poroso | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 3 | B | PLGA 50:50 | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 2,0000 | 0,000 | 0,014 | sim → β-TCP poroso | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 4 | A | Hidroxiapatite (HA) porosa | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 5,0000 | 0,047 | 0,047 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 5 | A | Hidroxiapatite (HA) porosa | Bioatividade (ordinal 1-5) | ordinal | 4,0000 | 0,038 | 0,038 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 6 | B | PLLA | Porosidade | quantitativo | 75,0000 | 0,038 | 0,038 | não | Karageorgiou V, Kaplan D. Biomaterials 2005;26:5474-5491 (porosidade) |
+| 7 | A | Compósito PCL/β-TCP (impressão 3D) | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 3,0000 | 0,037 | 0,037 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 8 | A | β-TCP poroso | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 5,0000 | 0,034 | 0,034 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 9 | A | β-TCP poroso | Bioatividade (ordinal 1-5) | ordinal | 4,0000 | 0,034 | 0,034 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 10 | A | β-TCP poroso | Porosidade | quantitativo | 65,0000 | 0,033 | 0,033 | não | Karageorgiou V, Kaplan D. Biomaterials 2005;26:5474-5491 (porosidade) |
+| 11 | A | Compósito PCL/β-TCP (impressão 3D) | Bioatividade (ordinal 1-5) | ordinal | 3,0000 | 0,030 | 0,030 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 12 | A | Hidroxiapatite (HA) porosa | Resistência à compressão (scaffold) | quantitativo | 11,0000 | 0,029 | 0,029 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 13 | A | Compósito PCL/β-TCP (impressão 3D) | Porosidade | quantitativo | 60,0000 | 0,027 | 0,027 | não | Karageorgiou V, Kaplan D. Biomaterials 2005;26:5474-5491 (porosidade) |
+| 14 | B | PLGA 50:50 | Porosidade | quantitativo | 80,0000 | 0,027 | 0,027 | não | Karageorgiou V, Kaplan D. Biomaterials 2005;26:5474-5491 (porosidade) |
+| 15 | A | PCL | Tempo de degradação | quantitativo | 30,0000 | 0,027 | 0,027 | não | Woodruff MA, Hutmacher DW. Prog Polym Sci 2010;35:1217-1256 (PCL) |
+| 16 | B | Quitosano/HA (liofilizado) | Bioatividade (ordinal 1-5) | ordinal | 3,0000 | 0,026 | 0,026 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 17 | A | Vidro bioativo 45S5 poroso | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 5,0000 | 0,026 | 0,032 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 18 | A | Vidro bioativo 45S5 poroso | Porosidade | quantitativo | 80,0000 | 0,024 | 0,026 | não | Karageorgiou V, Kaplan D. Biomaterials 2005;26:5474-5491 (porosidade) |
+| 19 | A | PCL | Imprimibilidade 3D (ordinal 1-5) | ordinal | 5,0000 | 0,024 | 0,024 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 20 | A | Compósito PCL/β-TCP (impressão 3D) | Imprimibilidade 3D (ordinal 1-5) | ordinal | 5,0000 | 0,023 | 0,023 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 21 | A | β-TCP poroso | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 3,0000 | 0,022 | 0,022 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 22 | B | PLLA | Imprimibilidade 3D (ordinal 1-5) | ordinal | 4,0000 | 0,020 | 0,020 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 23 | A | PCL | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 3,0000 | 0,019 | 0,029 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 24 | A | β-TCP poroso | Imprimibilidade 3D (ordinal 1-5) | ordinal | 2,0000 | 0,019 | 0,019 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 25 | A | PCL | Porosidade | quantitativo | 65,0000 | 0,019 | 0,019 | não | Karageorgiou V, Kaplan D. Biomaterials 2005;26:5474-5491 (porosidade) |
+| 26 | A | Compósito PCL/β-TCP (impressão 3D) | Tempo de degradação | quantitativo | 18,0000 | 0,019 | 0,019 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 27 | B | PLLA | Tempo de degradação | quantitativo | 27,0000 | 0,018 | 0,018 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 28 | A | Hidroxiapatite (HA) porosa | Porosidade | quantitativo | 65,0000 | 0,018 | 0,018 | não | Karageorgiou V, Kaplan D. Biomaterials 2005;26:5474-5491 (porosidade) |
+| 29 | B | Quitosano/HA (liofilizado) | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 3,0000 | 0,016 | 0,016 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 30 | B | PLGA 50:50 | Imprimibilidade 3D (ordinal 1-5) | ordinal | 3,0000 | 0,015 | 0,015 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 31 | B | PLLA | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 3,0000 | 0,015 | 0,015 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 32 | A | Hidroxiapatite (HA) porosa | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 3,0000 | 0,014 | 0,014 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 33 | A | β-TCP poroso | Resistência à compressão (scaffold) | quantitativo | 8,0000 | 0,013 | 0,013 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 34 | B | PLGA 50:50 | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 2,0000 | 0,012 | 0,012 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 35 | A | Vidro bioativo 45S5 poroso | Imprimibilidade 3D (ordinal 1-5) | ordinal | 2,0000 | 0,011 | 0,017 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 36 | B | Quitosano/HA (liofilizado) | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 2,0000 | 0,011 | 0,011 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 37 | A | Compósito PCL/β-TCP (impressão 3D) | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 2,0000 | 0,011 | 0,011 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 38 | A | PCL | Resistência à compressão (scaffold) | quantitativo | 6,0000 | 0,010 | 0,010 | não | Woodruff MA, Hutmacher DW. Prog Polym Sci 2010;35:1217-1256 (PCL) |
+| 39 | A | Compósito PCL/β-TCP (impressão 3D) | Resistência à compressão (scaffold) | quantitativo | 7,5000 | 0,010 | 0,010 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 40 | B | PLLA | Resistência à compressão (scaffold) | quantitativo | 5,5000 | 0,010 | 0,010 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 41 | A | β-TCP poroso | Tempo de degradação | quantitativo | 12,0000 | 0,009 | 0,009 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 42 | B | PLLA | Bioatividade (ordinal 1-5) | ordinal | 1,0000 | 0,009 | 0,009 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 43 | A | Vidro bioativo 45S5 poroso | Tempo de degradação | quantitativo | 9,0000 | 0,009 | 0,012 | não | Hench LL. J Am Ceram Soc 1991;74:1487-1510 (vidros bioativos) |
+| 44 | A | Hidroxiapatite (HA) porosa | Imprimibilidade 3D (ordinal 1-5) | ordinal | 2,0000 | 0,007 | 0,017 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 45 | B | PLGA 50:50 | Bioatividade (ordinal 1-5) | ordinal | 1,0000 | 0,006 | 0,008 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 46 | B | Quitosano/HA (liofilizado) | Tempo de degradação | quantitativo | 7,5000 | 0,006 | 0,006 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 47 | B | PLLA | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 1,0000 | 0,005 | 0,005 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 48 | A | β-TCP poroso | Módulo de compressão (scaffold) | quantitativo | 550,0000 | 0,004 | 0,004 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 49 | B | PLGA 50:50 | Resistência à compressão (scaffold) | quantitativo | 1,7500 | 0,003 | 0,003 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 50 | B | PLGA 50:50 | Tempo de degradação | quantitativo | 2,0000 | 0,003 | 0,003 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 51 | A | Hidroxiapatite (HA) porosa | Módulo de compressão (scaffold) | quantitativo | 1750,0000 | 0,001 | 0,003 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 52 | B | PLLA | Módulo de compressão (scaffold) | quantitativo | 175,0000 | 0,001 | 0,001 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 53 | A | Vidro bioativo 45S5 poroso | Resistência à compressão (scaffold) | quantitativo | 1,1500 | 0,001 | 0,001 | não | Hench LL. J Am Ceram Soc 1991;74:1487-1510 (vidros bioativos) |
+| 54 | A | Vidro bioativo 45S5 poroso | Módulo de compressão (scaffold) | quantitativo | 275,0000 | 0,001 | 0,001 | não | Hench LL. J Am Ceram Soc 1991;74:1487-1510 (vidros bioativos) |
+| 55 | A | PCL | Módulo de compressão (scaffold) | quantitativo | 50,0000 | 0,001 | 0,001 | não | Woodruff MA, Hutmacher DW. Prog Polym Sci 2010;35:1217-1256 (PCL) |
+| 56 | A | Compósito PCL/β-TCP (impressão 3D) | Módulo de compressão (scaffold) | quantitativo | 90,0000 | 0,001 | 0,001 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 57 | B | Quitosano/HA (liofilizado) | Resistência à compressão (scaffold) | quantitativo | 0,5500 | 0,000 | 0,001 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 58 | B | PLGA 50:50 | Módulo de compressão (scaffold) | quantitativo | 35,0000 | 0,000 | 0,000 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 59 | B | Quitosano/HA (liofilizado) | Módulo de compressão (scaffold) | quantitativo | 5,5000 | 0,000 | 0,000 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 60 | A | Vidro bioativo 45S5 poroso | Bioatividade (ordinal 1-5) | ordinal | 5,0000 | 0,000 | 0,043 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 61 | A | Hidroxiapatite (HA) porosa | Tempo de degradação | quantitativo | 42,0000 | 0,000 | 0,029 | não | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
+| 62 | A | Vidro bioativo 45S5 poroso | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 4,0000 | 0,000 | 0,027 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 63 | A | PCL | Bioatividade (ordinal 1-5) | ordinal | 1,0000 | 0,000 | 0,005 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 64 | A | PCL | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 1,0000 | 0,000 | 0,004 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
