@@ -28,6 +28,7 @@ Par articular e implante dentário ficam SEMIQUANTITATIVOS (ordinais > 50 % do p
   - "Verificado": valor confirmado na fonte indicada em doi_url (artigo ou norma).
   - "Verificado (fornecedor)": valor confirmado numa página de fornecedor que declara cumprir a norma, não no texto da norma.
   - "Verificado (composição química)": valor que resulta da composição química do material (ex.: 0 % de níquel num polímero sem metais).
+  - "Verificado (derivado)": valor calculado a partir de dados da fonte (ex.: razão σFS/σUTS × σUTS), com o cálculo na nota.
 - Teor de níquel (stent): % em massa; no WE43 é um limite máximo de impureza e tipico = máximo (pior caso).
 
 ## Tipos de critério (Petković et al., Appl Sci 2025;15:9198)

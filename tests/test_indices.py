@@ -47,10 +47,10 @@ def test_razao_de_rigidez_da_haste():
     mat, _ = load_data()
     r = stiffness_ratio(mat, load_tissue()).set_index("material")
     assert len(r) == 6
-    # Ti-6Al-4V ELI: E 110-114 GPa; osso cortical 15-20 GPa
-    assert r.loc["Ti-6Al-4V ELI", "razao_tipica"] == pytest.approx(112 / 17.5)
-    assert r.loc["Ti-6Al-4V ELI", "razao_min"] == pytest.approx(110 / 20)
-    assert r.loc["Ti-6Al-4V ELI", "razao_max"] == pytest.approx(114 / 15)
+    # Ti-6Al-4V ELI: E 101-110 GPa (Li et al. 2014, Tabela 4); osso cortical 15-20 GPa
+    assert r.loc["Ti-6Al-4V ELI", "razao_tipica"] == pytest.approx(105.5 / 17.5)
+    assert r.loc["Ti-6Al-4V ELI", "razao_min"] == pytest.approx(101 / 20)
+    assert r.loc["Ti-6Al-4V ELI", "razao_max"] == pytest.approx(110 / 15)
     assert (r["razao_min"] > 1).all()   # todos mais rígidos do que o osso
 
 

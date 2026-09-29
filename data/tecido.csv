@@ -1,5 +1,5 @@
 tecido,propriedade,unidade,min,max,notas,fonte,estado
-Osso cortical,Módulo de Young,GPa,15.0,20.0,Longitudinal; anisotrópico (slide 10),Ratner et al. 2020; Navarro et al. 2008; Karageorgiou & Kaplan 2005: confirmar,A verificar
+Osso cortical,Módulo de Young,GPa,15.0,20.0,"Longitudinal; anisotrópico (slide 10); Li et al. 2014, Tabelas 1 e 2 (fémur): 13,6-16,8 GPa em tração, 17,6 GPa em compressão; osso de idosos pode ficar abaixo de 15 GPa: relevante para o perfil osteoporose","Li Y et al. Materials 2014;7:1709 (New Developments of Ti-Based Alloys for Biomedical Applications), Tabelas 1 e 2, https://doi.org/10.3390/ma7031709; Ratner et al. 2020; Navarro et al. 2008; Karageorgiou & Kaplan 2005: confirmar",Verificado
 Osso cortical,Resistência à tração,MPa,50.0,150.0,,Ratner et al. 2020; Navarro et al. 2008; Karageorgiou & Kaplan 2005: confirmar,A verificar
 Osso cortical,Resistência à compressão,MPa,130.0,220.0,,Ratner et al. 2020; Navarro et al. 2008; Karageorgiou & Kaplan 2005: confirmar,A verificar
 Osso cortical,Densidade,g/cm³,1.8,2.1,,Ratner et al. 2020; Navarro et al. 2008; Karageorgiou & Kaplan 2005: confirmar,A verificar
