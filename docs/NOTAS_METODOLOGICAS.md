@@ -95,6 +95,23 @@ Caso de estudo 2 (haste da prótese da anca), TOPSIS; testes em tests/test_repro
 - Reversão de ranking observada (scaffold, 28 set 2026): ao retirar PLLA, PLGA e quitosano/HA (cenário A com os estatutos novos), o β-TCP e o PCL/β-TCP trocam de posição (TOPSIS e VIKOR: PCL/β-TCP 1.º com 8 materiais, β-TCP 1.º com 5), porque as normalizações dependem do mínimo e do máximo de cada coluna. Exemplo concreto para o item "Testes formais de reversão de ranking" do backlog e para a secção de limitações.
 - Scaffold: a fragilidade do ranking reflete em parte a incerteza dos dados (propriedades muito dependentes da porosidade, intervalos largos na base) e não só o método. Na discussão, separar as duas causas, por exemplo comparando a % de 1.º lugar do MC propriedades (incerteza dos dados) com a do W pesos (incerteza das preferências). Cenário A com os estatutos novos (5 materiais): β-TCP 53,6 % / 31,6 % / 37,4 % (T/W/V) no MC propriedades, mas 91,7 % / 100 % / 85,3 % no W pesos; ou seja, o 1.º lugar é estável face aos pesos e frágil face aos dados.
 
+## Fontes das propriedades mecânicas da haste (29 set 2026)
+- Fadiga a 10^7 ciclos e tensão de cedência das quatro ligas clínicas (316L encruado 20 %,
+  Co-Cr-Mo forjado a quente, Ti-6Al-4V, Ti cp grau 4 recozido): Okazaki 2012 (Materials 5:2981,
+  Tabela 2), para usar o mesmo laboratório e o mesmo ensaio (tração-tração, R = 0,1, 10 Hz).
+  A fadiga é derivada (σFS/σUTS × σUTS), com o estado "Verificado (derivado)"; a cedência usa
+  média ± DP como mín.-máx.
+- Limitações:
+  - (a) O Ti-6Al-4V foi ensaiado ao ar e o aço e o Co-Cr-Mo em meio de Eagle a 37 °C. É uma
+    diferença conservadora, porque em meio fisiológico a fadiga costuma ser igual ou inferior
+    [fonte a indicar]. O meio do ensaio do Ti cp grau 4 não é indicado no artigo.
+  - (b) O artigo não diz se o Ti-6Al-4V é ELI (O medido 0,07 %). O módulo do Ti-6Al-4V ELI
+    continua a vir de Li et al. 2014 (Tabela 4, ELI).
+  - (c) As ligas β (Ti-13Nb-13Zr e TNZT) continuam com outras fontes (Geetha 2009 e Li et al.
+    2014), por isso o método de ensaio mistura-se nessas duas.
+- Os módulos vêm de Li et al. 2014 (ligas de Ti) e de Navarro et al. 2008 (316L e Co-Cr-Mo).
+  O Niinomi 1998 só tem ligas de Ti e deixou de ser fonte do 316L e do Co-Cr-Mo.
+
 ## Valores a verificar (fora de data/materiais.csv)
 Os valores de propriedades "A verificar" estão na base e serão listados por
 scripts/listar_por_verificar.py (tarefa 12). Aqui ficam os que não estão nessa coluna:

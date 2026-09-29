@@ -10,27 +10,27 @@ Vencedor no cenário A: TOPSIS Ti-6Al-4V ELI; WASPAS Ti-6Al-4V ELI; VIKOR Ti-6Al
 
 | Cenário | Variante | TOPSIS | WASPAS | VIKOR | ρ mín. entre métodos |
 |---|---|---|---|---|---|
-| A | A | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,60 |
-| B | B | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,60 |
-| Q | sem ordinais | Co-Cr-Mo forjado | Ti-13Nb-13Zr | Ti-6Al-4V ELI | -0,50 |
+| A | A | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,30 |
+| B | B | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,77 |
+| Q | sem ordinais | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,10 |
 | η | η = 0,0 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti cp grau 4 | 0,90 |
-| η | η = 0,1 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,90 |
-| η | η = 0,2 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,90 |
+| η | η = 0,1 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 1,00 |
+| η | η = 0,2 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 1,00 |
 | η | η = 0,3 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 1,00 |
-| η | η = 0,4 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,90 |
-| η | η = 0,5 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,90 |
-| η | η = 0,6 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,70 |
-| η | η = 0,7 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,60 |
-| η | η = 0,8 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,60 |
-| η | η = 0,9 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,60 |
-| η | η = 1,0 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,60 |
+| η | η = 0,4 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,80 |
+| η | η = 0,5 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,80 |
+| η | η = 0,6 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,80 |
+| η | η = 0,7 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,70 |
+| η | η = 0,8 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,40 |
+| η | η = 0,9 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,40 |
+| η | η = 1,0 | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,30 |
 | T-haste | alvo 14 GPa | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,30 |
 | T-haste | alvo 15 GPa | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,30 |
-| T-haste | alvo 17 GPa | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,60 |
-| T-haste | alvo 20 GPa | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,60 |
-| T-haste | módulo como custo | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,60 |
-| C-custo | custo baixo (0,01) | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,60 |
-| C-custo | custo elevado (0,25) | Aço inox 316L | Ti-6Al-4V ELI | Aço inox 316L | 0,80 |
+| T-haste | alvo 17 GPa | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,30 |
+| T-haste | alvo 20 GPa | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,30 |
+| T-haste | módulo como custo | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,70 |
+| C-custo | custo baixo (0,01) | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,30 |
+| C-custo | custo elevado (0,25) | Aço inox 316L | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,60 |
 
 ### Monte Carlo: % de 1.º lugar
 
@@ -38,29 +38,26 @@ Vencedor no cenário A: TOPSIS Ti-6Al-4V ELI; WASPAS Ti-6Al-4V ELI; VIKOR Ti-6Al
 
 | Material | TOPSIS | WASPAS | VIKOR |
 |---|---|---|---|
-| Ti-6Al-4V ELI | 89,2 % | 97,4 % | 86,5 % |
-| Ti-13Nb-13Zr | 7,1 % | 2,6 % | 13,5 % |
-| Co-Cr-Mo forjado | 3,7 % | 0,0 % | 0,0 % |
+| Ti-6Al-4V ELI | 100,0 % | 100,0 % | 100,0 % |
 | Aço inox 316L | 0,0 % | 0,0 % | 0,0 % |
+| Co-Cr-Mo forjado | 0,0 % | 0,0 % | 0,0 % |
 | Ti cp grau 4 | 0,0 % | 0,0 % | 0,0 % |
+| Ti-13Nb-13Zr | 0,0 % | 0,0 % | 0,0 % |
 
 **W pesos ±20 %**
 
 | Material | TOPSIS | WASPAS | VIKOR |
 |---|---|---|---|
-| Ti-6Al-4V ELI | 95,9 % | 100,0 % | 100,0 % |
-| Co-Cr-Mo forjado | 4,1 % | 0,0 % | 0,0 % |
+| Ti-6Al-4V ELI | 100,0 % | 100,0 % | 100,0 % |
 | Aço inox 316L | 0,0 % | 0,0 % | 0,0 % |
+| Co-Cr-Mo forjado | 0,0 % | 0,0 % | 0,0 % |
 | Ti cp grau 4 | 0,0 % | 0,0 % | 0,0 % |
 | Ti-13Nb-13Zr | 0,0 % | 0,0 % | 0,0 % |
 
 ### Onde o vencedor muda (face ao cenário A)
 
-- Q, sem ordinais, TOPSIS: Ti-6Al-4V ELI → Co-Cr-Mo forjado
-- Q, sem ordinais, WASPAS: Ti-6Al-4V ELI → Ti-13Nb-13Zr
 - η, η = 0,0, VIKOR: Ti-6Al-4V ELI → Ti cp grau 4
 - C-custo, custo elevado (0,25), TOPSIS: Ti-6Al-4V ELI → Aço inox 316L
-- C-custo, custo elevado (0,25), VIKOR: Ti-6Al-4V ELI → Aço inox 316L
 
 ## Stent
 
