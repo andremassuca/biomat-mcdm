@@ -109,3 +109,14 @@ Unidade original: mm³ por milhão de ciclos (volume). Não é convertível para
 - CoXLPE vs MoXLPE: não comparáveis (estudos, polietilenos, doentes e métodos diferentes); o CoXLPE é alumina BIOLOX forte em doentes < 30 anos (pior caso).
 - Dahl et al. 2013 (Acta Orthop 84:360, https://doi.org/10.3109/17453674.2013.810516; RSA, 10 anos): única comparação cerâmica (alumina) vs CoCr no mesmo estudo, com polietileno convencional (GUR 1050 moldado por compressão, esterilizado por radiação gama em azoto): 0,62 vs 1,40 mm de desgaste proximal. Os autores dizem que a diferença pode ser menor com polietileno reticulado.
 - Vitamina E: não está na base (nenhum par com HXLPE estabilizado com vitamina E).
+
+## 8. Fratura de componentes cerâmicos e squeaking (critério estrito sem regra numérica; não entra em materiais.csv)
+
+| Tema | Valor | Condições | Fonte | Texto completo? |
+|---|---|---|---|---|
+| Fratura da cabeça (com revisão) | alumina 0,15 % (IC 95 % 0,11-0,20); AMC/BIOLOX delta 0,01 % (IC 95 % 0,002-0,09); HR ajustado 14,1 | registo norueguês, 1997-2017, mediana 6,3 anos; 31 479 CoP e 5790 CoC; liners 0,14 % | Hallan G, Fenstad AM, Furnes O. Clin Orthop Relat Res 2020;478(6):1254-1261, https://doi.org/10.1097/CORR.0000000000001272 | sim |
+| Fratura (componentes revistos) | cabeças Delta 0,009 %, Forte 0,119 %; liners Delta 0,126 %, Forte 0,112 % | NJR, só CoC, 111 681 PTA | Howard DP et al. Bone Joint J 2017;99-B(8):1012-1019, https://doi.org/10.1302/0301-620X.99B8.BJJ-2017-0019.R1 | só resumo |
+| Fratura (dados do fabricante) | cabeças Delta 0,003 %, alumina 0,021 % | valores da CeramTec: conflito de interesses; não usar sem a fonte primária | Massin P et al. Orthop Traumatol Surg Res 2014;100(6 Suppl):S317-S321, https://doi.org/10.1016/j.otsr.2014.05.010 | só resumo |
+| Squeaking | cerca de 3 % (I² = 87 %) | meta-análise, CoC de 4.ª geração, 14 estudos | Zhao CC et al. J Orthop Surg Res 2018;13:133, https://doi.org/10.1186/s13018-018-0841-y | sim |
+| Squeaking | 4,2 %; revisão por squeaking 0,2 % | meta-análise (43 estudos, 16 828 CoC) e AOANJRR | Owen DH et al. Bone Joint J 2014;96-B(2):181-187, https://doi.org/10.1302/0301-620X.96B2.32784 | só resumo |
+| Squeaking | 2,4 % (150/6137) | meta-análise, 3.ª e 4.ª geração, 12 estudos | Stanat SJ, Capozzi JD. J Arthroplasty 2012;27(3):445-453, https://doi.org/10.1016/j.arth.2011.04.031 | só resumo |

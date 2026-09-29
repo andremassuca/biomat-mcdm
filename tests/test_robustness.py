@@ -3,8 +3,9 @@ import numpy as np
 import pytest
 
 from biomat_mcdm.io import DecisionProblem, build_problem
-from biomat_mcdm.robustness import (com_alvo, com_eta, com_peso, monte_carlo, pct_primeiro, posicoes,
-                                    rank_agreement, sample_matrix, sample_weights, sem_ordinais)
+from biomat_mcdm.robustness import (alargar_valores_unicos, com_alvo, com_eta, com_peso, monte_carlo,
+                                    pct_primeiro, posicoes, rank_agreement, sample_matrix, sample_weights,
+                                    sem_ordinais)
 
 
 def problema():
@@ -90,3 +91,29 @@ def test_com_peso_fixa_e_redistribui():
     assert q.weights == pytest.approx([0.25, 0.75])
     with pytest.raises(ValueError):
         com_peso(p, "c1", 1.0)
+
+
+def test_alargar_valores_unicos_so_nas_celulas_quantitativas_com_min_igual_max():
+    p = problema()  # c1: intervalos 9-11, 4-6, 1-2; c2 ordinal com min = max
+    X_min = p.X_min.copy()
+    X_min[0, 0] = X_max0 = p.X_max[0, 0]  # A em c1 passa a valor único (11)
+    q = alargar_valores_unicos(DecisionProblem(p.alternatives, p.criteria, X_min, p.X_max,
+                                               p.types, p.targets, p.weights), 0.10)
+    assert q.X_min[0, 0] == pytest.approx(X_max0 * 0.9)
+    assert q.X_max[0, 0] == pytest.approx(X_max0 * 1.1)
+    assert np.allclose(q.X_min[1:, 0], p.X_min[1:, 0]) and np.allclose(q.X_max[1:, 0], p.X_max[1:, 0])
+    assert np.allclose(q.X_min[:, 1], p.X_min[:, 1]) and np.allclose(q.X_max[:, 1], p.X_max[:, 1])
+    with pytest.raises(ValueError):
+        alargar_valores_unicos(p, 1.0)
+
+
+def test_monte_carlo_com_incerteza_de_valor_unico_varia_so_nas_propriedades():
+    X = np.array([[5.0, 1], [5.2, 2]])  # c1 com valor único e quase empatado
+    p = DecisionProblem(["A", "B"], ["c1", "c2 (ordinal 1-5)"], X, X.copy(),
+                        ["benefit", "benefit"], [None, None], np.array([0.9, 0.1]))
+    fixo = monte_carlo(p, "TOPSIS", n_iter=200, seed=3)
+    assert (fixo == fixo[0]).all()  # sem incerteza: sempre o mesmo ranking
+    com = monte_carlo(p, "TOPSIS", n_iter=200, seed=3, incerteza_valor_unico=0.10)
+    assert 0 < pct_primeiro(com)[0] < 100  # com ±10 % a ordem de A e B passa a mudar
+    pesos = monte_carlo(p, "TOPSIS", n_iter=20, seed=3, variar="pesos", incerteza_valor_unico=0.10)
+    assert pesos.shape == (20, 2)

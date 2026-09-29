@@ -1,6 +1,6 @@
 # Resumo da robustez (PRELIMINAR: dados por verificar)
 
-η = 1 no resultado principal; sensibilidades a partir do cenário A. Monte Carlo: 10000 iterações, seed 42.
+η = 1 no resultado principal; sensibilidades a partir do cenário A. Monte Carlo: 10000 iterações, seed 42. No MC propriedades, as propriedades quantitativas com mín. = máx. variam ±10 % à volta do típico (data/parametros.csv).
 
 ## Haste
 
@@ -39,8 +39,8 @@ Vencedor no cenário A: TOPSIS Ti-6Al-4V ELI; WASPAS Ti-6Al-4V ELI; VIKOR Ti-6Al
 | Material | TOPSIS | WASPAS | VIKOR |
 |---|---|---|---|
 | Ti-6Al-4V ELI | 100,0 % | 100,0 % | 100,0 % |
-| Aço inox 316L | 0,0 % | 0,0 % | 0,0 % |
 | Co-Cr-Mo forjado | 0,0 % | 0,0 % | 0,0 % |
+| Aço inox 316L | 0,0 % | 0,0 % | 0,0 % |
 | Ti cp grau 4 | 0,0 % | 0,0 % | 0,0 % |
 | Ti-13Nb-13Zr | 0,0 % | 0,0 % | 0,0 % |
 
@@ -95,9 +95,9 @@ Vencedor no cenário A: TOPSIS Co-Cr L605; WASPAS Co-Cr L605; VIKOR Co-Cr L605
 
 | Material | TOPSIS | WASPAS | VIKOR |
 |---|---|---|---|
-| Co-Cr L605 | 96,8 % | 87,8 % | 95,7 % |
-| Co-Ni-Cr-Mo MP35N | 3,2 % | 12,2 % | 4,3 % |
-| Pt-Cr | 0,1 % | 0,0 % | 0,0 % |
+| Co-Cr L605 | 94,8 % | 87,6 % | 94,6 % |
+| Co-Ni-Cr-Mo MP35N | 5,1 % | 12,3 % | 5,3 % |
+| Pt-Cr | 0,1 % | 0,0 % | 0,1 % |
 | Aço inox 316L | 0,0 % | 0,0 % | 0,0 % |
 
 **W pesos ±20 %**

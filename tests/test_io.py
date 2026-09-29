@@ -1,4 +1,4 @@
-from biomat_mcdm.io import build_problem
+from biomat_mcdm.io import build_problem, load_parametros
 
 
 def test_haste_cenario_A_exclui_investigacao():
@@ -75,3 +75,9 @@ def test_scaffold_cenario_A_so_uso_clinico_mas_mantem_biodegradaveis():
     assert sorted(a) == sorted(["Hidroxiapatite (HA) porosa", "β-TCP poroso", "Vidro bioativo 45S5 poroso",
                                 "PCL", "Compósito PCL/β-TCP (impressão 3D)"])  # PCL é biodegradável e fica
     assert len(build_problem("Scaffold (regeneração óssea)", "B").alternatives) == 8
+
+
+def test_load_parametros_le_eta_e_incerteza():
+    par = load_parametros()
+    assert par["eta"] == 1.0
+    assert par["incerteza_valor_unico"] == 0.1

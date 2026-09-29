@@ -18,7 +18,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from biomat_mcdm.io import DATA, DecisionProblem, build_problem, load_tissue
+from biomat_mcdm.io import DATA, DecisionProblem, build_problem, load_parametros, load_tissue
 from biomat_mcdm.pipeline import METODOS, fmt_pt
 from biomat_mcdm.robustness import (com_alvo, com_eta, com_peso, monte_carlo, pct_primeiro,
                                     posicoes, rank_agreement, sem_ordinais)
@@ -102,14 +102,17 @@ def spearman_linhas(rk: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(out)
 
 
-def mc_linhas(caso: str, p: DecisionProblem, n_iter: int, seed: int) -> list[dict]:
+def mc_linhas(caso: str, p: DecisionProblem, n_iter: int, seed: int,
+              incerteza_valor_unico: float = 0.0) -> list[dict]:
     linhas = []
     for analise, variar in (("MC propriedades", "propriedades"), ("W pesos ±20 %", "pesos")):
         for m in METODOS:
-            r = monte_carlo(p, m, n_iter, seed, variar=variar)
+            r = monte_carlo(p, m, n_iter, seed, variar=variar,
+                            incerteza_valor_unico=incerteza_valor_unico)
             for a, pct, med in zip(p.alternatives, pct_primeiro(r), r.mean(axis=0)):
                 linhas.append({"caso": caso, "analise": analise, "metodo": m, "material": a,
-                               "pct_primeiro": pct, "posicao_media": med, "n_iter": n_iter, "seed": seed})
+                               "pct_primeiro": pct, "posicao_media": med, "n_iter": n_iter, "seed": seed,
+                               "incerteza_valor_unico": incerteza_valor_unico if variar == "propriedades" else 0.0})
     return linhas
 
 
@@ -123,6 +126,11 @@ def resumo_md(rk: pd.DataFrame, mc: pd.DataFrame, sp: pd.DataFrame, cen: pd.Data
     L = [f"# Resumo da robustez ({AVISO})", "",
          f"η = 1 no resultado principal; sensibilidades a partir do cenário {BASE}. "
          f"Monte Carlo: {n_iter} iterações, seed {seed}.", ""]
+    if not mc.empty and "incerteza_valor_unico" in mc:
+        inc = mc["incerteza_valor_unico"].max()
+        if inc:
+            L[-2] += (f" No MC propriedades, as propriedades quantitativas com mín. = máx. variam "
+                      f"±{fmt_pt(100 * inc, 0)} % à volta do típico (data/parametros.csv).")
     desc = dict(zip(cen["cenario"], cen["descricao"]))
     for caso in CASOS:
         r = rk[rk["caso"] == caso]
@@ -158,6 +166,7 @@ def correr(n_iter: int = 10_000, seed: int = 42, data_dir: Path = DATA) -> tuple
     """Corre tudo; devolve (rankings, monte_carlo, spearman, cenarios). Não grava ficheiros."""
     cen = pd.read_csv(data_dir / "cenarios.csv")
     rk, mc = [], []
+    inc = load_parametros(data_dir).get("incerteza_valor_unico", 0.0)
     for caso, nome in CASOS.items():
         for c in cen.itertuples():
             if not aplica(c.casos, caso):
@@ -165,7 +174,7 @@ def correr(n_iter: int = 10_000, seed: int = 42, data_dir: Path = DATA) -> tuple
             for var, p in variantes(c.cenario, caso, data_dir):
                 rk += ranking_linhas(caso, c.cenario, var, p)
         if any(aplica(c.casos, caso) for c in cen.itertuples() if c.cenario in ("MC", "W")):
-            mc += mc_linhas(caso, build_problem(nome, BASE, data_dir), n_iter, seed)
+            mc += mc_linhas(caso, build_problem(nome, BASE, data_dir), n_iter, seed, inc)
     rk = pd.DataFrame(rk)
     return rk, pd.DataFrame(mc), spearman_linhas(rk), cen
 

@@ -57,16 +57,43 @@ def sample_weights(w: np.ndarray, rng: np.random.Generator, spread: float = 0.2)
     return p / p.sum()
 
 
+def e_ordinal(criterio: str) -> bool:
+    """True para os critérios ordinais (escalas 1-5 definidas no trabalho)."""
+    return "ordinal" in criterio or "(1-5" in criterio
+
+
+def alargar_valores_unicos(problem: DecisionProblem, incerteza: float) -> DecisionProblem:
+    """Dá um intervalo ±incerteza à volta do típico às células quantitativas com mín. = máx.
+
+    Em linguagem simples: um valor de um único estudo não tem incerteza zero; aqui passa a
+    variar, por exemplo, ±10 % (incerteza = 0,10) no Monte Carlo. Os critérios ordinais e as
+    células que já têm intervalo ficam como estão.
+    """
+    if not 0 <= incerteza < 1:
+        raise ValueError("incerteza tem de estar em [0, 1)")
+    X_min, X_max = np.asarray(problem.X_min, float), np.asarray(problem.X_max, float)
+    quantitativo = np.array([not e_ordinal(c) for c in problem.criteria])
+    unico = np.isclose(X_min, X_max) & quantitativo[None, :]
+    lo, hi = X_min * (1 - incerteza), X_max * (1 + incerteza)
+    return replace(problem, X_min=np.where(unico, np.minimum(lo, hi), X_min),
+                   X_max=np.where(unico, np.maximum(lo, hi), X_max))
+
+
 def monte_carlo(problem: DecisionProblem, metodo: str, n_iter: int = 10_000, seed: int = 42,
-                variar: str = "propriedades", dist: str = "uniform", spread: float = 0.2) -> np.ndarray:
+                variar: str = "propriedades", dist: str = "uniform", spread: float = 0.2,
+                incerteza_valor_unico: float = 0.0) -> np.ndarray:
     """Corre o método n_iter vezes; devolve a matriz (n_iter, m) de posições.
 
     Em linguagem simples: repete o ranking muitas vezes, cada vez com valores sorteados
     ("propriedades": dentro dos intervalos da base; "pesos": pesos perturbados ±spread).
+    Com incerteza_valor_unico > 0, as propriedades quantitativas com mín. = máx. variam
+    ±incerteza_valor_unico à volta do típico (só em "propriedades").
     A mesma seed dá os mesmos sorteios para os três métodos, para os comparar em igualdade.
     """
     if n_iter < 1:
         raise ValueError("n_iter tem de ser ≥ 1")
+    if variar == "propriedades" and incerteza_valor_unico:
+        problem = alargar_valores_unicos(problem, incerteza_valor_unico)
     rng = np.random.default_rng(seed)
     out = np.empty((n_iter, len(problem.alternatives)), dtype=int)
     for k in range(n_iter):
@@ -94,7 +121,7 @@ def rank_agreement(rank_a: np.ndarray, rank_b: np.ndarray) -> float:
 
 def sem_ordinais(problem: DecisionProblem) -> DecisionProblem:
     """Cenário Q: retira os critérios ordinais (1-5) e renormaliza os pesos."""
-    keep = [j for j, c in enumerate(problem.criteria) if "ordinal" not in c and "(1-5" not in c]
+    keep = [j for j, c in enumerate(problem.criteria) if not e_ordinal(c)]
     return _subconjunto(problem, keep)
 
 

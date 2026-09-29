@@ -55,6 +55,12 @@ def load_tissue(data_dir: Path = DATA) -> pd.DataFrame:
     return pd.read_csv(data_dir / "tecido.csv")
 
 
+def load_parametros(data_dir: Path = DATA) -> dict[str, float]:
+    """Parâmetros de desenho de data/parametros.csv como {nome: valor} (ex.: eta)."""
+    p = pd.read_csv(data_dir / "parametros.csv")
+    return {r.parametro: float(r.valor) for r in p.itertuples()}
+
+
 def _pior_observado(sub: pd.DataFrame, tipo: str, alvo: float | None) -> float:
     """Pior valor observado num critério: o mais afastado do alvo, o maior (custo) ou o menor (benefício)."""
     vals = pd.concat([sub["min"], sub["max"]]).dropna().to_numpy(float)

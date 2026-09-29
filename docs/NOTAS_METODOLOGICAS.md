@@ -123,6 +123,38 @@ Caso de estudo 2 (haste da prótese da anca), TOPSIS; testes em tests/test_repro
 - O Monte Carlo (propriedades e W pesos ±20 %) corre só no cenário A; o TNZT (só no cenário B)
   não entra no Monte Carlo.
 
+## Incerteza dos valores únicos no Monte Carlo (30 set 2026)
+- Valores de um único estudo não têm incerteza zero. No MC propriedades, as células
+  quantitativas com mín. = máx. passam a variar ±10 % à volta do típico
+  (data/parametros.csv, incerteza_valor_unico = 0,10; robustness.alargar_valores_unicos).
+  Os ordinais não variam. ±10 % é um valor de desenho.
+- Com e sem esta variação, o 1.º lugar da haste é 100 % nos três métodos (teste de 30 set 2026),
+  arredondado a uma casa decimal; o valor exato com a variação é 99,99 % no TOPSIS (1 iteração
+  em 10 000 com o Co-Cr-Mo forjado) e 100 % no WASPAS e no VIKOR. Nos três casos (haste, stent,
+  scaffold) o vencedor do Monte Carlo não muda; no stent, o 1.º lugar do Co-Cr L605 desce
+  ligeiramente (TOPSIS 96,8 → 94,8 %; WASPAS 87,8 → 87,7 %; VIKOR 95,7 → 94,6 %).
+
+## Fratura cerâmica e squeaking: fontes (30 set 2026)
+- Texto completo confirmado:
+  - Hallan G, Fenstad AM, Furnes O. Clin Orthop Relat Res 2020;478(6):1254-1261,
+    doi:10.1097/CORR.0000000000001272 (registo norueguês, 1997-2017, mediana 6,3 anos):
+    fratura com revisão em 0,15 % das cabeças de alumina (IC 95 % 0,11 a 0,20) e 0,01 % das
+    de AMC/BIOLOX delta (IC 95 % 0,002 a 0,09); HR ajustado 14,1. Só conta fraturas com revisão.
+  - Zhao CC, Qu GX, Yan SG, Cai XZ. J Orthop Surg Res 2018;13:133, doi:10.1186/s13018-018-0841-y
+    (meta-análise, CoC de 4.ª geração, 14 estudos): squeaking em cerca de 3 % (I² = 87 %).
+- Apoio, só resumo:
+  - Howard DP et al. Bone Joint J 2017;99-B(8):1012-1019 (NJR, só CoC): cabeças Delta 0,009 %,
+    Forte 0,119 %; liners Delta 0,126 %, Forte 0,112 %.
+  - Owen DH et al. Bone Joint J 2014;96-B(2):181-187 (meta-análise e AOANJRR): squeaking 4,2 %;
+    revisão por squeaking 0,2 %.
+  - Stanat SJ, Capozzi JD. J Arthroplasty 2012;27(3):445-453 (meta-análise, 3.ª e 4.ª geração):
+    squeaking 2,4 %.
+- Não usar sem ir à fonte primária: Massin P et al. Orthop Traumatol Surg Res 2014;100(6 Suppl):
+  S317-S321 (cabeças Delta 0,003 % e alumina 0,021 %): valores do fabricante (CeramTec),
+  conflito de interesses.
+- O risco de fratura é um critério estrito sem regra numérica: estas fontes ficam na tabela de
+  apoio do par articular e no texto, não em data/materiais.csv.
+
 ## Valores a verificar (fora de data/materiais.csv)
 Os valores de propriedades "A verificar" estão na base e serão listados por
 scripts/listar_por_verificar.py (tarefa 12). Aqui ficam os que não estão nessa coluna:
