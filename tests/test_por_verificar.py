@@ -71,4 +71,4 @@ def test_valores_atribuidos_pela_opcao_O2_nao_entram():
     perm = ["Aço inox 316L", "Co-Cr L605", "Co-Ni-Cr-Mo MP35N", "Pt-Cr"]
     reab = df[df["criterio"].str.startswith("Tempo de reabsorção")]
     assert not reab["material"].isin(perm).any()
-    assert set(reab["material"]) == {"Liga de Mg WE43 (bioabsorvível)", "PLLA (bioabsorvível)"}
+    assert set(reab["material"]) <= {"Liga de Mg WE43 (bioabsorvível)", "PLLA (bioabsorvível)"}

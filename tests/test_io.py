@@ -1,3 +1,5 @@
+import pytest
+
 from biomat_mcdm.io import build_problem, load_parametros
 
 
@@ -81,3 +83,37 @@ def test_load_parametros_le_eta_e_incerteza():
     par = load_parametros()
     assert par["eta"] == 1.0
     assert par["incerteza_valor_unico"] == 0.1
+
+
+def test_metodos_usam_o_tipico_e_o_ponto_medio_quando_falta():
+    import numpy as np
+    from biomat_mcdm.io import DecisionProblem
+    X_min, X_max = np.array([[1.0], [2.0]]), np.array([[3.0], [4.0]])
+    p = DecisionProblem(["A", "B"], ["c"], X_min, X_max, ["benefit"], [None], np.array([1.0]))
+    assert np.allclose(p.X, [[2.0], [3.0]])  # sem típico: ponto médio
+    q = DecisionProblem(["A", "B"], ["c"], X_min, X_max, ["benefit"], [None], np.array([1.0]),
+                        X_tipico=np.array([[1.0], [4.0]]))
+    assert np.allclose(q.X, [[1.0], [4.0]])
+
+
+def test_build_problem_usa_a_coluna_tipico():
+    p = build_problem("Stent vascular", "A")
+    j = p.criteria.index("Alongamento na rotura")
+    i = p.alternatives.index("Co-Cr L605")
+    assert p.X[i, j] == 40.0  # típico (fita), não o ponto médio 45
+    assert p.X_min[i, j] == 40.0 and p.X_max[i, j] == 50.0
+
+
+def test_tipico_fora_do_intervalo_da_erro(tmp_path):
+    import shutil
+    import pandas as pd
+    from biomat_mcdm.io import DATA
+    for f in DATA.glob("*.csv"):
+        shutil.copy(f, tmp_path / f.name)
+    m = pd.read_csv(tmp_path / "materiais.csv")
+    sel = (m["material"] == "Co-Cr L605") & (m["propriedade"] == "Alongamento na rotura")
+    m.loc[sel, "tipico"] = 99.0
+    m.to_csv(tmp_path / "materiais.csv", index=False)
+    with pytest.raises(ValueError):
+        build_problem("Stent vascular", "A", tmp_path)
+

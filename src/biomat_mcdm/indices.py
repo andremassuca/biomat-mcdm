@@ -24,6 +24,12 @@ def _intervalo(df: pd.DataFrame, material: str, propriedade: str) -> tuple[float
     return float(s["min"].iloc[0]), float(s["max"].iloc[0])
 
 
+def _tipico(grupo: pd.DataFrame, propriedade: str) -> float:
+    """Típico da base (ponto médio quando está vazio)."""
+    r = grupo[grupo["propriedade"] == propriedade].iloc[0]
+    return float(r["tipico"]) if pd.notna(r["tipico"]) else (float(r["min"]) + float(r["max"])) / 2
+
+
 def sigma_y_over_e(materials: pd.DataFrame) -> pd.DataFrame:
     """Linhas novas (formato longo da base) com σy/E de cada material do stent.
 
@@ -40,9 +46,10 @@ def sigma_y_over_e(materials: pd.DataFrame) -> pd.DataFrame:
             continue
         base = grupo.iloc[0]
         lo, hi = sy[0] / (e[1] * 1000), sy[1] / (e[0] * 1000)
+        tip = _tipico(grupo, "Tensão de cedência") / (_tipico(grupo, "Módulo de Young") * 1000)
         linhas.append({
             **{k: base[k] for k in ("caso", "componente", "material", "norma", "classe", "estatuto")},
-            "propriedade": SIGMA_E, "unidade": "-", "min": lo, "max": hi, "tipico": (lo + hi) / 2,
+            "propriedade": SIGMA_E, "unidade": "-", "min": lo, "max": hi, "tipico": tip,
             "referencia": "Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py)",
             "notas": "Proxy ao nível do material; maior = mais recuo elástico",
             "estado": "A verificar (derivado)",

@@ -209,6 +209,22 @@ Caso de estudo 2 (haste da prótese da anca), TOPSIS; testes em tests/test_repro
   - ISO 7206-6:2013 em revisão (DIS em votação desde jul 2026): voltar a verificar a 7 out.
   - ISO 14242-1 e 14242-2 também na etapa "to be revised"; voltar a verificar a 7 out.
 
+## Stent: fontes e regras (30 set 2026)
+- Propriedades dependentes da forma: típico = forma usada no dispositivo; outras formas só alargam o
+  intervalo. No stent (cortado a laser de tubo), o típico é o valor do tubo ou da fita e o fio só
+  alarga o intervalo (ex.: alongamento do L605 40-50 %, típico 40; MP35N 40-70 %, típico 40).
+  Quando a ficha não diz se o valor é típico ou mínimo de especificação, a nota di-lo.
+- A espessura de strut é uma propriedade do dispositivo, não do material; a diferença entre o MP35N
+  (Resolute, 90 µm) e o L605 (XIENCE, 81 µm) reflete o desenho do stent, não uma limitação da liga.
+  Discutir no texto.
+- Tempos de reabsorção do PLLA (Absorb) e do Mg (Magmaris): as fontes encontradas são de modelos
+  animais (porco); o Seguchi 2023 é pré-clínico (mini-porcos), não humano. Magmaris: 12-24 meses,
+  típico 18 (ponto médio, por coerência com o PLLA).
+- Desde 30 set 2026, os métodos usam a coluna "tipico" de materiais.csv (ponto médio quando está
+  vazia; src/biomat_mcdm/io.py, DecisionProblem.X_tipico); o Monte Carlo continua a sortear entre o
+  mín. e o máx. Um típico fora de [mín., máx.] dá erro. Haste, scaffold e reprodução de Petković
+  et al. 2025 ficaram iguais (o típico era o ponto médio). O σy/E derivado usa agora σy típico / E típico.
+
 ## Valores a verificar (fora de data/materiais.csv)
 Os valores de propriedades "A verificar" estão na base e serão listados por
 scripts/listar_por_verificar.py (tarefa 12). Aqui ficam os que não estão nessa coluna:

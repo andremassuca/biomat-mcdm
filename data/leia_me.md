@@ -22,7 +22,8 @@ Par articular e implante dentário ficam SEMIQUANTITATIVOS (ordinais > 50 % do p
 - Cenários em cenarios.csv; η em parametros.csv.
 
 ## Legenda
-- min e max alimentam o Monte Carlo (distribuição entre mín. e máx.); tipico = ponto médio.
+- min e max alimentam o Monte Carlo (distribuição entre mín. e máx.).
+- tipico = valor usado nos métodos; por omissão o ponto médio; pode diferir quando a regra da forma ou outra regra o justifica, com nota.
 - Estados da coluna estado:
   - "A verificar": valor de partida (manual, revisão ou fonte secundária) ainda não confirmado na fonte original.
   - "Verificado": valor confirmado na fonte indicada em doi_url (artigo ou norma).

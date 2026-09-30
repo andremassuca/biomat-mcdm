@@ -68,26 +68,26 @@ Vencedor no cenário A: TOPSIS Co-Cr L605; WASPAS Co-Cr L605; VIKOR Co-Cr L605
 | Cenário | Variante | TOPSIS | WASPAS | VIKOR | ρ mín. entre métodos |
 |---|---|---|---|---|---|
 | A | A | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
-| B | B | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,94 |
+| B | B | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
 | B-bio (comparação) | B-bio | Liga de Mg WE43 (bioabsorvível) | Liga de Mg WE43 (bioabsorvível) | Liga de Mg WE43 (bioabsorvível) | n/a |
-| R-sentinela | 60 meses | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,94 |
-| R-sentinela | 120 meses | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,94 |
-| R-sentinela | 600 meses | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,94 |
-| R-sentinela | 1200 meses | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,89 |
-| Q | sem ordinais | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
-| η | η = 0,0 | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | 0,40 |
-| η | η = 0,1 | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | 0,40 |
+| R-sentinela | 60 meses | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
+| R-sentinela | 120 meses | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
+| R-sentinela | 600 meses | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
+| R-sentinela | 1200 meses | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
+| Q | sem ordinais | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,80 |
+| η | η = 0,0 | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | 0,80 |
+| η | η = 0,1 | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | 0,80 |
 | η | η = 0,2 | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | 0,40 |
-| η | η = 0,3 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,40 |
-| η | η = 0,4 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,40 |
-| η | η = 0,5 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,80 |
-| η | η = 0,6 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,80 |
-| η | η = 0,7 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
+| η | η = 0,3 | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | -0,20 |
+| η | η = 0,4 | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | -0,20 |
+| η | η = 0,5 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,20 |
+| η | η = 0,6 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,20 |
+| η | η = 0,7 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,80 |
 | η | η = 0,8 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
 | η | η = 0,9 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
 | η | η = 1,0 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
 | C-custo | custo baixo (0,01) | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
-| C-custo | custo elevado (0,25) | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | 0,40 |
+| C-custo | custo elevado (0,25) | Aço inox 316L | Aço inox 316L | Co-Cr L605 | 0,80 |
 
 ### Monte Carlo: % de 1.º lugar
 
@@ -95,25 +95,28 @@ Vencedor no cenário A: TOPSIS Co-Cr L605; WASPAS Co-Cr L605; VIKOR Co-Cr L605
 
 | Material | TOPSIS | WASPAS | VIKOR |
 |---|---|---|---|
-| Co-Cr L605 | 94,8 % | 87,6 % | 94,6 % |
-| Co-Ni-Cr-Mo MP35N | 5,1 % | 12,3 % | 5,3 % |
-| Pt-Cr | 0,1 % | 0,0 % | 0,1 % |
+| Co-Cr L605 | 79,0 % | 90,8 % | 82,9 % |
+| Co-Ni-Cr-Mo MP35N | 11,9 % | 7,3 % | 14,3 % |
+| Pt-Cr | 9,2 % | 1,9 % | 2,8 % |
 | Aço inox 316L | 0,0 % | 0,0 % | 0,0 % |
 
 **W pesos ±20 %**
 
 | Material | TOPSIS | WASPAS | VIKOR |
 |---|---|---|---|
-| Co-Cr L605 | 100,0 % | 100,0 % | 100,0 % |
+| Co-Cr L605 | 89,1 % | 100,0 % | 98,3 % |
+| Pt-Cr | 10,9 % | 0,0 % | 1,7 % |
 | Aço inox 316L | 0,0 % | 0,0 % | 0,0 % |
 | Co-Ni-Cr-Mo MP35N | 0,0 % | 0,0 % | 0,0 % |
-| Pt-Cr | 0,0 % | 0,0 % | 0,0 % |
 
 ### Onde o vencedor muda (face ao cenário A)
 
 - η, η = 0,0, WASPAS: Co-Cr L605 → Aço inox 316L
 - η, η = 0,1, WASPAS: Co-Cr L605 → Aço inox 316L
 - η, η = 0,2, WASPAS: Co-Cr L605 → Aço inox 316L
+- η, η = 0,3, WASPAS: Co-Cr L605 → Aço inox 316L
+- η, η = 0,4, WASPAS: Co-Cr L605 → Aço inox 316L
+- C-custo, custo elevado (0,25), TOPSIS: Co-Cr L605 → Aço inox 316L
 - C-custo, custo elevado (0,25), WASPAS: Co-Cr L605 → Aço inox 316L
 
 ## Scaffold

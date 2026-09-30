@@ -129,6 +129,7 @@ def _subconjunto(problem: DecisionProblem, keep: list[int]) -> DecisionProblem:
     w = problem.weights[keep]
     return replace(problem, criteria=[problem.criteria[j] for j in keep],
                    X_min=problem.X_min[:, keep], X_max=problem.X_max[:, keep],
+                   X_tipico=None if problem.X_tipico is None else problem.X_tipico[:, keep],
                    types=[problem.types[j] for j in keep], targets=[problem.targets[j] for j in keep],
                    weights=w / w.sum())
 

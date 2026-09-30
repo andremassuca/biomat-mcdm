@@ -29,10 +29,13 @@ class DecisionProblem:
     types: list[str]                 # "benefit" | "cost" | "target"
     targets: list[float | None]      # valor-alvo (só para "target")
     weights: np.ndarray              # (n,) pesos subjetivos propostos
+    X_tipico: np.ndarray | None = None  # (m, n) valores típicos da base (None = ponto médio)
 
     @property
     def X(self) -> np.ndarray:
-        """Matriz com valores típicos (ponto médio)."""
+        """Matriz com os valores usados nos métodos: o típico da base ou, sem ele, o ponto médio."""
+        if self.X_tipico is not None:
+            return np.asarray(self.X_tipico, float)
         return (self.X_min + self.X_max) / 2
 
 
@@ -108,20 +111,25 @@ def build_problem(case: str, scenario: str = "A", data_dir: Path = DATA,
     c["prop"] = c["criterio"].str.replace(r" \(só cenário B\)", "", regex=True)
 
     alts = list(dict.fromkeys(m["material"]))
-    cols_min, cols_max, keep = [], [], []
+    cols_min, cols_max, cols_tip, keep = [], [], [], []
     for _, cr in c.iterrows():
         sub = m[m["propriedade"] == cr["prop"]].set_index("material")
         sub = sub[sub[["min", "max"]].notna().all(axis=1)]
+        sub = sub.assign(tipico=sub["tipico"].fillna((sub["min"] + sub["max"]) / 2))
+        fora = sub[(sub["tipico"] < sub["min"] - 1e-9) | (sub["tipico"] > sub["max"] + 1e-9)]
+        if not fora.empty:
+            raise ValueError(f"típico fora de [mín., máx.] em {cr['prop']!r}: {list(fora.index)}")
         if (case, cr["prop"]) in PIOR_OBSERVADO and not sub.empty and len(sub) < len(alts):
             alvo = float(cr["alvo"]) if cr["tipo"] == "Alvo" else None
             v = (valor_em_falta or {}).get(cr["prop"], _pior_observado(sub, cr["tipo"], alvo))
-            falta = pd.DataFrame({"min": v, "max": v}, index=[a for a in alts if a not in sub.index])
-            sub = pd.concat([sub[["min", "max"]], falta])
+            falta = pd.DataFrame({"min": v, "max": v, "tipico": v}, index=[a for a in alts if a not in sub.index])
+            sub = pd.concat([sub[["min", "max", "tipico"]], falta])
         if sub.empty or len(sub) < len(alts):
             continue
         keep.append(cr)
         cols_min.append(sub.loc[alts, "min"].to_numpy(float))
         cols_max.append(sub.loc[alts, "max"].to_numpy(float))
+        cols_tip.append(sub.loc[alts, "tipico"].to_numpy(float))
 
     w = np.array([float(k["peso"]) for k in keep])
     return DecisionProblem(
@@ -129,6 +137,7 @@ def build_problem(case: str, scenario: str = "A", data_dir: Path = DATA,
         criteria=[k["prop"] for k in keep],
         X_min=np.array(cols_min).T,
         X_max=np.array(cols_max).T,
+        X_tipico=np.array(cols_tip).T,
         types=[_TYPE_MAP[k["tipo"]] for k in keep],
         targets=[float(k["alvo"]) if k["tipo"] == "Alvo" else None for k in keep],
         weights=w / w.sum(),  # renormaliza se algum critério foi excluído
