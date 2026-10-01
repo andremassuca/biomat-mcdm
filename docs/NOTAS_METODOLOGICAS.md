@@ -33,6 +33,8 @@ A "% de vitórias" no Monte Carlo NÃO é probabilidade de sucesso clínico: é 
   - regras categóricas (valor em texto na coluna valor_texto): "Tipo de expansão" = balão ou autoexpansível; passa se o valor está no alvo ("Expansível por balão");
   - resultado atual: eliminados o MoM (segurança iónica 1 < 2) e o Nitinol (tipo de expansão autoexpansível; também pelo estatuto "Excluído").
 - Alvos do scaffold = cenário de referência para osso trabecular, não ótimo universal (cenário T-scaffold).
+- Regra da porosidade (scaffold, 1 out 2026): as propriedades mecânicas de um scaffold usam-se à porosidade típica desse material (±10 pontos percentuais); valores medidos a porosidades muito diferentes ficam de fora ou só alargam o intervalo, com nota. Exemplo: na HA porosa (típico 65 %) entram os valores de resistência a 60 % e a ~70 %, e ficam de fora os de 40 % e de 80 %.
+- Bioatividade (scaffold, 1 out 2026): a rubrica segue a classificação de Hench (classe A, osteoprodutivo, nota 5; classe B, osteocondutor, nota 4); a HA e o β-TCP ficam com 4 e o vidro 45S5 com 5.
 - Densidade removida como proxy de radiopacidade (depende do número atómico efetivo e da espessura). Com a rubrica de radiopacidade (data/leia_me.md, 1 out 2026), a densidade continua a não ser critério do stent, mas serve de evidência de apoio para a ordem da radiopacidade (Allocco 2010, doi:10.1186/1745-6215-11-1).
 - K_IC removido do par articular (valor metálico arbitrário); fratura cerâmica tratada como requisito estrito/discussão.
 - Tração (metais) e flexão (cerâmicos) não são comparáveis → retirado da matriz dentária; requisito estrito ISO 14801.

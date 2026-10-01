@@ -28,6 +28,12 @@ Par articular e implante dentário ficam SEMIQUANTITATIVOS (ordinais > 50 % do p
 - Radiopacidade: rubrica escrita (ver "Rubricas ordinais"), fontes nas 7 linhas e estado "Verificado"; as notas não mudam.
 - Densidades do 316L, L605, MP35N e Pt-Cr com fonte. A densidade não é critério do stent.
 
+## Alterações v0.6 (1 out 2026): 1.ª ronda do scaffold
+- Rubrica da bioatividade reescrita segundo a classificação de Hench (classes A e B); as notas dos materiais não mudam.
+- Regra da porosidade para as propriedades mecânicas dos scaffolds (ver "Cuidados").
+- 11 linhas do scaffold com fonte primária: porosidade do quitosano/HA, do PLLA e do β-TCP; resistência à compressão da HA; e sete notas ordinais (imprimibilidade, esterilização e bioatividade).
+- A esterilização da HA continua "A verificar".
+
 ## Legenda
 - min e max alimentam o Monte Carlo (distribuição entre mín. e máx.).
 - tipico = valor usado nos métodos; por omissão o ponto médio; pode diferir quando a regra da forma ou outra regra o justifica, com nota.
@@ -47,7 +53,7 @@ Estrito = triagem passa/falha · Benefício = maior é melhor · Custo = menor �
 - Segurança iónica/ALTR: 5 = sem contacto metal-metal; 4 = risco na junção cabeça-cone; 1 = libertação de iões Co/Cr com ALTR documentada
 - Osteointegração: 5 = padrão-ouro com décadas de dados; 3 = dados clínicos a médio prazo; 1 = bioinerte com fraca aposição óssea
 - Estética: 5 = cor de dente; 3 = neutro; 2 = sombra cinzenta possível
-- Bioatividade: 5 = liga-se quimicamente ao osso; 4 = osteocondutor; 3 = compósito com fase bioativa; 1 = bioinerte
+- Bioatividade (classificação de Hench): 5 = classe A, osteoprodutivo (ex.: vidro 45S5); 4 = classe B, osteocondutor com ligação química ao osso (HA, β-TCP); 3 = osteocondutor sem ligação química, ou compósito com fase bioativa minoritária; 2 = pouca interação; 1 = bioinerte ou sem osteocondução. Fonte: Hench LL. Bioactive ceramics: theory and clinical applications. Bioceramics 1994;7:3-14 (original não lido); classes A e B lidas em Bramhill J, Ross S, Ross G. Int J Environ Res Public Health 2017;14:66, doi:10.3390/ijerph14010066 (revisão, texto completo).
 - Imprimibilidade 3D: 5 = extrusão direta fácil; 3 = possível com limitações; 2 = requer técnicas especiais (robocasting, liofilização)
 - Compatibilidade com RM: 5 = sem artefacto/aquecimento relevante; 4 = MR-condicional, artefacto pequeno (Ti); 3 = artefacto moderado (CoCr, Pt); 2 = artefacto marcado (aço inox)
 - Esterilização: 5 = aceita métodos padrão sem degradação; 4 = requer método específico sem perda de propriedades; 3 = método restrito com risco de degradação; 2 = degradação documentada
@@ -59,7 +65,7 @@ Estrito = triagem passa/falha · Benefício = maior é melhor · Custo = menor �
 NOTA: índices ordinais só devem pesar ≤ 50 % do total de cada caso: o resto deve vir de propriedades medidas.
 
 ## Cuidados
-1. Propriedades de scaffolds dependem da porosidade: compara só valores com porosidades semelhantes, ou regista a porosidade.
+1. Propriedades de scaffolds dependem da porosidade. Regra da porosidade: as propriedades mecânicas de um scaffold usam-se à porosidade típica desse material (±10 pontos percentuais); valores medidos a porosidades muito diferentes ficam de fora ou só alargam o intervalo, com nota. Regista sempre a porosidade e o método de fabrico do estudo.
 2. Cerâmicos: resistência à flexão ≠ resistência à tração. Assinala sempre qual é.
 3. Stents: o Nitinol é autoexpansível (outra classe): eliminado na triagem pela regra "Tipo de expansão"; só na discussão.
 4. Cenários (cenarios.csv): A = só materiais clínicos; B = inclui investigação e bioabsorvíveis. No stent, A = só permanentes em uso clínico (316L, L605, MP35N, Pt-Cr); B = A + Mg WE43 e PLLA.
