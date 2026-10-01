@@ -34,6 +34,15 @@ Par articular e implante dentário ficam SEMIQUANTITATIVOS (ordinais > 50 % do p
 - 11 linhas do scaffold com fonte primária: porosidade do quitosano/HA, do PLLA e do β-TCP; resistência à compressão da HA; e sete notas ordinais (imprimibilidade, esterilização e bioatividade).
 - A esterilização da HA continua "A verificar".
 
+## Alterações v0.7 (1 out 2026): 2.ª ronda do scaffold
+- Regra do típico: típico = mediana das fontes dentro da janela de porosidade (porosidade típica do material ±10 pontos percentuais); o intervalo vai do mínimo ao máximo dessas fontes.
+- β-TCP: resistência 0,35-7,72 MPa, típico 2. PCL/β-TCP: porosidade típica 70 % (especificação dos scaffolds por FDM).
+- HA: tempo de degradação tratado como não reabsorvível (mínimo 42 meses; máximo e típico = pior valor observado nos outros materiais, como a opção O2 do stent).
+- PLLA definido como scaffold impresso; degradação 24-60 meses, com dados de PLLA maciço.
+- Vidro 45S5: resistência 0,2-1,1 MPa e degradação 6-24 meses (dados de partículas). O módulo fica sem fonte primária.
+- Quitosano/HA: módulo e resistência cerca de dez vezes abaixo dos valores anteriores.
+- Porosidades do PCL, do PLGA e da HA com fonte.
+
 ## Legenda
 - min e max alimentam o Monte Carlo (distribuição entre mín. e máx.).
 - tipico = valor usado nos métodos; por omissão o ponto médio; pode diferir quando a regra da forma ou outra regra o justifica, com nota.
@@ -65,7 +74,7 @@ Estrito = triagem passa/falha · Benefício = maior é melhor · Custo = menor �
 NOTA: índices ordinais só devem pesar ≤ 50 % do total de cada caso: o resto deve vir de propriedades medidas.
 
 ## Cuidados
-1. Propriedades de scaffolds dependem da porosidade. Regra da porosidade: as propriedades mecânicas de um scaffold usam-se à porosidade típica desse material (±10 pontos percentuais); valores medidos a porosidades muito diferentes ficam de fora ou só alargam o intervalo, com nota. Regista sempre a porosidade e o método de fabrico do estudo.
+1. Propriedades de scaffolds dependem da porosidade. Regra da porosidade: as propriedades mecânicas de um scaffold usam-se à porosidade típica desse material (±10 pontos percentuais); valores medidos a porosidades muito diferentes ficam de fora ou só alargam o intervalo, com nota. Dentro da janela, típico = mediana das fontes dentro da janela de porosidade (porosidade típica do material ±10 pontos percentuais); o intervalo vai do mínimo ao máximo dessas fontes. Regista sempre a porosidade e o método de fabrico do estudo.
 2. Cerâmicos: resistência à flexão ≠ resistência à tração. Assinala sempre qual é.
 3. Stents: o Nitinol é autoexpansível (outra classe): eliminado na triagem pela regra "Tipo de expansão"; só na discussão.
 4. Cenários (cenarios.csv): A = só materiais clínicos; B = inclui investigação e bioabsorvíveis. No stent, A = só permanentes em uso clínico (316L, L605, MP35N, Pt-Cr); B = A + Mg WE43 e PLLA.

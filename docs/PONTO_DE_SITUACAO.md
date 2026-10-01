@@ -1,31 +1,49 @@
 # Ponto de situação
 
-Atualizado no fim de cada sessão de trabalho. Última atualização: 1 out 2026.
+Atualizado no fim de cada tarefa da fila. Última atualização: 1 out 2026.
 
 ## Prazos
 - Relatório: 8 out 2026.
 - Poster (BioJornadas): 16 out 2026.
 
+## Fila de trabalho (tudo no ramo main, uma tarefa de cada vez)
+Para o relatório, até 8 out:
+1. Scaffold, 2.ª ronda. Feito.
+2. Stent: frases com fonte e espessura de strut do 316L. Feito.
+3. Figuras com os ajustes pedidos e os dados atuais; export do scaffold. Em curso.
+4. Textos: rascunhos de métodos, validação, discussão e caso do scaffold; verificação de cada número; números do stent; cálculo de Gibson-Ashby.
+5. Enunciado e estrutura: relatorio/RELATORIO.md e scripts/verificar_referencias.py.
+6. Implante dentário: tabela de apoio e proposta de fontes.
+7. Cenário de orçamento, ranking de consenso e perfis de doente.
+8. Apoio aos métodos: tabelas de critérios, figura dos pesos e figura do exemplo dos três métodos.
+9. Análises extra: estabilidade dos pesos, frente de Pareto, confiança do ranking.
+Depois da tarefa 9: tag v1-relatorio; a base de dados fica congelada para o relatório.
+
+Depois de 8 out: custo ao longo da vida e margem de segurança à fadiga; aplicação interativa; base de dados v2.
+
 ## Estado por caso
-- Haste femoral (quantitativo): resultados preliminares gerados; 31 células por verificar, nenhuma muda o vencedor.
-- Stent (quantitativo): 1.ª e 2.ª rondas de verificação aplicadas; 44 células por verificar, 3 mudam o vencedor.
-- Scaffold ósseo (quantitativo): resultados preliminares gerados; 64 células por verificar, 3 mudam o vencedor.
+- Haste femoral: Ti-6Al-4V ELI em 1.º nos três métodos, cenários A e B; 31 células por verificar, nenhuma muda o vencedor.
+- Stent: 1.ª e 2.ª rondas aplicadas; 43 células por verificar, 3 mudam o vencedor.
+- Scaffold: 1.ª e 2.ª rondas aplicadas; 39 células por verificar, nenhuma muda o vencedor.
 - Par articular e implante dentário (semiquantitativos): tabela do par articular em relatorio/apoio/.
-- Relatório: rascunho do caso da anca em relatorio/ (caso_anca_rascunho.md; o 05_1_anca.md é um rascunho antigo, preservado).
-- Export de dados do stent (relatorio/apoio/stent_export.md) gerado de novo com a 2.ª ronda.
+- Relatório: rascunhos dos casos da anca e do stent em relatorio/.
 
-## Stent depois da 2.ª ronda (1 out 2026)
-- Cenário A: Pt-Cr em 1.º no TOPSIS e no VIKOR, L605 em 1.º no WASPAS. ΔC entre o 1.º e o 2.º no TOPSIS: 0,026.
-- Cenário B: L605 em 1.º nos três métodos, com o Pt-Cr praticamente empatado (ΔC = 0,002).
-- Cenário B-bio: Mg WE43 à frente do PLLA.
-- Monte Carlo das propriedades (cenário A): L605 em 1.º em 51-62 % das iterações, conforme o método. O resultado do cenário A não é robusto.
-- Células por verificar que mudam o vencedor: alongamento e tração do Pt-Cr (fontes secundárias) e σy/E do L605 (derivado).
-- Leitura: L605 e Pt-Cr estão empatados. O vencedor depende do alongamento e da tração do Pt-Cr, que ainda vêm de fontes secundárias, por isso o O'Brien 2010 (texto completo, Tabelas 4 e 6) é decisivo para fechar o caso.
+## Stent (1 out 2026)
+- Cenário A: Pt-Cr em 1.º no TOPSIS e no VIKOR, L605 em 1.º no WASPAS; ΔC = 0,024.
+- Cenário B: L605 em 1.º nos três métodos, empatado com o Pt-Cr (ΔC = 0,002).
+- Monte Carlo das propriedades (cenário A): L605 em 1.º em 43-62 % das iterações, MP35N em 26-46 %, Pt-Cr em 8-12 %.
+- O vencedor depende do alongamento e da tração do Pt-Cr, que ainda vêm de fontes secundárias: o O'Brien 2010 (texto completo, Tabelas 4 e 6) é decisivo.
 
-## Por fazer
-- Pt-Cr: confirmar módulo, tração e alongamento numa fonte primária (O'Brien 2010, Tabelas 4 e 6, tubo recozido). A cedência está confirmada só pelo resumo.
+## Scaffold depois da 2.ª ronda (1 out 2026)
+- PCL/β-TCP impresso em 1.º nos três métodos, cenário A (ΔC = 0,052) e cenário B (ΔC = 0,085).
+- Monte Carlo das propriedades (cenário A): PCL/β-TCP em 1.º em 39 % (TOPSIS), 68 % (WASPAS) e 46 % (VIKOR) das iterações; β-TCP em 52 %, 25 % e 39 %.
+- O vencedor só muda num cenário de sensibilidade: alvo da resistência à compressão a 2 MPa (ganha o β-TCP).
+- O resultado mudou com a verificação: com os valores de partida ganhava o β-TCP.
+- Ficam por verificar a resistência e o tempo de degradação do PCL/β-TCP, o tempo de degradação do quitosano/HA, o módulo do β-TCP e do vidro 45S5 e a esterilização da HA e do 45S5.
+
+## Por fazer nos dados
+- Pt-Cr: confirmar módulo, tração e alongamento numa fonte primária (O'Brien 2010).
 - Registar o URL da ficha da Alleima (316L).
-- Texto do caso do stent e do scaffold no relatório.
 
 ## Testes
-`pytest -q`: 171 passam, 8 falhas esperadas (xfail).
+`pytest -q`: 184 passam, 8 falhas esperadas (xfail).
