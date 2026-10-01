@@ -12,14 +12,14 @@ O stent passa por dois regimes mecânicos muito diferentes:
 - **Na implantação**, o metal tem de se deformar plasticamente sem fissurar: o stent é dilatado várias vezes o seu diâmetro inicial. Isto exige ductilidade elevada (alongamento na rotura).
 - **Depois de expandido**, tem de manter o diâmetro contra a pressão da parede arterial (resistência radial) e recuar o mínimo possível. O recuo elástico é tanto menor quanto menor for a razão entre a tensão de cedência e o módulo de Young (σy/E): o metal deve "ceder" com facilidade durante a expansão e ser rígido depois. No trabalho, σy/E foi usado como indicador ao nível do material; o recuo real depende também do desenho do stent.
 
-Ao longo da vida do doente, o stent sofre uma carga pulsátil a cada batimento cardíaco, da ordem de 40 milhões de ciclos por ano, pelo que a resistência à fadiga é essencial [confirmar fonte].
+Ao longo da vida do doente, o stent sofre uma carga pulsátil a cada batimento cardíaco, cerca de 38 milhões de ciclos por ano a 72 batimentos por minuto; os ensaios de durabilidade simulam 10 anos (ASTM F2477; FDA 2010), pelo que a resistência à fadiga é essencial.
 
-Um módulo de Young e uma resistência à tração elevados permitem struts (as hastes da malha) mais finos sem perder resistência radial. Isto é importante clinicamente: struts mais finos lesam menos a parede e estão associados a menos reestenose [confirmar: Kastrati et al. 2001, ISAR-STEREO]. Por isso, a espessura de strut foi o critério com maior peso. A espessura é uma propriedade do dispositivo, não só do material: a diferença entre o MP35N (Resolute, cerca de 90 µm) e o L605 (XIENCE, 81 µm) reflete também o desenho de cada stent.
+Um módulo de Young e uma resistência à tração elevados permitem struts (as hastes da malha) mais finos sem perder resistência radial. Isto é importante clinicamente: struts mais finos estão associados a menos reestenose: no ISAR-STEREO, 15,0 % com 50 µm contra 25,8 % com 140 µm (Kastrati et al. 2001). Por isso, a espessura de strut foi o critério com maior peso. A espessura é uma propriedade do dispositivo, não só do material: a diferença entre o MP35N (Resolute, cerca de 90 µm) e o L605 (XIENCE, 81 µm) reflete também o desenho de cada stent.
 
 ## 3. Propriedades químicas e físicas relevantes
 
 - **Resistência à corrosão no sangue.** Tal como nas próteses ortopédicas, depende do filme passivo de óxido (Cr2O3 nas ligas de aço, cobalto-crómio e platina-crómio).
-- **Teor de níquel.** Todas as ligas permanentes candidatas contêm níquel: cerca de 13-15 % no 316L, 9-11 % no L605, 33-37 % no MP35N e 9 % no Pt-Cr. É relevante em doentes com alergia ao níquel, embora a importância clínica desta alergia em stents seja debatida [confirmar fonte].
+- **Teor de níquel.** Todas as ligas permanentes candidatas contêm níquel: cerca de 13-15 % no 316L, 9-11 % no L605, 33-37 % no MP35N e 9 % no Pt-Cr. É relevante em doentes com alergia ao níquel, embora a importância clínica desta alergia em stents seja debatida: há estudos que a associam a reestenose (Köster et al. 2000; Gong et al. 2013) e outros que não encontram relação (Norgaz et al. 2005).
 - **Radiopacidade.** O cardiologista tem de ver o stent em fluoroscopia para o posicionar. A radiopacidade depende do teor de elementos de número atómico elevado e da espessura: a platina (Z = 78) e o tungsténio do L605 (Z = 74) tornam estas ligas mais visíveis do que o 316L, mesmo com struts finos (Allocco et al. 2010).
 - **Compatibilidade com ressonância magnética**, para o seguimento por angio-RM.
 - **Compatibilidade com o revestimento e com a esterilização.** O polímero e o fármaco não suportam calor; os stents com eluição de fármaco são esterilizados por óxido de etileno.
@@ -36,7 +36,7 @@ Há duas filosofias:
 - **Stent permanente bioinerte** (316L, L605, MP35N, Pt-Cr): fica para sempre na artéria. O revestimento com fármaco é farmacologicamente ativo, mas o metal é inerte.
 - **Stent bioabsorvível** (liga de magnésio WE43, PLLA): suporta a artéria durante a cicatrização (cerca de 3 a 6 meses) e depois desaparece, devolvendo à artéria a capacidade de se dilatar e evitando um corpo estranho permanente.
 
-A ideia dos bioabsorvíveis é atraente, mas o primeiro dispositivo de grande difusão, o Absorb (PLLA), foi retirado do mercado em 2017 por maior risco de trombose do scaffold, em parte associado a struts espessos (cerca de 150-160 µm) [confirmar fonte]. O Magmaris (magnésio) continua em uso clínico.
+A ideia dos bioabsorvíveis é atraente, mas o primeiro dispositivo de grande difusão, o Absorb (PLLA), com struts de cerca de 157 µm, deixou de ser comercializado em setembro de 2017, depois de dados de maior trombose do scaffold do que com o stent metálico (2,3 % contra 0,7 % aos 3 anos no ABSORB III; Kereiakes et al. 2017), que vários autores associam em parte à espessura dos struts (Ke et al. 2020). O Magmaris (magnésio) continua em uso clínico.
 
 ## 6. Riscos de corrosão, desgaste ou degradação
 
@@ -55,7 +55,7 @@ Os stents com eluição de fármaco libertam um antiproliferativo (por exemplo, 
 
 ## 8. Vantagem face aos materiais atuais
 
-O dispositivo a substituir é o stent de aço 316L, de primeira geração. Os seus problemas são os struts espessos (cerca de 100-140 µm [confirmar]), a menor radiopacidade e o teor de níquel. Na análise multicritério (TOPSIS, WASPAS e VIKOR), o 316L ficou em último lugar entre os metais permanentes nos dois cenários.
+O dispositivo a substituir é o stent de aço 316L, de primeira geração. Os seus problemas são os struts espessos (cerca de 130-140 µm nas plataformas de primeira geração; Nikam et al. 2014), a menor radiopacidade e o teor de níquel. Na análise multicritério (TOPSIS, WASPAS e VIKOR), o 316L ficou em último lugar entre os metais permanentes nos dois cenários.
 
 As duas ligas de nova geração, **cobalto-crómio L605** e **platina-crómio**, ficaram praticamente empatadas:
 - No cenário A (só materiais em uso clínico), o Pt-Cr fica em 1.º lugar com o TOPSIS e o VIKOR, e o L605 com o WASPAS; a diferença é pequena (ΔC = 0,026).
@@ -73,14 +73,14 @@ Os bioabsorvíveis ficaram atrás dos metais permanentes no cenário B (Mg WE43 
 - **Ligas permanentes:** tubo sem costura de pequeno diâmetro, obtido por trefilagem; corte a laser do padrão da malha; remoção da escória e decapagem; recozimento para recuperar a ductilidade; eletropolimento para alisar a superfície e melhorar a passivação.
 - **Revestimento com fármaco:** polímero com o fármaco aplicado por pulverização sobre os struts.
 - **Montagem e esterilização:** compressão do stent sobre o balão (crimping); esterilização por óxido de etileno.
-- **Magnésio:** tubo extrudido e corte a laser, com revestimento polimérico que liberta o fármaco e ajuda a controlar a corrosão inicial [confirmar].
+- **Magnésio:** minitubo sem costura cortado a laser e eletropolido (Moravej e Mantovani 2011); no Magmaris, a liga é revestida com 7 µm de PLLA que liberta sirolimus (Rapetto e Leoncini 2017).
 
 ## 10. Testes antes da utilização clínica
 
 - **Biocompatibilidade:** série ISO 10993, em particular a ISO 10993-4 (interação com o sangue).
-- **Ensaios específicos de stents:** ISO 25539-2 (implantes endovasculares: stents vasculares) [confirmar edição].
-- **Durabilidade à fadiga pulsátil:** ASTM F2477, equivalente a 10 anos de batimentos cardíacos [confirmar].
-- **Recuo elástico e resistência radial:** ASTM F2079 e ASTM F3067 [confirmar].
+- **Ensaios específicos de stents:** ISO 25539-2:2020 (implantes cardiovasculares, dispositivos endovasculares, parte 2: stents vasculares).
+- **Durabilidade à fadiga pulsátil:** ASTM F2477-24; a duração equivalente a 10 anos é recomendação do guia da FDA (2010), e as edições até à F2477-19 indicavam pelo menos 380 milhões de ciclos.
+- **Recuo elástico e resistência radial:** ASTM F2079-09(2022) (recuo elástico) e ASTM F3067-26 (guia de ensaio da resistência radial).
 - **Corrosão:** polarização potenciodinâmica (ASTM F2129).
 - **Ressonância magnética:** ASTM F2052, F2213, F2182 e F2119.
 - **Esterilização:** validação por óxido de etileno (ISO 11135).

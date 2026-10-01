@@ -72,16 +72,16 @@ Vencedor no cenário A: TOPSIS Pt-Cr; WASPAS Co-Cr L605; VIKOR Pt-Cr
 | B-bio (comparação) | B-bio | Liga de Mg WE43 (bioabsorvível) | Liga de Mg WE43 (bioabsorvível) | Liga de Mg WE43 (bioabsorvível) | n/a |
 | R-sentinela | 60 meses | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
 | R-sentinela | 120 meses | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
-| R-sentinela | 600 meses | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
-| R-sentinela | 1200 meses | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
+| R-sentinela | 600 meses | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,94 |
+| R-sentinela | 1200 meses | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,94 |
 | Q | sem ordinais | Pt-Cr | Co-Cr L605 | Pt-Cr | 0,40 |
 | η | η = 0,0 | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | 0,40 |
 | η | η = 0,1 | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | 0,40 |
-| η | η = 0,2 | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | 0,40 |
-| η | η = 0,3 | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | -0,20 |
-| η | η = 0,4 | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | -0,20 |
-| η | η = 0,5 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,40 |
-| η | η = 0,6 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,20 |
+| η | η = 0,2 | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | -0,20 |
+| η | η = 0,3 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,40 |
+| η | η = 0,4 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,40 |
+| η | η = 0,5 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
+| η | η = 0,6 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 0,80 |
 | η | η = 0,7 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
 | η | η = 0,8 | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
 | η | η = 0,9 | Pt-Cr | Co-Cr L605 | Co-Cr L605 | 0,80 |
@@ -95,19 +95,19 @@ Vencedor no cenário A: TOPSIS Pt-Cr; WASPAS Co-Cr L605; VIKOR Pt-Cr
 
 | Material | TOPSIS | WASPAS | VIKOR |
 |---|---|---|---|
-| Co-Cr L605 | 51,3 % | 62,1 % | 54,7 % |
-| Co-Ni-Cr-Mo MP35N | 24,5 % | 25,7 % | 31,4 % |
-| Pt-Cr | 24,2 % | 12,3 % | 13,9 % |
+| Co-Ni-Cr-Mo MP35N | 44,6 % | 25,7 % | 45,5 % |
+| Co-Cr L605 | 43,4 % | 62,1 % | 46,1 % |
+| Pt-Cr | 12,0 % | 12,3 % | 8,4 % |
 | Aço inox 316L | 0,0 % | 0,0 % | 0,0 % |
 
 **W pesos ±20 %**
 
 | Material | TOPSIS | WASPAS | VIKOR |
 |---|---|---|---|
-| Pt-Cr | 88,3 % | 0,0 % | 61,4 % |
-| Co-Cr L605 | 11,7 % | 100,0 % | 38,6 % |
+| Pt-Cr | 85,5 % | 0,0 % | 58,9 % |
+| Co-Cr L605 | 14,5 % | 100,0 % | 40,9 % |
 | Aço inox 316L | 0,0 % | 0,0 % | 0,0 % |
-| Co-Ni-Cr-Mo MP35N | 0,0 % | 0,0 % | 0,0 % |
+| Co-Ni-Cr-Mo MP35N | 0,0 % | 0,0 % | 0,2 % |
 
 ### Onde o vencedor muda (face ao cenário A)
 
@@ -131,10 +131,8 @@ Vencedor no cenário A: TOPSIS Pt-Cr; WASPAS Co-Cr L605; VIKOR Pt-Cr
 - η, η = 0,2, WASPAS: Co-Cr L605 → Aço inox 316L
 - η, η = 0,2, VIKOR: Pt-Cr → Co-Cr L605
 - η, η = 0,3, TOPSIS: Pt-Cr → Co-Cr L605
-- η, η = 0,3, WASPAS: Co-Cr L605 → Aço inox 316L
 - η, η = 0,3, VIKOR: Pt-Cr → Co-Cr L605
 - η, η = 0,4, TOPSIS: Pt-Cr → Co-Cr L605
-- η, η = 0,4, WASPAS: Co-Cr L605 → Aço inox 316L
 - η, η = 0,4, VIKOR: Pt-Cr → Co-Cr L605
 - η, η = 0,5, TOPSIS: Pt-Cr → Co-Cr L605
 - η, η = 0,5, VIKOR: Pt-Cr → Co-Cr L605

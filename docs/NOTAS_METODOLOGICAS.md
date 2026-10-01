@@ -227,6 +227,46 @@ Caso de estudo 2 (haste da prótese da anca), TOPSIS; testes em tests/test_repro
   mín. e o máx. Um típico fora de [mín., máx.] dá erro. Haste, scaffold e reprodução de Petković
   et al. 2025 ficaram iguais (o típico era o ponto médio). O σy/E derivado usa agora σy típico / E típico.
 
+## Fontes do texto do stent (1 out 2026)
+Referências das frases de relatorio/caso_stent_rascunho.md. "Só resumo" quando o texto completo não foi lido.
+As normas ASTM foram lidas na loja oficial (store.astm.org) e as ISO em catálogos de organismos nacionais, porque
+astm.org e iso.org não abriram.
+- Ciclos e durabilidade (Q2, Q10): ASTM F2477-24, Standard Test Methods for in vitro Pulsatile Durability Testing of
+  Vascular Stents and Endovascular Prostheses (o âmbito da edição F2477-19 indicava 10 anos a 72 batimentos por
+  minuto, pelo menos 380 milhões de ciclos; o da F2477-24 já não traz o número). FDA. Non-Clinical Engineering
+  Tests and Recommended Labeling for Intravascular Stents and Associated Delivery Systems. 18 abr 2010,
+  https://www.fda.gov/media/71639/download (recomenda o equivalente a dez anos; não indica número de ciclos).
+- Espessura de strut e reestenose (Q2): Kastrati A, Mehilli J, Dirschinger J, et al. Intracoronary stenting and
+  angiographic results: strut thickness effect on restenosis outcome (ISAR-STEREO) trial. Circulation
+  2001;103:2816-2821, doi:10.1161/01.CIR.103.23.2816 (texto completo; reestenose 15,0 % com 50 µm e 25,8 % com
+  140 µm). Pache J, Kastrati A, Mehilli J, et al. (ISAR-STEREO-2). J Am Coll Cardiol 2003;41:1283-1288,
+  doi:10.1016/S0735-1097(03)00119-0 (só resumo; 17,9 % e 31,4 %). O ensaio mede reestenose, não lesão da parede.
+- Alergia ao níquel (Q3): Köster R, Vieluf D, Kiehn M, et al. Nickel and molybdenum contact allergies in patients
+  with coronary in-stent restenosis. Lancet 2000;356:1895-1897, doi:10.1016/S0140-6736(00)03262-1 (só resumo).
+  Gong Z, Li M, Guo X, et al. Stent implantation in patients with metal allergy: a systemic review and
+  meta-analysis. Coron Artery Dis 2013;24:684-689, doi:10.1097/MCA.0b013e3283647ad1 (só resumo; apoia a
+  associação). Norgaz T, Hobikoglu G, Serdar ZA, et al. Is there a link between nickel allergy and coronary stent
+  restenosis? Tohoku J Exp Med 2005;206:243-246, doi:10.1620/tjem.206.243 (só resumo; 43 doentes, sem relação).
+- Absorb (Q5): FDA, carta aos profissionais de saúde de 18 mar 2017 e atualização de 31 out 2017 (vendas paradas a
+  14 set 2017; a FDA não indica o motivo). Kereiakes DJ, Ellis SG, Metzger C, et al. 3-Year Clinical Outcomes With
+  Everolimus-Eluting Bioresorbable Coronary Scaffolds: The ABSORB III Trial. J Am Coll Cardiol 2017;70:2852-2862,
+  doi:10.1016/j.jacc.2017.10.010 (só resumo; trombose do dispositivo 2,3 % e 0,7 %). Ke J, Zhang H, Huang J, et al.
+  Three-year outcomes of bioresorbable vascular scaffolds versus second-generation drug-eluting stents. Medicine
+  (Baltimore) 2020;99:e21554, doi:10.1097/MD.0000000000021554 (meta-análise, texto completo; struts de 157 µm).
+- Struts do 316L (Q8): Nikam N, Steinberg TB, Steinberg DH. Advances in stent technologies and their effect on
+  clinical efficacy and safety. Med Devices (Auckl) 2014;7:165-178, doi:10.2147/MDER.S31869 (revisão, texto
+  completo, Tabela 1: Express 132 µm, Cypher 140 µm). O limite de 100 µm não tem fonte e saiu.
+- Fabrico do stent de magnésio (Q9): Moravej M, Mantovani D. Biodegradable metals for cardiovascular stent
+  application: interests and new opportunities. Int J Mol Sci 2011;12:4250-4270, doi:10.3390/ijms12074250
+  (revisão, texto completo). Rapetto C, Leoncini M. Magmaris: a new generation metallic sirolimus-eluting fully
+  bioresorbable scaffold. J Thorac Dis 2017;9(Suppl 9):S903-S913, doi:10.21037/jtd.2017.06.34 (revisão, texto
+  completo). "Tubo extrudido" e o papel do revestimento na corrosão inicial não têm fonte e saíram.
+- Normas (Q10): ISO 25539-2:2020, Cardiovascular implants, Endovascular devices, Part 2: Vascular stents. ASTM
+  F2079-09(2022), Standard Test Method for Measuring Intrinsic Elastic Recoil of Balloon-Expandable Stents. ASTM
+  F3067-26, Standard Guide for Radial Loading of Balloon-Expandable and Self-Expanding Vascular Stents. Edições em
+  vigor das outras normas do mesmo parágrafo: ASTM F2129-25, F2052-21, F2213-25, F2182-19e2 e F2119-24; ISO
+  10993-4:2017; ISO 11135:2014.
+
 ## Valores a verificar (fora de data/materiais.csv)
 Os valores de propriedades "A verificar" estão na base e serão listados por
 scripts/listar_por_verificar.py (tarefa 12). Aqui ficam os que não estão nessa coluna:
