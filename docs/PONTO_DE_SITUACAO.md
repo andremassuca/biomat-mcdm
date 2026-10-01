@@ -10,8 +10,9 @@ Atualizado no fim de cada tarefa da fila. Última atualização: 1 out 2026.
 Para o relatório, até 8 out:
 1. Scaffold, 2.ª ronda. Feito.
 2. Stent: frases com fonte e espessura de strut do 316L. Feito.
-3. Figuras com os ajustes pedidos e os dados atuais; export do scaffold. Em curso.
-4. Textos: rascunhos de métodos, validação, discussão e caso do scaffold; verificação de cada número; números do stent; cálculo de Gibson-Ashby.
+3. Figuras com os ajustes pedidos e os dados atuais; export do scaffold. Feito.
+4. Textos: rascunhos de métodos, validação, discussão e caso do scaffold; verificação de cada número; números do stent; cálculo de Gibson-Ashby. Em curso: gravado, à espera de aprovação da tabela de correções.
+4b. Textos: introdução, conclusões, resumo, caso do implante dentário, declaração e glossário (texto recebido, ainda por gravar e verificar).
 5. Enunciado e estrutura: relatorio/RELATORIO.md e scripts/verificar_referencias.py.
 6. Implante dentário: tabela de apoio e proposta de fontes.
 7. Cenário de orçamento, ranking de consenso e perfis de doente.
@@ -20,6 +21,24 @@ Para o relatório, até 8 out:
 Depois da tarefa 9: tag v1-relatorio; a base de dados fica congelada para o relatório.
 
 Depois de 8 out: custo ao longo da vida e margem de segurança à fadiga; aplicação interativa; base de dados v2.
+
+## Feito a 1 out 2026
+- Stent: 2.ª ronda de verificação, fontes das nove frases por confirmar do rascunho, espessura de strut do 316L (130-140 µm) e normas com edição.
+- Scaffold: 1.ª e 2.ª rondas de verificação, rubrica da bioatividade segundo Hench, regra da porosidade e regra da mediana na janela.
+- Figuras dos três casos quantitativos (seis figuras, PNG e SVG) e exports de dados do stent e do scaffold.
+- Rascunho do caso do stent no relatório.
+
+## Gravado sem commit (à espera de aprovação)
+- relatorio/metodos_rascunho.md, validacao_rascunho.md, discussao_rascunho.md e caso_scaffold_rascunho.md: texto recebido, com as marcas por confirmar já resolvidas onde havia dados.
+- relatorio/caso_stent_rascunho.md: números finais do Monte Carlo, do ΔC e do η.
+- docs/REGISTO_APOIO_IA.md: linha da tarefa 4.
+
+## Decisões pendentes
+- Tabela de correções da tarefa 4 (frases que não batem com o código ou com os resultados): decidir cada uma.
+- Stent: no Monte Carlo das propriedades, o MP35N fica em 1.º tantas vezes como o L605 no TOPSIS e no VIKOR; o texto do stent e a discussão ainda tratam só o L605 e o Pt-Cr como candidatos ao 1.º lugar.
+- Métodos: o cenário de teto de orçamento está descrito no texto mas ainda não existe (tarefa 7).
+- Gibson e Ashby: edição e página da referência.
+- Scaffold: dez marcas por confirmar no rascunho (fontes e normas).
 
 ## Estado por caso
 - Haste femoral: Ti-6Al-4V ELI em 1.º nos três métodos, cenários A e B; 31 células por verificar, nenhuma muda o vencedor.
