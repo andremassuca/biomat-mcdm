@@ -21,6 +21,13 @@ Par articular e implante dentário ficam SEMIQUANTITATIVOS (ordinais > 50 % do p
 - Índices derivados calculados em src/biomat_mcdm/indices.py (σy/E do stent; E_implante/E_osso da haste).
 - Cenários em cenarios.csv; η em parametros.csv.
 
+## Alterações v0.5 (1 out 2026): 2.ª ronda do stent
+- Valores de fichas de fornecedor no 316L (alongamento), no L605 (cedência, módulo, tração) e no MP35N (tração), com o valor anterior na nota.
+- L605: o típico é o da chapa (Haynes), por não haver ficha de tubo com valores; a fita (Matthey) dá o intervalo.
+- Pt-Cr: cedência com fonte primária (O'Brien 2010, só resumo); módulo, tração e alongamento continuam "A verificar", com fontes secundárias na nota.
+- Radiopacidade: rubrica escrita (ver "Rubricas ordinais"), fontes nas 7 linhas e estado "Verificado"; as notas não mudam.
+- Densidades do 316L, L605, MP35N e Pt-Cr com fonte. A densidade não é critério do stent.
+
 ## Legenda
 - min e max alimentam o Monte Carlo (distribuição entre mín. e máx.).
 - tipico = valor usado nos métodos; por omissão o ponto médio; pode diferir quando a regra da forma ou outra regra o justifica, com nota.
@@ -47,6 +54,7 @@ Estrito = triagem passa/falha · Benefício = maior é melhor · Custo = menor �
 - Custo relativo de material e fabrico (NÃO é preço clínico; critério de CUSTO): 1 = matéria-prima e processo maduros, menor complexidade; 2 = processo estabelecido com maior exigência de controlo; 3 = liga/material especializado ou cadeia de fabrico exigente; 4 = material caro, processo complexo, revestimento ou controlo rigoroso; 5 = material crítico, arquitetura complexa ou processo pouco escalável
 - Fabricabilidade: 5 = processos industriais maduros (incl. fabrico aditivo); 3 = possível com limitações; 2 = escala laboratorial
 - Galvânica cabeça-cone: 5 = sem par metálico; 3 = CoCr em cone de Ti (fretting documentado); 2 = múltiplas interfaces metal-metal
+- Radiopacidade (stent): 5 = liga com fração elevada de elemento de Z alto (Pt-Cr); 4 = melhoria clara face ao 316L (L605, com W); 3 = referência dos metais de stent (316L, MP35N); 2 = pouco radiopaco (Nitinol); 1 = radiotransparente, precisa de marcadores (Mg WE43, PLLA). Critério: teor de elementos de Z alto (Pt, Z = 78; W, Z = 74). A densidade não é critério (desde a v0.3), serve só de evidência de apoio. Fontes: Allocco DJ et al. Trials 2010;11:1, doi:10.1186/1745-6215-11-1 (PMC2826324); PMC3692344 ("modest improvement" do CoCr face ao aço).
 
 NOTA: índices ordinais só devem pesar ≤ 50 % do total de cada caso: o resto deve vir de propriedades medidas.
 

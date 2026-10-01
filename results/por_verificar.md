@@ -43,65 +43,55 @@ Células a verificar: 31 (0 mudam o vencedor com ±20 %).
 
 ## Stent
 
-Vencedor do TOPSIS: cenário A: Co-Cr L605; cenário B: Co-Cr L605.
-Células a verificar: 54 (6 mudam o vencedor com ±20 %).
+Vencedor do TOPSIS: cenário A: Pt-Cr; cenário B: Co-Cr L605.
+Células a verificar: 44 (3 mudam o vencedor com ±20 %).
 
 | # | Cenário | Material | Critério | Tipo | Típico | ΔC material | ΔC máx. | Muda vencedor | Fonte atual |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | A | Aço inox 316L | Alongamento na rotura | quantitativo | 50,0000 | 0,074 | 0,074 | sim → Pt-Cr | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| 2 | A | Pt-Cr | Alongamento na rotura | quantitativo | 45,0000 | 0,042 | 0,042 | sim → Pt-Cr | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| 3 | A | Co-Cr L605 | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0020 | 0,041 | 0,041 | sim → Pt-Cr | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
-| 4 | A | Co-Cr L605 | Radiopacidade (ordinal 1-5) | ordinal | 4,0000 | 0,038 | 0,038 | sim → Pt-Cr | Radiopacidade depende sobretudo do número atómico efetivo e da espessura: confirmar com literatura de stents |
-| 5 | A | Co-Cr L605 | Resistência à tração | quantitativo | 1025,0000 | 0,020 | 0,020 | sim → Pt-Cr | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| 6 | A | Pt-Cr | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0024 | 0,017 | 0,041 | sim → Pt-Cr | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
-| 7 | B | PLLA (bioabsorvível) | Espessura típica de strut | quantitativo | 155,0000 | 0,039 | 0,052 | não | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
-| 8 | B | PLLA (bioabsorvível) | Compatibilidade com RM (ordinal 1-5) | ordinal | 5,0000 | 0,034 | 0,034 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| 9 | A | Co-Ni-Cr-Mo MP35N | Resistência à tração | quantitativo | 945,0000 | 0,034 | 0,034 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| 10 | A | Pt-Cr | Resistência à tração | quantitativo | 834,0000 | 0,031 | 0,031 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| 11 | A | Co-Ni-Cr-Mo MP35N | Radiopacidade (ordinal 1-5) | ordinal | 3,0000 | 0,030 | 0,030 | não | Radiopacidade depende sobretudo do número atómico efetivo e da espessura: confirmar com literatura de stents |
-| 12 | A | Co-Ni-Cr-Mo MP35N | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0018 | 0,030 | 0,030 | não | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
-| 13 | A | Co-Cr L605 | Fabricabilidade (ordinal 1-5) | ordinal | 5,0000 | 0,021 | 0,021 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| 14 | A | Co-Cr L605 | Módulo de Young | quantitativo | 243,0000 | 0,020 | 0,020 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| 15 | A | Co-Ni-Cr-Mo MP35N | Fabricabilidade (ordinal 1-5) | ordinal | 5,0000 | 0,020 | 0,020 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| 16 | A | Aço inox 316L | Fabricabilidade (ordinal 1-5) | ordinal | 5,0000 | 0,017 | 0,017 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| 17 | A | Co-Ni-Cr-Mo MP35N | Módulo de Young | quantitativo | 233,0000 | 0,016 | 0,016 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| 18 | A | Co-Cr L605 | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 4,0000 | 0,016 | 0,016 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| 19 | A | Aço inox 316L | Radiopacidade (ordinal 1-5) | ordinal | 3,0000 | 0,014 | 0,023 | não | Radiopacidade depende sobretudo do número atómico efetivo e da espessura: confirmar com literatura de stents |
-| 20 | A | Pt-Cr | Módulo de Young | quantitativo | 203,0000 | 0,014 | 0,014 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| 21 | B | Liga de Mg WE43 (bioabsorvível) | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 4,0000 | 0,013 | 0,013 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| 22 | A | Pt-Cr | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 4,0000 | 0,013 | 0,016 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| 23 | A | Co-Ni-Cr-Mo MP35N | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 4,0000 | 0,011 | 0,016 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| 24 | A | Aço inox 316L | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 4,0000 | 0,011 | 0,016 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| 25 | A | Co-Ni-Cr-Mo MP35N | Compatibilidade com RM (ordinal 1-5) | ordinal | 3,0000 | 0,011 | 0,011 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| 26 | A | Aço inox 316L | Módulo de Young | quantitativo | 193,0000 | 0,010 | 0,010 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| 27 | A | Co-Cr L605 | Compatibilidade com RM (ordinal 1-5) | ordinal | 3,0000 | 0,010 | 0,010 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| 28 | A | Pt-Cr | Compatibilidade com RM (ordinal 1-5) | ordinal | 3,0000 | 0,009 | 0,009 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| 29 | B | Liga de Mg WE43 (bioabsorvível) | Compatibilidade com RM (ordinal 1-5) | ordinal | 5,0000 | 0,006 | 0,026 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| 30 | A | Co-Cr L605 | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 3,0000 | 0,005 | 0,005 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| 31 | B | PLLA (bioabsorvível) | Fabricabilidade (ordinal 1-5) | ordinal | 3,0000 | 0,005 | 0,005 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| 32 | A | Co-Ni-Cr-Mo MP35N | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 3,0000 | 0,004 | 0,004 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| 33 | B | Liga de Mg WE43 (bioabsorvível) | Fabricabilidade (ordinal 1-5) | ordinal | 3,0000 | 0,004 | 0,004 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| 34 | B | PLLA (bioabsorvível) | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 5,0000 | 0,004 | 0,004 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| 35 | B | Liga de Mg WE43 (bioabsorvível) | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0039 | 0,003 | 0,003 | não | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
-| 36 | B | Liga de Mg WE43 (bioabsorvível) | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 5,0000 | 0,003 | 0,003 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| 37 | B | Liga de Mg WE43 (bioabsorvível) | Alongamento na rotura | quantitativo | 13,5000 | 0,003 | 0,003 | não | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |
-| 38 | B | Liga de Mg WE43 (bioabsorvível) | Resistência à tração | quantitativo | 250,0000 | 0,003 | 0,003 | não | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |
-| 39 | B | Liga de Mg WE43 (bioabsorvível) | Radiopacidade (ordinal 1-5) | ordinal | 1,0000 | 0,002 | 0,002 | não | Radiopacidade depende sobretudo do número atómico efetivo e da espessura: confirmar com literatura de stents |
-| 40 | B | PLLA (bioabsorvível) | Radiopacidade (ordinal 1-5) | ordinal | 1,0000 | 0,001 | 0,002 | não | Radiopacidade depende sobretudo do número atómico efetivo e da espessura: confirmar com literatura de stents |
-| 41 | B | Liga de Mg WE43 (bioabsorvível) | Módulo de Young | quantitativo | 44,5000 | 0,000 | 0,000 | não | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |
-| 42 | A | Aço inox 316L | Espessura típica de strut | quantitativo | 120,0000 | 0,000 | 0,122 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| 43 | A | Pt-Cr | Radiopacidade (ordinal 1-5) | ordinal | 5,0000 | 0,000 | 0,031 | não | Radiopacidade depende sobretudo do número atómico efetivo e da espessura: confirmar com literatura de stents |
-| 44 | A | Aço inox 316L | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0014 | 0,000 | 0,018 | não | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
-| 45 | A | Aço inox 316L | Resistência à tração | quantitativo | 592,5000 | 0,000 | 0,013 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| 46 | A | Pt-Cr | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 4,0000 | 0,000 | 0,007 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| 47 | B | PLLA (bioabsorvível) | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0179 | 0,000 | 0,003 | não | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
-| 48 | B | PLLA (bioabsorvível) | Alongamento na rotura | quantitativo | 4,0000 | 0,000 | 0,001 | não | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
-| 49 | A | Aço inox 316L | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 1,0000 | 0,000 | 0,001 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| 50 | B | PLLA (bioabsorvível) | Resistência à tração | quantitativo | 65,0000 | 0,000 | 0,001 | não | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
-| 51 | B | PLLA (bioabsorvível) | Módulo de Young | quantitativo | 3,3500 | 0,000 | 0,000 | não | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
-| 52 | A | Aço inox 316L | Compatibilidade com RM (ordinal 1-5) | ordinal | 2,0000 | 0,000 | 0,000 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| 53 | A | Pt-Cr | Fabricabilidade (ordinal 1-5) | ordinal | 4,0000 | 0,000 | 0,000 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| 54 | B | PLLA (bioabsorvível) | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 3,0000 | 0,000 | 0,000 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 1 | A | Pt-Cr | Alongamento na rotura | quantitativo | 45,0000 | 0,071 | 0,097 | sim → Co-Cr L605 | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 2 | A | Co-Cr L605 | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0021 | 0,039 | 0,039 | sim → Co-Cr L605 | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
+| 3 | A | Pt-Cr | Resistência à tração | quantitativo | 834,0000 | 0,034 | 0,034 | sim → Co-Cr L605 | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 4 | A | Pt-Cr | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0024 | 0,040 | 0,040 | não | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
+| 5 | B | PLLA (bioabsorvível) | Espessura típica de strut | quantitativo | 155,0000 | 0,039 | 0,052 | não | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
+| 6 | B | PLLA (bioabsorvível) | Compatibilidade com RM (ordinal 1-5) | ordinal | 5,0000 | 0,034 | 0,034 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 7 | A | Co-Ni-Cr-Mo MP35N | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0018 | 0,029 | 0,029 | não | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
+| 8 | A | Aço inox 316L | Fabricabilidade (ordinal 1-5) | ordinal | 5,0000 | 0,022 | 0,022 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 9 | A | Co-Cr L605 | Fabricabilidade (ordinal 1-5) | ordinal | 5,0000 | 0,020 | 0,020 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 10 | A | Co-Ni-Cr-Mo MP35N | Módulo de Young | quantitativo | 233,0000 | 0,019 | 0,019 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 11 | A | Co-Ni-Cr-Mo MP35N | Fabricabilidade (ordinal 1-5) | ordinal | 5,0000 | 0,019 | 0,019 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 12 | A | Aço inox 316L | Módulo de Young | quantitativo | 193,0000 | 0,019 | 0,019 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 13 | A | Aço inox 316L | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 4,0000 | 0,017 | 0,017 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 14 | A | Pt-Cr | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 4,0000 | 0,015 | 0,017 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 15 | A | Co-Cr L605 | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 4,0000 | 0,014 | 0,017 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 16 | B | Liga de Mg WE43 (bioabsorvível) | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 4,0000 | 0,013 | 0,013 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 17 | A | Pt-Cr | Módulo de Young | quantitativo | 203,0000 | 0,013 | 0,013 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 18 | A | Co-Ni-Cr-Mo MP35N | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 4,0000 | 0,012 | 0,017 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
+| 19 | A | Co-Ni-Cr-Mo MP35N | Compatibilidade com RM (ordinal 1-5) | ordinal | 3,0000 | 0,011 | 0,011 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 20 | A | Co-Cr L605 | Compatibilidade com RM (ordinal 1-5) | ordinal | 3,0000 | 0,010 | 0,010 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 21 | A | Pt-Cr | Compatibilidade com RM (ordinal 1-5) | ordinal | 3,0000 | 0,009 | 0,009 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 22 | B | Liga de Mg WE43 (bioabsorvível) | Compatibilidade com RM (ordinal 1-5) | ordinal | 5,0000 | 0,006 | 0,026 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 23 | B | PLLA (bioabsorvível) | Fabricabilidade (ordinal 1-5) | ordinal | 3,0000 | 0,005 | 0,005 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 24 | A | Co-Cr L605 | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 3,0000 | 0,005 | 0,005 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 25 | A | Co-Ni-Cr-Mo MP35N | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 3,0000 | 0,004 | 0,004 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 26 | B | Liga de Mg WE43 (bioabsorvível) | Fabricabilidade (ordinal 1-5) | ordinal | 3,0000 | 0,004 | 0,004 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 27 | B | PLLA (bioabsorvível) | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 5,0000 | 0,004 | 0,004 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 28 | B | Liga de Mg WE43 (bioabsorvível) | Alongamento na rotura | quantitativo | 13,5000 | 0,004 | 0,004 | não | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |
+| 29 | B | Liga de Mg WE43 (bioabsorvível) | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0039 | 0,003 | 0,003 | não | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
+| 30 | B | Liga de Mg WE43 (bioabsorvível) | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 5,0000 | 0,003 | 0,003 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 31 | B | Liga de Mg WE43 (bioabsorvível) | Resistência à tração | quantitativo | 250,0000 | 0,003 | 0,003 | não | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |
+| 32 | B | Liga de Mg WE43 (bioabsorvível) | Módulo de Young | quantitativo | 44,5000 | 0,001 | 0,001 | não | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |
+| 33 | A | Aço inox 316L | Espessura típica de strut | quantitativo | 120,0000 | 0,000 | 0,117 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 34 | A | Aço inox 316L | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0014 | 0,000 | 0,018 | não | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
+| 35 | A | Aço inox 316L | Resistência à tração | quantitativo | 592,5000 | 0,000 | 0,013 | não | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
+| 36 | A | Pt-Cr | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 4,0000 | 0,000 | 0,006 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 37 | B | PLLA (bioabsorvível) | Índice material de recuo elástico σy/E (proxy) | derivado | 0,0179 | 0,000 | 0,003 | não | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |
+| 38 | B | PLLA (bioabsorvível) | Alongamento na rotura | quantitativo | 4,0000 | 0,000 | 0,001 | não | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
+| 39 | B | PLLA (bioabsorvível) | Resistência à tração | quantitativo | 65,0000 | 0,000 | 0,001 | não | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
+| 40 | A | Aço inox 316L | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 1,0000 | 0,000 | 0,001 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 41 | B | PLLA (bioabsorvível) | Módulo de Young | quantitativo | 3,3500 | 0,000 | 0,000 | não | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
+| 42 | A | Aço inox 316L | Compatibilidade com RM (ordinal 1-5) | ordinal | 2,0000 | 0,000 | 0,000 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 43 | A | Pt-Cr | Fabricabilidade (ordinal 1-5) | ordinal | 4,0000 | 0,000 | 0,000 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 44 | B | PLLA (bioabsorvível) | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 3,0000 | 0,000 | 0,000 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
 
 ## Scaffold
 
