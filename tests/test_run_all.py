@@ -49,6 +49,17 @@ def test_monte_carlo_percentagens_somam_pelo_menos_100(saida):
     _, mc, _, _ = saida
     soma = mc.groupby(["caso", "analise", "metodo"])["pct_primeiro"].sum()
     assert (soma >= 100 - 1e-9).all()
+    assert {"pct_segundo", "pct_terceiro"} <= set(mc.columns)
+    assert (mc[["pct_primeiro", "pct_segundo", "pct_terceiro"]].sum(axis=1) <= 100 + 1e-9).all()
+
+
+def test_pontuacoes_tem_os_tres_casos_e_dois_cenarios():
+    pt = ra.pontuacao_linhas()
+    assert set(pt["caso"]) == {"Haste", "Stent", "Scaffold"}
+    assert set(pt["cenario"]) == {"A", "B"}
+    assert {"C_TOPSIS", "Q_WASPAS", "P_VIKOR", "pos_TOPSIS"} <= set(pt.columns)
+    um = pt[(pt["caso"] == "Stent") & (pt["cenario"] == "A")]
+    assert sorted(um["pos_TOPSIS"]) == [1, 2, 3, 4]
 
 
 def test_resumo_tem_as_seccoes(saida):

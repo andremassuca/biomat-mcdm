@@ -112,6 +112,15 @@ def pct_primeiro(ranks: np.ndarray) -> np.ndarray:
     return 100 * (np.asarray(ranks) == 1).mean(axis=0)
 
 
+def pct_posicao(ranks: np.ndarray, k: int) -> np.ndarray:
+    """% de iterações em que cada material fica na posição k (1 = melhor).
+
+    Em linguagem simples: conta em quantas das simulações cada material ficou em k.º lugar
+    e passa a contagem a percentagem. Com k = 1 dá o mesmo que pct_primeiro.
+    """
+    return 100 * (np.asarray(ranks) == k).mean(axis=0)
+
+
 def rank_agreement(rank_a: np.ndarray, rank_b: np.ndarray) -> float:
     """Correlação de Spearman entre dois rankings (1 = mesma ordem)."""
     return float(spearmanr(rank_a, rank_b)[0])

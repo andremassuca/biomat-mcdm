@@ -6,7 +6,7 @@ discutir o método, não para tirar conclusões sobre os materiais. η = 1 (só 
 Gera:
   results/haste_preliminar.csv          (tabela completa, cenários A e B)
   results/haste_preliminar.md           (posições lado a lado e Spearman, em Markdown)
-  results/figures/haste_preliminar.png / .svg
+  results/figures/anexo/haste_preliminar.png / .svg   (figura de anexo, fora do relatório)
 Uso: python scripts/haste_preliminar.py
 """
 from __future__ import annotations
@@ -115,9 +115,9 @@ def main() -> None:
     pd.concat(tabelas).to_csv(RESULTS / "haste_preliminar.csv", index=False)
     (RESULTS / "haste_preliminar.md").write_text("\n".join(linhas), encoding="utf-8")
     fig = figura(resultados)
-    (RESULTS / "figures").mkdir(parents=True, exist_ok=True)
+    (RESULTS / "figures" / "anexo").mkdir(parents=True, exist_ok=True)
     for ext in ("png", "svg"):
-        fig.savefig(RESULTS / "figures" / f"haste_preliminar.{ext}", dpi=300,
+        fig.savefig(RESULTS / "figures" / "anexo" / f"haste_preliminar.{ext}", dpi=300,
                     metadata={"Date": None} if ext == "svg" else None)
     plt.close(fig)
     print("\n".join(linhas))

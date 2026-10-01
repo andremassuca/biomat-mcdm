@@ -4,7 +4,7 @@ import pytest
 
 from biomat_mcdm.io import DecisionProblem, build_problem
 from biomat_mcdm.robustness import (alargar_valores_unicos, com_alvo, com_eta, com_peso, monte_carlo,
-                                    pct_primeiro, posicoes, rank_agreement, sample_matrix, sample_weights,
+                                    pct_posicao, pct_primeiro, posicoes, rank_agreement, sample_matrix, sample_weights,
                                     sem_ordinais)
 
 
@@ -61,6 +61,8 @@ def test_metodo_desconhecido_da_erro():
 def test_pct_primeiro_e_spearman():
     r = np.array([[1, 2, 3], [2, 1, 3], [1, 3, 2], [1, 2, 3]])
     assert pct_primeiro(r) == pytest.approx([75, 25, 0])
+    assert pct_posicao(r, 1) == pytest.approx(pct_primeiro(r))
+    assert sum(pct_posicao(r, k) for k in (1, 2, 3)) == pytest.approx([100, 100, 100])
     assert rank_agreement([1, 2, 3], [1, 2, 3]) == pytest.approx(1)
     assert rank_agreement([1, 2, 3], [3, 2, 1]) == pytest.approx(-1)
 

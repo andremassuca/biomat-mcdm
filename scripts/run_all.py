@@ -5,7 +5,8 @@ partem do cenário A. PRELIMINAR enquanto os valores da base estiverem "A verifi
 
 Gera:
   results/rankings_cenarios.csv   posição de cada material por caso, cenário, variante e método
-  results/monte_carlo.csv         % de 1.º lugar e posição média (MC propriedades e W pesos)
+  results/pontuacoes.csv          pontuação (C, Q, P) e posição nos cenários A e B, por método
+  results/monte_carlo.csv         % de 1.º, 2.º e 3.º lugar e posição média (MC propriedades e W pesos)
   results/spearman.csv            concordância entre métodos por cenário e variante
   results/resumo_robustez.md      resumo por caso
 Uso: python scripts/run_all.py [--n-iter 10000] [--seed 42]
@@ -19,8 +20,8 @@ import numpy as np
 import pandas as pd
 
 from biomat_mcdm.io import DATA, DecisionProblem, build_problem, load_parametros, load_tissue
-from biomat_mcdm.pipeline import METODOS, fmt_pt
-from biomat_mcdm.robustness import (com_alvo, com_eta, com_peso, monte_carlo, pct_primeiro,
+from biomat_mcdm.pipeline import METODOS, fmt_pt, rank_all_methods
+from biomat_mcdm.robustness import (com_alvo, com_eta, com_peso, monte_carlo, pct_posicao, pct_primeiro,
                                     posicoes, rank_agreement, sem_ordinais)
 
 RESULTS = Path(__file__).resolve().parents[1] / "results"
@@ -88,6 +89,20 @@ def ranking_linhas(caso: str, cenario: str, variante: str, p: DecisionProblem) -
     return linhas
 
 
+def pontuacao_linhas(data_dir: Path = DATA) -> pd.DataFrame:
+    """Pontuações dos três métodos (C, Q, P) e posições nos cenários A e B de cada caso.
+
+    Em linguagem simples: a tabela de rankings só guarda a posição; esta guarda também a
+    pontuação, para se ver quando dois materiais ficam quase empatados.
+    """
+    partes = []
+    for caso, nome in CASOS.items():
+        for cen in ("A", "B"):
+            df = rank_all_methods(build_problem(nome, cen, data_dir))
+            partes.append(df.assign(caso=caso, cenario=cen))
+    return pd.concat(partes, ignore_index=True)
+
+
 def spearman_linhas(rk: pd.DataFrame) -> pd.DataFrame:
     """Spearman entre os três métodos para cada caso, cenário e variante."""
     out = []
@@ -109,9 +124,11 @@ def mc_linhas(caso: str, p: DecisionProblem, n_iter: int, seed: int,
         for m in METODOS:
             r = monte_carlo(p, m, n_iter, seed, variar=variar,
                             incerteza_valor_unico=incerteza_valor_unico)
-            for a, pct, med in zip(p.alternatives, pct_primeiro(r), r.mean(axis=0)):
+            for a, pct, p2, p3, med in zip(p.alternatives, pct_primeiro(r), pct_posicao(r, 2),
+                                           pct_posicao(r, 3), r.mean(axis=0)):
                 linhas.append({"caso": caso, "analise": analise, "metodo": m, "material": a,
-                               "pct_primeiro": pct, "posicao_media": med, "n_iter": n_iter, "seed": seed,
+                               "pct_primeiro": pct, "pct_segundo": p2, "pct_terceiro": p3,
+                               "posicao_media": med, "n_iter": n_iter, "seed": seed,
                                "incerteza_valor_unico": incerteza_valor_unico if variar == "propriedades" else 0.0})
     return linhas
 
@@ -189,6 +206,7 @@ def main() -> None:
     rk.to_csv(RESULTS / "rankings_cenarios.csv", index=False)
     mc.to_csv(RESULTS / "monte_carlo.csv", index=False)
     sp.to_csv(RESULTS / "spearman.csv", index=False)
+    pontuacao_linhas().to_csv(RESULTS / "pontuacoes.csv", index=False)
     texto = resumo_md(rk, mc, sp, cen, a.n_iter, a.seed)
     (RESULTS / "resumo_robustez.md").write_text(texto, encoding="utf-8")
     print(texto)

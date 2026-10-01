@@ -13,7 +13,7 @@ Colunas R e P: serve também o relatório (R) e o poster (P). Figuras em `result
 | F4 | Robustez Monte Carlo | % de 1.º lugar por material, por caso (10 000 iterações, seed 42) | `results/*.csv` (tarefa 9) | sim | sim |
 | F5 | Sensibilidade a η | Posição ou C de cada material para η = 0,7; 0,8; 0,9; 1 | `results/*.csv` (tarefa 9) | sim | talvez |
 | F6 | Efeito dos perfis de doente | Ranking de referência vs perfil (haste: jovem ativo vs idoso com osteoporose; stent: alergia ao níquel) | `data/perfis.yaml`, `results/` (tarefa 10) | sim | sim |
-| F7 (suplementar) | Resultado preliminar da haste, cenários A e B | Posição por material e método (TOPSIS, WASPAS, VIKOR), Spearman entre métodos | `results/figures/haste_preliminar.png` (feito, PRELIMINAR) | reunião | não |
+| F7 (suplementar) | Resultado preliminar da haste, cenários A e B | Posição por material e método (TOPSIS, WASPAS, VIKOR), Spearman entre métodos | `results/figures/anexo/haste_preliminar.png` (feito, PRELIMINAR) | reunião | não |
 
 ## Tabelas
 
