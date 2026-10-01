@@ -47,7 +47,7 @@ AZUL, LARANJA, VERDE, CINZA = "#0072B2", "#E69F00", "#009E73", "#999999"
 CEU, VERMELHAO, ROSA, AMARELO = "#56B4E9", "#D55E00", "#CC79A7", "#F0E442"
 COR_MATERIAL = {
     "Haste": {"Ti-6Al-4V ELI": AZUL, "Co-Cr-Mo forjado": LARANJA, "Ti-13Nb-13Zr": VERDE,
-              "Aço inox 316L": CINZA, "Ti cp grau 4": CEU, "Ti-35Nb-7Zr-5Ta (TNZT)": ROSA},
+              "Aço inox 316L": CINZA, "Ti cp grau 4": AMARELO, "Ti-35Nb-7Zr-5Ta (TNZT)": ROSA},
     "Stent": {"Pt-Cr": AZUL, "Co-Cr L605": LARANJA, "Co-Ni-Cr-Mo MP35N": VERDE,
               "Aço inox 316L": CINZA, "Liga de Mg WE43 (bioabsorvível)": VERMELHAO,
               "PLLA (bioabsorvível)": ROSA, "Nitinol (autoexpansível)": AMARELO},
@@ -170,6 +170,16 @@ def dados_primeiro(mc: pd.DataFrame, caso: str) -> pd.DataFrame:
     return t.sort_values(METODOS, ascending=False)
 
 
+def separar_zeros(t: pd.DataFrame, minimo: float = 0.5) -> tuple[pd.DataFrame, list[str]]:
+    """Separa os materiais que nunca chegam ao 1.º lugar dos que chegam em pelo menos um método.
+
+    Em linguagem simples: um material conta como "0 %" quando a percentagem arredonda a zero
+    (menos de `minimo`) nos três métodos. Devolve a tabela dos outros e a lista dos nomes a zero.
+    """
+    fica = (t >= minimo).any(axis=1)
+    return t[fica], t.index[~fica].tolist()
+
+
 def dados_vencedor_eta(rk: pd.DataFrame, caso: str) -> pd.DataFrame:
     """Vencedor por método (linhas) e por valor de η (colunas, 0 a 1).
 
@@ -257,8 +267,9 @@ def fig_rigidez(df: pd.DataFrame, faixa: tuple[float, float], osso: tuple[float,
     ax.set_axisbelow(True)
     limpar(ax)
     if df["investigacao"].any():
-        ax.legend(handles=[Patch(facecolor=to_rgba(TEXTO_2, 0.35), edgecolor=TEXTO_2, hatch="//",
-                                 linestyle="--", label="em investigação")],
+        c = cor("Haste", df[df["investigacao"]]["material"].iloc[0])
+        ax.legend(handles=[Patch(facecolor="none", edgecolor=c, hatch="//", linestyle="--", linewidth=1.5,
+                                 label="em investigação")],
                   loc="upper right", frameon=False, fontsize=F_EIXO)
     lo, hi = fmt_pt(df["razao_tipica"].min(), 0), fmt_pt(df["razao_tipica"].max(), 0)
     cabecalho(fig, f"Todas as ligas são {lo} a {hi} vezes mais rígidas do que o osso cortical",
@@ -295,7 +306,7 @@ def fig_posicoes(rk: pd.DataFrame, pt: pd.DataFrame) -> plt.Figure:
             ax.set_title(f"{CASOS[caso]}, cenário {cen}", fontsize=F_EIXO + 1, color=TEXTO, loc="left",
                          pad=30, fontweight="bold")
             ax.set_xlabel(frase_concordancia(t), fontsize=F_EIXO - 1, color=TEXTO_2, labelpad=8, loc="left")
-    cabecalho(fig, "Os três métodos concordam no vencedor da haste; no stent e no scaffold "
+    cabecalho(fig, "Os três métodos concordam no vencedor da haste e do scaffold; no stent "
                    "o 1.º lugar depende do método e empata no cenário B",
               "Posição de cada material por método (η = 1). Cenário A: só materiais em uso clínico; "
               "cenário B: inclui investigação.\n"
@@ -305,19 +316,23 @@ def fig_posicoes(rk: pd.DataFrame, pt: pd.DataFrame) -> plt.Figure:
 
 
 def fig_monte_carlo(mc: pd.DataFrame) -> plt.Figure:
-    tab = {c: dados_primeiro(mc, c) for c in CASOS}
-    n = [len(t) for t in tab.values()]
-    fig, eixos = plt.subplots(3, 1, figsize=(13, 0.72 * sum(n) + 5), height_ratios=n, sharex=True)
+    tab = {c: separar_zeros(dados_primeiro(mc, c)) for c in CASOS}
+    n = [len(t) + 0.6 for t, _ in tab.values()]
+    fig, eixos = plt.subplots(3, 1, figsize=(13, 0.8 * sum(n) + 5.5), height_ratios=n, sharex=True)
     h = 0.26
     for ax, caso in zip(eixos, CASOS):
-        t = tab[caso]
+        t, zeros = tab[caso]
+        if zeros:
+            ax.text(0, len(t) - 0.42, "Restantes materiais: 0 % nos três métodos ("
+                    + ", ".join(curto(z) for z in zeros) + ")", fontsize=F_EIXO - 2, color=TEXTO_2,
+                    va="top", style="italic")
         for k, m in enumerate(METODOS):
             y = [i + (k - 1) * h for i in range(len(t))]
             ax.barh(y, t[m], height=h * 0.92, color=COR_METODO[m], label=m)
             for yi, v in zip(y, t[m]):
                 ax.text(v + 1.2, yi, f"{fmt_pt(v, 0)} %", va="center", fontsize=F_EIXO - 2, color=TEXTO)
         ax.set_yticks(range(len(t)), [curto(x) for x in t.index])
-        ax.set_ylim(len(t) - 0.5, -0.5)
+        ax.set_ylim(len(t) + 0.1, -0.5)
         ax.set_xlim(0, 112)
         ax.set_xticks(range(0, 101, 20))
         ax.xaxis.grid(True, color=GRELHA, linewidth=0.8)
@@ -325,7 +340,7 @@ def fig_monte_carlo(mc: pd.DataFrame) -> plt.Figure:
         limpar(ax)
         ax.set_title(CASOS[caso], fontsize=F_EIXO + 1, color=TEXTO, loc="left", fontweight="bold")
     eixos[-1].set_xlabel("% das iterações em 1.º lugar", fontsize=F_EIXO, color=TEXTO_2)
-    eixos[0].legend(loc="lower right", frameon=False, fontsize=F_EIXO, ncols=3)
+    eixos[1].legend(loc="lower right", frameon=False, fontsize=F_EIXO, ncols=3)
     it = int(mc["n_iter"].iloc[0])
     cabecalho(fig, "Só na haste o 1.º lugar resiste à incerteza dos dados",
               f"Monte Carlo das propriedades, cenário A, {it} iterações: percentagem das iterações\n"
@@ -390,14 +405,14 @@ def fig_vencedor_eta(rk: pd.DataFrame) -> plt.Figure:
                     fontsize=F_EIXO - 2, color=TEXTO, fontweight="bold")
     eixos[-1].set_xlabel("← pesos dos dados  |  pesos definidos por nós →", fontsize=F_EIXO + 1,
                          color=TEXTO, labelpad=12)
-    cabecalho(fig, "Na haste o vencedor quase não depende de η; no stent e no scaffold muda",
+    cabecalho(fig, "Na haste e no scaffold o vencedor quase não depende de η; no stent muda",
               "Material em 1.º lugar no cenário A, por método, quando η vai de 0 (só pesos objetivos, "
               "tirados dos dados)\na 1 (só pesos subjetivos, definidos no trabalho).", topo=0.89)
     return fig
 
 
 def fig_resumo(resumo: pd.DataFrame) -> plt.Figure:
-    fig, ax = plt.subplots(figsize=(19, 3.0 * len(resumo) + 3.2))
+    fig, ax = plt.subplots(figsize=(19, 1.9 * len(resumo) + 3.4))
     ax.set_xlim(0, 1)
     ax.set_ylim(len(resumo), -0.42)
     ax.axis("off")
@@ -413,17 +428,20 @@ def fig_resumo(resumo: pd.DataFrame) -> plt.Figure:
         for j, (mat, met) in enumerate(r.vencedores.items()):
             y = i + (j + 1) / (k + 1)
             ax.add_patch(Rectangle((0.13, y - 0.11), 0.016, 0.22, color=cor(r.caso, mat)))
-            ax.text(0.155, y, curto(mat), fontsize=F_TITULO - 1, color=TEXTO, va="center", fontweight="bold")
+            nome = ax.text(0.155, y, curto(mat), fontsize=F_TITULO - 1, color=TEXTO, va="center",
+                           fontweight="bold")
             if len(met) < len(METODOS):
-                ax.text(0.30, y, f"({', '.join(met)})", fontsize=F_EIXO - 1, color=TEXTO_2, va="center")
+                ax.annotate(f"({', '.join(met)})", xy=(1, 0.5), xycoords=nome, xytext=(10, 0),
+                            textcoords="offset points", fontsize=F_EIXO - 1, color=TEXTO_2, va="center")
             ax.text(0.47, y, " / ".join(f"{fmt_pt(v, 0)} %" for v in r.monte_carlo[mat]),
                     fontsize=F_TITULO - 1, color=TEXTO, va="center")
         frase = r.muda if r.muda.startswith("η") else r.muda[0].upper() + r.muda[1:]
         ax.text(0.74, i + 0.5, "\n".join(textwrap.wrap(frase, 34)), fontsize=F_EIXO, color=TEXTO,
                 va="center", linespacing=1.35)
-    cabecalho(fig, "Haste: vencedor estável. Stent e scaffold: 1.º lugar sensível aos dados e aos pesos",
+    cabecalho(fig, "Haste: vencedor estável. Scaffold: estável nos pesos, sensível aos dados. "
+                   "Stent: sensível aos dados e aos pesos",
               "Resumo dos três casos quantitativos: vencedor por método no cenário A (η = 1), robustez no "
-              "Monte Carlo das propriedades\ne cenários de sensibilidade em que o vencedor muda.", topo=0.86)
+              "Monte Carlo das propriedades\ne cenários de sensibilidade em que o vencedor muda.", topo=0.83)
     return fig
 
 

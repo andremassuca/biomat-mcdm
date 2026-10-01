@@ -1280,7 +1280,7 @@ L 439.462358 276.793148
 L 439.462358 319.190547 
 L 174.815 319.190547 
 z
-" clip-path="url(#pc5f5ae330a)" style="fill: #56b4e9; stroke: #56b4e9; stroke-width: 1.5; stroke-linejoin: miter"/>
+" clip-path="url(#pc5f5ae330a)" style="fill: #f0e442; stroke: #f0e442; stroke-width: 1.5; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
     <path d="M 174.815 345.176049 
@@ -1557,7 +1557,7 @@ L 786.055313 112.90025
 L 786.055313 103.10025 
 L 758.055313 103.10025 
 z
-" style="fill: url(#ha8e3b64190); fill-opacity: 0.35; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #52514e; stroke-linejoin: miter"/>
+" style="fill: url(#h9fab9e9690); stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #cc79a7; stroke-width: 1.5; stroke-linejoin: miter"/>
     </g>
     <g id="text_24">
      <!-- em investigação -->
@@ -3051,8 +3051,8 @@ M 36 108
 L 108 36 
 " style="fill: #cc79a7; stroke: #cc79a7; stroke-width: 1.0; stroke-linecap: butt; stroke-linejoin: miter"/>
   </pattern>
-  <pattern id="ha8e3b64190" patternUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
-   <rect x="0" y="0" width="73" height="73" fill="#52514e"/>
+  <pattern id="h9fab9e9690" patternUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
+   <rect x="0" y="0" width="73" height="73" fill="none"/>
    <path d="M -36 36 
 L 36 -36 
 M -30 42 
@@ -3079,7 +3079,7 @@ M 30 102
 L 102 30 
 M 36 108 
 L 108 36 
-" style="fill: #52514e; stroke: #52514e; stroke-width: 1.0; stroke-linecap: butt; stroke-linejoin: miter"/>
+" style="fill: #cc79a7; stroke: #cc79a7; stroke-width: 1.0; stroke-linecap: butt; stroke-linejoin: miter"/>
   </pattern>
  </defs>
 </svg>

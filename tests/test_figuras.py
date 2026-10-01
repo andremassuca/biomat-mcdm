@@ -84,6 +84,14 @@ def test_monte_carlo_percentagens_entre_0_e_100(saida):
     assert p["TOPSIS"].is_monotonic_decreasing
 
 
+def test_separar_zeros():
+    t = pd.DataFrame({"TOPSIS": [60.0, 0.2, 0.0], "WASPAS": [99.0, 1.0, 0.0], "VIKOR": [70.0, 0.0, 0.4]},
+                     index=["a", "b", "c"])
+    fica, zeros = fg.separar_zeros(t)
+    assert fica.index.tolist() == ["a", "b"]
+    assert zeros == ["c"]
+
+
 def test_vencedor_eta_tem_11_valores_por_metodo(saida):
     rk, _, _ = saida
     t = fg.dados_vencedor_eta(rk, "Scaffold")
