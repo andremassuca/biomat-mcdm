@@ -5,7 +5,7 @@ Cada valor típico varia ±20 % com o resto fixo (TOPSIS, η = 1). Ordem: primei
 ## Haste
 
 Vencedor do TOPSIS: cenário A: Ti-6Al-4V ELI; cenário B: Ti-6Al-4V ELI.
-Células a verificar: 31 (0 mudam o vencedor com ±20 %).
+Células a verificar: 29 (0 mudam o vencedor com ±20 %).
 
 | # | Cenário | Material | Critério | Tipo | Típico | ΔC material | ΔC máx. | Muda vencedor | Fonte atual |
 |---|---|---|---|---|---|---|---|---|---|
@@ -25,21 +25,19 @@ Células a verificar: 31 (0 mudam o vencedor com ±20 %).
 | 14 | B | Ti-35Nb-7Zr-5Ta (TNZT) | Compatibilidade com RM (ordinal 1-5) | ordinal | 4,0000 | 0,016 | 0,016 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
 | 15 | A | Co-Cr-Mo forjado | Compatibilidade com RM (ordinal 1-5) | ordinal | 3,0000 | 0,015 | 0,015 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
 | 16 | A | Ti-6Al-4V ELI | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 3,0000 | 0,007 | 0,007 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| 17 | A | Co-Cr-Mo forjado | Densidade | quantitativo | 8,4000 | 0,005 | 0,005 | não | [fonte a indicar] (o Niinomi 1998 é só de ligas de Ti) |
-| 18 | A | Aço inox 316L | Densidade | quantitativo | 7,9500 | 0,005 | 0,005 | não | [fonte a indicar] (o Niinomi 1998 é só de ligas de Ti) |
-| 19 | B | Ti-35Nb-7Zr-5Ta (TNZT) | Densidade | quantitativo | 5,7000 | 0,003 | 0,003 | não | Geetha M et al. Prog Mater Sci 2009;54:397-425 |
-| 20 | A | Co-Cr-Mo forjado | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 3,0000 | 0,003 | 0,003 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| 21 | A | Ti cp grau 4 | Densidade | quantitativo | 4,5100 | 0,003 | 0,003 | não | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
-| 22 | A | Ti-13Nb-13Zr | Densidade | quantitativo | 5,0000 | 0,003 | 0,003 | não | Geetha M et al. Prog Mater Sci 2009;54:397-425 |
-| 23 | A | Ti-6Al-4V ELI | Densidade | quantitativo | 4,4300 | 0,002 | 0,002 | não | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
-| 24 | A | Ti cp grau 4 | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 2,0000 | 0,001 | 0,001 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| 25 | A | Aço inox 316L | Resistência à corrosão (ordinal 1-5) | ordinal | 3,0000 | 0,000 | 0,023 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| 26 | A | Ti-13Nb-13Zr | Fabricabilidade (ordinal 1-5) | ordinal | 3,0000 | 0,000 | 0,011 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| 27 | A | Ti-13Nb-13Zr | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 4,0000 | 0,000 | 0,009 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| 28 | B | Ti-35Nb-7Zr-5Ta (TNZT) | Fabricabilidade (ordinal 1-5) | ordinal | 2,0000 | 0,000 | 0,009 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| 29 | B | Ti-35Nb-7Zr-5Ta (TNZT) | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 5,0000 | 0,000 | 0,006 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| 30 | A | Aço inox 316L | Compatibilidade com RM (ordinal 1-5) | ordinal | 2,0000 | 0,000 | 0,006 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| 31 | A | Aço inox 316L | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 1,0000 | 0,000 | 0,001 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 17 | B | Ti-35Nb-7Zr-5Ta (TNZT) | Densidade | quantitativo | 5,7000 | 0,003 | 0,003 | não | Geetha M et al. Prog Mater Sci 2009;54:397-425 |
+| 18 | A | Co-Cr-Mo forjado | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 3,0000 | 0,003 | 0,003 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 19 | A | Ti cp grau 4 | Densidade | quantitativo | 4,5100 | 0,003 | 0,003 | não | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
+| 20 | A | Ti-13Nb-13Zr | Densidade | quantitativo | 5,0000 | 0,003 | 0,003 | não | Geetha M et al. Prog Mater Sci 2009;54:397-425 |
+| 21 | A | Ti-6Al-4V ELI | Densidade | quantitativo | 4,4300 | 0,002 | 0,002 | não | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
+| 22 | A | Ti cp grau 4 | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 2,0000 | 0,001 | 0,001 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 23 | A | Aço inox 316L | Resistência à corrosão (ordinal 1-5) | ordinal | 3,0000 | 0,000 | 0,023 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 24 | A | Ti-13Nb-13Zr | Fabricabilidade (ordinal 1-5) | ordinal | 3,0000 | 0,000 | 0,011 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 25 | A | Ti-13Nb-13Zr | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 4,0000 | 0,000 | 0,009 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 26 | B | Ti-35Nb-7Zr-5Ta (TNZT) | Fabricabilidade (ordinal 1-5) | ordinal | 2,0000 | 0,000 | 0,009 | não | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
+| 27 | B | Ti-35Nb-7Zr-5Ta (TNZT) | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 5,0000 | 0,000 | 0,006 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| 28 | A | Aço inox 316L | Compatibilidade com RM (ordinal 1-5) | ordinal | 2,0000 | 0,000 | 0,006 | não | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
+| 29 | A | Aço inox 316L | Custo relativo de material e fabrico (1-5, 5 = mais caro) | ordinal | 1,0000 | 0,000 | 0,001 | não | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
 
 ## Stent
 

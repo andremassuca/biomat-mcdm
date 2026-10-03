@@ -3,7 +3,7 @@
 
 Valores de data/materiais.csv (versão usada neste relatório). Valor: mínimo a máximo da base; Típico: o valor usado nos métodos. Estados: "Verificado" (confirmado na fonte indicada), "Verificado (fornecedor)" (ficha técnica de fornecedor), "Verificado (derivado)" (calculado a partir de valores publicados na fonte), "Verificado (composição química)" (deduzido da composição do material) e "A verificar" (valor de partida ainda não confirmado na fonte original). As notas de cada valor estão na base de dados.
 
-Contagem por estado: A verificar: 207; Verificado: 69; Verificado (fornecedor): 19; Verificado (derivado): 4; Verificado (composição química): 1 (total: 300).
+Contagem por estado: A verificar: 205; Verificado: 69; Verificado (fornecedor): 21; Verificado (derivado): 4; Verificado (composição química): 1 (total: 300).
 
 ## Prótese da anca
 
@@ -13,13 +13,13 @@ Contagem por estado: A verificar: 207; Verificado: 69; Verificado (fornecedor): 
 | Aço inox 316L | Tensão de cedência | MPa | 755 a 765 | 760 | Verificado | Okazaki Y. Comparison of Fatigue Properties and Fatigue Crack Growth Rates of Various Implantable Metals. Materials 2012;5:2981 (https://doi.org/10.3390/ma5122981) |
 | Aço inox 316L | Resistência à tração | MPa | 490 a 860 | 675 | A verificar | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
 | Aço inox 316L | Limite de fadiga (10^7 ciclos) | MPa | 694 | 694 | Verificado (derivado) | Okazaki Y. Comparison of Fatigue Properties and Fatigue Crack Growth Rates of Various Implantable Metals. Materials 2012;5:2981 (https://doi.org/10.3390/ma5122981) |
-| Aço inox 316L | Densidade | g/cm³ | 7,9 a 8 | 7,95 | A verificar | [fonte a indicar] (o Niinomi 1998 é só de ligas de Ti) |
+| Aço inox 316L | Densidade | g/cm³ | 8 | 8 | Verificado (fornecedor) | Alleima, ficha 316LVM |
 | Aço inox 316L | Resistência à corrosão (ordinal 1-5) |  | 3 | 3 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
 | Co-Cr-Mo forjado | Módulo de Young | GPa | 220 a 230 | 225 | Verificado | Navarro M, Michiardi A, Castaño O, Planell JA. Biomaterials in orthopaedics. J R Soc Interface 2008;5(27):1137-1158 (https://doi.org/10.1098/rsif.2008.0151) |
 | Co-Cr-Mo forjado | Tensão de cedência | MPa | 629 a 709 | 669 | Verificado | Okazaki Y. Comparison of Fatigue Properties and Fatigue Crack Growth Rates of Various Implantable Metals. Materials 2012;5:2981 (https://doi.org/10.3390/ma5122981) |
 | Co-Cr-Mo forjado | Resistência à tração | MPa | 1000 a 1300 | 1150 | A verificar | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
 | Co-Cr-Mo forjado | Limite de fadiga (10^7 ciclos) | MPa | 796 | 796 | Verificado (derivado) | Okazaki Y. Comparison of Fatigue Properties and Fatigue Crack Growth Rates of Various Implantable Metals. Materials 2012;5:2981 (https://doi.org/10.3390/ma5122981) |
-| Co-Cr-Mo forjado | Densidade | g/cm³ | 8,3 a 8,5 | 8,4 | A verificar | [fonte a indicar] (o Niinomi 1998 é só de ligas de Ti) |
+| Co-Cr-Mo forjado | Densidade | g/cm³ | 8,25 a 8,3 | 8,275 | Verificado (fornecedor) | Alleima, ficha Alleima F1537 (barra); Fort Wayne Metals, FWM 1537 alloy (https://www.alleima.com/en/technical-center/material-datasheets/bar-and-hollow-bar/bar/alleima-f1537/) |
 | Co-Cr-Mo forjado | Resistência à corrosão (ordinal 1-5) |  | 4 | 4 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
 | Ti-6Al-4V ELI | Módulo de Young | GPa | 101 a 110 | 105,5 | Verificado | Li Y et al. Materials 2014;7:1709 (New Developments of Ti-Based Alloys for Biomedical Applications) (https://doi.org/10.3390/ma7031709) |
 | Ti-6Al-4V ELI | Tensão de cedência | MPa | 848 a 850 | 849 | Verificado | Okazaki Y. Comparison of Fatigue Properties and Fatigue Crack Growth Rates of Various Implantable Metals. Materials 2012;5:2981 (https://doi.org/10.3390/ma5122981) |
@@ -249,7 +249,7 @@ Contagem por estado: A verificar: 207; Verificado: 69; Verificado (fornecedor): 
 | Co-Ni-Cr-Mo MP35N | Fabricabilidade (ordinal 1-5) |  | 5 | 5 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
 | Co-Ni-Cr-Mo MP35N | Teor de níquel | % (massa) | 33 a 37 | 35 | Verificado (fornecedor) | Página de fornecedor (stainless.eu), MP35N ASTM F562 (https://www.stainless.eu/en/products/cobalt-alloys/mp35n/) |
 | Pt-Cr | Fabricabilidade (ordinal 1-5) |  | 4 | 4 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| Pt-Cr | Teor de níquel | % (massa) | 9 | 9 | Verificado | A novel platinum chromium everolimus-eluting stent for the treatment of coronary artery disease. Biologics: Targets and Therapy 2013;7:149 [confirmar autores e ano] (https://doi.org/10.2147/BTT.S34939) |
+| Pt-Cr | Teor de níquel | % (massa) | 9 | 9 | Verificado | Bennett J, Dubois C. A novel platinum chromium everolimus-eluting stent for the treatment of coronary artery disease. Biologics 2013;7:149-159 (https://doi.org/10.2147/BTT.S34939) |
 | Nitinol (autoexpansível) | Fabricabilidade (ordinal 1-5) |  | 3 | 3 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
 | Liga de Mg WE43 (bioabsorvível) | Fabricabilidade (ordinal 1-5) |  | 3 | 3 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
 | Liga de Mg WE43 (bioabsorvível) | Teor de níquel | % (massa) | 0 a 0,005 | 0,005 | A verificar | MakeItFrom, WE43B (cita ASTM B80) (https://www.makeitfrom.com/material-properties/WE43B-WE43B-T6-M18432-Magnesium) |

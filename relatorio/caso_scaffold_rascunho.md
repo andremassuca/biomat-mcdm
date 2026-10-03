@@ -42,7 +42,7 @@ Há um compromisso central: a porosidade é necessária para a regeneração, ma
 
 ### 3. Propriedades químicas e físicas relevantes
 
-- **Porosidade e tamanho de poro:** poros interligados, com porosidade elevada e poros de algumas centenas de micrómetros, permitem a entrada de células e vasos [confirmar: Karageorgiou e Kaplan 2005]. O alvo usado foi 70 %.
+- **Porosidade e tamanho de poro:** poros interligados, com porosidade elevada, permitem a entrada de células e vasos: considera-se que o tamanho mínimo de poro ronda os 100 µm e recomendam-se poros acima de 300 µm, que favorecem a formação de osso novo e de capilares, embora mais porosidade reduza a resistência mecânica (Karageorgiou e Kaplan 2005). O alvo usado foi 70 %.
 - **Velocidade de degradação:** deve acompanhar a formação de osso novo; o alvo usado foi cerca de 9 meses. Um scaffold que se degrada depressa demais perde o suporte antes do tempo; um que dura demasiado ocupa o espaço do osso novo.
 - **Produtos de degradação:** os poliésteres (PLLA, PLGA) libertam produtos ácidos; os fosfatos de cálcio libertam iões de cálcio e fosfato, que o organismo usa; o vidro 45S5 liberta iões de silício, cálcio e sódio e eleva o pH local.
 - **Molhabilidade da superfície**, que condiciona a adesão das células.
@@ -50,7 +50,7 @@ Há um compromisso central: a porosidade é necessária para a regeneração, ma
 
 ### 4. Biocompatibilidade
 
-Além dos ensaios gerais da série ISO 10993, interessa a biocompatibilidade dos produtos de degradação, porque o scaffold vai sendo libertado no tecido ao longo de meses. A acidificação local pelos produtos do PLGA, em particular quando se degrada depressa, pode causar reação inflamatória [confirmar fonte]. Os fosfatos de cálcio e os vidros bioativos têm composição próxima da fase mineral do osso.
+Além dos ensaios gerais da série ISO 10993, interessa a biocompatibilidade dos produtos de degradação, porque o scaffold vai sendo libertado no tecido ao longo de meses. Os produtos de degradação do PLGA (ácido láctico e ácido glicólico) baixam o pH local, o que pode desencadear uma reação inflamatória; a acidificação pode, por sua vez, acelerar a degradação (Liu et al. 2006). Os fosfatos de cálcio e os vidros bioativos têm composição próxima da fase mineral do osso.
 
 ### 5. Bioinerte, bioativo ou biodegradável
 
@@ -95,11 +95,11 @@ Uma limitação: o tempo de degradação do compósito continua "A verificar", p
 
 ### 10. Testes antes da utilização clínica
 
-- **Biocompatibilidade:** série ISO 10993, incluindo a identificação dos produtos de degradação de polímeros e de cerâmicos [confirmar partes e edições].
-- **Caracterização do scaffold:** guias ASTM para scaffolds de engenharia de tecidos e para medição da porosidade [confirmar normas: ASTM F2150, ASTM F2450].
-- **Degradação in vitro:** ensaio de degradação de polímeros absorvíveis [confirmar norma: ISO 13781].
+- **Biocompatibilidade:** série ISO 10993, incluindo a identificação e quantificação dos produtos de degradação de polímeros (ISO 10993-13:2010, escrita para polímeros não reabsorvíveis, com procedimentos adaptáveis aos reabsorvíveis) e de cerâmicos (ISO 10993-14:2001).
+- **Caracterização do scaffold:** guias ASTM para a caracterização de scaffolds (ASTM F2150-19) e para a avaliação da microestrutura de scaffolds poliméricos, incluindo porosidade, tamanho e interligação dos poros (ASTM F2450-18).
+- **Degradação in vitro:** ensaio de degradação in vitro de polímeros à base de polilactido, incluindo copolímeros com glicolido (ISO 13781:2017).
 - **Ensaios mecânicos:** compressão à porosidade de projeto.
-- **Ensaios in vivo:** modelos animais de defeito ósseo de tamanho crítico [confirmar exemplo].
+- **Ensaios in vivo:** modelos animais de defeito ósseo de tamanho crítico, como o defeito da calvária em rato, num local sem carga (Spicer et al. 2012), ou os defeitos segmentares da tíbia em animais de grande porte (Reichert et al. 2009).
 - **Clínica:** ensaios clínicos com seguimento radiológico da formação de osso.
 
 ### 11. Propriedades que caracterizam cada material face à aplicação

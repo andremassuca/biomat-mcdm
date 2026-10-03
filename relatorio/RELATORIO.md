@@ -64,7 +64,7 @@ A Tabela 1 resume, para cada caso, o problema do material atual, os biomateriais
 | Caso | Problema | Biomateriais a investigar | Proposta |
 |---|---|---|---|
 | **Prótese da anca** | **Desgaste:** partículas do par articular que levam a osteólise e descolamento asséptico. **Corrosão/rejeição:** iões Co/Cr nos pares metal-metal e corrosão na junção cabeça-cone. **Mecânico:** stress shielding por rigidez excessiva da haste. | *Haste:* aço inox 316L, Co-Cr-Mo forjado, Ti-6Al-4V ELI, Ti cp grau 4, Ti-13Nb-13Zr; Ti-35Nb-7Zr-5Ta (TNZT, em investigação, só no cenário B). *Par articular:* CoCrMo/UHMWPE, CoCrMo/HXLPE, ZTA/HXLPE, ZTA/ZTA, CoCrMo/CoCrMo (metal-metal, eliminado na triagem). | Haste em Ti-6Al-4V ELI. Par articular: cerâmica-cerâmica (ZTA/ZTA) como referência para o problema do desgaste e da libertação de partículas; cabeça de ZTA contra polietileno altamente reticulado como alternativa com menor risco de fratura e de ruído. |
-| **Implante dentário** | **Rejeição/integração:** falha de osteointegração e peri-implantite. **Mecânico:** fratura do implante ou do pilar. Estética em gengiva fina. | Ti cp grau 4, Ti-6Al-4V ELI, Ti-Zr (cerca de 15 % Zr), zircónia Y-TZP, PEEK. | Ti cp grau 4 com superfície rugosa; zircónia Y-TZP como alternativa estética, sem eliminar o risco de peri-implantite, que depende também do controlo de placa e de fatores do doente. |
+| **Implante dentário** | **Rejeição/integração:** falha de osteointegração e peri-implantite. **Mecânico:** fratura do implante ou do pilar. Estética em gengiva fina. | Ti cp grau 4, Ti-6Al-4V ELI, Ti-Zr (cerca de 15 % Zr), zircónia Y-TZP, PEEK. | Titânio comercialmente puro de grau 4 com superfície rugosa como referência; Ti-Zr como alternativa em implantes de diâmetro reduzido; zircónia Y-TZP como alternativa estética, sem eliminar o risco de peri-implantite, que depende também do controlo de placa e de fatores do doente. |
 | **Stent vascular** | **Rejeição/resposta do organismo:** reestenose por hiperplasia da neoíntima e trombose tardia. **Corrosão:** libertação de níquel em doentes com alergia. **Mecânico:** recuo elástico e struts espessos. | Aço inox 316L, Co-Cr L605, Co-Ni-Cr-Mo MP35N, Pt-Cr; bioabsorvíveis (liga de Mg WE43, PLLA) só no cenário B. Nitinol fica fora da comparação por ser autoexpansível. | Platina-crómio (Pt-Cr) com struts finos e eluição de fármaco como referência; cobalto-crómio L605 como alternativa praticamente equivalente, e a escolha com orçamento limitado. Os bioabsorvíveis são discutidos a partir do caso Absorb. |
 | **Scaffold ósseo** | **Mecânico:** compromisso entre porosidade e resistência. **Degradação:** reabsorção dessincronizada da formação de osso novo e acidez dos produtos de degradação dos poliésteres. | PCL, PLLA, PLGA 50:50, hidroxiapatite (HA) porosa, β-TCP poroso, vidro bioativo 45S5, compósito PCL/β-TCP, quitosano/HA. | Compósito PCL/β-TCP impresso em 3D quando o defeito exige suporte mecânico; β-TCP poroso quando a prioridade é só o suporte celular e a reabsorção. |
 
@@ -235,14 +235,14 @@ Os resultados estão na Tabela 4.
 | Cenário | Material | C (TOPSIS) | Pos. T | Q (WASPAS) | Pos. W | P (VIKOR) | Pos. V | Consenso (Borda) |
 |---|---|---|---|---|---|---|---|---|
 | A | Ti-6Al-4V ELI | 0,752 | 1 | 0,836 | 1 | 0,000 | 1 | 1 (12 pts) |
-| A | Co-Cr-Mo forjado | 0,577 | 2 | 0,575 | 5 | 0,726 | 3 | 3 (5 pts) |
+| A | Co-Cr-Mo forjado | 0,577 | 2 | 0,575 | 5 | 0,725 | 3 | 3 (5 pts) |
 | A | Ti-13Nb-13Zr | 0,532 | 3 | 0,767 | 2 | 0,606 | 2 | 2 (8 pts) |
 | A | Aço inox 316L | 0,467 | 4 | 0,602 | 4 | 0,767 | 4 | 4 (3 pts) |
-| A | Ti cp grau 4 | 0,453 | 5 | 0,739 | 3 | 0,854 | 5 | 5 (2 pts) |
+| A | Ti cp grau 4 | 0,453 | 5 | 0,739 | 3 | 0,853 | 5 | 5 (2 pts) |
 | B | Ti-6Al-4V ELI | 0,807 | 1 | 0,836 | 1 | 0,000 | 1 | 1 (15 pts) |
-| B | Ti-13Nb-13Zr | 0,667 | 2 | 0,767 | 2 | 0,319 | 2 | 2 (12 pts) |
-| B | Ti cp grau 4 | 0,587 | 3 | 0,739 | 3 | 0,523 | 3 | 3 (9 pts) |
-| B | Co-Cr-Mo forjado | 0,573 | 4 | 0,575 | 6 | 0,757 | 4 | 4 (4 pts) |
+| B | Ti-13Nb-13Zr | 0,667 | 2 | 0,767 | 2 | 0,318 | 2 | 2 (12 pts) |
+| B | Ti cp grau 4 | 0,587 | 3 | 0,739 | 3 | 0,522 | 3 | 3 (9 pts) |
+| B | Co-Cr-Mo forjado | 0,573 | 4 | 0,575 | 6 | 0,756 | 4 | 4 (4 pts) |
 | B | Aço inox 316L | 0,496 | 5 | 0,602 | 5 | 0,785 | 5 | 5 (3 pts) |
 | B | Ti-35Nb-7Zr-5Ta (TNZT) | 0,457 | 6 | 0,619 | 4 | 0,963 | 6 | 6 (2 pts) |
 
@@ -689,7 +689,7 @@ Há um compromisso central: a porosidade é necessária para a regeneração, ma
 
 ### Q3. Propriedades químicas e físicas relevantes
 
-- **Porosidade e tamanho de poro:** poros interligados, com porosidade elevada e poros de algumas centenas de micrómetros, permitem a entrada de células e vasos [confirmar: Karageorgiou e Kaplan [32]]. O alvo usado foi 70 %.
+- **Porosidade e tamanho de poro:** poros interligados, com porosidade elevada, permitem a entrada de células e vasos: considera-se que o tamanho mínimo de poro ronda os 100 µm e recomendam-se poros acima de 300 µm, que favorecem a formação de osso novo e de capilares, embora mais porosidade reduza a resistência mecânica (Karageorgiou e Kaplan [32]). O alvo usado foi 70 %.
 - **Velocidade de degradação:** deve acompanhar a formação de osso novo; o alvo usado foi cerca de 9 meses. Um scaffold que se degrada depressa demais perde o suporte antes do tempo; um que dura demasiado ocupa o espaço do osso novo.
 - **Produtos de degradação:** os poliésteres (PLLA, PLGA) libertam produtos ácidos; os fosfatos de cálcio libertam iões de cálcio e fosfato, que o organismo usa; o vidro 45S5 liberta iões de silício, cálcio e sódio e eleva o pH local.
 - **Molhabilidade da superfície**, que condiciona a adesão das células.
@@ -697,7 +697,7 @@ Há um compromisso central: a porosidade é necessária para a regeneração, ma
 
 ### Q4. Biocompatibilidade
 
-Além dos ensaios gerais da série ISO 10993, interessa a biocompatibilidade dos produtos de degradação, porque o scaffold vai sendo libertado no tecido ao longo de meses. A acidificação local pelos produtos do PLGA, em particular quando se degrada depressa, pode causar reação inflamatória [confirmar fonte]. Os fosfatos de cálcio e os vidros bioativos têm composição próxima da fase mineral do osso.
+Além dos ensaios gerais da série ISO 10993, interessa a biocompatibilidade dos produtos de degradação, porque o scaffold vai sendo libertado no tecido ao longo de meses. Os produtos de degradação do PLGA (ácido láctico e ácido glicólico) baixam o pH local, o que pode desencadear uma reação inflamatória; a acidificação pode, por sua vez, acelerar a degradação (Liu et al. [33]). Os fosfatos de cálcio e os vidros bioativos têm composição próxima da fase mineral do osso.
 
 ### Q5. Bioinerte, bioativo ou biodegradável
 
@@ -711,10 +711,10 @@ Os polímeros sintéticos (PCL, PLLA, PLGA) são biodegradáveis mas pouco bioat
 
 - **Fratura frágil** dos scaffolds cerâmicos porosos, que têm resistência baixa e pouca tenacidade.
 - **Perda prematura de suporte**, se a degradação for rápida (PLGA, cerca de 1 a 3 meses).
-- **Persistência a longo prazo**, se a degradação for lenta: a hidroxiapatite não foi reabsorvida de forma mensurável em 3,5 anos (Hoogendoorn et al. [33]), e o PLLA maciço persiste vários anos.
+- **Persistência a longo prazo**, se a degradação for lenta: a hidroxiapatite não foi reabsorvida de forma mensurável em 3,5 anos (Hoogendoorn et al. [34]), e o PLLA maciço persiste vários anos.
 - **Inflamação** pelos produtos ácidos de degradação dos poliésteres.
 - **Má vascularização no centro** de scaffolds grandes ou pouco interligados.
-- **Alteração das propriedades pela esterilização:** no PCL/β-TCP, a radiação por feixe de eletrões tornou a degradação mais rápida (Bruyas et al. [34]).
+- **Alteração das propriedades pela esterilização:** no PCL/β-TCP, a radiação por feixe de eletrões tornou a degradação mais rápida (Bruyas et al. [35]).
 
 ### Q7. Resposta do organismo
 
@@ -724,7 +724,7 @@ Depois da implantação forma-se um hematoma e uma resposta inflamatória inicia
 
 Propõe-se um **scaffold compósito de PCL com β-TCP, fabricado por impressão 3D**. Na análise multicritério ficou em 1.º lugar com os três métodos, nos cenários A e B (ΔC = 0,052 em A e 0,085 em B), e manteve o 1.º lugar em quase todos os cenários de sensibilidade: só perde para o β-TCP quando o alvo da resistência à compressão desce para 2 MPa. O resultado é estável face aos pesos (1.º lugar em 96 a 100 % das iterações com pesos ±20 %), mas sensível à incerteza dos dados: no Monte Carlo das propriedades, o β-TCP fica em 1.º em mais iterações do que o compósito com o TOPSIS (52 % contra 39 %), embora não com o WASPAS (25 % contra 68 %) nem com o VIKOR (39 % contra 46 %). O β-TCP é, por isso, uma alternativa competitiva quando a prioridade é a bioatividade e o defeito não exige resistência.
 
-O resultado mudou com a verificação dos dados, e a mudança é instrutiva. Com os valores de partida, tirados de revisões, ganhava o β-TCP poroso. À porosidade relevante (cerca de 65 %), porém, a resistência à compressão do β-TCP é de apenas cerca de 2 MPa (mediana de três estudos), e não os 8 MPa de partida. O β-TCP puro tem bioatividade e degradação adequadas, mas é frágil. O PCL é tenaz e fácil de imprimir, mas pouco bioativo e de degradação lenta. O compósito junta as vantagens dos dois: a fase polimérica dá tenacidade e permite controlar a arquitetura dos poros por impressão, e a fase cerâmica dá bioatividade. Já tem uso clínico limitado (Lodewijks et al. [35]; Lodewijks et al. [36]).
+O resultado mudou com a verificação dos dados, e a mudança é instrutiva. Com os valores de partida, tirados de revisões, ganhava o β-TCP poroso. À porosidade relevante (cerca de 65 %), porém, a resistência à compressão do β-TCP é de apenas cerca de 2 MPa (mediana de três estudos), e não os 8 MPa de partida. O β-TCP puro tem bioatividade e degradação adequadas, mas é frágil. O PCL é tenaz e fácil de imprimir, mas pouco bioativo e de degradação lenta. O compósito junta as vantagens dos dois: a fase polimérica dá tenacidade e permite controlar a arquitetura dos poros por impressão, e a fase cerâmica dá bioatividade. Já tem uso clínico limitado (Lodewijks et al. [36]; Lodewijks et al. [37]).
 
 Os outros candidatos ficaram atrás por razões claras:
 - o vidro 45S5 tem a melhor bioatividade, mas resistência muito baixa como scaffold poroso (cerca de 1 MPa);
@@ -736,17 +736,17 @@ Uma limitação: o tempo de degradação do compósito continua "A verificar", p
 
 ### Q9. Fabrico
 
-- **Compósito PCL/β-TCP:** mistura de PCL fundido com partículas de β-TCP (tipicamente 20 % em massa; Lodewijks et al. [35]), extrudida camada a camada por impressão 3D (deposição de material fundido), com uma arquitetura de filamentos cruzados que define poros interligados (por exemplo, filamentos de 300 µm separados por 1200 µm, com 70 % de porosidade; Sparks et al. [37]). Pode seguir-se um tratamento de superfície para aumentar a molhabilidade, por exemplo com hidróxido de sódio (Kawai et al. [38]).
-- **Esterilização:** óxido de etileno ou radiação, sabendo que a radiação por feixe de eletrões acelera a degradação em cerca de 25 % (Bruyas et al. [34]).
+- **Compósito PCL/β-TCP:** mistura de PCL fundido com partículas de β-TCP (tipicamente 20 % em massa; Lodewijks et al. [36]), extrudida camada a camada por impressão 3D (deposição de material fundido), com uma arquitetura de filamentos cruzados que define poros interligados (por exemplo, filamentos de 300 µm separados por 1200 µm, com 70 % de porosidade; Sparks et al. [38]). Pode seguir-se um tratamento de superfície para aumentar a molhabilidade, por exemplo com hidróxido de sódio (Kawai et al. [39]).
+- **Esterilização:** óxido de etileno ou radiação, sabendo que a radiação por feixe de eletrões acelera a degradação em cerca de 25 % (Bruyas et al. [35]).
 - **Outros processos usados nos candidatos:** sinterização de espumas cerâmicas (β-TCP, HA); lixiviação de sal, separação de fases ou liofilização (polímeros e quitosano/HA).
 
 ### Q10. Testes antes da utilização clínica
 
-- **Biocompatibilidade:** série ISO 10993, incluindo a identificação dos produtos de degradação de polímeros e de cerâmicos [confirmar partes e edições].
-- **Caracterização do scaffold:** guias ASTM para scaffolds de engenharia de tecidos e para medição da porosidade [confirmar normas: ASTM F2150, ASTM F2450].
-- **Degradação in vitro:** ensaio de degradação de polímeros absorvíveis [confirmar norma: ISO 13781].
+- **Biocompatibilidade:** série ISO 10993, incluindo a identificação e quantificação dos produtos de degradação de polímeros (ISO 10993-13:2010, escrita para polímeros não reabsorvíveis, com procedimentos adaptáveis aos reabsorvíveis) e de cerâmicos (ISO 10993-14:2001).
+- **Caracterização do scaffold:** guias ASTM para a caracterização de scaffolds (ASTM F2150-19) e para a avaliação da microestrutura de scaffolds poliméricos, incluindo porosidade, tamanho e interligação dos poros (ASTM F2450-18).
+- **Degradação in vitro:** ensaio de degradação in vitro de polímeros à base de polilactido, incluindo copolímeros com glicolido (ISO 13781:2017).
 - **Ensaios mecânicos:** compressão à porosidade de projeto.
-- **Ensaios in vivo:** modelos animais de defeito ósseo de tamanho crítico [confirmar exemplo].
+- **Ensaios in vivo:** modelos animais de defeito ósseo de tamanho crítico, como o defeito da calvária em rato, num local sem carga (Spicer et al. [40]), ou os defeitos segmentares da tíbia em animais de grande porte (Reichert et al. [41]).
 - **Clínica:** ensaios clínicos com seguimento radiológico da formação de osso.
 
 ### Q11. Propriedades que caracterizam cada material face à aplicação
@@ -830,7 +830,7 @@ O implante dentário substitui a raiz de um dente perdido. É um parafuso inseri
 
 ### Q2. Propriedades mecânicas necessárias
 
-O implante e a ligação ao pilar sofrem cargas cíclicas de mastigação, com componentes oblíquas que fletem o conjunto [confirmar valores típicos de força de mastigação]. São necessárias:
+O implante e a ligação ao pilar sofrem cargas cíclicas de mastigação, com componentes oblíquas que fletem o conjunto; a força de mordida máxima varia muito entre doentes (cerca de 50 a 900 N) e é cerca de três vezes maior na região posterior do que na anterior (Flanagan [42]). São necessárias:
 - **Resistência à fadiga do conjunto implante-pilar**, avaliada segundo a ISO 14801. No trabalho foi um critério eliminatório, porque a resistência depende da geometria e não só do material.
 - **Módulo de Young próximo do osso maxilar e mandibular** (cerca de 10-20 GPa), para uma transmissão de carga mais fisiológica. Foi usado como critério-alvo (15 GPa).
 - **Tenacidade à fratura**, sobretudo nos implantes cerâmicos, em que a fratura é o modo de falha crítico.
@@ -838,14 +838,14 @@ O implante e a ligação ao pilar sofrem cargas cíclicas de mastigação, com c
 ### Q3. Propriedades químicas e físicas relevantes
 
 - **Superfície:** uma rugosidade moderada, obtida por jateamento e ataque ácido, favorece a osteointegração.
-- **Corrosão em meio oral:** o titânio forma um filme passivo estável, mas este é destruído por fluoretos em meio ácido, a partir de concentrações da ordem de algumas dezenas de ppm de HF (Nakagawa et al. [39] [confirmar o limiar no texto completo]), como as de alguns géis profiláticos (Matono et al. [40]). Na ligação entre o implante e o pilar, o micromovimento combina desgaste e corrosão (tribocorrosão; Apaza-Bedoya et al. [41]).
+- **Corrosão em meio oral:** o titânio forma um filme passivo estável, mas este é destruído por fluoretos em meio ácido: a corrosão depende da concentração de ácido fluorídrico (HF) formado, e o filme passivo é destruído acima de cerca de 30 ppm de HF (Nakagawa et al. [43]), como as de alguns géis profiláticos (Matono et al. [44]). Na ligação entre o implante e o pilar, o micromovimento combina desgaste e corrosão (tribocorrosão; Apaza-Bedoya et al. [45]).
 - **Estética:** em gengiva fina, o titânio pode transparecer como uma sombra cinzenta; a zircónia, branca, evita este problema.
-- **Estabilidade a longo prazo da zircónia:** a zircónia estabilizada com ítria (Y-TZP) pode sofrer envelhecimento em meio húmido (transformação da fase tetragonal em monoclínica), que reduz a resistência [confirmar fonte].
+- **Estabilidade a longo prazo da zircónia:** a zircónia estabilizada com ítria (Y-TZP) pode sofrer envelhecimento em meio húmido (transformação da fase tetragonal em monoclínica), que reduz a resistência e a tenacidade (Chevalier et al. [46]); este envelhecimento foi observado in vivo na cavidade oral (Kocjan et al. [47]).
 - **Compatibilidade com ressonância magnética.**
 
 ### Q4. Biocompatibilidade
 
-O titânio é o material de referência, com décadas de evidência clínica de osteointegração. A zircónia é igualmente biocompatível e acumula menos placa bacteriana à superfície [confirmar fonte]. A hipersensibilidade ao titânio é rara, mas a zircónia é uma alternativa nesses doentes [confirmar fonte].
+O titânio é o material de referência, com décadas de evidência clínica de osteointegração. A zircónia é igualmente biocompatível (Cionca et al. [48]) e, em estudos de curta duração, acumulou menos placa bacteriana à superfície do que o titânio (Scarano et al. [49]; Roehling et al. [50]), embora a evidência não seja unânime. A hipersensibilidade ao titânio é rara (prevalência estimada de 0,6 % numa série de 1500 doentes; Sicilia et al. [51]), mas a zircónia é uma alternativa nesses doentes (Comino-Garayoa et al. [52]).
 
 ### Q5. Bioinerte, bioativo ou biodegradável
 
@@ -857,35 +857,35 @@ O implante é permanente e bioinerte no volume, com uma superfície tratada para
 - **Perda óssea marginal** à volta do colo do implante.
 - **Fratura do implante ou do parafuso do pilar** por fadiga.
 - **Corrosão e desgaste na ligação implante-pilar**, com libertação de partículas.
-- **Libertação de partículas e iões de titânio:** encontra-se mais titânio dissolvido na placa submucosa de doentes com peri-implantite (Safioti et al. [42]), embora não esteja provado que causem a doença (Mombelli et al. [43]).
-- **Na zircónia:** fratura frágil e envelhecimento hidrotérmico; a fração de fase monoclínica chegou a cerca de 12 % ao fim de 24 meses na boca (Kocjan et al. [44]).
+- **Libertação de partículas e iões de titânio:** encontra-se mais titânio dissolvido na placa submucosa de doentes com peri-implantite (Safioti et al. [53]), embora não esteja provado que causem a doença (Mombelli et al. [54]).
+- **Na zircónia:** fratura frágil e envelhecimento hidrotérmico; a fração de fase monoclínica chegou a cerca de 12 % ao fim de 24 meses na boca (Kocjan et al. [47]).
 
 ### Q7. Resposta do organismo
 
-Depois da inserção forma-se um coágulo na interface, seguido de inflamação inicial e de formação de osso novo diretamente sobre a superfície do implante, sem tecido fibroso intermédio: é a osteointegração, descrita por Brånemark. A estabilidade primária (mecânica, no momento da cirurgia) é progressivamente substituída pela estabilidade secundária (biológica), ao longo de várias semanas a meses [confirmar]. Os tecidos moles formam uma barreira à volta do colo do implante, essencial para evitar a infeção.
+Depois da inserção forma-se um coágulo na interface, seguido de inflamação inicial e de formação de osso novo diretamente sobre a superfície do implante, sem tecido fibroso intermédio: é a osteointegração, descrita por Brånemark. A estabilidade primária (mecânica, no momento da cirurgia) é progressivamente substituída pela estabilidade secundária (biológica): em modelo animal, o osso em contacto com as espiras é reabsorvido e substituído por osso novo entre a 1.ª e a 2.ª semana, e a osteointegração prossegue ao longo das semanas seguintes (Berglundh et al. [55]). Os tecidos moles formam uma barreira à volta do colo do implante, essencial para evitar a infeção.
 
 ### Q8. Vantagem face aos materiais atuais
 
 O caso foi tratado de forma semiquantitativa, porque as escalas ordinais têm cerca de 70 % do peso; o ranking apresenta-se como indicação, não como resultado quantitativo.
 
-O **titânio comercialmente puro de grau 4** ficou em 1.º lugar com os três métodos em todas as versões da análise, incluindo com o peso da osteointegração e da corrosão duplicado. É a escolha de referência: tem a evidência clínica mais longa e mais sólida de osteointegração, com sobrevivência de cerca de 96 % aos 10 anos numa meta-análise (Howe et al. [45]) e séries de milhares de implantes acompanhados durante 15 anos (Adell et al. [46]).
+O **titânio comercialmente puro de grau 4** ficou em 1.º lugar com os três métodos em todas as versões da análise, incluindo com o peso da osteointegração e da corrosão duplicado. É a escolha de referência: tem a evidência clínica mais longa e mais sólida de osteointegração, com sobrevivência de cerca de 96 % aos 10 anos numa meta-análise (Howe et al. [56]) e séries de milhares de implantes acompanhados durante 15 anos (Adell et al. [57]).
 
-A liga **Ti-Zr** ficou em 2.º lugar. Num ensaio aleatorizado teve sobrevivência semelhante à do titânio de grau 4 aos 10 anos, mas com poucos doentes (Müller et al. [47]); é uma alternativa sobretudo em implantes de diâmetro reduzido, em que a maior resistência da liga é útil (Altuna et al. [48]); os dois ensaios de Müller usaram implantes de 3,3 mm de diâmetro.
+A liga **Ti-Zr** ficou em 2.º lugar. Num ensaio aleatorizado teve sobrevivência semelhante à do titânio de grau 4 aos 10 anos, mas com poucos doentes (Müller et al. [58]); é uma alternativa sobretudo em implantes de diâmetro reduzido, em que a maior resistência da liga é útil (Altuna et al. [59]); os dois ensaios de Müller usaram implantes de 3,3 mm de diâmetro.
 
-A **zircónia Y-TZP** é a alternativa quando a estética é prioritária, em gengiva fina ou na zona anterior, ou quando há suspeita de hipersensibilidade ao titânio. Não sofre corrosão eletroquímica, mas envelhece em meio húmido (Chevalier [49]) e a sua evidência clínica é mais curta (Pieralli et al. [50]) e varia muito entre sistemas (Herber et al. [51]; Steyer et al. [52]).
+A **zircónia Y-TZP** é a alternativa quando a estética é prioritária, em gengiva fina ou na zona anterior, ou quando há suspeita de hipersensibilidade ao titânio. Não sofre corrosão eletroquímica, mas envelhece em meio húmido (Chevalier [46]) e a sua evidência clínica é mais curta (Pieralli et al. [60]) e varia muito entre sistemas (Herber et al. [61]; Steyer et al. [62]).
 
 O PEEK fica em 3.º lugar com o TOPSIS, pelo módulo próximo do osso e por não corroer, mas fica excluído na prática pela falta de evidência clínica de osteointegração (só existem estudos pré-clínicos). A liga Ti-6Al-4V, comum noutros implantes, não tem estudos clínicos dedicados no corpo do implante dentário.
 
 ### Q9. Fabrico
 
-- **Titânio:** maquinagem por controlo numérico a partir de varão, seguida de tratamento de superfície por jateamento e ataque ácido, limpeza, embalagem estéril e esterilização por radiação gama [confirmar].
-- **Zircónia:** prensagem ou moldação por injeção do pó, sinterização e prensagem isostática a quente, com tratamento de superfície para aumentar a rugosidade [confirmar].
+- **Titânio:** maquinagem por controlo numérico a partir de varão, seguida de tratamento de superfície para aumentar a rugosidade (por exemplo, jateamento e ataque ácido; Le Guéhennec et al. [63]), limpeza, embalagem e esterilização terminal.
+- **Zircónia:** conformação do pó (prensagem e maquinagem do corpo pré-sinterizado, ou moldação por injeção do pó), sinterização a alta temperatura e tratamento de superfície (por exemplo, jateamento) para aumentar a rugosidade (Osman e Swain [64]).
 
 ### Q10. Testes antes da utilização clínica
 
-- **Fadiga dinâmica do conjunto implante-pilar:** ISO 14801 [confirmar edição].
+- **Fadiga dinâmica do conjunto implante-pilar:** ISO 14801:2016.
 - **Biocompatibilidade:** série ISO 10993.
-- **Materiais:** ASTM F67 ou ISO 5832-2 (titânio comercialmente puro) e ISO 13356 (cerâmicos de zircónia para implantes) [confirmar edições].
+- **Materiais:** ASTM F67-24 ou ISO 5832-2:2025 (titânio comercialmente puro) e ISO 13356:2015 (zircónia Y-TZP para implantes).
 - **Clínica:** ensaios clínicos com seguimento da sobrevivência do implante e da perda óssea marginal a 5-10 anos.
 
 ### Q11. Propriedades que caracterizam cada material face à aplicação
@@ -936,15 +936,15 @@ Quando o custo recebe peso elevado, o aço 316L volta a ser competitivo, na hast
 ## 8.5 Comparação com a prática clínica
 
 As escolhas do modelo coincidem, em geral, com a prática clínica atual, o que reforça a sua credibilidade. Onde divergem, a divergência tem uma explicação.
-- **Haste:** nos registos, a fixação não cimentada e a híbrida dominam (NJR [53]: 42,5 % e 41,8 % das primárias de 2025; AOANJRR [54]: 62,9 % e 35,7 % em 2024); as hastes não cimentadas são sobretudo de Ti-6Al-4V (Hu e Yoon [55]). O aço continua a ser usado em hastes cimentadas polidas (Lamb et al. [56]), o que é coerente com o resultado de que o aço volta a ser competitivo quando o custo pesa muito.
-- **Par articular:** na prática, os pares mais usados são uma cabeça contra polietileno (cerâmica em cerca de 59 % e metálica em cerca de 33 % das primárias de 2025 no NJR; na Austrália, 97 % usaram polietileno reticulado ou cerâmica mista); o cerâmica-cerâmica caiu para cerca de 2 % e é usado em doentes mais novos (idade mediana de 59 a 60 anos, contra 70 no total; NJR [53]). O modelo coloca o cerâmica-cerâmica em 1.º lugar porque o desgaste domina os critérios, enquanto o risco de fratura e o ruído foram tratados de forma qualitativa e não entram no cálculo. É a principal divergência face à prática, e explica a preferência frequente pelo par cerâmica contra polietileno reticulado.
-- **Stent:** os stents com eluição de fármaco atuais usam plataformas de cobalto-crómio ou de platina-crómio, com struts de cerca de 55 a 90 µm, e o aço inoxidável das plataformas de 1.ª geração (Cypher, Taxus) foi abandonado (Brami et al. [57]; Macaya-Ten et al. [58]). O modelo chega à mesma conclusão.
-- **Scaffold:** os substitutos ósseos sintéticos mais usados na clínica são fosfatos de cálcio, como o β-TCP e a hidroxiapatite, e os compósitos impressos começam a ter uso clínico (Lodewijks et al. [35]; Lodewijks et al. [36]). O modelo coloca o compósito à frente quando o suporte mecânico conta, e o β-TCP quando só contam o suporte celular e a degradação.
+- **Haste:** nos registos, a fixação não cimentada e a híbrida dominam (NJR [65]: 42,5 % e 41,8 % das primárias de 2025; AOANJRR [66]: 62,9 % e 35,7 % em 2024); as hastes não cimentadas são sobretudo de Ti-6Al-4V (Hu e Yoon [67]). O aço continua a ser usado em hastes cimentadas polidas (Lamb et al. [68]), o que é coerente com o resultado de que o aço volta a ser competitivo quando o custo pesa muito.
+- **Par articular:** na prática, os pares mais usados são uma cabeça contra polietileno (cerâmica em cerca de 59 % e metálica em cerca de 33 % das primárias de 2025 no NJR; na Austrália, 97 % usaram polietileno reticulado ou cerâmica mista); o cerâmica-cerâmica caiu para cerca de 2 % e é usado em doentes mais novos (idade mediana de 59 a 60 anos, contra 70 no total; NJR [65]). O modelo coloca o cerâmica-cerâmica em 1.º lugar porque o desgaste domina os critérios, enquanto o risco de fratura e o ruído foram tratados de forma qualitativa e não entram no cálculo. É a principal divergência face à prática, e explica a preferência frequente pelo par cerâmica contra polietileno reticulado.
+- **Stent:** os stents com eluição de fármaco atuais usam plataformas de cobalto-crómio ou de platina-crómio, com struts de cerca de 55 a 90 µm, e o aço inoxidável das plataformas de 1.ª geração (Cypher, Taxus) foi abandonado (Brami et al. [69]; Macaya-Ten et al. [70]). O modelo chega à mesma conclusão.
+- **Scaffold:** os substitutos ósseos sintéticos mais usados na clínica são fosfatos de cálcio, como o β-TCP e a hidroxiapatite, e os compósitos impressos começam a ter uso clínico (Lodewijks et al. [36]; Lodewijks et al. [37]). O modelo coloca o compósito à frente quando o suporte mecânico conta, e o β-TCP quando só contam o suporte celular e a degradação.
 - **Implante dentário:** o titânio comercialmente puro continua a ser a referência, e a zircónia é uma alternativa sobretudo estética, como no modelo.
 
 ## 8.6 Material ou dispositivo?
 
-Várias propriedades decisivas são do dispositivo e não do material. A espessura dos struts depende do desenho do stent, e a rigidez de uma haste depende também da sua arquitetura. Um cálculo simples ilustra o alcance desta ideia: pela relação de Gibson e Ashby para materiais celulares, uma estrutura porosa de Ti-6Al-4V com cerca de 60 % de porosidade teria um módulo próximo do osso cortical: com E = E_s (1 − p)², constante C = 1 e E_s = 105,5 GPa (valor típico do Ti-6Al-4V ELI na base), o alvo de 17 GPa obtém-se com p = 59,9 %, e a 60 % de porosidade o módulo é 16,9 GPa (Gibson e Ashby [59], cap. 5). A solução para o stress shielding pode não ser outra liga, mas a mesma liga estruturada, por exemplo por fabrico aditivo.
+Várias propriedades decisivas são do dispositivo e não do material. A espessura dos struts depende do desenho do stent, e a rigidez de uma haste depende também da sua arquitetura. Um cálculo simples ilustra o alcance desta ideia: pela relação de Gibson e Ashby para materiais celulares, uma estrutura porosa de Ti-6Al-4V com cerca de 60 % de porosidade teria um módulo próximo do osso cortical: com E = E_s (1 − p)², constante C = 1 e E_s = 105,5 GPa (valor típico do Ti-6Al-4V ELI na base), o alvo de 17 GPa obtém-se com p = 59,9 %, e a 60 % de porosidade o módulo é 16,9 GPa (Gibson e Ashby [71], cap. 5). A solução para o stress shielding pode não ser outra liga, mas a mesma liga estruturada, por exemplo por fabrico aditivo.
 
 ## 8.7 Limitações
 
@@ -970,7 +970,7 @@ Principais conclusões:
 - **Par articular:** cerâmica-cerâmica (ZTA/ZTA) como melhor resposta ao desgaste e à libertação de partículas, sobretudo em doentes jovens e ativos, e cabeça de ZTA contra polietileno altamente reticulado como alternativa com menor risco de fratura e de ruído; o par metal-metal foi excluído por segurança.
 - **Stent coronário:** platina-crómio como escolha de referência, por ser o mais robusto à incerteza dos dados e o mais radiopaco, e cobalto-crómio L605 como alternativa praticamente equivalente; o 1.º lugar do Pt-Cr deve ser confirmado com a fonte primária das suas propriedades mecânicas. O aço 316L de primeira geração ficou em último entre os permanentes.
 - **Scaffold ósseo:** compósito PCL/β-TCP impresso, estável face aos pesos mas sensível à incerteza dos dados. O β-TCP puro mantém-se uma alternativa quando a resistência mecânica é pouco exigida.
-- **Implante dentário:** titânio comercialmente puro de grau 4 como referência (1.º em todas as versões da análise semiquantitativa, pela evidência clínica de osteointegração), Ti-Zr como alternativa em implantes de diâmetro reduzido (Müller et al. [47]) e zircónia Y-TZP quando a estética é prioritária ou há suspeita de hipersensibilidade ao titânio.
+- **Implante dentário:** titânio comercialmente puro de grau 4 como referência (1.º em todas as versões da análise semiquantitativa, pela evidência clínica de osteointegração), Ti-Zr como alternativa em implantes de diâmetro reduzido (Müller et al. [58]) e zircónia Y-TZP quando a estética é prioritária ou há suspeita de hipersensibilidade ao titânio.
 
 Três lições metodológicas destacam-se:
 1. Um método multicritério não é mais fiável do que os seus dados: a verificação em fontes primárias mudou valores decisivos e, no scaffold, o próprio vencedor.
@@ -1016,37 +1016,49 @@ Como trabalho futuro propõe-se:
 30. Moravej M, Mantovani D. Biodegradable metals for cardiovascular stent application: interests and new opportunities. Int J Mol Sci. 2011;12(7):4250-4270. doi:10.3390/ijms12074250.
 31. Rapetto C, Leoncini M. Magmaris: a new generation metallic sirolimus-eluting fully bioresorbable scaffold: present status and future perspectives. J Thorac Dis. 2017;9(S9):S903-S913. doi:10.21037/jtd.2017.06.34.
 32. Karageorgiou V, Kaplan D. Porosity of 3D biomaterial scaffolds and osteogenesis. Biomaterials. 2005;26(27):5474-5491. doi:10.1016/j.biomaterials.2005.02.002.
-33. Hoogendoorn HA, Renooij W, Akkermans LMA, Visser W, Wittebol P. Long-term Study of Large Ceramic Implants (Porous Hydroxyapatite) in Dog Femora. Clin Orthop Relat Res. 1984;187:281-288. doi:10.1097/00003086-198407000-00043.
-34. Bruyas A, Moeinzadeh S, Kim S, Lowenberg DW, Yang YP. Effect of Electron Beam Sterilization on Three-Dimensional-Printed Polycaprolactone/Beta-Tricalcium Phosphate Scaffolds for Bone Tissue Engineering. Tissue Eng Part A. 2019;25(3-4):248-256. doi:10.1089/ten.tea.2018.0130.
-35. Lodewijks AJL, Warin MMR, van der Broeck LCA, Fois MG, Lopez-Iglesias C, Blokhuis TJ, et al. Long-term follow-up of patients with large segmental bone defects treated with 3D-printed polycaprolactone/tricalcium phosphate scaffolds. Eur J Trauma Emerg Surg. 2025;51(1):326. doi:10.1007/s00068-025-02982-9.
-36. Lodewijks A, Blokhuis T, van Griensven M, Poeze M. The Treatment of Very Large Traumatic Bone Defects of the Tibia With a Polycaprolactone-Tricalcium Phosphate 3D-Printed Cage: A Review of Three Cases. Cureus. 2024. doi:10.7759/cureus.66256.
-37. Sparks DS, Savi FM, Dlaska CE, Saifzadeh S, Brierly G, Ren E, et al. Convergence of scaffold-guided bone regeneration principles and microvascular tissue transfer surgery. Sci Adv. 2023;9(18):eadd6071. doi:10.1126/sciadv.add6071.
-38. Kawai T, Shanjani Y, Fazeli S, Behn AW, Okuzu Y, Goodman SB, et al. Customized, degradable, functionally graded scaffold for potential treatment of early stage osteonecrosis of the femoral head. J Orthop Res. 2018;36(3):1002-1011. doi:10.1002/jor.23673.
-39. Nakagawa M, Matsuya S, Shiraishi T, Ohta M. Effect of fluoride concentration and pH on corrosion behavior of titanium for dental use. J Dent Res. 1999;78(9):1568-1572. doi:10.1177/00220345990780091201.
-40. Matono Y, Nakagawa M, Matsuya S, Ishikawa K, Terada Y. Corrosion behavior of pure titanium and titanium alloys in various concentrations of Acidulated Phosphate Fluoride (APF) solutions. Dent Mater J. 2006;25(1):104-112. doi:10.4012/dmj.25.104.
-41. Apaza‐Bedoya K, Tarce M, Benfatti CAM, Henriques B, Mathew MT, Teughels W, et al. Synergistic interactions between corrosion and wear at titanium-based dental implant connections: A scoping review. J Periodontal Res. 2017;52(6):946-954. doi:10.1111/jre.12469.
-42. Safioti LM, Kotsakis GA, Pozhitkov AE, Chung WO, Daubert DM. Increased Levels of Dissolved Titanium Are Associated With Peri-Implantitis - A Cross-Sectional Study. J Periodontol. 2017;88(5):436-442. doi:10.1902/jop.2016.160524.
-43. Mombelli A, Hashim D, Cionca N. What is the impact of titanium particles and biocorrosion on implant survival and complications? A critical review. Clin Oral Implants Res. 2018;29(S18):37-53. doi:10.1111/clr.13305.
-44. Kocjan A, Cotič J, Kosmač T, Jevnikar P. In vivo aging of zirconia dental ceramics - Part I: Biomedical grade 3Y-TZP. Dent Mater. 2021;37(3):443-453. doi:10.1016/j.dental.2020.11.023.
-45. Howe MS, Keys W, Richards D. Long-term (10-year) dental implant survival: A systematic review and sensitivity meta-analysis. J Dent. 2019;84:9-21. doi:10.1016/j.jdent.2019.03.008.
-46. Adell R, Eriksson B, Lekholm U, Brånemark PI, Jemt T. Long-term follow-up study of osseointegrated implants in the treatment of totally edentulous jaws. Int J Oral Maxillofac Implants. 1990;5(4):347-59. PMID: 2094653.
-47. Müller F, Al‐Nawas B, Storelli S, Quirynen M, Hicklin S, Castro‐Laza J, et al. Small-diameter titanium grade IV and titanium-zirconium implants in edentulous mandibles: Ten-year results from a double-blind, randomised controlled split-mouth core-trial. Clin Oral Implants Res. 2024;35(1):77-88. doi:10.1111/clr.14199.
-48. Altuna P, Lucas-Taulé E, Gargallo-Albiol J, Figueras-Álvarez O, Hernández-Alfaro F, Nart J. Clinical evidence on titanium-zirconium dental implants: a systematic review and meta-analysis. Int J Oral Maxillofac Surg. 2016;45(7):842-850. doi:10.1016/j.ijom.2016.01.004.
-49. Chevalier J, Gremillard L, Virkar AV, Clarke DR. The Tetragonal‐Monoclinic Transformation in Zirconia: Lessons Learned and Future Trends. J Am Ceram Soc. 2009;92(9):1901-1920. doi:10.1111/j.1551-2916.2009.03278.x.
-50. Pieralli S, Kohal RJ, Jung RE, Vach K, Spies BC. Clinical Outcomes of Zirconia Dental Implants: A Systematic Review. J Dent Res. 2017;96(1):38-46. doi:10.1177/0022034516664043.
-51. Herber V, Steyer E, Koller M, Nassehi Y, Pichler A, Payer M. Long term follow-up of immediately temporized zirconia and titanium one-piece dental implants-a prospective cohort study. Int J Implant Dent. 2025;11(1):70. doi:10.1186/s40729-025-00655-1.
-52. Steyer E, Herber V, Koller M, Végh D, Mukaddam K, Jakse N, et al. Immediate Restoration of Single-Piece Zirconia Implants: A Prospective Case Series-Long-Term Results after 11 Years of Clinical Function. Materials (Basel). 2021;14(22):6738. doi:10.3390/ma14226738.
-53. National Joint Registry. 23rd Annual Report 2026: Hips. Hemel Hempstead: NJR; 2026. ISSN 2054-183X. Disponível em: https://reports.njrcentre.org.uk
-54. Lewis PL, Gill DR, McAuliffe MJ, et al. Hip, Knee and Shoulder Arthroplasty: 2025 Annual Report. Adelaide: Australian Orthopaedic Association National Joint Replacement Registry (AOANJRR); 2025. doi:10.25310/MXFR3061.
-55. Hu CY, Yoon TR. Recent updates for biomaterials used in total hip arthroplasty. Biomater Res. 2018;22(1):33. doi:10.1186/s40824-018-0144-8.
-56. Lamb JN, Sayers A, Wilkinson JM, Pandit H, Whitehouse MR. The association between implant design, age, sex and the rate of major reoperation in patients undergoing primary total hip replacement: A retrospective study of UK National Joint Registry and Hospital Episodes Statistics data. PLoS Med. 2025;22(11):e1004538. doi:10.1371/journal.pmed.1004538.
-57. Brami P, Fischer Q, Pham V, Seret G, Varenne O, Picard F. Evolution of Coronary Stent Platforms: A Brief Overview of Currently Used Drug-Eluting Stents. J Clin Med. 2023;12(21):6711. doi:10.3390/jcm12216711.
-58. Macaya-Ten F, Gonzalo N, Escaned, and J, Macaya C. Inception of the coronary stent: a story of successful collaboration between innovative scientists and the biotechnology industry. REC Interv Cardiol. 2024. doi:10.24875/RECICE.M24000463.
-59. Gibson LJ, Ashby MF. Cellular Solids. 2.ª ed. Cambridge University Press; 1997. doi:10.1017/CBO9781139878326.
+33. Liu H, Slamovich EB, Webster TJ. Less harmful acidic degradation of poly(lacticco-glycolic acid) bone tissue engineering scaffolds through titania nanoparticle addition. Int J Nanomedicine. 2006;1(4):541-545. doi:10.2147/nano.2006.1.4.541.
+34. Hoogendoorn HA, Renooij W, Akkermans LMA, Visser W, Wittebol P. Long-term Study of Large Ceramic Implants (Porous Hydroxyapatite) in Dog Femora. Clin Orthop Relat Res. 1984;187:281-288. doi:10.1097/00003086-198407000-00043.
+35. Bruyas A, Moeinzadeh S, Kim S, Lowenberg DW, Yang YP. Effect of Electron Beam Sterilization on Three-Dimensional-Printed Polycaprolactone/Beta-Tricalcium Phosphate Scaffolds for Bone Tissue Engineering. Tissue Eng Part A. 2019;25(3-4):248-256. doi:10.1089/ten.tea.2018.0130.
+36. Lodewijks AJL, Warin MMR, van der Broeck LCA, Fois MG, Lopez-Iglesias C, Blokhuis TJ, et al. Long-term follow-up of patients with large segmental bone defects treated with 3D-printed polycaprolactone/tricalcium phosphate scaffolds. Eur J Trauma Emerg Surg. 2025;51(1):326. doi:10.1007/s00068-025-02982-9.
+37. Lodewijks A, Blokhuis T, van Griensven M, Poeze M. The Treatment of Very Large Traumatic Bone Defects of the Tibia With a Polycaprolactone-Tricalcium Phosphate 3D-Printed Cage: A Review of Three Cases. Cureus. 2024. doi:10.7759/cureus.66256.
+38. Sparks DS, Savi FM, Dlaska CE, Saifzadeh S, Brierly G, Ren E, et al. Convergence of scaffold-guided bone regeneration principles and microvascular tissue transfer surgery. Sci Adv. 2023;9(18):eadd6071. doi:10.1126/sciadv.add6071.
+39. Kawai T, Shanjani Y, Fazeli S, Behn AW, Okuzu Y, Goodman SB, et al. Customized, degradable, functionally graded scaffold for potential treatment of early stage osteonecrosis of the femoral head. J Orthop Res. 2018;36(3):1002-1011. doi:10.1002/jor.23673.
+40. Spicer PP, Kretlow JD, Young S, Jansen JA, Kasper FK, Mikos AG. Evaluation of bone regeneration using the rat critical size calvarial defect. Nat Protoc. 2012;7(10):1918-1929. doi:10.1038/nprot.2012.113.
+41. Reichert JC, Saifzadeh S, Wullschleger ME, Epari DR, Schütz MA, Duda GN, et al. The challenge of establishing preclinical models for segmental bone defect research. Biomaterials. 2009;30(12):2149-2163. doi:10.1016/j.biomaterials.2008.12.050.
+42. Flanagan D. Bite force and dental implant treatment: a short review. Med Devices (Auckl). 2017;Volume 10:141-148. doi:10.2147/MDER.S130314.
+43. Nakagawa M, Matsuya S, Shiraishi T, Ohta M. Effect of fluoride concentration and pH on corrosion behavior of titanium for dental use. J Dent Res. 1999;78(9):1568-1572. doi:10.1177/00220345990780091201.
+44. Matono Y, Nakagawa M, Matsuya S, Ishikawa K, Terada Y. Corrosion behavior of pure titanium and titanium alloys in various concentrations of Acidulated Phosphate Fluoride (APF) solutions. Dent Mater J. 2006;25(1):104-112. doi:10.4012/dmj.25.104.
+45. Apaza‐Bedoya K, Tarce M, Benfatti CAM, Henriques B, Mathew MT, Teughels W, et al. Synergistic interactions between corrosion and wear at titanium-based dental implant connections: A scoping review. J Periodontal Res. 2017;52(6):946-954. doi:10.1111/jre.12469.
+46. Chevalier J, Gremillard L, Virkar AV, Clarke DR. The Tetragonal‐Monoclinic Transformation in Zirconia: Lessons Learned and Future Trends. J Am Ceram Soc. 2009;92(9):1901-1920. doi:10.1111/j.1551-2916.2009.03278.x.
+47. Kocjan A, Cotič J, Kosmač T, Jevnikar P. In vivo aging of zirconia dental ceramics - Part I: Biomedical grade 3Y-TZP. Dent Mater. 2021;37(3):443-453. doi:10.1016/j.dental.2020.11.023.
+48. Cionca N, Hashim D, Mombelli A. Zirconia dental implants: where are we now, and where are we heading? Periodontol 2000. 2017;73(1):241-258. doi:10.1111/prd.12180.
+49. Scarano A, Piattelli M, Caputi S, Favero GA, Piattelli A. Bacterial adhesion on commercially pure titanium and zirconium oxide disks: an in vivo human study. J Periodontol. 2004;75(2):292-296. doi:10.1902/jop.2004.75.2.292.
+50. Roehling S, Astasov‐Frauenhoffer M, Hauser‐Gerspach I, Braissant O, Woelfler H, Waltimo T, et al. In Vitro Biofilm Formation on Titanium and Zirconia Implant Surfaces. J Periodontol. 2017;88(3):298-307. doi:10.1902/jop.2016.160245.
+51. Sicilia A, Cuesta S, Coma G, Arregui I, Guisasola C, Ruiz E, et al. Titanium allergy in dental implant patients: a clinical study on 1500 consecutive patients. Clin Oral Implants Res. 2008;19(8):823-835. doi:10.1111/j.1600-0501.2008.01544.x.
+52. Comino-Garayoa R, Cortés-Bretón Brinkmann J, Peláez J, López-Suárez C, Martínez-González JM, Suárez MJ. Allergies to Titanium Dental Implants: What Do We Really Know about Them? A Scoping Review. Biology (Basel). 2020;9(11):404. doi:10.3390/biology9110404.
+53. Safioti LM, Kotsakis GA, Pozhitkov AE, Chung WO, Daubert DM. Increased Levels of Dissolved Titanium Are Associated With Peri-Implantitis - A Cross-Sectional Study. J Periodontol. 2017;88(5):436-442. doi:10.1902/jop.2016.160524.
+54. Mombelli A, Hashim D, Cionca N. What is the impact of titanium particles and biocorrosion on implant survival and complications? A critical review. Clin Oral Implants Res. 2018;29(S18):37-53. doi:10.1111/clr.13305.
+55. Berglundh T, Abrahamsson I, Lang NP, Lindhe J. De novo alveolar bone formation adjacent to endosseous implants. Clin Oral Implants Res. 2003;14(3):251-262. doi:10.1034/j.1600-0501.2003.00972.x.
+56. Howe MS, Keys W, Richards D. Long-term (10-year) dental implant survival: A systematic review and sensitivity meta-analysis. J Dent. 2019;84:9-21. doi:10.1016/j.jdent.2019.03.008.
+57. Adell R, Eriksson B, Lekholm U, Brånemark PI, Jemt T. Long-term follow-up study of osseointegrated implants in the treatment of totally edentulous jaws. Int J Oral Maxillofac Implants. 1990;5(4):347-59. PMID: 2094653.
+58. Müller F, Al‐Nawas B, Storelli S, Quirynen M, Hicklin S, Castro‐Laza J, et al. Small-diameter titanium grade IV and titanium-zirconium implants in edentulous mandibles: Ten-year results from a double-blind, randomised controlled split-mouth core-trial. Clin Oral Implants Res. 2024;35(1):77-88. doi:10.1111/clr.14199.
+59. Altuna P, Lucas-Taulé E, Gargallo-Albiol J, Figueras-Álvarez O, Hernández-Alfaro F, Nart J. Clinical evidence on titanium-zirconium dental implants: a systematic review and meta-analysis. Int J Oral Maxillofac Surg. 2016;45(7):842-850. doi:10.1016/j.ijom.2016.01.004.
+60. Pieralli S, Kohal RJ, Jung RE, Vach K, Spies BC. Clinical Outcomes of Zirconia Dental Implants: A Systematic Review. J Dent Res. 2017;96(1):38-46. doi:10.1177/0022034516664043.
+61. Herber V, Steyer E, Koller M, Nassehi Y, Pichler A, Payer M. Long term follow-up of immediately temporized zirconia and titanium one-piece dental implants-a prospective cohort study. Int J Implant Dent. 2025;11(1):70. doi:10.1186/s40729-025-00655-1.
+62. Steyer E, Herber V, Koller M, Végh D, Mukaddam K, Jakse N, et al. Immediate Restoration of Single-Piece Zirconia Implants: A Prospective Case Series-Long-Term Results after 11 Years of Clinical Function. Materials (Basel). 2021;14(22):6738. doi:10.3390/ma14226738.
+63. Le Guéhennec L, Soueidan A, Layrolle P, Amouriq Y. Surface treatments of titanium dental implants for rapid osseointegration. Dent Mater. 2007;23(7):844-854. doi:10.1016/j.dental.2006.06.025.
+64. Osman R, Swain M. A Critical Review of Dental Implant Materials with an Emphasis on Titanium versus Zirconia. Materials (Basel). 2015;8(3):932-958. doi:10.3390/ma8030932.
+65. National Joint Registry. 23rd Annual Report 2026: Hips. Hemel Hempstead: NJR; 2026. ISSN 2054-183X. Disponível em: https://reports.njrcentre.org.uk
+66. Lewis PL, Gill DR, McAuliffe MJ, et al. Hip, Knee and Shoulder Arthroplasty: 2025 Annual Report. Adelaide: Australian Orthopaedic Association National Joint Replacement Registry (AOANJRR); 2025. doi:10.25310/MXFR3061.
+67. Hu CY, Yoon TR. Recent updates for biomaterials used in total hip arthroplasty. Biomater Res. 2018;22(1):33. doi:10.1186/s40824-018-0144-8.
+68. Lamb JN, Sayers A, Wilkinson JM, Pandit H, Whitehouse MR. The association between implant design, age, sex and the rate of major reoperation in patients undergoing primary total hip replacement: A retrospective study of UK National Joint Registry and Hospital Episodes Statistics data. PLoS Med. 2025;22(11):e1004538. doi:10.1371/journal.pmed.1004538.
+69. Brami P, Fischer Q, Pham V, Seret G, Varenne O, Picard F. Evolution of Coronary Stent Platforms: A Brief Overview of Currently Used Drug-Eluting Stents. J Clin Med. 2023;12(21):6711. doi:10.3390/jcm12216711.
+70. Macaya-Ten F, Gonzalo N, Escaned, and J, Macaya C. Inception of the coronary stent: a story of successful collaboration between innovative scientists and the biotechnology industry. REC Interv Cardiol. 2024. doi:10.24875/RECICE.M24000463.
+71. Gibson LJ, Ashby MF. Cellular Solids. 2.ª ed. Cambridge University Press; 1997. doi:10.1017/CBO9781139878326.
 
 # Normas citadas
 
-- ASTM F67
+- ASTM F67-24
 - ASTM F136
 - ASTM F1820-22
 - ASTM F1875-26
@@ -1055,25 +1067,27 @@ Como trabalho futuro propõe-se:
 - ASTM F2102-17(2026)
 - ASTM F2119-24
 - ASTM F2129-25
-- ASTM F2150
+- ASTM F2150-19
 - ASTM F2182-19e2
 - ASTM F2213-25
-- ASTM F2450
+- ASTM F2450-18
 - ASTM F2477-24
 - ASTM F3067-26
-- ISO 5832-2
+- ISO 5832-2:2025
 - ISO 7206-4:2010
 - ISO 7206-6:2013
 - ISO 7206-10:2018
 - ISO 10993
 - ISO 10993-4
+- ISO 10993-13:2010
+- ISO 10993-14:2001
 - ISO 11135
 - ISO 11137
-- ISO 13356
-- ISO 13781
+- ISO 13356:2015
+- ISO 13781:2017
 - ISO 14242-1:2014
 - ISO 14242-2:2016
-- ISO 14801
+- ISO 14801:2016
 - ISO 25539-2:2020
 
 # Anexo A. Equações dos métodos
@@ -1184,331 +1198,21 @@ $$ B_i = \sum_{k} \left( m - p_i^{(k)} \right) $$
 
 Os materiais ordenam-se por $B_i$ decrescente; em caso de empate, prevalece a posição no TOPSIS.
 
-# Anexo B. Base de dados completa
+# Anexo B. Base de dados
 
-Valores de data/materiais.csv (versão usada neste relatório). Valor: mínimo a máximo da base; Típico: o valor usado nos métodos. Estados: "Verificado" (confirmado na fonte indicada), "Verificado (fornecedor)" (ficha técnica de fornecedor), "Verificado (derivado)" (calculado a partir de valores publicados na fonte), "Verificado (composição química)" (deduzido da composição do material) e "A verificar" (valor de partida ainda não confirmado na fonte original). As notas de cada valor estão na base de dados.
+A base de dados completa, com o valor, a fonte, o estado e as notas de cada uma das 300 linhas, é entregue em anexo digital (data/base_dados_biomateriais.xlsx) e está no repositório do projeto.
 
-Contagem por estado: A verificar: 207; Verificado: 69; Verificado (fornecedor): 19; Verificado (derivado): 4; Verificado (composição química): 1 (total: 300).
+Estados: "Verificado" (confirmado na fonte indicada), "Verificado (fornecedor)" (ficha técnica de fornecedor), "Verificado (derivado)" (calculado a partir de valores publicados na fonte), "Verificado (composição química)" (deduzido da composição do material) e "A verificar" (valor de partida ainda não confirmado na fonte original).
 
-## B.1 Prótese da anca
+**Tabela B.1.** Número de valores da base de dados por caso e por estado.
 
-| Material | Propriedade | Unidade | Valor | Típico | Estado | Fonte |
+| Caso | A verificar | Verificado | Verificado (composição química) | Verificado (derivado) | Verificado (fornecedor) | Total |
 |---|---|---|---|---|---|---|
-| Aço inox 316L | Módulo de Young | GPa | 205 a 210 | 207,5 | Verificado | Navarro M, Michiardi A, Castaño O, Planell JA. Biomaterials in orthopaedics. J R Soc Interface 2008;5(27):1137-1158 (https://doi.org/10.1098/rsif.2008.0151) |
-| Aço inox 316L | Tensão de cedência | MPa | 755 a 765 | 760 | Verificado | Okazaki Y. Comparison of Fatigue Properties and Fatigue Crack Growth Rates of Various Implantable Metals. Materials 2012;5:2981 (https://doi.org/10.3390/ma5122981) |
-| Aço inox 316L | Resistência à tração | MPa | 490 a 860 | 675 | A verificar | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
-| Aço inox 316L | Limite de fadiga (10^7 ciclos) | MPa | 694 | 694 | Verificado (derivado) | Okazaki Y. Comparison of Fatigue Properties and Fatigue Crack Growth Rates of Various Implantable Metals. Materials 2012;5:2981 (https://doi.org/10.3390/ma5122981) |
-| Aço inox 316L | Densidade | g/cm³ | 7,9 a 8 | 7,95 | A verificar | [fonte a indicar] (o Niinomi 1998 é só de ligas de Ti) |
-| Aço inox 316L | Resistência à corrosão (ordinal 1-5) |  | 3 | 3 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| Co-Cr-Mo forjado | Módulo de Young | GPa | 220 a 230 | 225 | Verificado | Navarro M, Michiardi A, Castaño O, Planell JA. Biomaterials in orthopaedics. J R Soc Interface 2008;5(27):1137-1158 (https://doi.org/10.1098/rsif.2008.0151) |
-| Co-Cr-Mo forjado | Tensão de cedência | MPa | 629 a 709 | 669 | Verificado | Okazaki Y. Comparison of Fatigue Properties and Fatigue Crack Growth Rates of Various Implantable Metals. Materials 2012;5:2981 (https://doi.org/10.3390/ma5122981) |
-| Co-Cr-Mo forjado | Resistência à tração | MPa | 1000 a 1300 | 1150 | A verificar | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
-| Co-Cr-Mo forjado | Limite de fadiga (10^7 ciclos) | MPa | 796 | 796 | Verificado (derivado) | Okazaki Y. Comparison of Fatigue Properties and Fatigue Crack Growth Rates of Various Implantable Metals. Materials 2012;5:2981 (https://doi.org/10.3390/ma5122981) |
-| Co-Cr-Mo forjado | Densidade | g/cm³ | 8,3 a 8,5 | 8,4 | A verificar | [fonte a indicar] (o Niinomi 1998 é só de ligas de Ti) |
-| Co-Cr-Mo forjado | Resistência à corrosão (ordinal 1-5) |  | 4 | 4 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| Ti-6Al-4V ELI | Módulo de Young | GPa | 101 a 110 | 105,5 | Verificado | Li Y et al. Materials 2014;7:1709 (New Developments of Ti-Based Alloys for Biomedical Applications) (https://doi.org/10.3390/ma7031709) |
-| Ti-6Al-4V ELI | Tensão de cedência | MPa | 848 a 850 | 849 | Verificado | Okazaki Y. Comparison of Fatigue Properties and Fatigue Crack Growth Rates of Various Implantable Metals. Materials 2012;5:2981 (https://doi.org/10.3390/ma5122981) |
-| Ti-6Al-4V ELI | Resistência à tração | MPa | 860 a 965 | 912,5 | A verificar | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
-| Ti-6Al-4V ELI | Limite de fadiga (10^7 ciclos) | MPa | 682 | 682 | Verificado (derivado) | Okazaki Y. Comparison of Fatigue Properties and Fatigue Crack Growth Rates of Various Implantable Metals. Materials 2012;5:2981 (https://doi.org/10.3390/ma5122981) |
-| Ti-6Al-4V ELI | Densidade | g/cm³ | 4,43 | 4,43 | A verificar | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
-| Ti-6Al-4V ELI | Resistência à corrosão (ordinal 1-5) |  | 5 | 5 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| Ti cp grau 4 | Módulo de Young | GPa | 104,1 | 104,1 | Verificado | Li Y et al. Materials 2014;7:1709 (New Developments of Ti-Based Alloys for Biomedical Applications) (https://doi.org/10.3390/ma7031709) |
-| Ti cp grau 4 | Tensão de cedência | MPa | 610 a 622 | 616 | Verificado | Okazaki Y. Comparison of Fatigue Properties and Fatigue Crack Growth Rates of Various Implantable Metals. Materials 2012;5:2981 (https://doi.org/10.3390/ma5122981) |
-| Ti cp grau 4 | Resistência à tração | MPa | 550 a 680 | 615 | A verificar | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
-| Ti cp grau 4 | Limite de fadiga (10^7 ciclos) | MPa | 483 | 483 | Verificado (derivado) | Okazaki Y. Comparison of Fatigue Properties and Fatigue Crack Growth Rates of Various Implantable Metals. Materials 2012;5:2981 (https://doi.org/10.3390/ma5122981) |
-| Ti cp grau 4 | Densidade | g/cm³ | 4,51 | 4,51 | A verificar | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
-| Ti cp grau 4 | Resistência à corrosão (ordinal 1-5) |  | 5 | 5 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| Ti-13Nb-13Zr | Módulo de Young | GPa | 79 a 84 | 81,5 | Verificado | Li Y et al. Materials 2014;7:1709 (New Developments of Ti-Based Alloys for Biomedical Applications) (https://doi.org/10.3390/ma7031709) |
-| Ti-13Nb-13Zr | Tensão de cedência | MPa | 836 a 908 | 872 | Verificado | Li Y et al. Materials 2014;7:1709 (New Developments of Ti-Based Alloys for Biomedical Applications) (https://doi.org/10.3390/ma7031709) |
-| Ti-13Nb-13Zr | Resistência à tração | MPa | 973 a 1037 | 1005 | A verificar | Geetha M et al. Prog Mater Sci 2009;54:397-425 |
-| Ti-13Nb-13Zr | Limite de fadiga (10^7 ciclos) | MPa | 500 a 600 | 550 | A verificar | Geetha M et al. Prog Mater Sci 2009;54:397-425 |
-| Ti-13Nb-13Zr | Densidade | g/cm³ | 4,9 a 5,1 | 5 | A verificar | Geetha M et al. Prog Mater Sci 2009;54:397-425 |
-| Ti-13Nb-13Zr | Resistência à corrosão (ordinal 1-5) |  | 5 | 5 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| Ti-35Nb-7Zr-5Ta (TNZT) | Módulo de Young | GPa | 55 | 55 | Verificado | Li Y et al. Materials 2014;7:1709 (New Developments of Ti-Based Alloys for Biomedical Applications) (https://doi.org/10.3390/ma7031709) |
-| Ti-35Nb-7Zr-5Ta (TNZT) | Tensão de cedência | MPa | 530 a 547 | 538,5 | Verificado | Li Y et al. Materials 2014;7:1709 (New Developments of Ti-Based Alloys for Biomedical Applications) (https://doi.org/10.3390/ma7031709) |
-| Ti-35Nb-7Zr-5Ta (TNZT) | Resistência à tração | MPa | 590 a 600 | 595 | A verificar | Geetha M et al. Prog Mater Sci 2009;54:397-425 |
-| Ti-35Nb-7Zr-5Ta (TNZT) | Limite de fadiga (10^7 ciclos) | MPa | 275 | 275 | Verificado | Li Y et al. Materials 2014;7:1709 (New Developments of Ti-Based Alloys for Biomedical Applications) (https://doi.org/10.3390/ma7031709) |
-| Ti-35Nb-7Zr-5Ta (TNZT) | Densidade | g/cm³ | 5,6 a 5,8 | 5,7 | A verificar | Geetha M et al. Prog Mater Sci 2009;54:397-425 |
-| Ti-35Nb-7Zr-5Ta (TNZT) | Resistência à corrosão (ordinal 1-5) |  | 5 | 5 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| CoCrMo / UHMWPE convencional (MoP) | Taxa de desgaste linear | mm/ano | 0,04 a 0,106 | 0,077 | Verificado | Teeter MG, Yuan X, Somerville LE, MacDonald SJ, McCalden RW, Naudie DD. Thirteen-year wear rate comparison of highly crosslinked and conventional polyethylene in total hip arthroplasty. Can J Surg 2017;60(3):212-216 (https://doi.org/10.1503/cjs.005216) |
-| CoCrMo / UHMWPE convencional (MoP) | Dureza da cabeça | HV | 312 a 368 | 340 | Verificado | Fischer A, Weiß S, Wimmer MA. The tribological difference between biomedical steels and CoCrMo-alloys. J Mech Behav Biomed Mater 2012;9:50-62, Tabela 1 (https://doi.org/10.1016/j.jmbbm.2012.01.007) |
-| CoCrMo / UHMWPE convencional (MoP) | Segurança iónica / risco ALTR (ordinal 1-5) |  | 4 | 4 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| CoCrMo / HXLPE (MoXLPE) | Taxa de desgaste linear | mm/ano | 0,011 a 0,0212 | 0,0161 | Verificado | Higuchi Y, Seki T, Morita D, Komatsu D, Takegami Y, Ishiguro N. Comparison of wear rate between ceramic-on-ceramic, metal on highly cross-linked polyethylene, and metal-on-metal bearings. Rev Bras Ortop 2019;54(3):295-302, Tabela 4 (https://doi.org/10.1055/s-0039-1691762) |
-| CoCrMo / HXLPE (MoXLPE) | Dureza da cabeça | HV | 312 a 368 | 340 | Verificado | Fischer A, Weiß S, Wimmer MA. The tribological difference between biomedical steels and CoCrMo-alloys. J Mech Behav Biomed Mater 2012;9:50-62, Tabela 1 (https://doi.org/10.1016/j.jmbbm.2012.01.007) |
-| CoCrMo / HXLPE (MoXLPE) | Segurança iónica / risco ALTR (ordinal 1-5) |  | 4 | 4 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| ZTA / HXLPE (CoXLPE) | Taxa de desgaste linear | mm/ano | 0,032 a 0,044 | 0,038 | Verificado | Kim YH, Park JW. Eighteen-Year Results of Cementless THA with Alumina-on-HXLPE Bearings in Patients <30 Years Old. J Bone Joint Surg Am 2020;102(14):1255-1259 (https://doi.org/10.2106/JBJS.19.01157) |
-| ZTA / HXLPE (CoXLPE) | Dureza da cabeça | HV | 1937 | 1937 | Verificado (fornecedor) | KYOCERA Medical Technologies. BIOLOX delta Ceramic (página de produto), Tabela 1; consultada a 29 set 2026 (https://medical.kyocera.com/joint/prdct/biolox-delta-ceramic.html) |
-| ZTA / HXLPE (CoXLPE) | Segurança iónica / risco ALTR (ordinal 1-5) |  | 5 | 5 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| ZTA / ZTA (CoC) | Taxa de desgaste linear | mm/ano | 0,0019 a 0,0063 | 0,0041 | Verificado | Higuchi Y, Seki T, Morita D, Komatsu D, Takegami Y, Ishiguro N. Comparison of wear rate between ceramic-on-ceramic, metal on highly cross-linked polyethylene, and metal-on-metal bearings. Rev Bras Ortop 2019;54(3):295-302, Tabela 4 (https://doi.org/10.1055/s-0039-1691762) |
-| ZTA / ZTA (CoC) | Dureza da cabeça | HV | 1937 | 1937 | Verificado (fornecedor) | KYOCERA Medical Technologies. BIOLOX delta Ceramic (página de produto), Tabela 1; consultada a 29 set 2026 (https://medical.kyocera.com/joint/prdct/biolox-delta-ceramic.html) |
-| ZTA / ZTA (CoC) | Segurança iónica / risco ALTR (ordinal 1-5) |  | 5 | 5 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| CoCrMo / CoCrMo (MoM) | Taxa de desgaste linear | mm/ano | 0,0035 a 0,0073 | 0,0054 | Verificado | Higuchi Y, Seki T, Morita D, Komatsu D, Takegami Y, Ishiguro N. Comparison of wear rate between ceramic-on-ceramic, metal on highly cross-linked polyethylene, and metal-on-metal bearings. Rev Bras Ortop 2019;54(3):295-302, Tabela 4 (https://doi.org/10.1055/s-0039-1691762) |
-| CoCrMo / CoCrMo (MoM) | Dureza da cabeça | HV | 312 a 368 | 340 | Verificado | Fischer A, Weiß S, Wimmer MA. The tribological difference between biomedical steels and CoCrMo-alloys. J Mech Behav Biomed Mater 2012;9:50-62, Tabela 1 (https://doi.org/10.1016/j.jmbbm.2012.01.007) |
-| CoCrMo / CoCrMo (MoM) | Segurança iónica / risco ALTR (ordinal 1-5) |  | 1 | 1 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| Aço inox 316L | Compatibilidade com RM (ordinal 1-5) |  | 2 | 2 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| Co-Cr-Mo forjado | Compatibilidade com RM (ordinal 1-5) |  | 3 | 3 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| Ti-6Al-4V ELI | Compatibilidade com RM (ordinal 1-5) |  | 4 | 4 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| Ti cp grau 4 | Compatibilidade com RM (ordinal 1-5) |  | 4 | 4 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| Ti-13Nb-13Zr | Compatibilidade com RM (ordinal 1-5) |  | 4 | 4 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| Ti-35Nb-7Zr-5Ta (TNZT) | Compatibilidade com RM (ordinal 1-5) |  | 4 | 4 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| Aço inox 316L | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 1 | 1 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Co-Cr-Mo forjado | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 3 | 3 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Ti-6Al-4V ELI | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 3 | 3 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Ti cp grau 4 | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 2 | 2 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Ti-13Nb-13Zr | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 4 | 4 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Ti-35Nb-7Zr-5Ta (TNZT) | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 5 | 5 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Aço inox 316L | Fabricabilidade (ordinal 1-5) |  | 5 | 5 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| Co-Cr-Mo forjado | Fabricabilidade (ordinal 1-5) |  | 4 | 4 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| Ti-6Al-4V ELI | Fabricabilidade (ordinal 1-5) |  | 5 | 5 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| Ti cp grau 4 | Fabricabilidade (ordinal 1-5) |  | 4 | 4 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| Ti-13Nb-13Zr | Fabricabilidade (ordinal 1-5) |  | 3 | 3 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| Ti-35Nb-7Zr-5Ta (TNZT) | Fabricabilidade (ordinal 1-5) |  | 2 | 2 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| CoCrMo / UHMWPE convencional (MoP) | Compatibilidade galvânica cabeça-cone (ordinal 1-5) |  | 3 | 3 | A verificar | Literatura sobre corrosão na junção cabeça-cone (trunnionosis): confirmar |
-| CoCrMo / HXLPE (MoXLPE) | Compatibilidade galvânica cabeça-cone (ordinal 1-5) |  | 3 | 3 | A verificar | Literatura sobre corrosão na junção cabeça-cone (trunnionosis): confirmar |
-| ZTA / HXLPE (CoXLPE) | Compatibilidade galvânica cabeça-cone (ordinal 1-5) |  | 5 | 5 | A verificar | Literatura sobre corrosão na junção cabeça-cone (trunnionosis): confirmar |
-| ZTA / ZTA (CoC) | Compatibilidade galvânica cabeça-cone (ordinal 1-5) |  | 5 | 5 | A verificar | Literatura sobre corrosão na junção cabeça-cone (trunnionosis): confirmar |
-| CoCrMo / CoCrMo (MoM) | Compatibilidade galvânica cabeça-cone (ordinal 1-5) |  | 2 | 2 | A verificar | Literatura sobre corrosão na junção cabeça-cone (trunnionosis): confirmar |
-| CoCrMo / UHMWPE convencional (MoP) | Compatibilidade com esterilização (ordinal 1-5) |  | 2 | 2 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| CoCrMo / HXLPE (MoXLPE) | Compatibilidade com esterilização (ordinal 1-5) |  | 4 | 4 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| ZTA / HXLPE (CoXLPE) | Compatibilidade com esterilização (ordinal 1-5) |  | 4 | 4 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| ZTA / ZTA (CoC) | Compatibilidade com esterilização (ordinal 1-5) |  | 5 | 5 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| CoCrMo / CoCrMo (MoM) | Compatibilidade com esterilização (ordinal 1-5) |  | 5 | 5 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| CoCrMo / UHMWPE convencional (MoP) | Compatibilidade com RM (ordinal 1-5) |  | 3 | 3 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| CoCrMo / HXLPE (MoXLPE) | Compatibilidade com RM (ordinal 1-5) |  | 3 | 3 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| ZTA / HXLPE (CoXLPE) | Compatibilidade com RM (ordinal 1-5) |  | 5 | 5 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| ZTA / ZTA (CoC) | Compatibilidade com RM (ordinal 1-5) |  | 5 | 5 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| CoCrMo / CoCrMo (MoM) | Compatibilidade com RM (ordinal 1-5) |  | 2 | 2 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| CoCrMo / UHMWPE convencional (MoP) | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 1 | 1 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| CoCrMo / HXLPE (MoXLPE) | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 2 | 2 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| ZTA / HXLPE (CoXLPE) | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 3 | 3 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| ZTA / ZTA (CoC) | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 4 | 4 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| CoCrMo / CoCrMo (MoM) | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 3 | 3 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-
-## B.2 Implante dentário
-
-| Material | Propriedade | Unidade | Valor | Típico | Estado | Fonte |
-|---|---|---|---|---|---|---|
-| Ti cp grau 4 | Módulo de Young | GPa | 103 a 110 | 106,5 | A verificar | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
-| Ti cp grau 4 | Resistência mecânica (tração/flexão) | MPa | 550 a 680 | 615 | A verificar | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
-| Ti cp grau 4 | Tenacidade à fratura (K_IC) | MPa·m^0.5 | 50 a 70 | 60 | A verificar | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
-| Ti cp grau 4 | Densidade | g/cm³ | 4,51 | 4,51 | A verificar | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
-| Ti cp grau 4 | Estética (ordinal 1-5) |  | 2 | 2 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| Ti cp grau 4 | Evidência clínica de osteointegração (ordinal 1-5) |  | 5 | 5 | Verificado | Adell R et al. Int J Oral Maxillofac Implants 1990;5:347-359 (PMID 2094653); Howe MS et al. J Dent 2019;84:9-21 (https://doi.org/10.1016/j.jdent.2019.03.008) |
-| Ti-6Al-4V ELI | Módulo de Young | GPa | 110 a 114 | 112 | A verificar | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
-| Ti-6Al-4V ELI | Resistência mecânica (tração/flexão) | MPa | 860 a 965 | 912,5 | A verificar | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
-| Ti-6Al-4V ELI | Tenacidade à fratura (K_IC) | MPa·m^0.5 | 55 a 75 | 65 | A verificar | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
-| Ti-6Al-4V ELI | Densidade | g/cm³ | 4,43 | 4,43 | A verificar | Niinomi M. Mater Sci Eng A 1998;243:231-236 |
-| Ti-6Al-4V ELI | Estética (ordinal 1-5) |  | 2 | 2 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| Ti-6Al-4V ELI | Evidência clínica de osteointegração (ordinal 1-5) |  | 2 | 2 | Verificado | Shah FA et al. Mater Sci Eng C 2016;62:960-966; Johansson CB et al. Int J Oral Maxillofac Implants 1998;13:315-321 (PMID 9638001) (https://doi.org/10.1016/j.msec.2016.01.032) |
-| Ti-Zr (~15% Zr) | Módulo de Young | GPa | 95 a 105 | 100 | A verificar | Ficha técnica do fabricante (ex.: Straumann Roxolid): confirmar |
-| Ti-Zr (~15% Zr) | Resistência mecânica (tração/flexão) | MPa | 900 a 1000 | 950 | A verificar | Ficha técnica do fabricante (ex.: Straumann Roxolid): confirmar |
-| Ti-Zr (~15% Zr) | Tenacidade à fratura (K_IC) | MPa·m^0.5 | 50 a 70 | 60 | A verificar | Ficha técnica do fabricante (ex.: Straumann Roxolid): confirmar |
-| Ti-Zr (~15% Zr) | Densidade | g/cm³ | 4,9 a 5,1 | 5 | A verificar | Ficha técnica do fabricante (ex.: Straumann Roxolid): confirmar |
-| Ti-Zr (~15% Zr) | Estética (ordinal 1-5) |  | 2 | 2 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| Ti-Zr (~15% Zr) | Evidência clínica de osteointegração (ordinal 1-5) |  | 4 | 4 | Verificado | Müller F et al. Clin Oral Implants Res 2024;35:77-88; Altuna P et al. Int J Oral Maxillofac Surg 2016;45:842-850 (https://doi.org/10.1111/clr.14199) |
-| Zircónia Y-TZP | Módulo de Young | GPa | 200 a 210 | 205 | A verificar | Chevalier J. Biomaterials 2006;27:535-543 (zircónia/envelhecimento) |
-| Zircónia Y-TZP | Resistência mecânica (tração/flexão) | MPa | 900 a 1200 | 1050 | A verificar | Chevalier J. Biomaterials 2006;27:535-543 (zircónia/envelhecimento) |
-| Zircónia Y-TZP | Tenacidade à fratura (K_IC) | MPa·m^0.5 | 5 a 10 | 7,5 | A verificar | Chevalier J. Biomaterials 2006;27:535-543 (zircónia/envelhecimento) |
-| Zircónia Y-TZP | Densidade | g/cm³ | 6 a 6,1 | 6,05 | A verificar | Chevalier J. Biomaterials 2006;27:535-543 (zircónia/envelhecimento) |
-| Zircónia Y-TZP | Estética (ordinal 1-5) |  | 5 | 5 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| Zircónia Y-TZP | Evidência clínica de osteointegração (ordinal 1-5) |  | 3 | 3 | Verificado | Pieralli S et al. J Dent Res 2017;96:38-46; Roehling S et al. Clin Oral Implants Res 2018;29(S16):135-153 (https://doi.org/10.1177/0022034516664043) |
-| PEEK | Módulo de Young | GPa | 3 a 4 | 3,5 | A verificar | Ratner BD et al. Biomaterials Science, 4th ed., 2020 |
-| PEEK | Resistência mecânica (tração/flexão) | MPa | 90 a 100 | 95 | A verificar | Ratner BD et al. Biomaterials Science, 4th ed., 2020 |
-| PEEK | Tenacidade à fratura (K_IC) | MPa·m^0.5 | 3 a 6 | 4,5 | A verificar | Ratner BD et al. Biomaterials Science, 4th ed., 2020 |
-| PEEK | Densidade | g/cm³ | 1,3 a 1,32 | 1,31 | A verificar | Ratner BD et al. Biomaterials Science, 4th ed., 2020 |
-| PEEK | Estética (ordinal 1-5) |  | 3 | 3 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| PEEK | Evidência clínica de osteointegração (ordinal 1-5) |  | 1 | 1 | Verificado | Najeeb S et al. J Oral Implantol 2016;42:512-516; Mishra S, Chowdhary R. Clin Implant Dent Relat Res 2019;21:208-222 (https://doi.org/10.1563/aaid-joi-d-16-00072) |
-| Ti cp grau 4 | Compatibilidade com RM (ordinal 1-5) |  | 4 | 4 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| Ti-6Al-4V ELI | Compatibilidade com RM (ordinal 1-5) |  | 4 | 4 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| Ti-Zr (~15% Zr) | Compatibilidade com RM (ordinal 1-5) |  | 4 | 4 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| Zircónia Y-TZP | Compatibilidade com RM (ordinal 1-5) |  | 5 | 5 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| PEEK | Compatibilidade com RM (ordinal 1-5) |  | 5 | 5 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| Ti cp grau 4 | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 2 | 2 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Ti-6Al-4V ELI | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 2 | 2 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Ti-Zr (~15% Zr) | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 4 | 4 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Zircónia Y-TZP | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 4 | 4 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| PEEK | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 2 | 2 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Ti cp grau 4 | Maquinabilidade / fabricabilidade (ordinal 1-5) |  | 5 | 5 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| Ti-6Al-4V ELI | Maquinabilidade / fabricabilidade (ordinal 1-5) |  | 4 | 4 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| Ti-Zr (~15% Zr) | Maquinabilidade / fabricabilidade (ordinal 1-5) |  | 4 | 4 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| Zircónia Y-TZP | Maquinabilidade / fabricabilidade (ordinal 1-5) |  | 3 | 3 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| PEEK | Maquinabilidade / fabricabilidade (ordinal 1-5) |  | 4 | 4 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| Ti cp grau 4 | Resistência à corrosão em meio oral (ordinal 1-5) |  | 3 | 3 | Verificado | Nakagawa M et al. J Dent Res 1999;78:1568-1572; Apaza-Bedoya K et al. J Periodontal Res 2017;52:946-954 (https://doi.org/10.1177/00220345990780091201) |
-| Ti-6Al-4V ELI | Resistência à corrosão em meio oral (ordinal 1-5) |  | 3 | 3 | Verificado | Nakagawa M et al. Dent Mater J 2001;20:305-314; Huang HH. Biomaterials 2003;24:275-282 (https://doi.org/10.4012/dmj.20.305) |
-| Ti-Zr (~15% Zr) | Resistência à corrosão em meio oral (ordinal 1-5) |  | 3 | 3 | Verificado | Akimoto T et al. J Biomed Mater Res B 2018;106:73-79; Grandin HM, Berner S, Dard M. Materials 2012;5:1348-1360 (https://doi.org/10.1002/jbm.b.33811) |
-| Zircónia Y-TZP | Resistência à corrosão em meio oral (ordinal 1-5) |  | 4 | 4 | Verificado | Chevalier J et al. J Am Ceram Soc 2009;92:1901-1920; Kocjan A et al. Dent Mater 2021;37:443-453 (https://doi.org/10.1111/j.1551-2916.2009.03278.x) |
-| PEEK | Resistência à corrosão em meio oral (ordinal 1-5) |  | 5 | 5 | Verificado | Kurtz SM, Devine JN. Biomaterials 2007;28:4845-4869; Liebermann A et al. J Prosthet Dent 2016;115:321-328 (https://doi.org/10.1016/j.biomaterials.2007.07.013) |
-
-## B.3 Stent vascular
-
-| Material | Propriedade | Unidade | Valor | Típico | Estado | Fonte |
-|---|---|---|---|---|---|---|
-| Aço inox 316L | Módulo de Young | GPa | 193 | 193 | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Aço inox 316L | Tensão de cedência | MPa | 205 a 340 | 272,5 | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Aço inox 316L | Resistência à tração | MPa | 515 a 670 | 592,5 | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Aço inox 316L | Alongamento na rotura | % | 40 a 50 | 40 | Verificado (fornecedor) | Alleima, ficha 316LVM (tubo de parede fina recozido); patente US 6780261 B2 (Scimed), tubo de stent totalmente recozido (https://patents.google.com/patent/US6780261B2/en) |
-| Aço inox 316L | Densidade | g/cm³ | 8 | 8 | Verificado (fornecedor) | Alleima, ficha 316LVM |
-| Aço inox 316L | Espessura típica de strut | µm | 130 a 140 | 135 | Verificado | Nikam N, Steinberg TB, Steinberg DH. Med Devices (Auckl) 2014;7:165-178 (Tabela 1) (https://doi.org/10.2147/MDER.S31869) |
-| Aço inox 316L | Tempo de reabsorção | meses |  |  | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Aço inox 316L | Tipo de expansão |  | balão |  | A verificar |  |
-| Co-Cr L605 | Módulo de Young | GPa | 225 | 225 | Verificado (fornecedor) | Lamineries Matthey, ficha Alloy L-605 v26E (fita recozida, declara ASTM F90); Haynes International, HAYNES 25 (chapa solubilizada); Fort Wayne Metals, L-605 alloy (barra e fio) (https://www.matthey.ch/fileadmin/user_upload/downloads/fichetechnique/EN/Alloy_L-605_v26E.pdf) |
-| Co-Cr L605 | Tensão de cedência | MPa | 380 a 700 | 476 | Verificado (fornecedor) | Lamineries Matthey, ficha Alloy L-605 v26E (fita recozida, declara ASTM F90); Haynes International, HAYNES 25 (chapa solubilizada); Fort Wayne Metals, L-605 alloy (barra e fio) (https://www.matthey.ch/fileadmin/user_upload/downloads/fichetechnique/EN/Alloy_L-605_v26E.pdf) |
-| Co-Cr L605 | Resistência à tração | MPa | 900 a 1000 | 996 | Verificado (fornecedor) | Lamineries Matthey, ficha Alloy L-605 v26E (fita recozida, declara ASTM F90); Haynes International, HAYNES 25 (chapa solubilizada); Fort Wayne Metals, L-605 alloy (barra e fio) (https://www.matthey.ch/fileadmin/user_upload/downloads/fichetechnique/EN/Alloy_L-605_v26E.pdf) |
-| Co-Cr L605 | Alongamento na rotura | % | 40 | 40 | Verificado (fornecedor) | Lamineries Matthey, ficha Alloy L-605 v26E (fita recozida, declara ASTM F90); Fort Wayne Metals, L-605 alloy (fio) (https://www.matthey.ch/fileadmin/user_upload/downloads/fichetechnique/EN/Alloy_L-605_v26E.pdf) |
-| Co-Cr L605 | Densidade | g/cm³ | 9,07 a 9,27 | 9,27 | Verificado (fornecedor) | Lamineries Matthey, ficha Alloy L-605 v26E (fita); Haynes International, HAYNES 25 (https://www.matthey.ch/fileadmin/user_upload/downloads/fichetechnique/EN/Alloy_L-605_v26E.pdf) |
-| Co-Cr L605 | Espessura típica de strut | µm | 81 | 81 | Verificado | Macaya-Ten F et al. REC Interv Cardiol 2024 (Tabela 3); Brami P et al. J Clin Med 2023 (https://doi.org/10.24875/RECICE.M24000463) |
-| Co-Cr L605 | Tempo de reabsorção | meses |  |  | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Co-Cr L605 | Tipo de expansão |  | balão |  | A verificar |  |
-| Co-Ni-Cr-Mo MP35N | Módulo de Young | GPa | 233 | 233 | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Co-Ni-Cr-Mo MP35N | Tensão de cedência | MPa | 410 a 415 | 412,5 | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Co-Ni-Cr-Mo MP35N | Resistência à tração | MPa | 965 | 965 | Verificado (fornecedor) | K-Tube, MP35N Technical Data Sheet (tubo miniatura para stents); Ulbrich, MP35N Wire UNS R30035 (fio, declara ASTM F562) (https://www.k-tube.com/wp-content/uploads/2025/12/MP35N-K-Tube-Technical-Data-Sheet.pdf) |
-| Co-Ni-Cr-Mo MP35N | Alongamento na rotura | % | 40 | 40 | Verificado (fornecedor) | K-Tube, MP35N Technical Data Sheet (tubo miniatura para stents); Ulbrich, MP35N Wire UNS R30035 (fio, declara ASTM F562) (https://www.k-tube.com/wp-content/uploads/2025/12/MP35N-K-Tube-Technical-Data-Sheet.pdf) |
-| Co-Ni-Cr-Mo MP35N | Densidade | g/cm³ | 8,43 | 8,43 | Verificado (fornecedor) | Ulbrich, MP35N Wire UNS R30035 (declara ASTM F562) (https://www.ulbrich.com/uploads/data-sheets/MP35N-Wire-UNS-R30035.pdf) |
-| Co-Ni-Cr-Mo MP35N | Espessura típica de strut | µm | 90 a 91 | 90 | Verificado | Brami P et al. J Clin Med 2023; Macaya-Ten F et al. REC Interv Cardiol 2024 (Tabela 3) (https://doi.org/10.3390/jcm12216711) |
-| Co-Ni-Cr-Mo MP35N | Tempo de reabsorção | meses |  |  | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Co-Ni-Cr-Mo MP35N | Tipo de expansão |  | balão |  | A verificar |  |
-| Pt-Cr | Módulo de Young | GPa | 203 | 203 | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Pt-Cr | Tensão de cedência | MPa | 480 | 480 | Verificado | O'Brien BJ, Stinson JS, Larsen SR, Eppihimer MJ, Carroll WM. A platinum-chromium steel for cardiovascular stents. Biomaterials 2010;31:3755-3761 (https://doi.org/10.1016/j.biomaterials.2010.01.146) |
-| Pt-Cr | Resistência à tração | MPa | 834 | 834 | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Pt-Cr | Alongamento na rotura | % | 45 | 45 | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Pt-Cr | Densidade | g/cm³ | 9,9 | 9,9 | Verificado | Allocco DJ et al. Trials 2010;11:1 (PMC2826324) (https://doi.org/10.1186/1745-6215-11-1) |
-| Pt-Cr | Espessura típica de strut | µm | 74 a 81 | 79 | Verificado (fornecedor) | Boston Scientific, SYNERGY Product Spec Sheet (https://www.bostonscientific.com/content/dam/bostonscientific/Interventional%20Cardiology/portfolio-group/Stents/Synergy/legacy-resource-center/SYNERGY-Product-Spec-Sheet.pdf) |
-| Pt-Cr | Tempo de reabsorção | meses |  |  | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Pt-Cr | Tipo de expansão |  | balão |  | A verificar |  |
-| Nitinol (autoexpansível) | Módulo de Young | GPa | 40 a 75 | 57,5 | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Nitinol (autoexpansível) | Tensão de cedência | MPa | 350 a 600 | 475 | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Nitinol (autoexpansível) | Resistência à tração | MPa | 1070 a 1300 | 1185 | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Nitinol (autoexpansível) | Alongamento na rotura | % | 10 a 15 | 12,5 | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Nitinol (autoexpansível) | Densidade | g/cm³ | 6,45 | 6,45 | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Nitinol (autoexpansível) | Espessura típica de strut | µm | 100 a 150 | 125 | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Nitinol (autoexpansível) | Tempo de reabsorção | meses |  |  | A verificar | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |
-| Nitinol (autoexpansível) | Tipo de expansão |  | autoexpansível |  | A verificar |  |
-| Liga de Mg WE43 (bioabsorvível) | Módulo de Young | GPa | 44 a 45 | 44,5 | A verificar | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |
-| Liga de Mg WE43 (bioabsorvível) | Tensão de cedência | MPa | 150 a 195 | 172,5 | A verificar | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |
-| Liga de Mg WE43 (bioabsorvível) | Resistência à tração | MPa | 220 a 280 | 250 | A verificar | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |
-| Liga de Mg WE43 (bioabsorvível) | Alongamento na rotura | % | 10 a 17 | 13,5 | A verificar | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |
-| Liga de Mg WE43 (bioabsorvível) | Densidade | g/cm³ | 1,84 | 1,84 | A verificar | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |
-| Liga de Mg WE43 (bioabsorvível) | Espessura típica de strut | µm | 120 a 150 | 135 | Verificado | Rapetto C, Leoncini M. J Thorac Dis 2017 (Tabela 1); Seguchi M et al. EuroIntervention 2023;19:e167 (https://doi.org/10.21037/jtd.2017.06.34) |
-| Liga de Mg WE43 (bioabsorvível) | Tempo de reabsorção | meses | 12 a 24 | 18 | Verificado | Joner M et al. EuroIntervention 2018 (DREAMS 2G/Magmaris, porco); Seguchi M et al. EuroIntervention 2023;19:e167 (pré-clínico, mini-porcos) (https://doi.org/10.4244/EIJ-D-17-00708) |
-| Liga de Mg WE43 (bioabsorvível) | Tipo de expansão |  | balão |  | A verificar |  |
-| PLLA (bioabsorvível) | Módulo de Young | GPa | 3,1 a 3,6 | 3,35 | A verificar | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
-| PLLA (bioabsorvível) | Tensão de cedência | MPa | 50 a 70 | 60 | A verificar | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
-| PLLA (bioabsorvível) | Resistência à tração | MPa | 60 a 70 | 65 | A verificar | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
-| PLLA (bioabsorvível) | Alongamento na rotura | % | 2 a 6 | 4 | A verificar | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
-| PLLA (bioabsorvível) | Densidade | g/cm³ | 1,25 a 1,29 | 1,27 | A verificar | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
-| PLLA (bioabsorvível) | Espessura típica de strut | µm | 150 a 160 | 155 | A verificar | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |
-| PLLA (bioabsorvível) | Tempo de reabsorção | meses | 36 a 48 | 42 | Verificado | FDA SSED PMA P150023 (Absorb GT1); Gogas BD et al. Int J Cardiovasc Imaging 2012 (https://www.accessdata.fda.gov/cdrh_docs/pdf15/P150023B.pdf) |
-| PLLA (bioabsorvível) | Tipo de expansão |  | balão |  | A verificar |  |
-| Aço inox 316L | Compatibilidade com RM (ordinal 1-5) |  | 2 | 2 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| Co-Cr L605 | Compatibilidade com RM (ordinal 1-5) |  | 3 | 3 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| Co-Ni-Cr-Mo MP35N | Compatibilidade com RM (ordinal 1-5) |  | 3 | 3 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| Pt-Cr | Compatibilidade com RM (ordinal 1-5) |  | 3 | 3 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| Nitinol (autoexpansível) | Compatibilidade com RM (ordinal 1-5) |  | 4 | 4 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| Liga de Mg WE43 (bioabsorvível) | Compatibilidade com RM (ordinal 1-5) |  | 5 | 5 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| PLLA (bioabsorvível) | Compatibilidade com RM (ordinal 1-5) |  | 5 | 5 | A verificar | Shellock FG / MRIsafety.com; ASTM F2182 (aquecimento) e F2119 (artefactos): confirmar |
-| Aço inox 316L | Radiopacidade (ordinal 1-5) |  | 3 | 3 | Verificado | Allocco DJ et al. Trials 2010;11:1 (PMC2826324); PMC3692344 ("modest improvement" do CoCr); rubrica no LEIA-ME (teor de elementos de Z alto) (https://doi.org/10.1186/1745-6215-11-1) |
-| Co-Cr L605 | Radiopacidade (ordinal 1-5) |  | 4 | 4 | Verificado | Allocco DJ et al. Trials 2010;11:1 (PMC2826324); PMC3692344 ("modest improvement" do CoCr); rubrica no LEIA-ME (teor de elementos de Z alto) (https://doi.org/10.1186/1745-6215-11-1) |
-| Co-Ni-Cr-Mo MP35N | Radiopacidade (ordinal 1-5) |  | 3 | 3 | Verificado | Allocco DJ et al. Trials 2010;11:1 (PMC2826324); PMC3692344 ("modest improvement" do CoCr); rubrica no LEIA-ME (teor de elementos de Z alto) (https://doi.org/10.1186/1745-6215-11-1) |
-| Pt-Cr | Radiopacidade (ordinal 1-5) |  | 5 | 5 | Verificado | Allocco DJ et al. Trials 2010;11:1 (PMC2826324); PMC3692344 ("modest improvement" do CoCr); rubrica no LEIA-ME (teor de elementos de Z alto) (https://doi.org/10.1186/1745-6215-11-1) |
-| Nitinol (autoexpansível) | Radiopacidade (ordinal 1-5) |  | 2 | 2 | Verificado | Allocco DJ et al. Trials 2010;11:1 (PMC2826324); PMC3692344 ("modest improvement" do CoCr); rubrica no LEIA-ME (teor de elementos de Z alto) (https://doi.org/10.1186/1745-6215-11-1) |
-| Liga de Mg WE43 (bioabsorvível) | Radiopacidade (ordinal 1-5) |  | 1 | 1 | Verificado | Allocco DJ et al. Trials 2010;11:1 (PMC2826324); PMC3692344 ("modest improvement" do CoCr); rubrica no LEIA-ME (teor de elementos de Z alto) (https://doi.org/10.1186/1745-6215-11-1) |
-| PLLA (bioabsorvível) | Radiopacidade (ordinal 1-5) |  | 1 | 1 | Verificado | Allocco DJ et al. Trials 2010;11:1 (PMC2826324); PMC3692344 ("modest improvement" do CoCr); rubrica no LEIA-ME (teor de elementos de Z alto) (https://doi.org/10.1186/1745-6215-11-1) |
-| Aço inox 316L | Compatibilidade com esterilização (ordinal 1-5) |  | 4 | 4 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| Co-Cr L605 | Compatibilidade com esterilização (ordinal 1-5) |  | 4 | 4 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| Co-Ni-Cr-Mo MP35N | Compatibilidade com esterilização (ordinal 1-5) |  | 4 | 4 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| Pt-Cr | Compatibilidade com esterilização (ordinal 1-5) |  | 4 | 4 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| Nitinol (autoexpansível) | Compatibilidade com esterilização (ordinal 1-5) |  | 5 | 5 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| Liga de Mg WE43 (bioabsorvível) | Compatibilidade com esterilização (ordinal 1-5) |  | 4 | 4 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| PLLA (bioabsorvível) | Compatibilidade com esterilização (ordinal 1-5) |  | 3 | 3 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| Aço inox 316L | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 1 | 1 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Co-Cr L605 | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 3 | 3 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Co-Ni-Cr-Mo MP35N | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 3 | 3 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Pt-Cr | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 4 | 4 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Nitinol (autoexpansível) | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 4 | 4 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Liga de Mg WE43 (bioabsorvível) | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 5 | 5 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| PLLA (bioabsorvível) | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 5 | 5 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Aço inox 316L | Fabricabilidade (ordinal 1-5) |  | 5 | 5 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| Aço inox 316L | Teor de níquel | % (massa) | 13 a 15 | 14 | Verificado (fornecedor) | Página de fornecedor (Upmet), 316L ASTM F138 (https://www.upmet.com/products/stainless-steel/316lslvm) |
-| Co-Cr L605 | Fabricabilidade (ordinal 1-5) |  | 5 | 5 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| Co-Cr L605 | Teor de níquel | % (massa) | 9 a 11 | 10 | Verificado (fornecedor) | Página de fornecedor (MGM Industries), L605 ASTM F90 (https://www.mgm-industries.com/l605-alloy) |
-| Co-Ni-Cr-Mo MP35N | Fabricabilidade (ordinal 1-5) |  | 5 | 5 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| Co-Ni-Cr-Mo MP35N | Teor de níquel | % (massa) | 33 a 37 | 35 | Verificado (fornecedor) | Página de fornecedor (stainless.eu), MP35N ASTM F562 (https://www.stainless.eu/en/products/cobalt-alloys/mp35n/) |
-| Pt-Cr | Fabricabilidade (ordinal 1-5) |  | 4 | 4 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| Pt-Cr | Teor de níquel | % (massa) | 9 | 9 | Verificado | A novel platinum chromium everolimus-eluting stent for the treatment of coronary artery disease. Biologics: Targets and Therapy 2013;7:149 [confirmar autores e ano] (https://doi.org/10.2147/BTT.S34939) |
-| Nitinol (autoexpansível) | Fabricabilidade (ordinal 1-5) |  | 3 | 3 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| Liga de Mg WE43 (bioabsorvível) | Fabricabilidade (ordinal 1-5) |  | 3 | 3 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| Liga de Mg WE43 (bioabsorvível) | Teor de níquel | % (massa) | 0 a 0,005 | 0,005 | A verificar | MakeItFrom, WE43B (cita ASTM B80) (https://www.makeitfrom.com/material-properties/WE43B-WE43B-T6-M18432-Magnesium) |
-| PLLA (bioabsorvível) | Fabricabilidade (ordinal 1-5) |  | 3 | 3 | A verificar | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |
-| PLLA (bioabsorvível) | Teor de níquel | % (massa) | 0 | 0 | Verificado (composição química) | Composição química do PLLA |
-
-## B.4 Scaffold (regeneração óssea)
-
-| Material | Propriedade | Unidade | Valor | Típico | Estado | Fonte |
-|---|---|---|---|---|---|---|
-| PCL | Resistência à compressão (scaffold) | MPa | 2 a 10 | 6 | A verificar | Woodruff MA, Hutmacher DW. Prog Polym Sci 2010;35:1217-1256 (PCL) |
-| PCL | Módulo de compressão (scaffold) | MPa | 20 a 80 | 50 | A verificar | Woodruff MA, Hutmacher DW. Prog Polym Sci 2010;35:1217-1256 (PCL) |
-| PCL | Porosidade | % | 48 a 77 | 61 | Verificado | Zein I et al. Biomaterials 2002;23:1169-1185; Hutmacher DW et al. J Biomed Mater Res 2001;55:203-216 (https://doi.org/10.1016/s0142-9612(01)00232-0) |
-| PCL | Tempo de degradação | meses | 24 a 36 | 30 | A verificar | Woodruff MA, Hutmacher DW. Prog Polym Sci 2010;35:1217-1256 (PCL) |
-| PCL | Bioatividade (ordinal 1-5) |  | 1 | 1 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| PCL | Imprimibilidade 3D (ordinal 1-5) |  | 5 | 5 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| PLLA | Resistência à compressão (scaffold) | MPa | 1 a 10 | 5 | Verificado | Karanth D et al. Clin Exp Dent Res 2023;9:398-408 (https://doi.org/10.1002/cre2.712) |
-| PLLA | Módulo de compressão (scaffold) | MPa | 50 a 300 | 175 | Verificado | Karanth D et al. Clin Exp Dent Res 2023;9:398-408; Yin HM et al. Polymers 2016;8:213 (https://doi.org/10.1002/cre2.712) |
-| PLLA | Porosidade | % | 60 a 90 | 75 | Verificado | Lu L et al. Biomaterials 2000;21:1595-1605; Budyanto L, Goh YQ, Ooi CP. J Mater Sci Mater Med 2009;20:105-111; Ghosh S et al. J Mater Sci Mater Med 2007;18:185-193 (https://doi.org/10.1016/S0142-9612(00)00048-X) |
-| PLLA | Tempo de degradação | meses | 24 a 60 | 42 | Verificado | Bos RRM et al. Biomaterials 1991;12:32-36; Bergsma JE et al. Biomaterials 1995;16:25-31 (https://doi.org/10.1016/0142-9612(91)90128-w) |
-| PLLA | Bioatividade (ordinal 1-5) |  | 1 | 1 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| PLLA | Imprimibilidade 3D (ordinal 1-5) |  | 4 | 4 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| PLGA 50:50 | Resistência à compressão (scaffold) | MPa | 0,5 a 3 | 1,75 | A verificar | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
-| PLGA 50:50 | Módulo de compressão (scaffold) | MPa | 10 a 60 | 35 | A verificar | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
-| PLGA 50:50 | Porosidade | % | 73 a 87 | 80 | Verificado | Lu L et al. Biomaterials 2000;21:1837-1845 (https://doi.org/10.1016/s0142-9612(00)00047-8) |
-| PLGA 50:50 | Tempo de degradação | meses | 1 a 3 | 2 | A verificar | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
-| PLGA 50:50 | Bioatividade (ordinal 1-5) |  | 1 | 1 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| PLGA 50:50 | Imprimibilidade 3D (ordinal 1-5) |  | 3 | 3 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| Hidroxiapatite (HA) porosa | Resistência à compressão (scaffold) | MPa | 1,6 a 22,5 | 3,4 | Verificado | Liang H et al. Int J Bioprint 2022;8(1):502; Zhang P, Zhou Q, He R. Materials 2024;17:6092 (Tabela 1) (https://doi.org/10.18063/ijb.v8i1.502) |
-| Hidroxiapatite (HA) porosa | Módulo de compressão (scaffold) | MPa | 500 a 3000 | 1750 | A verificar | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
-| Hidroxiapatite (HA) porosa | Porosidade | % | 55 a 80 | 65 | Verificado (fornecedor) | FDA 510(k) K023998 (Tabela 1: Pro Osteon 200); Hoogendoorn HA et al. Clin Orthop Relat Res 1984;187:281-288 (https://www.accessdata.fda.gov/cdrh_docs/pdf2/K023998.pdf) |
-| Hidroxiapatite (HA) porosa | Tempo de degradação | meses | 42 a 60 | 60 | Verificado | Hoogendoorn HA et al. Clin Orthop Relat Res 1984;187:281-288; Oonishi H et al. J Biomed Mater Res 2000;51:37-46 (https://doi.org/10.1097/00003086-198407000-00043) |
-| Hidroxiapatite (HA) porosa | Bioatividade (ordinal 1-5) |  | 4 | 4 | Verificado | Grandfield K et al. J R Soc Interface 2010;7:1497-1501; rubrica segundo a classificação de Hench (LEIA-ME) (https://doi.org/10.1098/rsif.2010.0213) |
-| Hidroxiapatite (HA) porosa | Imprimibilidade 3D (ordinal 1-5) |  | 2 | 2 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| β-TCP poroso | Resistência à compressão (scaffold) | MPa | 0,35 a 7,72 | 2 | Verificado | Montelongo SA et al. J Mater Sci Mater Med 2021;32:94; Xulin H et al. Int J Bioprint 2023;9(2):673; Hashimoto K, Oikawa H, Shibata H. Int J Mol Sci 2024;25:5363 (https://doi.org/10.1007/s10856-021-06569-9) |
-| β-TCP poroso | Módulo de compressão (scaffold) | MPa | 100 a 1000 | 550 | A verificar | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
-| β-TCP poroso | Porosidade | % | 65 a 92 | 65 | Verificado (fornecedor) | FDA 510(k) K120152 (Cerasorb Plus); FDA 510(k) K032409 (Vitoss); Furusawa T et al. Int J Implant Dent 2016;2:4 (https://fda.innolitics.com/device/K120152) |
-| β-TCP poroso | Tempo de degradação | meses | 6 a 18 | 12 | A verificar | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
-| β-TCP poroso | Bioatividade (ordinal 1-5) |  | 4 | 4 | Verificado | Kotani S et al. J Biomed Mater Res 1991;25:1303-1315; rubrica segundo a classificação de Hench (LEIA-ME) (https://doi.org/10.1002/jbm.820251010) |
-| β-TCP poroso | Imprimibilidade 3D (ordinal 1-5) |  | 2 | 2 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| Vidro bioativo 45S5 poroso | Resistência à compressão (scaffold) | MPa | 0,58 a 1,1 | 0,915 | Verificado | Baino F, Fiume E. Materials 2019;12:3244 (Tabela 1) (https://doi.org/10.3390/ma12193244) |
-| Vidro bioativo 45S5 poroso | Módulo de compressão (scaffold) | MPa | 50 a 500 | 275 | A verificar | Hench LL. J Am Ceram Soc 1991;74:1487-1510 (vidros bioativos) |
-| Vidro bioativo 45S5 poroso | Porosidade | % | 70 a 90 | 80 | A verificar | Karageorgiou V, Kaplan D. Biomaterials 2005;26:5474-5491 (porosidade) |
-| Vidro bioativo 45S5 poroso | Tempo de degradação | meses | 6 a 24 | 16 | Verificado | Tadjoedin ES et al. Clin Oral Implants Res 2002;13:428-436; Tadjoedin ES et al. Clin Oral Implants Res 2000;11:334-344 (https://doi.org/10.1034/j.1600-0501.2002.130412.x) |
-| Vidro bioativo 45S5 poroso | Bioatividade (ordinal 1-5) |  | 5 | 5 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| Vidro bioativo 45S5 poroso | Imprimibilidade 3D (ordinal 1-5) |  | 2 | 2 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| Compósito PCL/β-TCP (impressão 3D) | Resistência à compressão (scaffold) | MPa | 2,2 a 6,38 | 4,3 | A verificar | Kawai T et al. J Orthop Res 2018;36:1002-1011; Wong WS et al. Cureus 2025;17:e86272 (https://doi.org/10.1002/jor.23673) |
-| Compósito PCL/β-TCP (impressão 3D) | Módulo de compressão (scaffold) | MPa | 22,2 a 51,5 | 23,1 | Verificado | Reichert JC et al. Int Orthop 2011;35:1229-1236; Kawai T et al. J Orthop Res 2018;36:1002-1011 (https://doi.org/10.1007/s00264-010-1146-x) |
-| Compósito PCL/β-TCP (impressão 3D) | Porosidade | % | 60 a 70 | 70 | Verificado | Sparks DS et al. Sci Adv 2023;9:eadd6071; Nam JH et al. J Periodontal Implant Sci 2023;53:218-232 (https://doi.org/10.1126/sciadv.add6071) |
-| Compósito PCL/β-TCP (impressão 3D) | Tempo de degradação | meses | 12 a 24 | 18 | A verificar | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
-| Compósito PCL/β-TCP (impressão 3D) | Bioatividade (ordinal 1-5) |  | 3 | 3 | Verificado | Bruyas A et al. J Mater Res 2018;33:1948-1959; rubrica segundo a classificação de Hench (LEIA-ME) (https://doi.org/10.1557/jmr.2018.112) |
-| Compósito PCL/β-TCP (impressão 3D) | Imprimibilidade 3D (ordinal 1-5) |  | 5 | 5 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| Quitosano/HA (liofilizado) | Resistência à compressão (scaffold) | MPa | 0,03 a 0,06 | 0,05 | Verificado | Gaihre B, Jayasuriya AC. Mater Sci Eng C 2018;91:330-339 (https://doi.org/10.1016/j.msec.2018.05.060) |
-| Quitosano/HA (liofilizado) | Módulo de compressão (scaffold) | MPa | 0,08 a 0,8 | 0,76 | Verificado | Gaihre B, Jayasuriya AC. Mater Sci Eng C 2018;91:330-339; Wang H et al. Heliyon 2024;10:e25832 (https://doi.org/10.1016/j.msec.2018.05.060) |
-| Quitosano/HA (liofilizado) | Porosidade | % | 86,9 a 91,3 | 87,5 | Verificado | Gaihre B, Jayasuriya AC. Mater Sci Eng C 2018;91:330-339; Wang H et al. Heliyon 2024;10:e25832 (https://doi.org/10.1016/j.msec.2018.05.060) |
-| Quitosano/HA (liofilizado) | Tempo de degradação | meses | 3 a 12 | 7,5 | A verificar | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |
-| Quitosano/HA (liofilizado) | Bioatividade (ordinal 1-5) |  | 3 | 3 | A verificar | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
-| Quitosano/HA (liofilizado) | Imprimibilidade 3D (ordinal 1-5) |  | 2 | 2 | Verificado | Bergonzi C et al. Sci Rep 2019;9:362 (https://doi.org/10.1038/s41598-018-36613-8) |
-| PCL | Compatibilidade com esterilização (ordinal 1-5) |  | 3 | 3 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| PLLA | Compatibilidade com esterilização (ordinal 1-5) |  | 3 | 3 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| PLGA 50:50 | Compatibilidade com esterilização (ordinal 1-5) |  | 2 | 2 | Verificado | Holy CE, Cheng C, Davies JE, Shoichet MS. Biomaterials 2001;22:25-31 (Tabela 2) (https://doi.org/10.1016/S0142-9612(00)00136-8) |
-| Hidroxiapatite (HA) porosa | Compatibilidade com esterilização (ordinal 1-5) |  | 5 | 5 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| β-TCP poroso | Compatibilidade com esterilização (ordinal 1-5) |  | 5 | 5 | Verificado (fornecedor) | FDA 510(k) K032409 (Vitoss, Orthovita, 2003); FDA 510(k) K120152 (Cerasorb Plus, Riemser, 2012) (https://fda.innolitics.com/device/K032409) |
-| Vidro bioativo 45S5 poroso | Compatibilidade com esterilização (ordinal 1-5) |  | 5 | 5 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| Compósito PCL/β-TCP (impressão 3D) | Compatibilidade com esterilização (ordinal 1-5) |  | 3 | 3 | Verificado | Bruyas A et al. Tissue Eng Part A 2019;25:248-256 (https://doi.org/10.1089/ten.tea.2018.0130) |
-| Quitosano/HA (liofilizado) | Compatibilidade com esterilização (ordinal 1-5) |  | 3 | 3 | A verificar | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
-| PCL | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 1 | 1 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| PLLA | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 1 | 1 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| PLGA 50:50 | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 2 | 2 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Hidroxiapatite (HA) porosa | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 3 | 3 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| β-TCP poroso | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 3 | 3 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Vidro bioativo 45S5 poroso | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 4 | 4 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Compósito PCL/β-TCP (impressão 3D) | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 2 | 2 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
-| Quitosano/HA (liofilizado) | Custo relativo de material e fabrico (1-5, 5 = mais caro) |  | 2 | 2 | A verificar | Índice relativo de material e fabrico (rubrica no LEIA-ME); não representa preço hospitalar |
+| Implante dentário | 40 | 10 | 0 | 0 | 0 | 50 |
+| Prótese da anca | 60 | 21 | 0 | 4 | 4 | 89 |
+| Scaffold (regeneração óssea) | 39 | 22 | 0 | 0 | 3 | 64 |
+| Stent vascular | 66 | 16 | 1 | 0 | 14 | 97 |
+| Total | 205 | 69 | 1 | 4 | 21 | 300 |
 
 # Glossário
 

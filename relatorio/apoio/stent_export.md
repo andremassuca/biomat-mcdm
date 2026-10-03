@@ -1,4 +1,4 @@
-# Stent vascular: export de dados (commit 4eb1fb3, 03/10/2026)
+# Stent vascular: export de dados (commit 75756a8, 03/10/2026)
 
 Gerado por scripts/exportar_caso.py a partir de data/, src/ e results/. Só dados.
 
@@ -143,7 +143,7 @@ Pesos no cenário B (renormalizados): Índice material de recuo elástico σy/E 
 | Co-Ni-Cr-Mo MP35N | Teor de níquel | % (massa) | 35 | 33 | 37 |  | Página de fornecedor (stainless.eu), MP35N ASTM F562 | https://www.stainless.eu/en/products/cobalt-alloys/mp35n/ | Verificado (fornecedor) |
 | Liga de Mg WE43 (bioabsorvível) | Teor de níquel | % (massa) | 0,005 | 0 | 0,005 |  | MakeItFrom, WE43B (cita ASTM B80) | https://www.makeitfrom.com/material-properties/WE43B-WE43B-T6-M18432-Magnesium | A verificar |
 | PLLA (bioabsorvível) | Teor de níquel | % (massa) | 0 | 0 | 0 |  | Composição química do PLLA |  | Verificado (composição química) |
-| Pt-Cr | Teor de níquel | % (massa) | 9 | 9 | 9 |  | A novel platinum chromium everolimus-eluting stent for the treatment of coronary artery disease. Biologics: Targets and Therapy 2013;7:149 [confirmar autores e ano] | https://doi.org/10.2147/BTT.S34939 | Verificado |
+| Pt-Cr | Teor de níquel | % (massa) | 9 | 9 | 9 |  | Bennett J, Dubois C. A novel platinum chromium everolimus-eluting stent for the treatment of coronary artery disease. Biologics 2013;7:149-159 | https://doi.org/10.2147/BTT.S34939 | Verificado |
 | Aço inox 316L | Tipo de expansão | - |  |  |  | balão |  |  | A verificar |
 | Co-Cr L605 | Tipo de expansão | - |  |  |  | balão |  |  | A verificar |
 | Co-Ni-Cr-Mo MP35N | Tipo de expansão | - |  |  |  | balão |  |  | A verificar |
@@ -374,6 +374,7 @@ Células a verificar: 43 (3 mudam o vencedor com ±20 %).
   - resultado atual: eliminados o MoM (segurança iónica 1 < 2) e o Nitinol (tipo de expansão autoexpansível; também pelo estatuto "Excluído").
 - HA não reabsorvível (scaffold, 1 out 2026): o tempo de degradação da HA segue a lógica da opção O2 do stent: mínimo 42 meses (sem reabsorção em 3,5 anos) e máximo e típico iguais ao pior valor observado nos outros materiais do scaffold (60 meses, PLLA). É um valor de modelação e subestima a permanência real da HA.
 - Densidade removida como proxy de radiopacidade (depende do número atómico efetivo e da espessura). Com a rubrica de radiopacidade (data/leia_me.md, 1 out 2026), a densidade continua a não ser critério do stent, mas serve de evidência de apoio para a ordem da radiopacidade (Allocco 2010, doi:10.1186/1745-6215-11-1).
+- O-orçamento (3 out 2026): exclui na triagem os materiais com custo relativo acima de teto_custo_relativo = 3 (valor de desenho), sem mudar os pesos; cenário A dos três casos quantitativos. Sai o Ti-13Nb-13Zr (haste), o Pt-Cr (stent) e o vidro 45S5 (scaffold); o vencedor só muda no stent (L605 nos três métodos).
   em 10 000 com o Co-Cr-Mo forjado) e 100 % no WASPAS e no VIKOR. Nos três casos (haste, stent,
   scaffold) o vencedor do Monte Carlo não muda; no stent, o 1.º lugar do Co-Cr L605 desce
 ## Stent: fontes e regras (30 set 2026)

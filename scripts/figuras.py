@@ -69,6 +69,11 @@ MUDA = {"B": "juntar os materiais em investigação", "Q": "tirar os critérios 
         "P-foco": "reforçar os critérios do problema crítico", "O-orçamento": "impor o teto de orçamento"}
 
 
+def pct_fig(v: float) -> str:
+    """Percentagem sem casas, ou com duas quando o arredondamento daria 0 ou 100 sem o ser (ex.: 99,99)."""
+    return fmt_pt(v, 2) if (99.5 <= v < 100) or (0 < v < 0.5) else fmt_pt(v, 0)
+
+
 def curto(material: str) -> str:
     """Nome do material sem os parênteses longos, para caber nos eixos."""
     for a, b in ABREVIA.items():
@@ -327,14 +332,14 @@ def fig_monte_carlo(mc: pd.DataFrame) -> plt.Figure:
     for ax, caso in zip(eixos, CASOS):
         t, zeros = tab[caso]
         if zeros:
-            ax.text(0, len(t) - 0.42, "Restantes materiais: 0 % nos três métodos ("
+            ax.text(0, len(t) - 0.42, "Restantes materiais: menos de 0,5 % nos três métodos ("
                     + ", ".join(curto(z) for z in zeros) + ")", fontsize=F_EIXO - 2, color=TEXTO_2,
                     va="top", style="italic")
         for k, m in enumerate(METODOS):
             y = [i + (k - 1) * h for i in range(len(t))]
             ax.barh(y, t[m], height=h * 0.92, color=COR_METODO[m], label=m)
             for yi, v in zip(y, t[m]):
-                ax.text(v + 1.2, yi, f"{fmt_pt(v, 0)} %", va="center", fontsize=F_EIXO - 2, color=TEXTO)
+                ax.text(v + 1.2, yi, f"{pct_fig(v)} %", va="center", fontsize=F_EIXO - 2, color=TEXTO)
         ax.set_yticks(range(len(t)), [curto(x) for x in t.index])
         ax.set_ylim(len(t) + 0.1, -0.5)
         ax.set_xlim(0, 112)
@@ -345,7 +350,7 @@ def fig_monte_carlo(mc: pd.DataFrame) -> plt.Figure:
         ax.set_title(CASOS[caso], fontsize=F_EIXO + 1, color=TEXTO, loc="left", fontweight="bold")
     eixos[-1].set_xlabel("% das iterações em 1.º lugar", fontsize=F_EIXO, color=TEXTO_2)
     eixos[1].legend(loc="lower right", frameon=False, fontsize=F_EIXO, ncols=3)
-    it = int(mc["n_iter"].iloc[0])
+    it = f"{int(mc['n_iter'].iloc[0]):,}".replace(",", " ")
     cabecalho(fig, "Só na haste o 1.º lugar resiste à incerteza dos dados",
               f"Monte Carlo das propriedades, cenário A, {it} iterações: percentagem das iterações\n"
               "em que cada material fica em 1.º lugar, por método.", topo=0.90)
@@ -365,7 +370,7 @@ def fig_monte_carlo_completo(mc: pd.DataFrame) -> plt.Figure:
                         edgecolor="white", linewidth=1)
                 for k, (v, e) in enumerate(zip(t[col], esq)):
                     if v >= 12:
-                        ax.text(e + v / 2, k, fmt_pt(v, 0), ha="center", va="center",
+                        ax.text(e + v / 2, k, pct_fig(v), ha="center", va="center",
                                 fontsize=F_EIXO - 2, color=cor_texto(to_rgba(tom)))
                 esq = esq + t[col]
             ax.set_yticks(range(len(t)), [curto(x) for x in t.index] if j == 0 else [])
@@ -377,7 +382,7 @@ def fig_monte_carlo_completo(mc: pd.DataFrame) -> plt.Figure:
                 ax.set_xlabel("% das iterações", fontsize=F_EIXO, color=TEXTO_2)
     fig.legend(handles=[Patch(color=c, label=NOME_LUGAR[k]) for k, c in TONS_LUGAR.items()],
                loc="lower left", bbox_to_anchor=(0.01, 0.0), ncols=3, frameon=False, fontsize=F_EIXO)
-    it = int(mc["n_iter"].iloc[0])
+    it = f"{int(mc['n_iter'].iloc[0]):,}".replace(",", " ")
     cabecalho(fig, "No stent e no scaffold os três primeiros lugares trocam entre si",
               f"Monte Carlo das propriedades, cenário A, {it} iterações: percentagem das iterações "
               "em 1.º, 2.º e 3.º lugar, por método (anexo).", topo=0.90)
@@ -437,7 +442,7 @@ def fig_resumo(resumo: pd.DataFrame) -> plt.Figure:
             if len(met) < len(METODOS):
                 ax.annotate(f"({', '.join(met)})", xy=(1, 0.5), xycoords=nome, xytext=(10, 0),
                             textcoords="offset points", fontsize=F_EIXO - 1, color=TEXTO_2, va="center")
-            ax.text(0.47, y, " / ".join(f"{fmt_pt(v, 0)} %" for v in r.monte_carlo[mat]),
+            ax.text(0.47, y, " / ".join(f"{pct_fig(v)} %" for v in r.monte_carlo[mat]),
                     fontsize=F_TITULO - 1, color=TEXTO, va="center")
         frase = r.muda if r.muda.startswith("η") else r.muda[0].upper() + r.muda[1:]
         ax.text(0.74, i + 0.5, "\n".join(textwrap.wrap(frase, 34)), fontsize=F_EIXO, color=TEXTO,

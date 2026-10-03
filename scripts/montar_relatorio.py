@@ -2,7 +2,7 @@
 
 Ordem: capa (metadados YAML), resumo, índice (gerado pelo pandoc), 1 Introdução (com a Tabela 1, resumo
 dos casos), 2 Métodos, 3 Validação, 4-7 Casos (anca, stent, scaffold, implante dentário), 8 Discussão,
-9 Conclusões, Referências, Normas citadas, Anexos A e B, Glossário e Declaração.
+9 Conclusões, Referências, Normas citadas, Anexos A e B (B: só a contagem por estado), Glossário e Declaração.
 - Os marcadores <!-- incluir: tabelas/x.md --> e <!-- figura: fig_x --> são substituídos pelas tabelas
   de relatorio/tabelas/ e pelas figuras de results/figures/, numeradas pela ordem em que aparecem.
 - As citações "Apelido (et al.) ano" passam a "Apelido (et al.) [n]", pela ordem da primeira citação, e a
@@ -212,9 +212,8 @@ def montar() -> str:
     fim = "# Anexo A" + fim
     lista = "\n".join(f"{i}. {refs[k]}" for i, k in enumerate(ordem, 1))
     lista_normas = "\n".join(f"- {n}" for n in normas(texto + fim))
-    anexo_b = "\n".join(l for l in ler("tabelas/anexo_b_dados.md").splitlines() if not l.startswith("<!--"))
-    anexo_b = re.sub(r"^## (.+)$", lambda m, c=iter(range(1, 20)): f"## B.{next(c)} {m.group(1)}", anexo_b,
-                     flags=re.M)
+    # Anexo B no relatório: só a contagem por estado; a tabela completa fica em tabelas/anexo_b_dados.md e no .xlsx.
+    anexo_b = "\n".join(l for l in ler("tabelas/anexo_b_resumo.md").splitlines() if not l.startswith("<!--"))
     anexo_a, resto = fim.split("\n\n# Glossário", 1)
     partes = [YAML.format(abstract="\n".join("  " + l for l in resumo.splitlines())), texto,
               "# Referências\n\n" + lista, "# Normas citadas\n\n" + lista_normas,

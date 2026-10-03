@@ -143,3 +143,8 @@ def test_semiquantitativos_notas_de_0_a_1_e_ordem_do_topsis():
     assert nota.loc["Ti cp grau 4", j] == 1 and nota.loc["PEEK", j] == 0
     m = "Módulo de Young"  # alvo 15 GPa: o PEEK (3,5) é o mais perto
     assert nota[m].idxmax() == "PEEK"
+
+
+def test_pct_fig_nao_arredonda_para_100_nem_para_0():
+    assert fg.pct_fig(99.99) == "99,99" and fg.pct_fig(100.0) == "100"
+    assert fg.pct_fig(0.01) == "0,01" and fg.pct_fig(0.0) == "0" and fg.pct_fig(56.6) == "57"

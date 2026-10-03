@@ -209,6 +209,29 @@ def anexo_b(data_dir: Path = DATA) -> str:
     return "\n".join(L)
 
 
+def contagem_estados(data_dir: Path = DATA) -> pd.DataFrame:
+    """Número de valores por estado, por caso e no total (linhas: casos e Total; colunas: estados)."""
+    m = pd.read_csv(data_dir / "materiais.csv")
+    t = pd.crosstab(m["caso"], m["estado"], margins=True, margins_name="Total")
+    return t.rename_axis(index=None, columns=None)
+
+
+def anexo_b_resumo(data_dir: Path = DATA) -> str:
+    """Anexo B do relatório: só a contagem por estado e a remissão para o anexo digital."""
+    t = contagem_estados(data_dir)
+    tab = pd.DataFrame({"Caso": t.index, **{c: t[c].to_numpy() for c in t.columns}})
+    return "\n".join([
+        "# Anexo B. Base de dados", "",
+        "A base de dados completa, com o valor, a fonte, o estado e as notas de cada uma das "
+        f"{int(t.loc['Total', 'Total'])} linhas, é entregue em anexo digital (data/base_dados_biomateriais.xlsx) e "
+        "está no repositório do projeto.", "",
+        "Estados: \"Verificado\" (confirmado na fonte indicada), \"Verificado (fornecedor)\" (ficha técnica de "
+        "fornecedor), \"Verificado (derivado)\" (calculado a partir de valores publicados na fonte), \"Verificado "
+        "(composição química)\" (deduzido da composição do material) e \"A verificar\" (valor de partida ainda não "
+        "confirmado na fonte original).", "",
+        "**Tabela B.1.** Número de valores da base de dados por caso e por estado.", "", md(tab)])
+
+
 def gerar(destino: Path = DESTINO, data_dir: Path = DATA, results: Path = RESULTS) -> list[Path]:
     """Escreve as três tabelas de cada caso; devolve os caminhos."""
     destino.mkdir(parents=True, exist_ok=True)
@@ -223,10 +246,11 @@ def gerar(destino: Path = DESTINO, data_dir: Path = DATA, results: Path = RESULT
             p = destino / f"{chave}_{nome}.md"
             p.write_text(f"<!-- gerado por scripts/tabelas_relatorio.py; não editar à mão -->\n{texto}\n", encoding="utf-8")
             feitos.append(p)
-    p = destino / "anexo_b_dados.md"
-    p.write_text("<!-- gerado por scripts/tabelas_relatorio.py; não editar à mão -->\n" + anexo_b(data_dir) + "\n",
-                 encoding="utf-8")
-    feitos.append(p)
+    for nome, texto in (("anexo_b_dados", anexo_b(data_dir)), ("anexo_b_resumo", anexo_b_resumo(data_dir))):
+        p = destino / f"{nome}.md"
+        p.write_text("<!-- gerado por scripts/tabelas_relatorio.py; não editar à mão -->\n" + texto + "\n",
+                     encoding="utf-8")
+        feitos.append(p)
     return feitos
 
 
