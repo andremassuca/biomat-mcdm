@@ -1,11 +1,11 @@
 """Corre todos os cenários de data/cenarios.csv nos 3 casos quantitativos (haste, stent, scaffold).
 
-Resultado principal: η = 1 (data/parametros.csv). Cenários de sensibilidade (Q, η, T, C-custo, P-foco)
+Resultado principal: η = 1 (data/parametros.csv). Cenários de sensibilidade (Q, η, T, C-custo, P-foco, O-orçamento)
 partem do cenário A. PRELIMINAR enquanto os valores da base estiverem "A verificar".
 
 Gera:
   results/rankings_cenarios.csv   posição de cada material por caso, cenário, variante e método
-  results/pontuacoes.csv          pontuação (C, Q, P) e posição nos cenários A e B, por método
+  results/pontuacoes.csv          pontuação (C, Q, P), posição por método e consenso de Borda, cenários A e B
   results/monte_carlo.csv         % de 1.º, 2.º e 3.º lugar e posição média (MC propriedades e W pesos)
   results/spearman.csv            concordância entre métodos por cenário e variante
   results/resumo_robustez.md      resumo por caso
@@ -22,9 +22,9 @@ import pandas as pd
 
 from biomat_mcdm.io import (DATA, DecisionProblem, build_problem, criterios_do_problema, load_parametros,
                             load_tissue)
-from biomat_mcdm.pipeline import METODOS, fmt_pt, rank_all_methods
-from biomat_mcdm.robustness import (com_alvo, com_eta, com_foco, com_peso, com_valor, monte_carlo, pct_posicao,
-                                    pct_primeiro, posicoes, rank_agreement, sem_ordinais)
+from biomat_mcdm.pipeline import METODOS, consenso_borda, fmt_pt, rank_all_methods
+from biomat_mcdm.robustness import (com_alvo, com_eta, com_foco, com_peso, com_teto, com_valor, monte_carlo,
+                                    pct_posicao, pct_primeiro, posicoes, rank_agreement, sem_ordinais)
 
 RESULTS = Path(__file__).resolve().parents[1] / "results"
 AVISO = "PRELIMINAR: dados por verificar"
@@ -88,6 +88,10 @@ def variantes(codigo: str, caso: str, data_dir: Path = DATA) -> list[tuple[str, 
         return [(f"custo {k} ({fmt_pt(v, 2)})", com_peso(base, CUSTO, v)) for k, v in PESO_CUSTO.items()]
     if codigo == "P-foco":
         return variantes_foco(nome, base, data_dir)
+    if codigo == "O-orçamento":
+        teto = load_parametros(data_dir).get("teto_custo_relativo", 3.0)
+        p, sai = com_teto(base, CUSTO, teto)
+        return [(f"custo ≤ {teto:g} (sai: {', '.join(sai) if sai else 'nenhum'})", p)]
     return []
 
 
@@ -151,7 +155,7 @@ def pontuacao_linhas(data_dir: Path = DATA) -> pd.DataFrame:
     partes = []
     for caso, nome in CASOS.items():
         for cen in ("A", "B"):
-            df = rank_all_methods(build_problem(nome, cen, data_dir))
+            df = consenso_borda(rank_all_methods(build_problem(nome, cen, data_dir)))
             partes.append(df.assign(caso=caso, cenario=cen))
     return pd.concat(partes, ignore_index=True)
 

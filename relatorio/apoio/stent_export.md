@@ -1,4 +1,4 @@
-# Stent vascular: export de dados (commit 3ec4143, 03/10/2026)
+# Stent vascular: export de dados (commit 4eb1fb3, 03/10/2026)
 
 Gerado por scripts/exportar_caso.py a partir de data/, src/ e results/. Só dados.
 
@@ -27,6 +27,7 @@ Cenários aplicáveis (cenarios.csv):
 - C-custo: Peso do custo relativo baixo (0,01) vs elevado (0,25), restantes pesos redistribuídos
 - MC: Incerteza das propriedades
 - P-foco: Foco no problema crítico do professor (2 out 2026): peso dos critérios de ligação direta x2 (fator_foco_problema), restantes renormalizados; sensibilidade: direta + indireta (data/problemas_criticos.csv). Par articular: sensibilidade semiquantitativa à parte
+- O-orçamento: Teto de orçamento: exclui na triagem os materiais com custo relativo acima de teto_custo_relativo (3), sem mudar os pesos; cenário A
 
 ## 2. Critérios (criterios.csv)
 
@@ -234,6 +235,7 @@ Vencedor no cenário A: TOPSIS Pt-Cr; WASPAS Co-Cr L605; VIKOR Pt-Cr
 | C-custo | custo elevado (0,25) | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | 0,40 |
 | P-foco | direta | Pt-Cr | Co-Cr L605 | Pt-Cr | 0,80 |
 | P-foco | direta + indireta | Pt-Cr | Co-Cr L605 | Pt-Cr | 0,80 |
+| O-orçamento | custo ≤ 3 (sai: Pt-Cr) | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
 
 #### Monte Carlo: % de 1.º lugar
 
@@ -292,6 +294,8 @@ Vencedor no cenário A: TOPSIS Pt-Cr; WASPAS Co-Cr L605; VIKOR Pt-Cr
 - C-custo, custo elevado (0,25), TOPSIS: Pt-Cr → Co-Cr L605
 - C-custo, custo elevado (0,25), WASPAS: Co-Cr L605 → Aço inox 316L
 - C-custo, custo elevado (0,25), VIKOR: Pt-Cr → Co-Cr L605
+- O-orçamento, custo ≤ 3 (sai: Pt-Cr), TOPSIS: Pt-Cr → Co-Cr L605
+- O-orçamento, custo ≤ 3 (sai: Pt-Cr), VIKOR: Pt-Cr → Co-Cr L605
 
 ## 6. Triagem (critérios estritos)
 
@@ -392,6 +396,7 @@ Referências das frases de relatorio/caso_stent_rascunho.md. "Só resumo" quando
 - Normas (Q10): ISO 25539-2:2020, Cardiovascular implants, Endovascular devices, Part 2: Vascular stents. ASTM
   F2079-09(2022), Standard Test Method for Measuring Intrinsic Elastic Recoil of Balloon-Expandable Stents. ASTM
   F3067-26, Standard Guide for Radial Loading of Balloon-Expandable and Self-Expanding Vascular Stents. Edições em
+- Stents: Brami P et al. J Clin Med 2023;12:6711 (secção 2: "stainless steel was abandoned for cobalt-chromium and platinum-chromium alloys"; Tabela 1: 9 plataformas atuais de CoCr ou PtCr, struts de 55 a 89 µm); Macaya-Ten F et al. REC Interv Cardiol 2024 (Tabela 3: Cypher e Taxus em aço inoxidável; retirada faseada). Nenhuma escreve "316L".
 - [ ] Tipo de expansão dos stents (data/materiais.csv, 7 linhas "A verificar", sem referência).
 
 leia_me.md:

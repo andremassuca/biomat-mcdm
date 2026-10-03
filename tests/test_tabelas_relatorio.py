@@ -59,6 +59,16 @@ def test_nota_pesos_so_quando_nao_somam_1():
 
 def test_gerar_escreve_tres_ficheiros_por_caso(tmp_path):
     feitos = tr.gerar(tmp_path)
-    assert len(feitos) == 3 * len(tr.CASOS)
+    assert len(feitos) == 3 * len(tr.CASOS) + 1  # mais o anexo B
     texto = (tmp_path / "par_resultados.md").read_text(encoding="utf-8")
     assert "SEMIQUANTITATIVO" in texto and texto.startswith("<!-- gerado")
+
+
+def test_anexo_b_tem_todas_as_linhas_da_base():
+    m = pd.read_csv(tr.DATA / "materiais.csv")
+    total = sum(len(tr.tabela_dados(c)) for c in m["caso"].drop_duplicates())
+    assert total == len(m)
+    t = tr.tabela_dados("Stent vascular")
+    l605 = t[(t["Material"] == "Co-Cr L605") & (t["Propriedade"] == "Módulo de Young")].iloc[0]
+    assert l605["Valor"] == "225" and l605["Estado"] == "Verificado (fornecedor)"
+    assert "Contagem por estado" in tr.anexo_b()

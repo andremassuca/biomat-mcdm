@@ -54,3 +54,19 @@ def spearman_methods(df: pd.DataFrame) -> pd.DataFrame:
 def fmt_pt(x: float, casas: int = 3) -> str:
     """Número com vírgula decimal (português), ex.: fmt_pt(0.2) -> '0,200'."""
     return f"{x:.{casas}f}".replace(".", ",")
+
+
+def consenso_borda(df: pd.DataFrame) -> pd.DataFrame:
+    """Acrescenta o consenso de Borda a uma tabela de rank_all_methods.
+
+    Em linguagem simples: cada método dá (m - posição) pontos a cada material (m materiais);
+    soma-se e ordena-se; em caso de empate na soma, ganha o que está melhor no TOPSIS.
+    Colunas novas: pontos_Borda e pos_Borda (1 = melhor).
+    """
+    m = len(df)
+    out = df.copy()
+    out["pontos_Borda"] = sum(m - out[f"pos_{k}"] for k in METODOS)
+    ordem = out.sort_values(["pontos_Borda", "pos_TOPSIS"], ascending=[False, True]).index
+    out.loc[ordem, "pos_Borda"] = range(1, m + 1)
+    out["pos_Borda"] = out["pos_Borda"].astype(int)
+    return out

@@ -3,7 +3,7 @@ import numpy as np
 import pytest
 
 from biomat_mcdm.io import DecisionProblem, build_problem
-from biomat_mcdm.robustness import (alargar_valores_unicos, com_alvo, com_eta, com_foco, com_peso, com_valor, monte_carlo,
+from biomat_mcdm.robustness import (alargar_valores_unicos, com_alvo, com_eta, com_foco, com_peso, com_teto, com_valor, monte_carlo,
                                     pct_posicao, pct_primeiro, posicoes, rank_agreement, sample_matrix, sample_weights,
                                     sem_ordinais)
 
@@ -137,3 +137,12 @@ def test_com_valor_fixa_uma_celula_sem_mexer_no_resto():
     q = com_valor(p, "B", "c1", 7.0)
     assert q.X[1, 0] == 7.0 and q.X_min[1, 0] == 7.0 and q.X_max[1, 0] == 7.0
     assert np.allclose(q.X_min[[0, 2], 0], p.X_min[[0, 2], 0]) and p.X_min[1, 0] == 4.0
+
+
+def test_com_teto_exclui_acima_do_teto_sem_mudar_pesos():
+    p = problema()  # c2 (custo): A = 1, B = 2, C = 3
+    q, sai = com_teto(p, "c2 (ordinal 1-5)", 2)
+    assert q.alternatives == ["A", "B"] and sai == ["C"]
+    assert np.allclose(q.weights, p.weights) and q.X.shape == (2, 2)
+    with pytest.raises(ValueError):
+        com_teto(p, "c2 (ordinal 1-5)", 1)

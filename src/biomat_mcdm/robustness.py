@@ -200,3 +200,19 @@ def com_valor(problem: DecisionProblem, material: str, criterio: str, valor: flo
         X_tip = problem.X_tipico.copy()
         X_tip[i, j] = valor
     return replace(problem, X_min=X_min, X_max=X_max, X_tipico=X_tip)
+
+
+def com_teto(problem: DecisionProblem, criterio: str, teto: float) -> tuple[DecisionProblem, list[str]]:
+    """Cenário O-orçamento: exclui os materiais com valor acima de `teto` num critério (triagem).
+
+    Em linguagem simples: tira da comparação os materiais demasiado caros, sem mexer nos pesos;
+    os restantes são ordenados de novo. Devolve o problema reduzido e a lista dos excluídos.
+    """
+    j = problem.criteria.index(criterio)
+    ficam = [i for i in range(len(problem.alternatives)) if problem.X[i, j] <= teto]
+    if len(ficam) < 2:
+        raise ValueError("o teto deixa menos de dois materiais")
+    sai = [a for i, a in enumerate(problem.alternatives) if i not in ficam]
+    return replace(problem, alternatives=[problem.alternatives[i] for i in ficam],
+                   X_min=problem.X_min[ficam], X_max=problem.X_max[ficam],
+                   X_tipico=None if problem.X_tipico is None else problem.X_tipico[ficam]), sai

@@ -33,6 +33,7 @@ Vencedor no cenário A: TOPSIS Ti-6Al-4V ELI; WASPAS Ti-6Al-4V ELI; VIKOR Ti-6Al
 | C-custo | custo elevado (0,25) | Aço inox 316L | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,60 |
 | P-foco | direta | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,70 |
 | P-foco | direta + indireta | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,70 |
+| O-orçamento | custo ≤ 3 (sai: Ti-13Nb-13Zr) | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,20 |
 
 ### Monte Carlo: % de 1.º lugar
 
@@ -92,6 +93,7 @@ Vencedor no cenário A: TOPSIS Pt-Cr; WASPAS Co-Cr L605; VIKOR Pt-Cr
 | C-custo | custo elevado (0,25) | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | 0,40 |
 | P-foco | direta | Pt-Cr | Co-Cr L605 | Pt-Cr | 0,80 |
 | P-foco | direta + indireta | Pt-Cr | Co-Cr L605 | Pt-Cr | 0,80 |
+| O-orçamento | custo ≤ 3 (sai: Pt-Cr) | Co-Cr L605 | Co-Cr L605 | Co-Cr L605 | 1,00 |
 
 ### Monte Carlo: % de 1.º lugar
 
@@ -150,6 +152,8 @@ Vencedor no cenário A: TOPSIS Pt-Cr; WASPAS Co-Cr L605; VIKOR Pt-Cr
 - C-custo, custo elevado (0,25), TOPSIS: Pt-Cr → Co-Cr L605
 - C-custo, custo elevado (0,25), WASPAS: Co-Cr L605 → Aço inox 316L
 - C-custo, custo elevado (0,25), VIKOR: Pt-Cr → Co-Cr L605
+- O-orçamento, custo ≤ 3 (sai: Pt-Cr), TOPSIS: Pt-Cr → Co-Cr L605
+- O-orçamento, custo ≤ 3 (sai: Pt-Cr), VIKOR: Pt-Cr → Co-Cr L605
 
 ## Scaffold
 
@@ -185,6 +189,7 @@ Vencedor no cenário A: TOPSIS Compósito PCL/β-TCP (impressão 3D); WASPAS Com
 | C-custo | custo elevado (0,25) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | 0,90 |
 | P-foco | direta | β-TCP poroso | Compósito PCL/β-TCP (impressão 3D) | β-TCP poroso | 0,80 |
 | P-foco | direta + indireta | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | 0,90 |
+| O-orçamento | custo ≤ 3 (sai: Vidro bioativo 45S5 poroso) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | 0,80 |
 
 ### Monte Carlo: % de 1.º lugar
 
@@ -248,3 +253,4 @@ Vencedor no cenário A: TOPSIS Compósito PCL/β-TCP (impressão 3D); WASPAS Com
 - **C-custo**: Peso do custo relativo baixo (0,01) vs elevado (0,25), restantes pesos redistribuídos
 - **MC**: Incerteza das propriedades
 - **P-foco**: Foco no problema crítico do professor (2 out 2026): peso dos critérios de ligação direta x2 (fator_foco_problema), restantes renormalizados; sensibilidade: direta + indireta (data/problemas_criticos.csv). Par articular: sensibilidade semiquantitativa à parte
+- **O-orçamento**: Teto de orçamento: exclui na triagem os materiais com custo relativo acima de teto_custo_relativo (3), sem mudar os pesos; cenário A

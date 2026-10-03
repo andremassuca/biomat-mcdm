@@ -29,6 +29,8 @@ def test_variantes_por_cenario():
     assert len(ra.variantes("T-scaffold", "Scaffold")) == 8
     assert len(ra.variantes("C-custo", "Scaffold")) == 2
     assert [v for v, _ in ra.variantes("P-foco", "Stent")] == ["direta", "direta + indireta"]
+    (rot, p), = ra.variantes("O-orçamento", "Stent")
+    assert "Pt-Cr" in rot and "Pt-Cr" not in p.alternatives
     assert ra.variantes("MC", "Haste") == []
 
 
@@ -58,7 +60,7 @@ def test_pontuacoes_tem_os_tres_casos_e_dois_cenarios():
     pt = ra.pontuacao_linhas()
     assert set(pt["caso"]) == {"Haste", "Stent", "Scaffold"}
     assert set(pt["cenario"]) == {"A", "B"}
-    assert {"C_TOPSIS", "Q_WASPAS", "P_VIKOR", "pos_TOPSIS"} <= set(pt.columns)
+    assert {"C_TOPSIS", "Q_WASPAS", "P_VIKOR", "pos_TOPSIS", "pos_Borda", "pontos_Borda"} <= set(pt.columns)
     um = pt[(pt["caso"] == "Stent") & (pt["cenario"] == "A")]
     assert sorted(um["pos_TOPSIS"]) == [1, 2, 3, 4]
 

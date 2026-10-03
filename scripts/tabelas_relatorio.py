@@ -16,7 +16,7 @@ from pathlib import Path
 import pandas as pd
 
 from biomat_mcdm.io import DATA, build_problem
-from biomat_mcdm.pipeline import METODOS, fmt_pt, rank_all_methods
+from biomat_mcdm.pipeline import METODOS, consenso_borda, fmt_pt, rank_all_methods
 
 RAIZ = Path(__file__).resolve().parents[1]
 RESULTS = RAIZ / "results"
@@ -88,7 +88,7 @@ def pontuacoes(chave: str, data_dir: Path = DATA, results: Path = RESULTS) -> pd
     if quant:
         pt = pd.read_csv(results / "pontuacoes.csv")
         return pt[pt["caso"] == rotulo].reset_index(drop=True)
-    partes = [rank_all_methods(build_problem(caso, cen, data_dir)).assign(caso=rotulo, cenario=cen)
+    partes = [consenso_borda(rank_all_methods(build_problem(caso, cen, data_dir))).assign(caso=rotulo, cenario=cen)
               for cen in ("A", "B")]
     return pd.concat(partes, ignore_index=True)
 
@@ -107,7 +107,8 @@ def tabela_resultados(pt: pd.DataFrame) -> pd.DataFrame:
             linhas.append({"Cenário": cen, "Material": r.material,
                            "C (TOPSIS)": num(r.C_TOPSIS), "Pos. T": r.pos_TOPSIS,
                            "Q (WASPAS)": num(r.Q_WASPAS), "Pos. W": r.pos_WASPAS,
-                           "P (VIKOR)": num(r.P_VIKOR), "Pos. V": r.pos_VIKOR})
+                           "P (VIKOR)": num(r.P_VIKOR), "Pos. V": r.pos_VIKOR,
+                           "Consenso (Borda)": f"{r.pos_Borda} ({r.pontos_Borda} pts)"})
     return pd.DataFrame(linhas)
 
 
@@ -166,6 +167,48 @@ def robustez_linhas(chave: str, results: Path = RESULTS) -> list[str]:
     return L
 
 
+def tabela_dados(caso: str, data_dir: Path = DATA) -> pd.DataFrame:
+    """Anexo B: todos os valores da base de um caso, com a fonte e o estado de cada um.
+
+    Em linguagem simples: a tabela completa de dados, como está em data/materiais.csv (mín.,
+    máx. e típico; propriedades categóricas pelo texto), sem as notas longas.
+    """
+    m = pd.read_csv(data_dir / "materiais.csv")
+    m = m[m["caso"] == caso]
+    linhas = []
+    for r in m.itertuples():
+        if pd.isna(r.min) and pd.isna(r.max):
+            valor = "" if pd.isna(r.valor_texto) else str(r.valor_texto)
+        elif r.min == r.max:
+            valor = num(r.min, 4).rstrip("0").rstrip(",")
+        else:
+            valor = f"{num(r.min, 4).rstrip('0').rstrip(',')} a {num(r.max, 4).rstrip('0').rstrip(',')}"
+        tip = "" if pd.isna(r.tipico) else num(r.tipico, 4).rstrip("0").rstrip(",")
+        fonte = "" if pd.isna(r.referencia) else str(r.referencia)
+        if not pd.isna(r.doi_url):
+            fonte += f" ({r.doi_url})"
+        linhas.append({"Material": r.material, "Propriedade": r.propriedade,
+                       "Unidade": "" if r.unidade == "-" else r.unidade, "Valor": valor, "Típico": tip,
+                       "Estado": r.estado, "Fonte": fonte.replace("|", "/")})
+    return pd.DataFrame(linhas)
+
+
+def anexo_b(data_dir: Path = DATA) -> str:
+    """Texto do anexo B: uma tabela por caso, com a contagem de valores por estado."""
+    m = pd.read_csv(data_dir / "materiais.csv")
+    L = ["# Anexo B. Base de dados completa", "",
+         "Valores de data/materiais.csv (versão usada neste relatório). Valor: mínimo a máximo da base; Típico: o "
+         "valor usado nos métodos. Estados: \"Verificado\" (confirmado na fonte indicada), \"Verificado "
+         "(fornecedor)\" (ficha técnica de fornecedor), \"Verificado (derivado)\" (calculado a partir de valores "
+         "publicados na fonte), \"Verificado (composição química)\" (deduzido da composição do material) e \"A verificar\" (valor de partida ainda não confirmado "
+         "na fonte original). As notas de cada valor estão na base de dados.", ""]
+    contagem = m["estado"].value_counts()
+    L += ["Contagem por estado: " + "; ".join(f"{k}: {v}" for k, v in contagem.items()) + f" (total: {len(m)}).", ""]
+    for caso in m["caso"].drop_duplicates():
+        L += [f"## {caso}", "", md(tabela_dados(caso, data_dir)), ""]
+    return "\n".join(L)
+
+
 def gerar(destino: Path = DESTINO, data_dir: Path = DATA, results: Path = RESULTS) -> list[Path]:
     """Escreve as três tabelas de cada caso; devolve os caminhos."""
     destino.mkdir(parents=True, exist_ok=True)
@@ -180,6 +223,10 @@ def gerar(destino: Path = DESTINO, data_dir: Path = DATA, results: Path = RESULT
             p = destino / f"{chave}_{nome}.md"
             p.write_text(f"<!-- gerado por scripts/tabelas_relatorio.py; não editar à mão -->\n{texto}\n", encoding="utf-8")
             feitos.append(p)
+    p = destino / "anexo_b_dados.md"
+    p.write_text("<!-- gerado por scripts/tabelas_relatorio.py; não editar à mão -->\n" + anexo_b(data_dir) + "\n",
+                 encoding="utf-8")
+    feitos.append(p)
     return feitos
 
 

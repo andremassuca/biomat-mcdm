@@ -1,4 +1,4 @@
-# Scaffold ósseo: export de dados (commit 65551f3, 03/10/2026)
+# Scaffold ósseo: export de dados (commit 4eb1fb3, 03/10/2026)
 
 Gerado por scripts/exportar_caso.py a partir de data/, src/ e results/. Só dados.
 
@@ -27,6 +27,7 @@ Cenários aplicáveis (cenarios.csv):
 - C-custo: Peso do custo relativo baixo (0,01) vs elevado (0,25), restantes pesos redistribuídos
 - MC: Incerteza das propriedades
 - P-foco: Foco no problema crítico do professor (2 out 2026): peso dos critérios de ligação direta x2 (fator_foco_problema), restantes renormalizados; sensibilidade: direta + indireta (data/problemas_criticos.csv). Par articular: sensibilidade semiquantitativa à parte
+- O-orçamento: Teto de orçamento: exclui na triagem os materiais com custo relativo acima de teto_custo_relativo (3), sem mudar os pesos; cenário A
 
 ## 2. Critérios (criterios.csv)
 
@@ -193,6 +194,7 @@ Vencedor no cenário A: TOPSIS Compósito PCL/β-TCP (impressão 3D); WASPAS Com
 | C-custo | custo elevado (0,25) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | 0,90 |
 | P-foco | direta | β-TCP poroso | Compósito PCL/β-TCP (impressão 3D) | β-TCP poroso | 0,80 |
 | P-foco | direta + indireta | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | 0,90 |
+| O-orçamento | custo ≤ 3 (sai: Vidro bioativo 45S5 poroso) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | 0,80 |
 
 #### Monte Carlo: % de 1.º lugar
 
@@ -240,7 +242,7 @@ Células a verificar: 39 (0 mudam o vencedor com ±20 %).
 | 2 | A | Vidro bioativo 45S5 poroso | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 5,0000 | 0,025 | 0,029 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
 | 3 | B | Quitosano/HA (liofilizado) | Bioatividade (ordinal 1-5) | ordinal | 3,0000 | 0,022 | 0,022 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
 | 4 | A | Compósito PCL/β-TCP (impressão 3D) | Resistência à compressão (scaffold) | quantitativo | 4,3000 | 0,020 | 0,020 | não | Kawai T et al. J Orthop Res 2018;36:1002-1011; Wong WS et al. Cureus 2025;17:e86272 |
-| 5 | A | Compósito PCL/β-TCP (impressão 3D) | Imprimibilidade 3D (ordinal 1-5) | ordinal | 5,0000 | 0,019 | 0,019 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 5 | A | Compósito PCL/β-TCP (impressão 3D) | Imprimibilidade 3D (ordinal 1-5) | ordinal | 5,0000 | 0,020 | 0,020 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
 | 6 | A | PCL | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 3,0000 | 0,019 | 0,029 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
 | 7 | A | PCL | Imprimibilidade 3D (ordinal 1-5) | ordinal | 5,0000 | 0,018 | 0,018 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
 | 8 | A | PCL | Resistência à compressão (scaffold) | quantitativo | 6,0000 | 0,018 | 0,024 | não | Woodruff MA, Hutmacher DW. Prog Polym Sci 2010;35:1217-1256 (PCL) |
@@ -295,7 +297,7 @@ Células a verificar: 39 (0 mudam o vencedor com ±20 %).
   Three-year outcomes of bioresorbable vascular scaffolds versus second-generation drug-eluting stents. Medicine
   bioresorbable scaffold. J Thorac Dis 2017;9(Suppl 9):S903-S913, doi:10.21037/jtd.2017.06.34 (revisão, texto
 - Não encontrada: a referência "Chua 2025" do rascunho do chat (sem registo na Crossref com esse autor e tema); substituída a 3 out 2026 por Lodewijks et al. Cureus 2024;16(8):e66256, doi:10.7759/cureus.66256 (defeitos tibiais muito grandes tratados com PCL/TCP impresso; confirmado na Crossref), na discussão (8.5) e no caso do scaffold.
-- Heliyon 2025, "Editor Note" sobre Wang Y et al. Heliyon 2024;10:e26071 (doi:10.1016/j.heliyon.2025.e44205), usado no módulo do PCL/β-TCP: conteúdo não lido (página com acesso bloqueado); verificar se é correção ou manifestação de preocupação.
+- Heliyon 2025, "Editor Note" sobre Wang Y et al. Heliyon 2024;10:e26071 (doi:10.1016/j.heliyon.2025.e44205): conteúdo não confirmado (página da revista com acesso bloqueado; sem correção, manifestação de preocupação ou retratação associada no PubMed (PMID 38468962), no PMC (PMC10925999) nem na Crossref, incluindo os dados do Retraction Watch, consultados a 3 out 2026). A Tabela 3 do artigo dá uma resistência à compressão (27,9 MPa) quase igual ao módulo (48,2 MPa), pouco plausível num scaffold poroso. Decisão do André: retirado da base; módulo do PCL/β-TCP com a mediana das três fontes restantes (típico 35,7 → 23,1 MPa; mín. e máx. iguais). Efeito: rankings e ΔC iguais; pontuações do WASPAS e do VIKOR mudam na 3.ª casa; MC das propriedades igual; W pesos ±20 %: compósito 95,9 → 95,7 % no TOPSIS. Se a revista esclarecer que é só uma correção, pode voltar.
 - [ ] Estatuto clínico dos 8 materiais do scaffold (Clínico (substituto ósseo) / Clínico (uso limitado) / Investigação), proposto a 28 set 2026; fonte a verificar indicada na coluna notas de data/materiais.csv (Rezwan et al. 2006, Bose et al. 2012, Hench 1991, Woodruff & Hutmacher 2010, Athanasiou et al. 1996, base 510(k) da FDA; PCL/β-TCP e quitosano/HA sem fonte).
 
 leia_me.md:

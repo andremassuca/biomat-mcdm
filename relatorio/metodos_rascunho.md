@@ -37,7 +37,7 @@ Alguns critérios não têm uma grandeza física simples (resistência à corros
 
 Todos os valores estão numa base de dados única (ficheiros CSV). Cada valor tem um mínimo, um máximo, um valor típico, a fonte e um estado de verificação: "Verificado", "Verificado (fornecedor)", "Verificado (derivado)", "Verificado (composição química)" ou "A verificar".
 
-Os valores de partida vieram de revisões. Os valores com mais influência no resultado foram verificados em fontes primárias (normas, artigos com ensaio, fichas técnicas de fabricantes e de fornecedores); os restantes ficam marcados "A verificar" (83 das 295 linhas da base estão verificadas). A ordem de verificação seguiu a influência de cada valor no resultado: cada valor foi variado ±20 % com os restantes fixos, e verificaram-se primeiro os que mudavam o vencedor.
+Os valores de partida vieram de revisões. Os valores com mais influência no resultado foram verificados em fontes primárias (normas, artigos com ensaio, fichas técnicas de fabricantes e de fornecedores); os restantes ficam marcados "A verificar" (93 das 300 linhas da base estão verificadas). A ordem de verificação seguiu a influência de cada valor no resultado: cada valor foi variado ±20 % com os restantes fixos, e verificaram-se primeiro os que mudavam o vencedor.
 
 Usaram-se três regras para manter os valores comparáveis:
 - **Regra da forma:** quando uma propriedade depende da forma do produto (tubo, fita, fio, chapa), o mínimo e o máximo cobrem só a forma usada no dispositivo; os valores de outras formas ficam registados nas notas, mas não entram no cálculo. Quando a forma do dispositivo tem um único valor, aplica-se uma incerteza de ±10 %.
@@ -68,7 +68,7 @@ As equações de cada método seguem Petković et al. (2025) e são apresentadas
 ## 2.8 Análise de robustez
 
 O resultado foi testado em várias frentes:
-- **Cenários de sensibilidade:** retirar os critérios ordinais (Q); variar η de 0 a 1; alterar os valores-alvo (T); dar peso baixo ou elevado ao custo (C-custo); impor um teto de orçamento [cenário ainda por implementar]; no stent, variar o valor atribuído aos permanentes no tempo de reabsorção (R-sentinela).
+- **Cenários de sensibilidade:** retirar os critérios ordinais (Q); variar η de 0 a 1; alterar os valores-alvo (T); dar peso baixo ou elevado ao custo (C-custo); excluir na triagem os materiais com custo relativo acima de 3, sem mudar os pesos (teto de orçamento, O-orçamento); duplicar o peso dos critérios ligados ao problema crítico indicado pelo docente para cada dispositivo, com os restantes renormalizados (P-foco); no stent, variar o valor atribuído aos permanentes no tempo de reabsorção (R-sentinela).
 - **Monte Carlo das propriedades:** 10 000 repetições (semente 42), com cada valor sorteado uniformemente entre o mínimo e o máximo da base. Os valores de uma única fonte, sem intervalo, variaram ±10 % à volta do típico.
 - **Monte Carlo dos pesos:** pesos perturbados ±20 %.
 - **Concordância entre métodos:** coeficiente de correlação de Spearman entre as ordenações.

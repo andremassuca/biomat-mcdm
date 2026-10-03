@@ -25,7 +25,7 @@ Quando os métodos discordam, a causa é quase sempre um material com um ponto m
 
 ## 8.4 O papel do custo
 
-Quando o custo recebe peso elevado, o aço 316L volta a ser competitivo, na haste com o TOPSIS e no stent com o WASPAS. Isto reflete a realidade clínica: o aço continua a ser usado em contextos de custo restrito. A escolha final depende, por isso, das prioridades do hospital, e a análise torna essa dependência explícita.
+Quando o custo recebe peso elevado, o aço 316L volta a ser competitivo, na haste com o TOPSIS e no stent com o WASPAS. Isto reflete a realidade clínica: o aço continua a ser usado em contextos de custo restrito. A escolha final depende, por isso, das prioridades do hospital, e a análise torna essa dependência explícita. Com um teto de orçamento que exclui os materiais de custo relativo acima de 3, o vencedor só muda no stent: sem o Pt-Cr, o L605 passa a 1.º com os três métodos. Na haste (sai o Ti-13Nb-13Zr) e no scaffold (sai o vidro 45S5), o vencedor mantém-se.
 
 ## 8.5 Comparação com a prática clínica
 
@@ -44,7 +44,7 @@ Várias propriedades decisivas são do dispositivo e não do material. A espessu
 
 - Os valores vêm de estudos diferentes, com métodos de ensaio e formas de produto diferentes; as regras da forma e da porosidade reduzem, mas não eliminam, essa heterogeneidade.
 - Alguns critérios são ordinais, com rubricas definidas neste trabalho; foram mantidos minoritários no peso e testados num cenário sem ordinais.
-- Os pesos subjetivos e os multiplicadores dos perfis são valores de desenho, justificados mas não medidos.
+- Os pesos subjetivos são valores de desenho, justificados mas não medidos.
 - Os métodos de normalização dependem do mínimo e do máximo de cada critério, o que pode causar reversão de ranking ao acrescentar ou retirar materiais; observou-se um caso no scaffold.
 - Parte dos valores continua "A verificar", embora, na haste e no scaffold, nenhum dos restantes mude o vencedor com uma variação de ±20 %; no stent, três ainda mudam (alongamento e tração do Pt-Cr e σy/E do L605).
 

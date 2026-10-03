@@ -12,3 +12,4 @@ T-haste,"Sensibilidade do alvo de E (inclui 14 GPa, Petković et al. 2025, vs 17
 C-custo,"Peso do custo relativo baixo (0,01) vs elevado (0,25), restantes pesos redistribuídos",Todos os quantitativos
 MC,Incerteza das propriedades,Todos os quantitativos
 P-foco,"Foco no problema crítico do professor (2 out 2026): peso dos critérios de ligação direta x2 (fator_foco_problema), restantes renormalizados; sensibilidade: direta + indireta (data/problemas_criticos.csv). Par articular: sensibilidade semiquantitativa à parte",Todos os quantitativos
+O-orçamento,"Teto de orçamento: exclui na triagem os materiais com custo relativo acima de teto_custo_relativo (3), sem mudar os pesos; cenário A",Todos os quantitativos

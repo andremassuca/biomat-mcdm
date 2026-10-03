@@ -2,3 +2,4 @@ parametro,valor,descricao
 eta,1.0,η: confiança do decisor nos pesos subjetivos (0 = só objetivos; 1 = só subjetivos); eq. 1 de Petković et al. 2025. Resultado principal com η = 1; η de 0 a 1 só como sensibilidade
 incerteza_valor_unico,0.1,"Monte Carlo de propriedades: as células quantitativas com mín. = máx. (valor de um único estudo) variam ±10 % à volta do típico; valor de desenho; os ordinais não variam"
 fator_foco_problema,2.0,"Cenário P-foco: o peso dos critérios ligados ao problema crítico do professor (2 out 2026; data/problemas_criticos.csv) é multiplicado por este fator e os pesos são renormalizados; valor de desenho"
+teto_custo_relativo,3,"Cenário O-orçamento: exclui na triagem os materiais com custo relativo de material e fabrico (ordinal 1-5) acima deste valor, sem mudar os pesos; casos quantitativos, cenário A; valor de desenho"

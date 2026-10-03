@@ -66,7 +66,7 @@ ABREVIA_CELULA = {"Ti-6Al-4V ELI": "Ti-6Al-4V", "Ti cp grau 4": "Ti cp", "Aço i
                   "Vidro bioativo 45S5 poroso": "45S5"}
 MUDA = {"B": "juntar os materiais em investigação", "Q": "tirar os critérios ordinais",
         "T-haste": "mudar o alvo do módulo", "T-scaffold": "mudar os alvos",
-        "P-foco": "reforçar os critérios do problema crítico"}
+        "P-foco": "reforçar os critérios do problema crítico", "O-orçamento": "impor o teto de orçamento"}
 
 
 def curto(material: str) -> str:

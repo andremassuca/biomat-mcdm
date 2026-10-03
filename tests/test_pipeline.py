@@ -50,3 +50,16 @@ def test_haste_cenarios_A_e_B_correm():
         assert len(df) == n
         for m in ("TOPSIS", "WASPAS", "VIKOR"):
             assert sorted(df[f"pos_{m}"]) == list(range(1, n + 1))
+
+
+def test_consenso_borda_soma_pontos_e_desempata_pelo_topsis():
+    import pandas as pd
+    from biomat_mcdm.pipeline import consenso_borda
+    df = pd.DataFrame({"material": ["X", "Y", "Z"], "pos_TOPSIS": [2, 1, 3],
+                       "pos_WASPAS": [1, 2, 3], "pos_VIKOR": [1, 2, 3]})
+    out = consenso_borda(df).set_index("material")
+    assert out.loc["X", "pontos_Borda"] == 1 + 2 + 2 and out.loc["Y", "pontos_Borda"] == 2 + 1 + 1
+    assert out.loc["X", "pos_Borda"] == 1 and out.loc["Z", "pos_Borda"] == 3
+    empate = pd.DataFrame({"material": ["X", "Y"], "pos_TOPSIS": [2, 1], "pos_WASPAS": [1, 2], "pos_VIKOR": [1, 2]})
+    e = consenso_borda(empate.iloc[:, :3].assign(pos_VIKOR=[2, 1])).set_index("material")
+    assert e.loc["Y", "pos_Borda"] == 1  # 1 + 0 + 1 = 2 contra 0 + 1 + 0 = 1
