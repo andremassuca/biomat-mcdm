@@ -43,8 +43,13 @@ Par articular e implante dentário ficam SEMIQUANTITATIVOS (ordinais > 50 % do p
 - Quitosano/HA: módulo e resistência cerca de dez vezes abaixo dos valores anteriores.
 - Porosidades do PCL, do PLGA e da HA com fonte.
 
+## Alterações v0.8 (2 out 2026): regra da forma revista (stent)
+- Regra da forma: nas propriedades dependentes da forma do produto, min, max e tipico cobrem só a forma usada no dispositivo (no stent: tubo ou fita); os valores de outras formas (fio, barra, chapa) ficam só na coluna notas. Se a forma do dispositivo tiver um único valor, min = max e o Monte Carlo aplica ±10 % (incerteza_valor_unico em parametros.csv).
+- Linhas revistas: L605 módulo 225 (antes 225-243), tração 900-1000 (antes 900-1138), alongamento 40 (antes 40-50); MP35N tração 965 (antes 931-965), alongamento 40 (antes 40-70). Sem alteração: 316L alongamento 40-50 e L605 cedência 380-700. Os típicos não mudaram.
+- Exceção mantida no L605: o típico da cedência e da tração é o da chapa (Haynes), por não haver ficha de tubo com valores; fica dentro do intervalo da fita (Matthey).
+
 ## Legenda
-- min e max alimentam o Monte Carlo (distribuição entre mín. e máx.).
+- min e max alimentam o Monte Carlo (distribuição entre mín. e máx.); nas propriedades dependentes da forma, só com valores da forma do dispositivo (regra da forma, v0.8).
 - tipico = valor usado nos métodos; por omissão o ponto médio; pode diferir quando a regra da forma ou outra regra o justifica, com nota.
 - Estados da coluna estado:
   - "A verificar": valor de partida (manual, revisão ou fonte secundária) ainda não confirmado na fonte original.

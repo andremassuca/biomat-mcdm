@@ -1,4 +1,4 @@
-# Stent vascular: export de dados (commit 3e221b6, 01/10/2026)
+# Stent vascular: export de dados (commit f9a66da, 03/10/2026)
 
 Gerado por scripts/exportar_caso.py a partir de data/, src/ e results/. Só dados.
 
@@ -53,8 +53,8 @@ Pesos no cenário B (renormalizados): Índice material de recuo elástico σy/E 
 | Material | Propriedade | Unidade | Típico | Mín. | Máx. | Texto | Fonte | doi_url | Estado |
 |---|---|---|---|---|---|---|---|---|---|
 | Aço inox 316L | Alongamento na rotura | % | 40 | 40 | 50 |  | Alleima, ficha 316LVM (tubo de parede fina recozido); patente US 6780261 B2 (Scimed), tubo de stent totalmente recozido | https://patents.google.com/patent/US6780261B2/en | Verificado (fornecedor) |
-| Co-Cr L605 | Alongamento na rotura | % | 40 | 40 | 50 |  | Lamineries Matthey, ficha Alloy L-605 v26E (fita recozida, declara ASTM F90); Fort Wayne Metals, L-605 alloy (fio) | https://www.matthey.ch/fileadmin/user_upload/downloads/fichetechnique/EN/Alloy_L-605_v26E.pdf | Verificado (fornecedor) |
-| Co-Ni-Cr-Mo MP35N | Alongamento na rotura | % | 40 | 40 | 70 |  | K-Tube, MP35N Technical Data Sheet (tubo miniatura para stents); Ulbrich, MP35N Wire UNS R30035 (fio, declara ASTM F562) | https://www.k-tube.com/wp-content/uploads/2025/12/MP35N-K-Tube-Technical-Data-Sheet.pdf | Verificado (fornecedor) |
+| Co-Cr L605 | Alongamento na rotura | % | 40 | 40 | 40 |  | Lamineries Matthey, ficha Alloy L-605 v26E (fita recozida, declara ASTM F90); Fort Wayne Metals, L-605 alloy (fio) | https://www.matthey.ch/fileadmin/user_upload/downloads/fichetechnique/EN/Alloy_L-605_v26E.pdf | Verificado (fornecedor) |
+| Co-Ni-Cr-Mo MP35N | Alongamento na rotura | % | 40 | 40 | 40 |  | K-Tube, MP35N Technical Data Sheet (tubo miniatura para stents); Ulbrich, MP35N Wire UNS R30035 (fio, declara ASTM F562) | https://www.k-tube.com/wp-content/uploads/2025/12/MP35N-K-Tube-Technical-Data-Sheet.pdf | Verificado (fornecedor) |
 | Liga de Mg WE43 (bioabsorvível) | Alongamento na rotura | % | 13,5 | 10 | 17 |  | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |  | A verificar |
 | Nitinol (autoexpansível) | Alongamento na rotura | % | 12,5 | 10 | 15 |  | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |  | A verificar |
 | PLLA (bioabsorvível) | Alongamento na rotura | % | 4 | 2 | 6 |  | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |  | A verificar |
@@ -102,7 +102,7 @@ Pesos no cenário B (renormalizados): Índice material de recuo elástico σy/E 
 | PLLA (bioabsorvível) | Fabricabilidade (ordinal 1-5) | - | 3 | 3 | 3 |  | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |  | A verificar |
 | Pt-Cr | Fabricabilidade (ordinal 1-5) | - | 4 | 4 | 4 |  | Geetha 2009; Navarro 2008; literatura de fabrico aditivo: confirmar |  | A verificar |
 | Aço inox 316L | Módulo de Young | GPa | 193 | 193 | 193 |  | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |  | A verificar |
-| Co-Cr L605 | Módulo de Young | GPa | 225 | 225 | 243 |  | Lamineries Matthey, ficha Alloy L-605 v26E (fita recozida, declara ASTM F90); Haynes International, HAYNES 25 (chapa solubilizada); Fort Wayne Metals, L-605 alloy (barra e fio) | https://www.matthey.ch/fileadmin/user_upload/downloads/fichetechnique/EN/Alloy_L-605_v26E.pdf | Verificado (fornecedor) |
+| Co-Cr L605 | Módulo de Young | GPa | 225 | 225 | 225 |  | Lamineries Matthey, ficha Alloy L-605 v26E (fita recozida, declara ASTM F90); Haynes International, HAYNES 25 (chapa solubilizada); Fort Wayne Metals, L-605 alloy (barra e fio) | https://www.matthey.ch/fileadmin/user_upload/downloads/fichetechnique/EN/Alloy_L-605_v26E.pdf | Verificado (fornecedor) |
 | Co-Ni-Cr-Mo MP35N | Módulo de Young | GPa | 233 | 233 | 233 |  | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |  | A verificar |
 | Liga de Mg WE43 (bioabsorvível) | Módulo de Young | GPa | 44,5 | 44 | 45 |  | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |  | A verificar |
 | Nitinol (autoexpansível) | Módulo de Young | GPa | 57,5 | 40 | 75 |  | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |  | A verificar |
@@ -116,8 +116,8 @@ Pesos no cenário B (renormalizados): Índice material de recuo elástico σy/E 
 | PLLA (bioabsorvível) | Radiopacidade (ordinal 1-5) | - | 1 | 1 | 1 |  | Allocco DJ et al. Trials 2010;11:1 (PMC2826324); PMC3692344 ("modest improvement" do CoCr); rubrica no LEIA-ME (teor de elementos de Z alto) | https://doi.org/10.1186/1745-6215-11-1 | Verificado |
 | Pt-Cr | Radiopacidade (ordinal 1-5) | - | 5 | 5 | 5 |  | Allocco DJ et al. Trials 2010;11:1 (PMC2826324); PMC3692344 ("modest improvement" do CoCr); rubrica no LEIA-ME (teor de elementos de Z alto) | https://doi.org/10.1186/1745-6215-11-1 | Verificado |
 | Aço inox 316L | Resistência à tração | MPa | 592,5 | 515 | 670 |  | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |  | A verificar |
-| Co-Cr L605 | Resistência à tração | MPa | 996 | 900 | 1138 |  | Lamineries Matthey, ficha Alloy L-605 v26E (fita recozida, declara ASTM F90); Haynes International, HAYNES 25 (chapa solubilizada); Fort Wayne Metals, L-605 alloy (barra e fio) | https://www.matthey.ch/fileadmin/user_upload/downloads/fichetechnique/EN/Alloy_L-605_v26E.pdf | Verificado (fornecedor) |
-| Co-Ni-Cr-Mo MP35N | Resistência à tração | MPa | 965 | 931 | 965 |  | K-Tube, MP35N Technical Data Sheet (tubo miniatura para stents); Ulbrich, MP35N Wire UNS R30035 (fio, declara ASTM F562) | https://www.k-tube.com/wp-content/uploads/2025/12/MP35N-K-Tube-Technical-Data-Sheet.pdf | Verificado (fornecedor) |
+| Co-Cr L605 | Resistência à tração | MPa | 996 | 900 | 1000 |  | Lamineries Matthey, ficha Alloy L-605 v26E (fita recozida, declara ASTM F90); Haynes International, HAYNES 25 (chapa solubilizada); Fort Wayne Metals, L-605 alloy (barra e fio) | https://www.matthey.ch/fileadmin/user_upload/downloads/fichetechnique/EN/Alloy_L-605_v26E.pdf | Verificado (fornecedor) |
+| Co-Ni-Cr-Mo MP35N | Resistência à tração | MPa | 965 | 965 | 965 |  | K-Tube, MP35N Technical Data Sheet (tubo miniatura para stents); Ulbrich, MP35N Wire UNS R30035 (fio, declara ASTM F562) | https://www.k-tube.com/wp-content/uploads/2025/12/MP35N-K-Tube-Technical-Data-Sheet.pdf | Verificado (fornecedor) |
 | Liga de Mg WE43 (bioabsorvível) | Resistência à tração | MPa | 250 | 220 | 280 |  | Witte F. Acta Biomater 2010;6:1680-1692 (Mg) |  | A verificar |
 | Nitinol (autoexpansível) | Resistência à tração | MPa | 1185 | 1070 | 1300 |  | Hanawa T. J Artif Organs 2009;12:73-79 (metais para stents) |  | A verificar |
 | PLLA (bioabsorvível) | Resistência à tração | MPa | 65 | 60 | 70 |  | Ensaios ABSORB / comunicação FDA 2017 (Absorb BVS) |  | A verificar |
@@ -150,7 +150,7 @@ Pesos no cenário B (renormalizados): Índice material de recuo elástico σy/E 
 | PLLA (bioabsorvível) | Tipo de expansão | - |  |  |  | balão |  |  | A verificar |
 | Pt-Cr | Tipo de expansão | - |  |  |  | balão |  |  | A verificar |
 | Aço inox 316L | Índice material de recuo elástico σy/E (proxy) | - | 0,0014 | 0,0011 | 0,0018 |  | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |  | A verificar (derivado) |
-| Co-Cr L605 | Índice material de recuo elástico σy/E (proxy) | - | 0,0021 | 0,0016 | 0,0031 |  | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |  | A verificar (derivado) |
+| Co-Cr L605 | Índice material de recuo elástico σy/E (proxy) | - | 0,0021 | 0,0017 | 0,0031 |  | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |  | A verificar (derivado) |
 | Co-Ni-Cr-Mo MP35N | Índice material de recuo elástico σy/E (proxy) | - | 0,0018 | 0,0018 | 0,0018 |  | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |  | A verificar (derivado) |
 | Liga de Mg WE43 (bioabsorvível) | Índice material de recuo elástico σy/E (proxy) | - | 0,0039 | 0,0033 | 0,0044 |  | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |  | A verificar (derivado) |
 | Nitinol (autoexpansível) | Índice material de recuo elástico σy/E (proxy) | - | 0,0083 | 0,0047 | 0,015 |  | Calculado: tensão de cedência / módulo de Young (src/biomat_mcdm/indices.py) |  | A verificar (derivado) |
@@ -238,9 +238,9 @@ Vencedor no cenário A: TOPSIS Pt-Cr; WASPAS Co-Cr L605; VIKOR Pt-Cr
 
 | Material | TOPSIS | WASPAS | VIKOR |
 |---|---|---|---|
-| Co-Ni-Cr-Mo MP35N | 44,6 % | 25,7 % | 45,5 % |
-| Co-Cr L605 | 43,4 % | 62,1 % | 46,1 % |
-| Pt-Cr | 12,0 % | 12,3 % | 8,4 % |
+| Pt-Cr | 69,9 % | 56,6 % | 59,1 % |
+| Co-Cr L605 | 27,1 % | 41,8 % | 31,7 % |
+| Co-Ni-Cr-Mo MP35N | 3,0 % | 1,6 % | 9,1 % |
 | Aço inox 316L | 0,0 % | 0,0 % | 0,0 % |
 
 **W pesos ±20 %**
@@ -365,11 +365,12 @@ Células a verificar: 43 (3 mudam o vencedor com ±20 %).
   - estatuto "Excluído" na base elimina (Nitinol: autoexpansível, outra classe de dispositivo);
   - regras categóricas (valor em texto na coluna valor_texto): "Tipo de expansão" = balão ou autoexpansível; passa se o valor está no alvo ("Expansível por balão");
   - resultado atual: eliminados o MoM (segurança iónica 1 < 2) e o Nitinol (tipo de expansão autoexpansível; também pelo estatuto "Excluído").
+- HA não reabsorvível (scaffold, 1 out 2026): o tempo de degradação da HA segue a lógica da opção O2 do stent: mínimo 42 meses (sem reabsorção em 3,5 anos) e máximo e típico iguais ao pior valor observado nos outros materiais do scaffold (60 meses, PLLA). É um valor de modelação e subestima a permanência real da HA.
 - Densidade removida como proxy de radiopacidade (depende do número atómico efetivo e da espessura). Com a rubrica de radiopacidade (data/leia_me.md, 1 out 2026), a densidade continua a não ser critério do stent, mas serve de evidência de apoio para a ordem da radiopacidade (Allocco 2010, doi:10.1186/1745-6215-11-1).
   em 10 000 com o Co-Cr-Mo forjado) e 100 % no WASPAS e no VIKOR. Nos três casos (haste, stent,
   scaffold) o vencedor do Monte Carlo não muda; no stent, o 1.º lugar do Co-Cr L605 desce
 ## Stent: fontes e regras (30 set 2026)
-  intervalo. No stent (cortado a laser de tubo), o típico é o valor do tubo ou da fita e o fio só
+  e o típico cobrem só a forma usada no dispositivo. No stent (cortado a laser de tubo), essa forma
   (Resolute, 90 µm) e o L605 (XIENCE, 81 µm) reflete o desenho do stent, não uma limitação da liga.
 - Tempos de reabsorção do PLLA (Absorb) e do Mg (Magmaris): as fontes encontradas são de modelos
   et al. 2025 ficaram iguais (o típico era o ponto médio). O σy/E derivado usa agora σy típico / E típico.
@@ -398,6 +399,9 @@ Par articular e implante dentário ficam SEMIQUANTITATIVOS (ordinais > 50 % do p
 - Índices derivados calculados em src/biomat_mcdm/indices.py (σy/E do stent; E_implante/E_osso da haste).
 ## Alterações v0.5 (1 out 2026): 2.ª ronda do stent
 - Densidades do 316L, L605, MP35N e Pt-Cr com fonte. A densidade não é critério do stent.
+- HA: tempo de degradação tratado como não reabsorvível (mínimo 42 meses; máximo e típico = pior valor observado nos outros materiais, como a opção O2 do stent).
+## Alterações v0.8 (2 out 2026): regra da forma revista (stent)
+- Regra da forma: nas propriedades dependentes da forma do produto, min, max e tipico cobrem só a forma usada no dispositivo (no stent: tubo ou fita); os valores de outras formas (fio, barra, chapa) ficam só na coluna notas. Se a forma do dispositivo tiver um único valor, min = max e o Monte Carlo aplica ±10 % (incerteza_valor_unico em parametros.csv).
   - "Verificado (composição química)": valor que resulta da composição química do material (ex.: 0 % de níquel num polímero sem metais).
 - Teor de níquel (stent): % em massa; no WE43 é um limite máximo de impureza e tipico = máximo (pior caso).
 - Radiopacidade (stent): 5 = liga com fração elevada de elemento de Z alto (Pt-Cr); 4 = melhoria clara face ao 316L (L605, com W); 3 = referência dos metais de stent (316L, MP35N); 2 = pouco radiopaco (Nitinol); 1 = radiotransparente, precisa de marcadores (Mg WE43, PLLA). Critério: teor de elementos de Z alto (Pt, Z = 78; W, Z = 74). A densidade não é critério (desde a v0.3), serve só de evidência de apoio. Fontes: Allocco DJ et al. Trials 2010;11:1, doi:10.1186/1745-6215-11-1 (PMC2826324); PMC3692344 ("modest improvement" do CoCr face ao aço).

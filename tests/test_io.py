@@ -99,8 +99,8 @@ def test_metodos_usam_o_tipico_e_o_ponto_medio_quando_falta():
 def test_build_problem_usa_a_coluna_tipico():
     p = build_problem("Stent vascular", "A")
     j = p.criteria.index("Alongamento na rotura")
-    i = p.alternatives.index("Co-Cr L605")
-    assert p.X[i, j] == 40.0  # típico (fita), não o ponto médio 45
+    i = p.alternatives.index("Aço inox 316L")
+    assert p.X[i, j] == 40.0  # típico (tubo de parede fina), não o ponto médio 45
     assert p.X_min[i, j] == 40.0 and p.X_max[i, j] == 50.0
 
 

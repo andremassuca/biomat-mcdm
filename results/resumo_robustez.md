@@ -95,9 +95,9 @@ Vencedor no cenário A: TOPSIS Pt-Cr; WASPAS Co-Cr L605; VIKOR Pt-Cr
 
 | Material | TOPSIS | WASPAS | VIKOR |
 |---|---|---|---|
-| Co-Ni-Cr-Mo MP35N | 44,6 % | 25,7 % | 45,5 % |
-| Co-Cr L605 | 43,4 % | 62,1 % | 46,1 % |
-| Pt-Cr | 12,0 % | 12,3 % | 8,4 % |
+| Pt-Cr | 69,9 % | 56,6 % | 59,1 % |
+| Co-Cr L605 | 27,1 % | 41,8 % | 31,7 % |
+| Co-Ni-Cr-Mo MP35N | 3,0 % | 1,6 % | 9,1 % |
 | Aço inox 316L | 0,0 % | 0,0 % | 0,0 % |
 
 **W pesos ±20 %**

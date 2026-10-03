@@ -1,6 +1,6 @@
 # Ponto de situação
 
-Atualizado no fim de cada tarefa da fila. Última atualização: 1 out 2026.
+Atualizado no fim de cada tarefa da fila. Última atualização: 3 out 2026.
 
 ## Prazos
 - Relatório: 8 out 2026.
@@ -32,8 +32,8 @@ Depois de 8 out: custo ao longo da vida e margem de segurança à fadiga; aplica
 Nada: está tudo no repositório.
 
 ## Decisões pendentes
-- Stent, MP35N no Monte Carlo: o intervalo do alongamento inclui o valor do fio (70 %); proposta: valores de outras formas só nas notas, intervalo do Monte Carlo só com a forma do dispositivo.
-- Stent: o texto do caso e a discussão ainda tratam só o L605 e o Pt-Cr como candidatos ao 1.º lugar; rever depois da decisão sobre o MP35N.
+- Stent: o texto do caso (Monte Carlo, "43 a 62 %" e "8 a 12 %") e a discussão ("o L605 ganha em cerca de metade das iterações", "L605 mais robusto") e as conclusões ("o L605 é a escolha de referência, por ser mais robusto à incerteza dos dados") têm os números anteriores à regra da forma revista; pedir ao chat a frase nova com os valores de 2 out.
+- Métodos e glossário: a frase da regra da forma ("as outras formas só alargam o intervalo") ficou desatualizada.
 - Métodos: o cenário de teto de orçamento e o anexo das equações estão no texto mas ainda não existem (tarefas 5 e 7); os perfis de doente da discussão também não (tarefa 7).
 - Gibson e Ashby: edição e página da referência.
 - Scaffold: seis marcas por confirmar no rascunho (fontes da porosidade e da inflamação pelo PLGA, normas e exemplo de modelo animal).
@@ -46,10 +46,11 @@ Nada: está tudo no repositório.
 - Par articular e implante dentário (semiquantitativos): tabela do par articular em relatorio/apoio/.
 - Relatório: rascunhos dos casos da anca e do stent em relatorio/.
 
-## Stent (1 out 2026)
+## Stent (2 out 2026, regra da forma revista)
 - Cenário A: Pt-Cr em 1.º no TOPSIS e no VIKOR, L605 em 1.º no WASPAS; ΔC = 0,024.
 - Cenário B: L605 em 1.º nos três métodos, empatado com o Pt-Cr (ΔC = 0,002).
-- Monte Carlo das propriedades (cenário A): L605 em 1.º em 43-62 % das iterações, MP35N em 26-46 %, Pt-Cr em 8-12 %.
+- Regra da forma revista (2 out): mín. e máx. só com a forma do dispositivo (tubo ou fita); outras formas só na nota; valor único com ±10 %. Os típicos e os rankings não mudaram; mudou o Monte Carlo.
+- Monte Carlo das propriedades (cenário A): Pt-Cr em 1.º em 57-70 % das iterações (TOPSIS 69,9 %; WASPAS 56,6 %; VIKOR 59,1 %), L605 em 27-42 %, MP35N em 2-9 %. Antes da revisão: L605 43-62 %, MP35N 26-46 %, Pt-Cr 8-12 %.
 - O vencedor depende do alongamento e da tração do Pt-Cr, que ainda vêm de fontes secundárias: o O'Brien 2010 (texto completo, Tabelas 4 e 6) é decisivo.
 
 ## Scaffold depois da 2.ª ronda (1 out 2026)

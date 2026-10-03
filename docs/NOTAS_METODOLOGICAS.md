@@ -215,10 +215,23 @@ Caso de estudo 2 (haste da prótese da anca), TOPSIS; testes em tests/test_repro
   - ISO 14242-1 e 14242-2 também na etapa "to be revised"; voltar a verificar a 7 out.
 
 ## Stent: fontes e regras (30 set 2026)
-- Propriedades dependentes da forma: típico = forma usada no dispositivo; outras formas só alargam o
-  intervalo. No stent (cortado a laser de tubo), o típico é o valor do tubo ou da fita e o fio só
-  alarga o intervalo (ex.: alongamento do L605 40-50 %, típico 40; MP35N 40-70 %, típico 40).
+- Regra da forma (revista a 2 out 2026): nas propriedades dependentes da forma, o mínimo, o máximo
+  e o típico cobrem só a forma usada no dispositivo. No stent (cortado a laser de tubo), essa forma
+  é o tubo ou a fita; os valores de outras formas (fio, barra, chapa) ficam só na nota da linha,
+  para registo, e não entram no intervalo do Monte Carlo. Se a forma do dispositivo tiver um único
+  valor, mín. = máx. e aplica-se a regra dos valores únicos (±10 % à volta do típico,
+  incerteza_valor_unico em parametros.csv).
   Quando a ficha não diz se o valor é típico ou mínimo de especificação, a nota di-lo.
+  - Versão anterior (30 set): as outras formas alargavam o intervalo (ex.: alongamento do MP35N
+    40-70 % por causa do fio). Foi abandonada porque o Monte Carlo sorteava valores que o tubo
+    não atinge.
+  - Linhas revistas a 2 out: L605 módulo 225-243 → 225 (único); L605 tração 900-1138 → 900-1000;
+    L605 alongamento 40-50 → 40 (único); MP35N tração 931-965 → 965 (único); MP35N alongamento
+    40-70 → 40 (único). Sem alteração: 316L alongamento 40-50 (as duas fontes são de tubo) e L605
+    cedência 380-700 (intervalo da fita). Os típicos não mudaram.
+  - Exceção mantida (decisão de 30 set): no L605, o típico da cedência (476 MPa) e da tração
+    (996 MPa) é o da chapa (Haynes), por não haver ficha de tubo com valores; os dois ficam dentro
+    do intervalo da fita (Matthey).
 - A espessura de strut é uma propriedade do dispositivo, não do material; a diferença entre o MP35N
   (Resolute, 90 µm) e o L605 (XIENCE, 81 µm) reflete o desenho do stent, não uma limitação da liga.
   Discutir no texto.
