@@ -27,11 +27,20 @@ Quando os métodos discordam, a causa é quase sempre um material com um ponto m
 
 Quando o custo recebe peso elevado, o aço 316L volta a ser competitivo, na haste com o TOPSIS e no stent com o WASPAS. Isto reflete a realidade clínica: o aço continua a ser usado em contextos de custo restrito. A escolha final depende, por isso, das prioridades do hospital, e a análise torna essa dependência explícita.
 
-## 8.5 Material ou dispositivo?
+## 8.5 Comparação com a prática clínica
+
+As escolhas do modelo coincidem, em geral, com a prática clínica atual, o que reforça a sua credibilidade. Onde divergem, a divergência tem uma explicação.
+- **Haste:** nos registos, a fixação não cimentada e a híbrida dominam (NJR 2026: 42,5 % e 41,8 % das primárias de 2025; AOANJRR 2025: 62,9 % e 35,7 % em 2024); as hastes não cimentadas são sobretudo de Ti-6Al-4V (Hu e Yoon 2018). O aço continua a ser usado em hastes cimentadas polidas (Lamb et al. 2025), o que é coerente com o resultado de que o aço volta a ser competitivo quando o custo pesa muito.
+- **Par articular:** na prática, os pares mais usados são uma cabeça contra polietileno (cerâmica em cerca de 59 % e metálica em cerca de 33 % das primárias de 2025 no NJR; na Austrália, 97 % usaram polietileno reticulado ou cerâmica mista); o cerâmica-cerâmica caiu para cerca de 2 % e é usado em doentes mais novos (idade mediana de 59 a 60 anos, contra 70 no total; NJR 2026). O modelo coloca o cerâmica-cerâmica em 1.º lugar porque o desgaste domina os critérios, enquanto o risco de fratura e o ruído foram tratados de forma qualitativa e não entram no cálculo. É a principal divergência face à prática, e explica a preferência frequente pelo par cerâmica contra polietileno reticulado.
+- **Stent:** os stents com eluição de fármaco atuais usam plataformas de cobalto-crómio ou de platina-crómio, com struts de cerca de 55 a 90 µm, e o aço inoxidável das plataformas de 1.ª geração (Cypher, Taxus) foi abandonado (Brami et al. 2023; Macaya-Ten et al. 2024). O modelo chega à mesma conclusão.
+- **Scaffold:** os substitutos ósseos sintéticos mais usados na clínica são fosfatos de cálcio, como o β-TCP e a hidroxiapatite, e os compósitos impressos começam a ter uso clínico (Lodewijks et al. 2025; Lodewijks et al. 2024). O modelo coloca o compósito à frente quando o suporte mecânico conta, e o β-TCP quando só contam o suporte celular e a degradação.
+- **Implante dentário:** o titânio comercialmente puro continua a ser a referência, e a zircónia é uma alternativa sobretudo estética, como no modelo.
+
+## 8.6 Material ou dispositivo?
 
 Várias propriedades decisivas são do dispositivo e não do material. A espessura dos struts depende do desenho do stent, e a rigidez de uma haste depende também da sua arquitetura. Um cálculo simples ilustra o alcance desta ideia: pela relação de Gibson e Ashby para materiais celulares, uma estrutura porosa de Ti-6Al-4V com cerca de 60 % de porosidade teria um módulo próximo do osso cortical: com E = E_s (1 − p)², constante C = 1 e E_s = 105,5 GPa (valor típico do Ti-6Al-4V ELI na base), o alvo de 17 GPa obtém-se com p = 59,9 %, e a 60 % de porosidade o módulo é 16,9 GPa (Gibson e Ashby, Cellular Solids [confirmar edição e página]). A solução para o stress shielding pode não ser outra liga, mas a mesma liga estruturada, por exemplo por fabrico aditivo.
 
-## 8.6 Limitações
+## 8.7 Limitações
 
 - Os valores vêm de estudos diferentes, com métodos de ensaio e formas de produto diferentes; as regras da forma e da porosidade reduzem, mas não eliminam, essa heterogeneidade.
 - Alguns critérios são ordinais, com rubricas definidas neste trabalho; foram mantidos minoritários no peso e testados num cenário sem ordinais.
@@ -39,7 +48,7 @@ Várias propriedades decisivas são do dispositivo e não do material. A espessu
 - Os métodos de normalização dependem do mínimo e do máximo de cada critério, o que pode causar reversão de ranking ao acrescentar ou retirar materiais; observou-se um caso no scaffold.
 - Parte dos valores continua "A verificar", embora, na haste e no scaffold, nenhum dos restantes mude o vencedor com uma variação de ±20 %; no stent, três ainda mudam (alongamento e tração do Pt-Cr e σy/E do L605).
 
-## 8.7 Trabalho futuro
+## 8.8 Trabalho futuro
 
 - Perfis de doente (idade, atividade, osteoporose, alergias, obesidade) que alterem pesos, alvos e exclusões.
 - Custo ao longo da vida, com as taxas de revisão dos registos de artroplastia.
