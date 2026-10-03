@@ -1,10 +1,18 @@
 # Ponto de situação
 
-Atualizado no fim de cada tarefa da fila. Última atualização: 3 out 2026.
+Atualizado no fim de cada tarefa da fila. Última atualização: 3 out 2026 (tarde).
 
 ## Prazos
 - Relatório: 8 out 2026.
-- Poster (BioJornadas): 16 out 2026.
+- Poster (BioJornadas): 16 out 2026. Participação confirmada com a coordenadora (3 out); Prof. Pedro Sampaio convidado para orientador.
+
+## Problemas críticos por dispositivo (professor, 2 out 2026)
+Referir explicitamente no relatório (texto em docs/aulas/problemas_criticos_2026-10-02.md, fora do Git):
+- Prótese da anca: desgaste e libertação de partículas.
+- Implante dentário: integração com o osso e corrosão.
+- Stent vascular: resistência mecânica e biocompatibilidade.
+- Scaffold: suporte celular e degradação controlada.
+Formato do relatório: liberdade total (sem limite de páginas nem modelo obrigatório; professor, 3 out).
 
 ## Fila de trabalho (tudo no ramo main, uma tarefa de cada vez)
 Para o relatório, até 8 out:
@@ -12,9 +20,12 @@ Para o relatório, até 8 out:
 2. Stent: frases com fonte e espessura de strut do 316L. Feito.
 3. Figuras com os ajustes pedidos e os dados atuais; export do scaffold. Feito.
 4. Textos: rascunhos de métodos, validação, discussão e caso do scaffold; verificação de cada número; números do stent; cálculo de Gibson-Ashby. Feito.
-4b. Textos: introdução, conclusões, resumo, caso do implante dentário, declaração e glossário. Gravados; falta verificar cada número e alinhar o implante dentário com a base. É a próxima tarefa.
-5. Enunciado e estrutura: relatorio/RELATORIO.md e scripts/verificar_referencias.py.
-6. Implante dentário: tabela de apoio e proposta de fontes.
+P1. Mapa problema crítico → critérios (com pesos atuais). É a próxima tarefa.
+P2. Cenário "P-foco no problema" (peso dos critérios do problema duplicado) nos casos quantitativos e sensibilidade no par articular.
+P3. Implante dentário centrado na osteointegração e na corrosão (antiga tarefa 6, antecipada): tabela de apoio e fontes primárias.
+4b. Textos: introdução, conclusões, resumo, caso do implante dentário, declaração e glossário. Gravados; falta verificar cada número e alinhar o implante dentário com a base.
+5. Estrutura do relatório (proposta do Claude Code, a aprovar antes de montar): relatorio/RELATORIO.md, lista única de referências e scripts/verificar_referencias.py.
+6. Implante dentário: passou para P3.
 7. Cenário de orçamento, ranking de consenso e perfis de doente.
 8. Apoio aos métodos: tabelas de critérios, figura dos pesos e figura do exemplo dos três métodos.
 9. Análises extra: estabilidade dos pesos, frente de Pareto, confiança do ranking.
