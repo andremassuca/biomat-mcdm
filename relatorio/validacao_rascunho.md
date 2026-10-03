@@ -1,6 +1,6 @@
 # 3. Validação da implementação
 
-Antes de aplicar os métodos aos casos deste trabalho, foi necessário garantir que a implementação estava correta. Para isso reproduziu-se um estudo publicado que usa os mesmos métodos com critérios-alvo: Petković et al. (2025), Applied Sciences 15(16):9198.
+Antes de aplicar os métodos aos casos deste trabalho, foi necessário garantir que a implementação estava correta. Para isso reproduziu-se um estudo publicado que usa os mesmos métodos com critérios-alvo: Petković et al. 2025, Applied Sciences 15(16):9198.
 
 ## 3.1 Reprodução do caso da prótese da anca
 

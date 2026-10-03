@@ -46,3 +46,11 @@ def test_relatorio_montado_sem_marcadores_e_com_referencias_numeradas():
 def test_relatorio_sem_travessoes():
     texto = mr.montar()
     assert chr(0x2014) not in texto and chr(0x2013) not in texto  # travessão e meia-risca
+
+
+def test_relatorio_sem_citacoes_autor_ano_por_numerar():
+    texto = mr.montar()
+    corpo = texto.split("\n# Referências\n", 1)[0]
+    refs = mr.vr.ler_referencias()
+    por_numerar = [m.group(0) for m in mr.vr.CITACAO.finditer(corpo) if f"{m['nome']} {mr.vr._ano(m)}" in refs]
+    assert por_numerar == []

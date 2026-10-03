@@ -1,6 +1,6 @@
 # Anexo A. Equações dos métodos
 
-As equações seguem Petković et al. (2025), com a numeração do artigo entre parênteses retos. São as que
+As equações seguem Petković et al. 2025, com a numeração do artigo entre parênteses retos. São as que
 estão implementadas em src/biomat_mcdm/ e foram validadas contra os resultados publicados nos casos de
 estudo 1 e 2 do artigo (secção 3). Notação: $x_{ij}$ é o valor do material $i$ ($i = 1, \dots, m$) no
 critério $j$ ($j = 1, \dots, n$); $w_j$ é o peso do critério $j$, com $\sum_j w_j = 1$.

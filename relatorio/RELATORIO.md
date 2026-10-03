@@ -42,7 +42,7 @@ Este trabalho responde à pergunta "qual é o biomaterial ideal?" para cinco com
 - um scaffold para regeneração óssea;
 - um implante dentário.
 
-Para tornar o compromisso explícito e reprodutível, usou-se a decisão multicritério (MCDM). Os materiais candidatos foram comparados em vários critérios ao mesmo tempo, com pesos justificados, por três métodos diferentes (TOPSIS, WASPAS e VIKOR). Seguiu-se a abordagem de critérios-alvo de Petković et al. (2025), em que o melhor valor de uma propriedade nem sempre é o maior ou o menor. Por exemplo, o módulo de Young de uma haste deve aproximar-se do osso.
+Para tornar o compromisso explícito e reprodutível, usou-se a decisão multicritério (MCDM). Os materiais candidatos foram comparados em vários critérios ao mesmo tempo, com pesos justificados, por três métodos diferentes (TOPSIS, WASPAS e VIKOR). Seguiu-se a abordagem de critérios-alvo de Petković et al. [4], em que o melhor valor de uma propriedade nem sempre é o maior ou o menor. Por exemplo, o módulo de Young de uma haste deve aproximar-se do osso.
 
 O trabalho tem quatro contribuições:
 1. a aplicação de MCDM com critérios-alvo a três dispositivos diferentes, com os mesmos métodos e as mesmas regras;
@@ -95,7 +95,7 @@ Cada critério pertence a um de quatro tipos:
 - **Estrito (eliminatório):** o material passa ou não passa (por exemplo, a biocompatibilidade segundo a ISO 10993, ou o tipo de expansão do stent). Os materiais eliminados ficam registados, com o motivo.
 - **Benefício:** quanto maior, melhor (por exemplo, o limite de fadiga).
 - **Custo:** quanto menor, melhor (por exemplo, a densidade ou o custo relativo).
-- **Alvo:** o melhor valor é um valor intermédio. É o caso do módulo de Young da haste, que deve aproximar-se do osso cortical para reduzir o stress shielding. Seguiu-se a abordagem de critérios-alvo de Petković et al. (2025).
+- **Alvo:** o melhor valor é um valor intermédio. É o caso do módulo de Young da haste, que deve aproximar-se do osso cortical para reduzir o stress shielding. Seguiu-se a abordagem de critérios-alvo de Petković et al. [4].
 
 Usaram-se também dois índices derivados:
 - σy/E, como indicador do recuo elástico do stent;
@@ -116,7 +116,7 @@ Usaram-se três regras para manter os valores comparáveis:
 
 ## 2.5 Normalização
 
-Os critérios têm unidades diferentes (MPa, GPa, µm, escalas 1-5). Antes de os combinar, cada valor foi convertido numa nota adimensional entre 0 e 1. Nos critérios de benefício e de custo, a nota cresce com a proximidade ao melhor valor observado. Nos critérios-alvo, cresce com a proximidade ao valor-alvo, segundo a normalização de Petković et al. (2025) (eq. 2 no TOPSIS; o WASPAS usa as eqs. 9 a 13 e o VIKOR uma distância ao valor de referência, eqs. 17 e 18).
+Os critérios têm unidades diferentes (MPa, GPa, µm, escalas 1-5). Antes de os combinar, cada valor foi convertido numa nota adimensional entre 0 e 1. Nos critérios de benefício e de custo, a nota cresce com a proximidade ao melhor valor observado. Nos critérios-alvo, cresce com a proximidade ao valor-alvo, segundo a normalização de Petković et al. [4] (eq. 2 no TOPSIS; o WASPAS usa as eqs. 9 a 13 e o VIKOR uma distância ao valor de referência, eqs. 17 e 18).
 
 ## 2.6 Pesos
 
@@ -133,7 +133,7 @@ Usaram-se três métodos que combinam os critérios de formas diferentes. Quando
 - **WASPAS:** combina a soma ponderada e o produto ponderado das notas normalizadas (λ = 0,5). A parte multiplicativa penaliza fortemente um critério com nota muito baixa, por isso o método favorece materiais equilibrados.
 - **VIKOR:** procura a solução de compromisso. Combina o afastamento total à solução ideal (S) com o maior afastamento num único critério (R), através de um parâmetro v = 0,5. O índice final (P, na notação de Petković et al.) é tanto melhor quanto menor.
 
-As equações de cada método seguem Petković et al. (2025) e são apresentadas em anexo.
+As equações de cada método seguem Petković et al. [4] e são apresentadas em anexo.
 
 ## 2.8 Análise de robustez
 
@@ -147,7 +147,7 @@ O resultado foi testado em várias frentes:
 
 ## 2.9 Validação da implementação
 
-A implementação foi validada reproduzindo o caso de estudo da prótese da anca de Petković et al. (2025). Foram reproduzidos os 15 coeficientes C publicados e as posições correspondentes, com uma diferença máxima de cerca de 5 × 10⁻⁶.
+A implementação foi validada reproduzindo o caso de estudo da prótese da anca de Petković et al. [4]. Foram reproduzidos os 15 coeficientes C publicados e as posições correspondentes, com uma diferença máxima de cerca de 5 × 10⁻⁶.
 
 Nesta reprodução detetou-se uma incoerência no artigo: o valor de M1-C9 na Tabela A3 é 0,41, mas os resultados publicados só se reproduzem com 0,59. Os dados foram mantidos fiéis à tabela e a diferença ficou documentada (secção de validação).
 
@@ -157,7 +157,7 @@ Todo o processo foi implementado em Python, com testes automáticos para cada fu
 
 # 3. Validação da implementação
 
-Antes de aplicar os métodos aos casos deste trabalho, foi necessário garantir que a implementação estava correta. Para isso reproduziu-se um estudo publicado que usa os mesmos métodos com critérios-alvo: Petković et al. (2025), Applied Sciences 15(16):9198.
+Antes de aplicar os métodos aos casos deste trabalho, foi necessário garantir que a implementação estava correta. Para isso reproduziu-se um estudo publicado que usa os mesmos métodos com critérios-alvo: Petković et al. [4], Applied Sciences 15(16):9198.
 
 ## 3.1 Reprodução do caso da prótese da anca
 
@@ -323,7 +323,7 @@ Na marcha a cerca de 4 km/h, a força de contacto na anca é, em média, cerca d
 Para a haste, as propriedades determinantes são:
 - Limite de fadiga elevado a 10^7 ciclos, porque a fratura por fadiga é a falha mecânica crítica.
 - Tensão de cedência elevada, para evitar deformação plástica sob picos de carga.
-- Módulo de Young o mais próximo possível do osso cortical. O trabalho usa um intervalo de 15-20 GPa; em fémur humano, os valores medidos vão de cerca de 13,6 a 17,6 GPa, consoante a idade e o tipo de ensaio (Li et al. [8], Tabelas 1 e 2). Um implante muito mais rígido do que o osso absorve a maior parte da carga e deixa o fémur proximal sem estímulo mecânico. É o fenómeno de stress shielding, que leva à reabsorção óssea. No trabalho, este critério foi tratado como critério-alvo (T = 17 GPa), seguindo a abordagem de Petković et al. (2025).
+- Módulo de Young o mais próximo possível do osso cortical. O trabalho usa um intervalo de 15-20 GPa; em fémur humano, os valores medidos vão de cerca de 13,6 a 17,6 GPa, consoante a idade e o tipo de ensaio (Li et al. [8], Tabelas 1 e 2). Um implante muito mais rígido do que o osso absorve a maior parte da carga e deixa o fémur proximal sem estímulo mecânico. É o fenómeno de stress shielding, que leva à reabsorção óssea. No trabalho, este critério foi tratado como critério-alvo (T = 17 GPa), seguindo a abordagem de Petković et al. [4].
 
 Os valores de referência mostram o problema. O aço 316L (cerca de 205-210 GPa) e as ligas Co-Cr-Mo (cerca de 220-230 GPa; Navarro et al. [9]) são mais de dez vezes mais rígidos do que o osso. O Ti-6Al-4V ELI (101-110 GPa; Li et al. [8]) fica perto de metade. As ligas β de titânio, como o Ti-13Nb-13Zr (79-84 GPa) e o Ti-35Nb-7Zr-5Ta (cerca de 55 GPa, na variante com baixo teor de oxigénio; Li et al. [8]), aproximam-se mais.
 
@@ -589,7 +589,7 @@ Os bioabsorvíveis ficaram atrás dos metais permanentes no cenário B (Mg WE43 
 
 - **Biocompatibilidade:** série ISO 10993, em particular a ISO 10993-4 (interação com o sangue).
 - **Ensaios específicos de stents:** ISO 25539-2:2020 (implantes cardiovasculares, dispositivos endovasculares, parte 2: stents vasculares).
-- **Durabilidade à fadiga pulsátil:** ASTM F2477-24; a duração equivalente a 10 anos é recomendação do guia da FDA (2010), e as edições até à F2477-19 indicavam pelo menos 380 milhões de ciclos.
+- **Durabilidade à fadiga pulsátil:** ASTM F2477-24; a duração equivalente a 10 anos é recomendação do guia da FDA [20], e as edições até à F2477-19 indicavam pelo menos 380 milhões de ciclos.
 - **Recuo elástico e resistência radial:** ASTM F2079-09(2022) (recuo elástico) e ASTM F3067-26 (guia de ensaio da resistência radial).
 - **Corrosão:** polarização potenciodinâmica (ASTM F2129).
 - **Ressonância magnética:** ASTM F2052, F2213, F2182 e F2119.
@@ -944,10 +944,10 @@ As escolhas do modelo coincidem, em geral, com a prática clínica atual, o que 
 
 ## 8.6 Comparação com estudos anteriores
 
-A Tabela 12 compara este trabalho com estudos publicados de seleção de materiais para implantes por métodos multicritério. Os critérios-alvo já tinham sido usados antes (Petković et al. [4]; Hafezalkotob e Hafezalkotob [71]), mas três aspetos distinguem este trabalho:
+A Tabela 12 compara este trabalho com estudos publicados de seleção de materiais para implantes por métodos multicritério. Uma revisão recente resume os critérios e métodos usados na seleção de materiais para a prótese da anca (Garofalo et al. [71]). Os critérios-alvo já tinham sido usados antes (Petković et al. [4]; Hafezalkotob e Hafezalkotob [72]), mas três aspetos distinguem este trabalho:
 - **Verificação dos dados:** os estudos analisados usam valores de revisões ou de estudos anteriores, sem indicar verificação na fonte original. Aqui, os valores com mais influência no resultado foram verificados em fontes primárias, com regras explícitas para a forma do produto e para a porosidade.
 - **Robustez:** os estudos analisados limitam-se a variar os pesos ou o esquema de pesos. Aqui combinou-se a simulação de Monte Carlo das propriedades e dos pesos com vários cenários de sensibilidade, o que permitiu separar os resultados sólidos (haste femoral) dos frágeis (stent).
-- **Validação da implementação:** nenhum dos estudos analisados reproduz numericamente um resultado publicado. Aqui, a implementação foi validada contra Petković et al. (2025), e essa reprodução revelou uma incoerência nos dados do artigo.
+- **Validação da implementação:** nenhum dos estudos analisados reproduz numericamente um resultado publicado. Aqui, a implementação foi validada contra Petković et al. [4], e essa reprodução revelou uma incoerência nos dados do artigo.
 
 Na pesquisa efetuada (Crossref e PubMed), não se encontraram estudos de seleção do material de stents coronários por métodos multicritério, o que torna esse caso uma aplicação nova destes métodos.
 
@@ -956,9 +956,9 @@ Na pesquisa efetuada (Crossref e PubMed), não se encontraram estudos de seleç�
 | Estudo | Dispositivo | Materiais e critérios | Métodos | Critérios-alvo | Verificação dos dados | Robustez | Validação da implementação |
 |---|---|---|---|---|---|---|---|
 | Petković et al. [4] | placa de fixação óssea; corpo da haste femoral | 15 materiais metálicos; 10 critérios em cada caso | TOPSIS, VIKOR e WASPAS estendidos | sim (módulo de Young, alvo de 14 GPa) | valores da literatura, sem verificação indicada na fonte original | nível de confiança η de 0,7 a 1 | dois casos de estudo e concordância qualitativa com a literatura; sem reprodução numérica |
-| Bahraminasab e Jahan [72] | componente femoral da prótese total do joelho | não indicado | VIKOR abrangente | não indicado | não indicado | sensibilidade dos pesos | não indicado |
-| Hafezalkotob e Hafezalkotob [71] | componente femoral da prótese da anca e do joelho | anca: 11 materiais, 9 critérios | MULTIMOORA com critérios-alvo e dados em intervalos | sim (densidade e módulo de Young) | matriz de um estudo anterior, sem verificação na fonte original | não indicado | comparação das ordenações com outros métodos publicados |
-| Kumar et al. [73] | componente femoral da prótese total do joelho | 11 materiais, 8 critérios | WSM, WPM, WASPAS, EDAS e TOPSIS, combinados | não indicado | não indicado | troca do esquema de pesos (desvio-padrão, entropia, AHP difuso) | não indicado |
+| Bahraminasab e Jahan [73] | componente femoral da prótese total do joelho | não indicado | VIKOR abrangente | não indicado | não indicado | sensibilidade dos pesos | não indicado |
+| Hafezalkotob e Hafezalkotob [72] | componente femoral da prótese da anca e do joelho | anca: 11 materiais, 9 critérios | MULTIMOORA com critérios-alvo e dados em intervalos | sim (densidade e módulo de Young) | matriz de um estudo anterior, sem verificação na fonte original | não indicado | comparação das ordenações com outros métodos publicados |
+| Kumar et al. [74] | componente femoral da prótese total do joelho | 11 materiais, 8 critérios | WSM, WPM, WASPAS, EDAS e TOPSIS, combinados | não indicado | não indicado | troca do esquema de pesos (desvio-padrão, entropia, AHP difuso) | não indicado |
 | Este trabalho | haste femoral, par articular, stent coronário, scaffold ósseo, implante dentário | 4 a 8 materiais e 7 a 11 critérios por caso | TOPSIS, WASPAS e VIKOR; consenso de Borda | sim (haste, scaffold, implante dentário e tempo de reabsorção do stent) | 93 dos 300 valores verificados em fontes primárias; regras da forma e da porosidade | Monte Carlo das propriedades e dos pesos; η de 0 a 1; cenários Q, T, C-custo, P-foco e O-orçamento | reprodução numérica do caso 2 de Petković et al. [4] |
 
 ## 8.7 Enquadramento regulamentar e disponibilidade
@@ -969,7 +969,7 @@ Isto tem uma consequência direta para a seleção: um material sem historial cl
 
 ## 8.8 Material ou dispositivo?
 
-Várias propriedades decisivas são do dispositivo e não do material. A espessura dos struts depende do desenho do stent, e a rigidez de uma haste depende também da sua arquitetura. Um cálculo simples ilustra o alcance desta ideia: pela relação de Gibson e Ashby para materiais celulares, uma estrutura porosa de Ti-6Al-4V com cerca de 60 % de porosidade teria um módulo próximo do osso cortical: com E = E_s (1 − p)², constante C = 1 e E_s = 105,5 GPa (valor típico do Ti-6Al-4V ELI na base), o alvo de 17 GPa obtém-se com p = 59,9 %, e a 60 % de porosidade o módulo é 16,9 GPa (Gibson e Ashby [74], cap. 5). A solução para o stress shielding pode não ser outra liga, mas a mesma liga estruturada, por exemplo por fabrico aditivo.
+Várias propriedades decisivas são do dispositivo e não do material. A espessura dos struts depende do desenho do stent, e a rigidez de uma haste depende também da sua arquitetura. Um cálculo simples ilustra o alcance desta ideia: pela relação de Gibson e Ashby para materiais celulares, uma estrutura porosa de Ti-6Al-4V com cerca de 60 % de porosidade teria um módulo próximo do osso cortical: com E = E_s (1 − p)², constante C = 1 e E_s = 105,5 GPa (valor típico do Ti-6Al-4V ELI na base), o alvo de 17 GPa obtém-se com p = 59,9 %, e a 60 % de porosidade o módulo é 16,9 GPa (Gibson e Ashby [75], cap. 5). A solução para o stress shielding pode não ser outra liga, mas a mesma liga estruturada, por exemplo por fabrico aditivo.
 
 ## 8.9 Limitações
 
@@ -1034,7 +1034,7 @@ Como trabalho futuro propõe-se:
 23. Gong Z, Li M, Guo X, Ma Z, Shi J. Stent implantation in patients with metal allergy: a systemic review and meta-analysis. Coron Artery Dis. 2013;24(8):684-689. doi:10.1097/MCA.0b013e3283647ad1.
 24. Norgaz T, Hobikoglu G, Serdar ZA, Aksu H, Alper AT, Ozer O, et al. Is there a link between nickel allergy and coronary stent restenosis? Tohoku J Exp Med. 2005;206(3):243-246. doi:10.1620/tjem.206.243.
 25. Allocco DJ, Cannon LA, Britt A, Heil JE, Nersesov A, Wehrenberg S, et al. A prospective evaluation of the safety and efficacy of the TAXUS Element paclitaxel-eluting coronary stent system for the treatment of de novo coronary artery lesions: design and statistical methods of the PERSEUS clinical program. Trials. 2010;11(1):1. doi:10.1186/1745-6215-11-1.
-26. Kereiakes DJ, Ellis SG, Metzger C, Caputo RP, Rizik DG, Teirstein PS, et al. 3-Year Clinical Outcomes With Everolimus-Eluting Bioresorbable Coronary Scaffolds: The ABSORB III Trial. J Am Coll Cardiol. 2017;70(23):2852-2862. doi:10.1016/j.jacc.2017.10.010.
+26. Kereiakes DJ, Ellis SG, Metzger C, Caputo RP, Rizik DG, Teirstein PS, et al. 3-Year Clinical Outcomes With Everolimus-Eluting Bioresorbable Coronary Scaffolds. Journal of the American College of Cardiology. 2017;70(23):2852-2862. doi:10.1016/j.jacc.2017.10.010.
 27. Ke J, Zhang H, Huang J, Lv P, Chen Y, Xu K, et al. Three-year outcomes of bioresorbable vascular scaffolds versus second-generation drug-eluting stents: Meta-analysis of randomized trials. Medicine (Baltimore). 2020;99(31):e21554. doi:10.1097/MD.0000000000021554.
 28. Nikam N, Steinberg TB, Steinberg DH. Advances in stent technologies and their effect on clinical efficacy and safety. Med Devices (Auckl). 2014;7:165-178. doi:10.2147/MDER.S31869.
 29. O'Brien BJ, Stinson JS, Larsen SR, Eppihimer MJ, Carroll WM. A platinum-chromium steel for cardiovascular stents. Biomaterials. 2010;31(14):3755-3761. doi:10.1016/j.biomaterials.2010.01.146.
@@ -1079,10 +1079,11 @@ Como trabalho futuro propõe-se:
 68. Lamb JN, Sayers A, Wilkinson JM, Pandit H, Whitehouse MR. The association between implant design, age, sex and the rate of major reoperation in patients undergoing primary total hip replacement: A retrospective study of UK National Joint Registry and Hospital Episodes Statistics data. PLoS Med. 2025;22(11):e1004538. doi:10.1371/journal.pmed.1004538.
 69. Brami P, Fischer Q, Pham V, Seret G, Varenne O, Picard F. Evolution of Coronary Stent Platforms: A Brief Overview of Currently Used Drug-Eluting Stents. J Clin Med. 2023;12(21):6711. doi:10.3390/jcm12216711.
 70. Macaya-Ten F, Gonzalo N, Escaned, and J, Macaya C. Inception of the coronary stent: a story of successful collaboration between innovative scientists and the biotechnology industry. REC Interv Cardiol. 2024. doi:10.24875/RECICE.M24000463.
-71. Hafezalkotob A, Hafezalkotob A. Interval MULTIMOORA method with target values of attributes based on interval distance and preference degree: biomaterials selection. J Ind Eng Int. 2017;13(2):181-198. doi:10.1007/s40092-016-0176-4.
-72. Bahraminasab M, Jahan A. Material selection for femoral component of total knee replacement using comprehensive VIKOR. Mater Des. 2011;32(8-9):4471-4477. doi:10.1016/j.matdes.2011.03.046.
-73. Kumar R, Dubey R, Singh S, Singh S, Prakash C, Nirsanametla Y, et al. Multiple-Criteria Decision-Making and Sensitivity Analysis for Selection of Materials for Knee Implant Femoral Component. Materials (Basel). 2021;14(8):2084. doi:10.3390/ma14082084.
-74. Gibson LJ, Ashby MF. Cellular Solids. 2.ª ed. Cambridge University Press; 1997. doi:10.1017/CBO9781139878326.
+71. Garofalo S, Morano C, Bruno L, Pagnotta L. A Comprehensive Literature Review for Total Hip Arthroplasty (THA): Part 2: Material Selection Criteria and Methods. J Funct Biomater. 2025;16(5):184. doi:10.3390/jfb16050184.
+72. Hafezalkotob A, Hafezalkotob A. Interval MULTIMOORA method with target values of attributes based on interval distance and preference degree: biomaterials selection. J Ind Eng Int. 2017;13(2):181-198. doi:10.1007/s40092-016-0176-4.
+73. Bahraminasab M, Jahan A. Material selection for femoral component of total knee replacement using comprehensive VIKOR. Mater Des. 2011;32(8-9):4471-4477. doi:10.1016/j.matdes.2011.03.046.
+74. Kumar R, Dubey R, Singh S, Singh S, Prakash C, Nirsanametla Y, et al. Multiple-Criteria Decision-Making and Sensitivity Analysis for Selection of Materials for Knee Implant Femoral Component. Materials (Basel). 2021;14(8):2084. doi:10.3390/ma14082084.
+75. Gibson LJ, Ashby MF. Cellular Solids. 2.ª ed. Cambridge University Press; 1997. doi:10.1017/CBO9781139878326.
 
 # Normas e legislação citadas
 
@@ -1123,7 +1124,7 @@ Como trabalho futuro propõe-se:
 
 # Anexo A. Equações dos métodos
 
-As equações seguem Petković et al. (2025), com a numeração do artigo entre parênteses retos. São as que
+As equações seguem Petković et al. [4], com a numeração do artigo entre parênteses retos. São as que
 estão implementadas em src/biomat_mcdm/ e foram validadas contra os resultados publicados nos casos de
 estudo 1 e 2 do artigo (secção 3). Notação: $x_{ij}$ é o valor do material $i$ ($i = 1, \dots, m$) no
 critério $j$ ($j = 1, \dots, n$); $w_j$ é o peso do critério $j$, com $\sum_j w_j = 1$.

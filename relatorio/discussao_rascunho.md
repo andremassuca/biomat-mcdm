@@ -38,10 +38,10 @@ As escolhas do modelo coincidem, em geral, com a prática clínica atual, o que 
 
 ## 8.6 Comparação com estudos anteriores
 
-A Tabela [n] compara este trabalho com estudos publicados de seleção de materiais para implantes por métodos multicritério. Os critérios-alvo já tinham sido usados antes (Petković et al. 2025; Hafezalkotob e Hafezalkotob 2017), mas três aspetos distinguem este trabalho:
+A Tabela [n] compara este trabalho com estudos publicados de seleção de materiais para implantes por métodos multicritério. Uma revisão recente resume os critérios e métodos usados na seleção de materiais para a prótese da anca (Garofalo et al. 2025). Os critérios-alvo já tinham sido usados antes (Petković et al. 2025; Hafezalkotob e Hafezalkotob 2017), mas três aspetos distinguem este trabalho:
 - **Verificação dos dados:** os estudos analisados usam valores de revisões ou de estudos anteriores, sem indicar verificação na fonte original. Aqui, os valores com mais influência no resultado foram verificados em fontes primárias, com regras explícitas para a forma do produto e para a porosidade.
 - **Robustez:** os estudos analisados limitam-se a variar os pesos ou o esquema de pesos. Aqui combinou-se a simulação de Monte Carlo das propriedades e dos pesos com vários cenários de sensibilidade, o que permitiu separar os resultados sólidos (haste femoral) dos frágeis (stent).
-- **Validação da implementação:** nenhum dos estudos analisados reproduz numericamente um resultado publicado. Aqui, a implementação foi validada contra Petković et al. (2025), e essa reprodução revelou uma incoerência nos dados do artigo.
+- **Validação da implementação:** nenhum dos estudos analisados reproduz numericamente um resultado publicado. Aqui, a implementação foi validada contra Petković et al. 2025, e essa reprodução revelou uma incoerência nos dados do artigo.
 
 Na pesquisa efetuada (Crossref e PubMed), não se encontraram estudos de seleção do material de stents coronários por métodos multicritério, o que torna esse caso uma aplicação nova destes métodos.
 

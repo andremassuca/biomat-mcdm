@@ -25,7 +25,7 @@ Cada critério pertence a um de quatro tipos:
 - **Estrito (eliminatório):** o material passa ou não passa (por exemplo, a biocompatibilidade segundo a ISO 10993, ou o tipo de expansão do stent). Os materiais eliminados ficam registados, com o motivo.
 - **Benefício:** quanto maior, melhor (por exemplo, o limite de fadiga).
 - **Custo:** quanto menor, melhor (por exemplo, a densidade ou o custo relativo).
-- **Alvo:** o melhor valor é um valor intermédio. É o caso do módulo de Young da haste, que deve aproximar-se do osso cortical para reduzir o stress shielding. Seguiu-se a abordagem de critérios-alvo de Petković et al. (2025).
+- **Alvo:** o melhor valor é um valor intermédio. É o caso do módulo de Young da haste, que deve aproximar-se do osso cortical para reduzir o stress shielding. Seguiu-se a abordagem de critérios-alvo de Petković et al. 2025.
 
 Usaram-se também dois índices derivados:
 - σy/E, como indicador do recuo elástico do stent;
@@ -46,7 +46,7 @@ Usaram-se três regras para manter os valores comparáveis:
 
 ## 2.5 Normalização
 
-Os critérios têm unidades diferentes (MPa, GPa, µm, escalas 1-5). Antes de os combinar, cada valor foi convertido numa nota adimensional entre 0 e 1. Nos critérios de benefício e de custo, a nota cresce com a proximidade ao melhor valor observado. Nos critérios-alvo, cresce com a proximidade ao valor-alvo, segundo a normalização de Petković et al. (2025) (eq. 2 no TOPSIS; o WASPAS usa as eqs. 9 a 13 e o VIKOR uma distância ao valor de referência, eqs. 17 e 18).
+Os critérios têm unidades diferentes (MPa, GPa, µm, escalas 1-5). Antes de os combinar, cada valor foi convertido numa nota adimensional entre 0 e 1. Nos critérios de benefício e de custo, a nota cresce com a proximidade ao melhor valor observado. Nos critérios-alvo, cresce com a proximidade ao valor-alvo, segundo a normalização de Petković et al. 2025 (eq. 2 no TOPSIS; o WASPAS usa as eqs. 9 a 13 e o VIKOR uma distância ao valor de referência, eqs. 17 e 18).
 
 ## 2.6 Pesos
 
@@ -63,7 +63,7 @@ Usaram-se três métodos que combinam os critérios de formas diferentes. Quando
 - **WASPAS:** combina a soma ponderada e o produto ponderado das notas normalizadas (λ = 0,5). A parte multiplicativa penaliza fortemente um critério com nota muito baixa, por isso o método favorece materiais equilibrados.
 - **VIKOR:** procura a solução de compromisso. Combina o afastamento total à solução ideal (S) com o maior afastamento num único critério (R), através de um parâmetro v = 0,5. O índice final (P, na notação de Petković et al.) é tanto melhor quanto menor.
 
-As equações de cada método seguem Petković et al. (2025) e são apresentadas em anexo.
+As equações de cada método seguem Petković et al. 2025 e são apresentadas em anexo.
 
 ## 2.8 Análise de robustez
 
@@ -77,7 +77,7 @@ O resultado foi testado em várias frentes:
 
 ## 2.9 Validação da implementação
 
-A implementação foi validada reproduzindo o caso de estudo da prótese da anca de Petković et al. (2025). Foram reproduzidos os 15 coeficientes C publicados e as posições correspondentes, com uma diferença máxima de cerca de 5 × 10⁻⁶.
+A implementação foi validada reproduzindo o caso de estudo da prótese da anca de Petković et al. 2025. Foram reproduzidos os 15 coeficientes C publicados e as posições correspondentes, com uma diferença máxima de cerca de 5 × 10⁻⁶.
 
 Nesta reprodução detetou-se uma incoerência no artigo: o valor de M1-C9 na Tabela A3 é 0,41, mas os resultados publicados só se reproduzem com 0,59. Os dados foram mantidos fiéis à tabela e a diferença ficou documentada (secção de validação).
 

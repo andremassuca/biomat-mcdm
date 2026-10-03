@@ -33,3 +33,10 @@ def test_verificar_compara_textos_e_lista(tmp_path):
 def test_lista_do_relatorio_cobre_todas_as_citacoes():
     sem_ref, _ = vr.verificar()
     assert sem_ref == []
+
+
+def test_ano_entre_parenteses_tambem_conta_e_e_numerado():
+    refs = {"Petković 2025": "x"}
+    assert vr.citacoes("segundo Petković et al. (2025), o método", set(refs)) == ["Petković 2025"]
+    texto, _ = vr.numerar("segundo Petković et al. (2025), o método", refs)
+    assert texto == "segundo Petković et al. [1], o método"

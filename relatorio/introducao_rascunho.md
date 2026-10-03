@@ -10,7 +10,7 @@ Este trabalho responde à pergunta "qual é o biomaterial ideal?" para cinco com
 - um scaffold para regeneração óssea;
 - um implante dentário.
 
-Para tornar o compromisso explícito e reprodutível, usou-se a decisão multicritério (MCDM). Os materiais candidatos foram comparados em vários critérios ao mesmo tempo, com pesos justificados, por três métodos diferentes (TOPSIS, WASPAS e VIKOR). Seguiu-se a abordagem de critérios-alvo de Petković et al. (2025), em que o melhor valor de uma propriedade nem sempre é o maior ou o menor. Por exemplo, o módulo de Young de uma haste deve aproximar-se do osso.
+Para tornar o compromisso explícito e reprodutível, usou-se a decisão multicritério (MCDM). Os materiais candidatos foram comparados em vários critérios ao mesmo tempo, com pesos justificados, por três métodos diferentes (TOPSIS, WASPAS e VIKOR). Seguiu-se a abordagem de critérios-alvo de Petković et al. 2025, em que o melhor valor de uma propriedade nem sempre é o maior ou o menor. Por exemplo, o módulo de Young de uma haste deve aproximar-se do osso.
 
 O trabalho tem quatro contribuições:
 1. a aplicação de MCDM com critérios-alvo a três dispositivos diferentes, com os mesmos métodos e as mesmas regras;

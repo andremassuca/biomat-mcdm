@@ -22,7 +22,13 @@ TEXTOS = ["resumo_rascunho.md", "introducao_rascunho.md", "metodos_rascunho.md",
           "anexo_a_equacoes.md", "glossario.md", "tabelas/comparacao_estudos.md"]
 
 _NOME = r"(?:(?:Le|De|Van) )?[A-ZÁÉÍÓÚÂÊÔÃÕÇÅÖÜ][\w'’\-]+"
-CITACAO = re.compile(rf"\b(?P<nome>{_NOME})(?P<meio> et al\.,?| e {_NOME}| & {_NOME})?,? (?P<ano>(?:19|20)\d\d)\b")
+# O ano pode vir solto ("Higuchi et al. 2019") ou entre parênteses ("Higuchi et al. (2019)").
+CITACAO = re.compile(rf"\b(?P<nome>{_NOME})(?P<meio> et al\.,?| e {_NOME}| & {_NOME})?,? "
+                     rf"(?:\((?P<anop>(?:19|20)\d\d)\)|(?P<ano>(?:19|20)\d\d)\b)")
+
+
+def _ano(m: re.Match) -> str:
+    return m["ano"] or m["anop"]
 ENTRADA = re.compile(r"^- \[(?P<chave>[^\]]+)\] (?P<texto>.+)$")
 
 
@@ -45,7 +51,7 @@ def citacoes(texto: str, chaves: set[str] | None = None) -> list[str]:
     """
     vistas = []
     for m in CITACAO.finditer(texto):
-        k = f"{m['nome']} {m['ano']}"
+        k = f"{m['nome']} {_ano(m)}"
         if chaves is not None and k not in chaves and not m["meio"]:
             continue
         if k not in vistas:
@@ -77,7 +83,7 @@ def numerar(texto: str, refs: dict[str, str]) -> tuple[str, list[str]]:
     ordem: list[str] = []
 
     def troca(m: re.Match) -> str:
-        k = f"{m['nome']} {m['ano']}"
+        k = f"{m['nome']} {_ano(m)}"
         if k not in refs:
             return m.group(0)
         if k not in ordem:

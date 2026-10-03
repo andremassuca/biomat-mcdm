@@ -107,7 +107,7 @@ Os bioabsorvíveis ficaram atrás dos metais permanentes no cenário B (Mg WE43 
 
 - **Biocompatibilidade:** série ISO 10993, em particular a ISO 10993-4 (interação com o sangue).
 - **Ensaios específicos de stents:** ISO 25539-2:2020 (implantes cardiovasculares, dispositivos endovasculares, parte 2: stents vasculares).
-- **Durabilidade à fadiga pulsátil:** ASTM F2477-24; a duração equivalente a 10 anos é recomendação do guia da FDA (2010), e as edições até à F2477-19 indicavam pelo menos 380 milhões de ciclos.
+- **Durabilidade à fadiga pulsátil:** ASTM F2477-24; a duração equivalente a 10 anos é recomendação do guia da FDA 2010, e as edições até à F2477-19 indicavam pelo menos 380 milhões de ciclos.
 - **Recuo elástico e resistência radial:** ASTM F2079-09(2022) (recuo elástico) e ASTM F3067-26 (guia de ensaio da resistência radial).
 - **Corrosão:** polarização potenciodinâmica (ASTM F2129).
 - **Ressonância magnética:** ASTM F2052, F2213, F2182 e F2119.
