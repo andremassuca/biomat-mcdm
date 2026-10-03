@@ -1,6 +1,6 @@
 """Corre todos os cenários de data/cenarios.csv nos 3 casos quantitativos (haste, stent, scaffold).
 
-Resultado principal: η = 1 (data/parametros.csv). Cenários de sensibilidade (Q, η, T, C-custo)
+Resultado principal: η = 1 (data/parametros.csv). Cenários de sensibilidade (Q, η, T, C-custo, P-foco)
 partem do cenário A. PRELIMINAR enquanto os valores da base estiverem "A verificar".
 
 Gera:
@@ -9,6 +9,7 @@ Gera:
   results/monte_carlo.csv         % de 1.º, 2.º e 3.º lugar e posição média (MC propriedades e W pesos)
   results/spearman.csv            concordância entre métodos por cenário e variante
   results/resumo_robustez.md      resumo por caso
+  results/semiquantitativos.csv   par articular: cenário A e P-foco (sensibilidade semiquantitativa)
 Uso: python scripts/run_all.py [--n-iter 10000] [--seed 42]
 """
 from __future__ import annotations
@@ -19,10 +20,11 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from biomat_mcdm.io import DATA, DecisionProblem, build_problem, load_parametros, load_tissue
+from biomat_mcdm.io import (DATA, DecisionProblem, build_problem, criterios_do_problema, load_parametros,
+                            load_tissue)
 from biomat_mcdm.pipeline import METODOS, fmt_pt, rank_all_methods
-from biomat_mcdm.robustness import (com_alvo, com_eta, com_peso, monte_carlo, pct_posicao, pct_primeiro,
-                                    posicoes, rank_agreement, sem_ordinais)
+from biomat_mcdm.robustness import (com_alvo, com_eta, com_foco, com_peso, monte_carlo, pct_posicao,
+                                    pct_primeiro, posicoes, rank_agreement, sem_ordinais)
 
 RESULTS = Path(__file__).resolve().parents[1] / "results"
 AVISO = "PRELIMINAR: dados por verificar"
@@ -40,6 +42,9 @@ T_SCAFFOLD = {"Resistência à compressão (scaffold)": ("Osso trabecular", "Res
               "Módulo de compressão (scaffold)": ("Osso trabecular", "Módulo de Young"),
               "Porosidade": ("Osso trabecular", "Porosidade")}
 FATORES_DEGRADACAO = (0.5, 2.0)
+# P-foco: resultado principal só com as ligações diretas; sensibilidade com direta + indireta.
+LIGACOES_FOCO = {"direta": ("direta",), "direta + indireta": ("direta", "indireta")}
+PAR = "Prótese da anca | Par articular"  # semiquantitativo: só sensibilidade, à parte
 
 
 def aplica(casos: str, caso: str) -> bool:
@@ -77,7 +82,39 @@ def variantes(codigo: str, caso: str, data_dir: Path = DATA) -> list[tuple[str, 
         return out
     if codigo == "C-custo":
         return [(f"custo {k} ({fmt_pt(v, 2)})", com_peso(base, CUSTO, v)) for k, v in PESO_CUSTO.items()]
+    if codigo == "P-foco":
+        return variantes_foco(nome, base, data_dir)
     return []
+
+
+def variantes_foco(nome: str, base: DecisionProblem, data_dir: Path = DATA) -> list[tuple[str, DecisionProblem]]:
+    """Cenário P-foco: o peso dos critérios do problema crítico multiplicado por fator_foco_problema.
+
+    Em linguagem simples: devolve duas versões do problema, uma em que só os critérios com
+    ligação direta ao problema do professor ganham peso, e outra em que ganham também os de
+    ligação indireta.
+    """
+    fator = load_parametros(data_dir).get("fator_foco_problema", 2.0)
+    return [(rot, com_foco(base, criterios_do_problema(nome, lig, data_dir), fator))
+            for rot, lig in LIGACOES_FOCO.items()]
+
+
+def par_articular_linhas(data_dir: Path = DATA) -> pd.DataFrame:
+    """Par articular (semiquantitativo): posições no cenário A e nas duas versões do P-foco."""
+    base = build_problem(PAR, BASE, data_dir)
+    linhas = ranking_linhas("Par articular", BASE, BASE, base)
+    for var, p in variantes_foco(PAR, base, data_dir):
+        linhas += ranking_linhas("Par articular", "P-foco", var, p)
+    return pd.DataFrame(linhas)
+
+
+def par_articular_md(par: pd.DataFrame) -> list[str]:
+    """Secção do resumo com o par articular, assinalada como semiquantitativa."""
+    L = ["## Par articular (SEMIQUANTITATIVO: ordinais > 50 % do peso; só sensibilidade)", "",
+         "| Cenário | Variante | " + " | ".join(METODOS) + " |", "|---|---|---|---|---|"]
+    for (c, v), g in par.groupby(["cenario", "variante"], sort=False):
+        L.append(f"| {c} | {v} | " + " | ".join(vencedores(g[g["metodo"] == m]) for m in METODOS) + " |")
+    return L + [""]
 
 
 def ranking_linhas(caso: str, cenario: str, variante: str, p: DecisionProblem) -> list[dict]:
@@ -138,7 +175,7 @@ def vencedores(g: pd.DataFrame) -> str:
 
 
 def resumo_md(rk: pd.DataFrame, mc: pd.DataFrame, sp: pd.DataFrame, cen: pd.DataFrame,
-              n_iter: int, seed: int) -> str:
+              n_iter: int, seed: int, par: pd.DataFrame | None = None) -> str:
     """Resumo por caso: vencedores, Monte Carlo, Spearman e onde o vencedor muda."""
     L = [f"# Resumo da robustez ({AVISO})", "",
          f"η = 1 no resultado principal; sensibilidades a partir do cenário {BASE}. "
@@ -175,6 +212,8 @@ def resumo_md(rk: pd.DataFrame, mc: pd.DataFrame, sp: pd.DataFrame, cen: pd.Data
         L += ["### Onde o vencedor muda (face ao cenário " + BASE + ")", ""]
         L += muda if muda else ["- Em nenhum cenário de sensibilidade."]
         L.append("")
+    if par is not None and not par.empty:
+        L += par_articular_md(par)
     L += ["## Cenários", ""] + [f"- **{k}**: {v}" for k, v in desc.items()] + [""]
     return "\n".join(L)
 
@@ -207,7 +246,9 @@ def main() -> None:
     mc.to_csv(RESULTS / "monte_carlo.csv", index=False)
     sp.to_csv(RESULTS / "spearman.csv", index=False)
     pontuacao_linhas().to_csv(RESULTS / "pontuacoes.csv", index=False)
-    texto = resumo_md(rk, mc, sp, cen, a.n_iter, a.seed)
+    par = par_articular_linhas()
+    par.to_csv(RESULTS / "semiquantitativos.csv", index=False)
+    texto = resumo_md(rk, mc, sp, cen, a.n_iter, a.seed, par)
     (RESULTS / "resumo_robustez.md").write_text(texto, encoding="utf-8")
     print(texto)
 

@@ -1,4 +1,4 @@
-# Scaffold ósseo: export de dados (commit 69cc2ad, 01/10/2026)
+# Scaffold ósseo: export de dados (commit dfccec4, 03/10/2026)
 
 Gerado por scripts/exportar_caso.py a partir de data/, src/ e results/. Só dados.
 
@@ -26,6 +26,7 @@ Cenários aplicáveis (cenarios.csv):
 - T-scaffold: Sensibilidade dos alvos
 - C-custo: Peso do custo relativo baixo (0,01) vs elevado (0,25), restantes pesos redistribuídos
 - MC: Incerteza das propriedades
+- P-foco: Foco no problema crítico do professor (2 out 2026): peso dos critérios de ligação direta x2 (fator_foco_problema), restantes renormalizados; sensibilidade: direta + indireta (data/problemas_criticos.csv). Par articular: sensibilidade semiquantitativa à parte
 
 ## 2. Critérios (criterios.csv)
 
@@ -190,6 +191,8 @@ Vencedor no cenário A: TOPSIS Compósito PCL/β-TCP (impressão 3D); WASPAS Com
 | T-scaffold | Tempo de degradação: x2,0 | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | 0,70 |
 | C-custo | custo baixo (0,01) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | 0,90 |
 | C-custo | custo elevado (0,25) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | 0,90 |
+| P-foco | direta | β-TCP poroso | Compósito PCL/β-TCP (impressão 3D) | β-TCP poroso | 0,80 |
+| P-foco | direta + indireta | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | 0,90 |
 
 #### Monte Carlo: % de 1.º lugar
 
@@ -218,6 +221,8 @@ Vencedor no cenário A: TOPSIS Compósito PCL/β-TCP (impressão 3D); WASPAS Com
 - T-scaffold, Resistência à compressão: 2, TOPSIS: Compósito PCL/β-TCP (impressão 3D) → β-TCP poroso
 - T-scaffold, Resistência à compressão: 2, WASPAS: Compósito PCL/β-TCP (impressão 3D) → β-TCP poroso
 - T-scaffold, Resistência à compressão: 2, VIKOR: Compósito PCL/β-TCP (impressão 3D) → β-TCP poroso
+- P-foco, direta, TOPSIS: Compósito PCL/β-TCP (impressão 3D) → β-TCP poroso
+- P-foco, direta, VIKOR: Compósito PCL/β-TCP (impressão 3D) → β-TCP poroso
 
 ## 6. Triagem (critérios estritos)
 
@@ -281,6 +286,7 @@ Células a verificar: 39 (0 mudam o vencedor com ±20 %).
 - PLLA do scaffold = scaffold impresso ou extrudido; as espumas têm módulo 1 a 2 ordens de grandeza abaixo.
 - Bioatividade (scaffold, 1 out 2026): a rubrica segue a classificação de Hench (classe A, osteoprodutivo, nota 5; classe B, osteocondutor, nota 4); a HA e o β-TCP ficam com 4 e o vidro 45S5 com 5.
 - T-scaffold: alvos no mínimo e no máximo do osso trabecular (tecido.csv) para compressão (2-12 MPa), módulo (50-500 MPa) e porosidade (50-90 %); tempo de degradação sem referência no tecido: fatores de sensibilidade x0,5 e x2 sobre o alvo (não são valores da literatura).
+- P-foco (3 out 2026): problema crítico de cada dispositivo indicado pelo professor (2 out 2026). O peso dos critérios ligados ao problema (data/problemas_criticos.csv) é multiplicado por fator_foco_problema = 2 (valor de desenho) e os pesos são renormalizados. Resultado principal: só critérios de ligação direta; sensibilidade: direta + indireta. Scaffold: leitura literal do professor no resultado principal (porosidade, bioatividade, tempo de degradação); a resistência, o módulo e a imprimibilidade entram só na sensibilidade (decisão do André, 3 out). Par articular: sensibilidade semiquantitativa à parte (results/semiquantitativos.csv). Mapa e resultados em relatorio/apoio/problemas_criterios.md.
 - Reversão de ranking observada (scaffold, 28 set 2026): ao retirar PLLA, PLGA e quitosano/HA (cenário A com os estatutos novos), o β-TCP e o PCL/β-TCP trocam de posição (TOPSIS e VIKOR: PCL/β-TCP 1.º com 8 materiais, β-TCP 1.º com 5), porque as normalizações dependem do mínimo e do máximo de cada coluna. Exemplo concreto para o item "Testes formais de reversão de ranking" do backlog e para a secção de limitações.
 - Scaffold: a fragilidade do ranking reflete em parte a incerteza dos dados (propriedades muito dependentes da porosidade, intervalos largos na base) e não só o método. Na discussão, separar as duas causas, por exemplo comparando a % de 1.º lugar do MC propriedades (incerteza dos dados) com a do W pesos (incerteza das preferências). Cenário A com os estatutos novos (5 materiais): β-TCP 53,6 % / 31,6 % / 37,4 % (T/W/V) no MC propriedades, mas 91,7 % / 100 % / 85,3 % no W pesos; ou seja, o 1.º lugar é estável face aos pesos e frágil face aos dados.
   scaffold) o vencedor do Monte Carlo não muda; no stent, o 1.º lugar do Co-Cr L605 desce

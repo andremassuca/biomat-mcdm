@@ -20,7 +20,7 @@ def livro():
 
 def test_folhas(livro):
     assert livro.sheetnames == ["LEIA-ME", "Materiais", "Criterios", "Soma_pesos", "Indices_stent",
-                                "Indices_haste", "Cenarios", "Tecido", "Parametros"]
+                                "Indices_haste", "Cenarios", "Tecido", "Parametros", "Problemas_criticos"]
 
 
 def test_nota_de_geracao_automatica(livro):

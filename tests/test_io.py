@@ -117,3 +117,15 @@ def test_tipico_fora_do_intervalo_da_erro(tmp_path):
     with pytest.raises(ValueError):
         build_problem("Stent vascular", "A", tmp_path)
 
+
+def test_mapa_dos_problemas_usa_criterios_da_base():
+    import pandas as pd
+    from biomat_mcdm.io import DATA, criterios_do_problema, load_problemas
+    mapa, crit = load_problemas(), pd.read_csv(DATA / "criterios.csv")
+    assert set(mapa["ligacao"]) <= {"direta", "indireta"}
+    for r in mapa.itertuples():
+        assert r.criterio in set(crit[crit["caso_componente"] == r.caso_componente]["criterio"]), r.criterio
+    assert criterios_do_problema("Scaffold (regeneração óssea)") == ["Porosidade", "Bioatividade (ordinal 1-5)",
+                                                                    "Tempo de degradação"]
+    stent = criterios_do_problema("Stent vascular", ("direta", "indireta"))
+    assert "Tempo de reabsorção" in stent  # sem "(só cenário B)", como em DecisionProblem.criteria

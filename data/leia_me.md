@@ -1,6 +1,7 @@
 # LEIA-ME da base de dados
 
-Fonte de verdade: os ficheiros CSV em data/ (materiais, criterios, tecido, cenarios, parametros)
+Fonte de verdade: os ficheiros CSV em data/ (materiais, criterios, tecido, cenarios, parametros,
+problemas_criticos)
 e este ficheiro (texto da folha LEIA-ME). O base_dados_biomateriais.xlsx é gerado por
 scripts/exportar_xlsx.py e não se edita à mão.
 
@@ -47,6 +48,11 @@ Par articular e implante dentário ficam SEMIQUANTITATIVOS (ordinais > 50 % do p
 - Regra da forma: nas propriedades dependentes da forma do produto, min, max e tipico cobrem só a forma usada no dispositivo (no stent: tubo ou fita); os valores de outras formas (fio, barra, chapa) ficam só na coluna notas. Se a forma do dispositivo tiver um único valor, min = max e o Monte Carlo aplica ±10 % (incerteza_valor_unico em parametros.csv).
 - Linhas revistas: L605 módulo 225 (antes 225-243), tração 900-1000 (antes 900-1138), alongamento 40 (antes 40-50); MP35N tração 965 (antes 931-965), alongamento 40 (antes 40-70). Sem alteração: 316L alongamento 40-50 e L605 cedência 380-700. Os típicos não mudaram.
 - Exceção mantida no L605: o típico da cedência e da tração é o da chapa (Haynes), por não haver ficha de tubo com valores; fica dentro do intervalo da fita (Matthey).
+
+## Alterações v0.9 (3 out 2026): problemas críticos do professor
+- Novo problemas_criticos.csv: para cada caso, os critérios que respondem ao problema crítico indicado pelo professor (2 out 2026), com ligação direta ou indireta e justificação. Folha Problemas_criticos no .xlsx.
+- Novo parâmetro fator_foco_problema = 2 (valor de desenho) e novo cenário P-foco: peso dos critérios de ligação direta x2, restantes renormalizados; sensibilidade com direta + indireta; no par articular, só como sensibilidade semiquantitativa.
+- Implante dentário: a corrosão ainda não é critério (a acrescentar).
 
 ## Legenda
 - min e max alimentam o Monte Carlo (distribuição entre mín. e máx.); nas propriedades dependentes da forma, só com valores da forma do dispositivo (regra da forma, v0.8).

@@ -1,4 +1,4 @@
-# Stent vascular: export de dados (commit 9caad93, 03/10/2026)
+# Stent vascular: export de dados (commit dfccec4, 03/10/2026)
 
 Gerado por scripts/exportar_caso.py a partir de data/, src/ e results/. Só dados.
 
@@ -26,6 +26,7 @@ Cenários aplicáveis (cenarios.csv):
 - M: Concordância entre métodos
 - C-custo: Peso do custo relativo baixo (0,01) vs elevado (0,25), restantes pesos redistribuídos
 - MC: Incerteza das propriedades
+- P-foco: Foco no problema crítico do professor (2 out 2026): peso dos critérios de ligação direta x2 (fator_foco_problema), restantes renormalizados; sensibilidade: direta + indireta (data/problemas_criticos.csv). Par articular: sensibilidade semiquantitativa à parte
 
 ## 2. Critérios (criterios.csv)
 
@@ -231,6 +232,8 @@ Vencedor no cenário A: TOPSIS Pt-Cr; WASPAS Co-Cr L605; VIKOR Pt-Cr
 | η | η = 1,0 | Pt-Cr | Co-Cr L605 | Pt-Cr | 0,80 |
 | C-custo | custo baixo (0,01) | Pt-Cr | Co-Cr L605 | Pt-Cr | 0,80 |
 | C-custo | custo elevado (0,25) | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | 0,40 |
+| P-foco | direta | Pt-Cr | Co-Cr L605 | Pt-Cr | 0,80 |
+| P-foco | direta + indireta | Pt-Cr | Co-Cr L605 | Pt-Cr | 0,80 |
 
 #### Monte Carlo: % de 1.º lugar
 

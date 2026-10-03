@@ -64,7 +64,8 @@ ABREVIA_CELULA = {"Ti-6Al-4V ELI": "Ti-6Al-4V", "Ti cp grau 4": "Ti cp", "Aço i
                   "β-TCP poroso": "β-TCP", "Compósito PCL/β-TCP (impressão 3D)": "PCL/β-TCP",
                   "Vidro bioativo 45S5 poroso": "45S5"}
 MUDA = {"B": "juntar os materiais em investigação", "Q": "tirar os critérios ordinais",
-        "T-haste": "mudar o alvo do módulo", "T-scaffold": "mudar os alvos"}
+        "T-haste": "mudar o alvo do módulo", "T-scaffold": "mudar os alvos",
+        "P-foco": "reforçar os critérios do problema crítico"}
 
 
 def curto(material: str) -> str:
@@ -102,10 +103,12 @@ def cabecalho(fig: plt.Figure, titulo: str, subtitulo: str, topo: float = 0.88) 
     """Título com a conclusão, subtítulo técnico e nota de preliminar no canto inferior direito.
 
     `topo` é a fração da altura da figura onde acabam os gráficos (o resto fica para o cabeçalho).
+    O título pode ter várias linhas (separadas por "\n"); o subtítulo desce em conformidade.
     """
+    linhas_extra = titulo.count("\n")
     fig.tight_layout(rect=(0, 0.035, 1, topo))
     fig.text(0.012, 0.985, titulo, fontsize=F_TITULO, fontweight="bold", color=TEXTO, va="top")
-    fig.text(0.012, 0.985 - (F_TITULO + 10) / 72 / fig.get_figheight(), subtitulo,
+    fig.text(0.012, 0.985 - (F_TITULO + 10 + 1.25 * F_TITULO * linhas_extra) / 72 / fig.get_figheight(), subtitulo,
              fontsize=F_SUB, color=TEXTO_2, va="top")
     fig.text(0.99, 0.008, NOTA, fontsize=F_NOTA, color=TEXTO_2, ha="right", va="bottom", style="italic")
 
@@ -438,10 +441,10 @@ def fig_resumo(resumo: pd.DataFrame) -> plt.Figure:
         frase = r.muda if r.muda.startswith("η") else r.muda[0].upper() + r.muda[1:]
         ax.text(0.74, i + 0.5, "\n".join(textwrap.wrap(frase, 34)), fontsize=F_EIXO, color=TEXTO,
                 va="center", linespacing=1.35)
-    cabecalho(fig, "Haste: vencedor estável. Scaffold: estável nos pesos, sensível aos dados. "
-                   "Stent: sensível aos dados e aos pesos",
+    cabecalho(fig, "Haste: vencedor estável. Stent: sensível aos dados e aos pesos.\n"
+                   "Scaffold: estável a pequenas variações dos pesos, sensível aos dados e ao foco no problema",
               "Resumo dos três casos quantitativos: vencedor por método no cenário A (η = 1), robustez no "
-              "Monte Carlo das propriedades\ne cenários de sensibilidade em que o vencedor muda.", topo=0.83)
+              "Monte Carlo das propriedades\ne cenários de sensibilidade em que o vencedor muda.", topo=0.79)
     return fig
 
 

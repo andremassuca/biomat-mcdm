@@ -1,0 +1,21 @@
+caso_componente,problema,criterio,ligacao,justificacao
+Prótese da anca | Par articular,Desgaste e libertação de partículas,Taxa de desgaste linear,direta,Partículas de desgaste do polietileno: osteólise e descolamento
+Prótese da anca | Par articular,Desgaste e libertação de partículas,Segurança iónica / risco ALTR (ordinal 1-5),direta,"Iões e partículas metálicas; também critério de triagem (≥ 2, exclui o MoM)"
+Prótese da anca | Par articular,Desgaste e libertação de partículas,Compatibilidade galvânica cabeça-cone (ordinal 1-5),direta,Corrosão por fretting na junção cabeça-cone liberta iões e partículas
+Prótese da anca | Par articular,Desgaste e libertação de partículas,Dureza da cabeça,indireta,Riscos por terceiro corpo aceleram o desgaste do contraface
+Prótese da anca | Par articular,Desgaste e libertação de partículas,Compatibilidade com esterilização (ordinal 1-5),indireta,A oxidação do polietileno irradiado acelera o desgaste
+Prótese da anca | Haste femoral,Desgaste e libertação de partículas,Resistência à corrosão (ordinal 1-5),direta,Libertação iónica da haste
+Implante dentário,Integração com o osso,Evidência clínica de osteointegração (ordinal 1-5),direta,Função principal do implante
+Implante dentário,Integração com o osso,Módulo de Young,indireta,Transferência de carga ao osso e perda óssea marginal
+Stent vascular,Resistência mecânica,Índice material de recuo elástico σy/E (proxy),direta,Recuo elástico depois da expansão
+Stent vascular,Resistência mecânica,Alongamento na rotura,direta,Expansão sem fratura
+Stent vascular,Resistência mecânica,Resistência à tração,direta,Resistência radial e fadiga pulsátil
+Stent vascular,Resistência mecânica,Módulo de Young,direta,Rigidez radial com struts finos
+Stent vascular,Biocompatibilidade,Espessura típica de strut,direta,Struts finos: menos reestenose e trombose (propriedade do dispositivo)
+Stent vascular,Biocompatibilidade,Tempo de reabsorção (só cenário B),indireta,Presença permanente vs reabsorção; só no cenário B
+Scaffold (regeneração óssea),Suporte celular,Porosidade,direta,"Poros interligados para adesão, migração e vascularização"
+Scaffold (regeneração óssea),Suporte celular,Bioatividade (ordinal 1-5),direta,Osteocondução e ligação ao osso
+Scaffold (regeneração óssea),Degradação controlada,Tempo de degradação,direta,Acompanhar a formação de osso novo
+Scaffold (regeneração óssea),Suporte celular,Imprimibilidade 3D (ordinal 1-5),indireta,Controlo da arquitetura dos poros
+Scaffold (regeneração óssea),Suporte celular,Resistência à compressão (scaffold),indireta,Suporte mecânico enquanto o osso se forma (leitura ampla)
+Scaffold (regeneração óssea),Suporte celular,Módulo de compressão (scaffold),indireta,Suporte mecânico enquanto o osso se forma (leitura ampla)

@@ -3,7 +3,7 @@ import numpy as np
 import pytest
 
 from biomat_mcdm.io import DecisionProblem, build_problem
-from biomat_mcdm.robustness import (alargar_valores_unicos, com_alvo, com_eta, com_peso, monte_carlo,
+from biomat_mcdm.robustness import (alargar_valores_unicos, com_alvo, com_eta, com_foco, com_peso, monte_carlo,
                                     pct_posicao, pct_primeiro, posicoes, rank_agreement, sample_matrix, sample_weights,
                                     sem_ordinais)
 
@@ -119,3 +119,14 @@ def test_monte_carlo_com_incerteza_de_valor_unico_varia_so_nas_propriedades():
     assert 0 < pct_primeiro(com)[0] < 100  # com ±10 % a ordem de A e B passa a mudar
     pesos = monte_carlo(p, "TOPSIS", n_iter=20, seed=3, variar="pesos", incerteza_valor_unico=0.10)
     assert pesos.shape == (20, 2)
+
+
+def test_com_foco_duplica_e_renormaliza():
+    p = problema()  # pesos 0,6 e 0,4
+    q = com_foco(p, ["c2 (ordinal 1-5)"], 2.0)
+    assert q.weights == pytest.approx([0.6 / 1.4, 0.8 / 1.4])
+    assert com_foco(p, ["c1", "não existe"], 2.0).weights == pytest.approx([1.2 / 1.6, 0.4 / 1.6])
+    with pytest.raises(ValueError):
+        com_foco(p, ["não existe"])
+    with pytest.raises(ValueError):
+        com_foco(p, ["c1"], 0)

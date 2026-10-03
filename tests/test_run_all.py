@@ -28,6 +28,7 @@ def test_variantes_por_cenario():
     assert len(ra.variantes("R-sentinela", "Stent")) == 4
     assert len(ra.variantes("T-scaffold", "Scaffold")) == 8
     assert len(ra.variantes("C-custo", "Scaffold")) == 2
+    assert [v for v, _ in ra.variantes("P-foco", "Stent")] == ["direta", "direta + indireta"]
     assert ra.variantes("MC", "Haste") == []
 
 
@@ -70,3 +71,22 @@ def test_resumo_tem_as_seccoes(saida):
         assert f"## {caso}" in texto
     assert "Onde o vencedor muda" in texto
     assert "% de 1.º lugar" in texto
+
+
+def test_p_foco_aumenta_o_peso_do_problema_e_soma_1():
+    base = ra.build_problem(ra.CASOS["Scaffold"], "A")
+    (_, d), (_, di) = ra.variantes("P-foco", "Scaffold")
+    j = base.criteria.index("Porosidade")
+    k = base.criteria.index("Módulo de compressão (scaffold)")
+    assert d.weights.sum() == pytest.approx(1) and di.weights.sum() == pytest.approx(1)
+    assert d.weights[j] > base.weights[j] and d.weights[k] < base.weights[k]  # módulo é indireto
+    assert di.weights[k] > d.weights[k]
+
+
+def test_par_articular_semiquantitativo_a_parte():
+    par = ra.par_articular_linhas()
+    assert set(par["caso"]) == {"Par articular"}
+    assert set(zip(par["cenario"], par["variante"])) == {("A", "A"), ("P-foco", "direta"),
+                                                         ("P-foco", "direta + indireta")}
+    texto = "\n".join(ra.par_articular_md(par))
+    assert "SEMIQUANTITATIVO" in texto

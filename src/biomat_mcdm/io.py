@@ -64,6 +64,26 @@ def load_parametros(data_dir: Path = DATA) -> dict[str, float]:
     return {r.parametro: float(r.valor) for r in p.itertuples()}
 
 
+def load_problemas(data_dir: Path = DATA) -> pd.DataFrame:
+    """Mapa problema crítico → critérios (data/problemas_criticos.csv).
+
+    Em linguagem simples: para cada caso, diz que critérios respondem ao problema crítico
+    indicado pelo professor e se a ligação é direta ou indireta.
+    """
+    return pd.read_csv(data_dir / "problemas_criticos.csv")
+
+
+def criterios_do_problema(case: str, ligacoes: tuple[str, ...] = ("direta",),
+                          data_dir: Path = DATA) -> list[str]:
+    """Critérios ligados ao problema crítico de um caso, só com as ligações pedidas.
+
+    Devolve o nome da propriedade, como em DecisionProblem.criteria (sem "(só cenário B)").
+    """
+    m = load_problemas(data_dir)
+    m = m[(m["caso_componente"] == case) & m["ligacao"].isin(ligacoes)]
+    return list(dict.fromkeys(m["criterio"].str.replace(r" \(só cenário B\)", "", regex=True)))
+
+
 def _pior_observado(sub: pd.DataFrame, tipo: str, alvo: float | None) -> float:
     """Pior valor observado num critério: o mais afastado do alvo, o maior (custo) ou o menor (benefício)."""
     vals = pd.concat([sub["min"], sub["max"]]).dropna().to_numpy(float)

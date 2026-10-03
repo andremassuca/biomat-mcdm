@@ -167,3 +167,20 @@ def com_peso(problem: DecisionProblem, criterio: str, peso: float) -> DecisionPr
     resto = np.delete(w, j)
     w = np.insert(resto / resto.sum() * (1 - peso), j, peso)
     return replace(problem, weights=w)
+
+
+def com_foco(problem: DecisionProblem, criterios: list[str], fator: float = 2.0) -> DecisionProblem:
+    """Cenário P-foco: multiplica por `fator` o peso dos critérios dados e renormaliza (soma 1).
+
+    Em linguagem simples: dá mais importância aos critérios ligados ao problema crítico do
+    dispositivo; os outros critérios perdem peso na mesma proporção. Critérios da lista que
+    não existem no problema (ex.: só entram no cenário B) são ignorados.
+    """
+    if fator <= 0:
+        raise ValueError("fator tem de ser positivo")
+    idx = [j for j, c in enumerate(problem.criteria) if c in set(criterios)]
+    if not idx:
+        raise ValueError("nenhum dos critérios do foco existe no problema")
+    w = problem.weights.copy()
+    w[idx] *= fator
+    return replace(problem, weights=w / w.sum())

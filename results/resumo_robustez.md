@@ -31,6 +31,8 @@ Vencedor no cenário A: TOPSIS Ti-6Al-4V ELI; WASPAS Ti-6Al-4V ELI; VIKOR Ti-6Al
 | T-haste | módulo como custo | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,70 |
 | C-custo | custo baixo (0,01) | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,30 |
 | C-custo | custo elevado (0,25) | Aço inox 316L | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,60 |
+| P-foco | direta | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,70 |
+| P-foco | direta + indireta | Ti-6Al-4V ELI | Ti-6Al-4V ELI | Ti-6Al-4V ELI | 0,70 |
 
 ### Monte Carlo: % de 1.º lugar
 
@@ -88,6 +90,8 @@ Vencedor no cenário A: TOPSIS Pt-Cr; WASPAS Co-Cr L605; VIKOR Pt-Cr
 | η | η = 1,0 | Pt-Cr | Co-Cr L605 | Pt-Cr | 0,80 |
 | C-custo | custo baixo (0,01) | Pt-Cr | Co-Cr L605 | Pt-Cr | 0,80 |
 | C-custo | custo elevado (0,25) | Co-Cr L605 | Aço inox 316L | Co-Cr L605 | 0,40 |
+| P-foco | direta | Pt-Cr | Co-Cr L605 | Pt-Cr | 0,80 |
+| P-foco | direta + indireta | Pt-Cr | Co-Cr L605 | Pt-Cr | 0,80 |
 
 ### Monte Carlo: % de 1.º lugar
 
@@ -179,6 +183,8 @@ Vencedor no cenário A: TOPSIS Compósito PCL/β-TCP (impressão 3D); WASPAS Com
 | T-scaffold | Tempo de degradação: x2,0 | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | 0,70 |
 | C-custo | custo baixo (0,01) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | 0,90 |
 | C-custo | custo elevado (0,25) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | 0,90 |
+| P-foco | direta | β-TCP poroso | Compósito PCL/β-TCP (impressão 3D) | β-TCP poroso | 0,80 |
+| P-foco | direta + indireta | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | Compósito PCL/β-TCP (impressão 3D) | 0,90 |
 
 ### Monte Carlo: % de 1.º lugar
 
@@ -207,6 +213,16 @@ Vencedor no cenário A: TOPSIS Compósito PCL/β-TCP (impressão 3D); WASPAS Com
 - T-scaffold, Resistência à compressão: 2, TOPSIS: Compósito PCL/β-TCP (impressão 3D) → β-TCP poroso
 - T-scaffold, Resistência à compressão: 2, WASPAS: Compósito PCL/β-TCP (impressão 3D) → β-TCP poroso
 - T-scaffold, Resistência à compressão: 2, VIKOR: Compósito PCL/β-TCP (impressão 3D) → β-TCP poroso
+- P-foco, direta, TOPSIS: Compósito PCL/β-TCP (impressão 3D) → β-TCP poroso
+- P-foco, direta, VIKOR: Compósito PCL/β-TCP (impressão 3D) → β-TCP poroso
+
+## Par articular (SEMIQUANTITATIVO: ordinais > 50 % do peso; só sensibilidade)
+
+| Cenário | Variante | TOPSIS | WASPAS | VIKOR |
+|---|---|---|---|---|
+| A | A | ZTA / ZTA (CoC) | ZTA / ZTA (CoC) | ZTA / ZTA (CoC) |
+| P-foco | direta | ZTA / ZTA (CoC) | ZTA / ZTA (CoC) | ZTA / ZTA (CoC) |
+| P-foco | direta + indireta | ZTA / ZTA (CoC) | ZTA / ZTA (CoC) | ZTA / ZTA (CoC) |
 
 ## Cenários
 
@@ -222,3 +238,4 @@ Vencedor no cenário A: TOPSIS Compósito PCL/β-TCP (impressão 3D); WASPAS Com
 - **T-haste**: Sensibilidade do alvo de E (inclui 14 GPa, Petković et al. 2025, vs 17 GPa)
 - **C-custo**: Peso do custo relativo baixo (0,01) vs elevado (0,25), restantes pesos redistribuídos
 - **MC**: Incerteza das propriedades
+- **P-foco**: Foco no problema crítico do professor (2 out 2026): peso dos critérios de ligação direta x2 (fator_foco_problema), restantes renormalizados; sensibilidade: direta + indireta (data/problemas_criticos.csv). Par articular: sensibilidade semiquantitativa à parte

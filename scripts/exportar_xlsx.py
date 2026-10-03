@@ -75,6 +75,7 @@ def construir(data_dir: Path = DATA) -> Workbook:
     _folha_tabela(wb, "Cenarios", pd.read_csv(data_dir / "cenarios.csv"), filtros=False)
     _folha_tabela(wb, "Tecido", pd.read_csv(data_dir / "tecido.csv"))
     _folha_tabela(wb, "Parametros", pd.read_csv(data_dir / "parametros.csv"), filtros=False)
+    _folha_tabela(wb, "Problemas_criticos", pd.read_csv(data_dir / "problemas_criticos.csv"))
     return wb
 
 
