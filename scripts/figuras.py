@@ -11,6 +11,7 @@ Gera em results/figures/ (PNG a 300 dpi e SVG):
   fig_c2_monte_carlo_completo  % de 1.º, 2.º e 3.º lugar (anexo)
   fig_d_vencedor_eta           vencedor em função de η, por método
   fig_e_resumo                 uma linha por caso: vencedor, Monte Carlo e o que o muda
+  fig_f_semiquantitativos      matriz de valores por critério do par articular e do implante dentário
 Uso: python scripts/figuras.py
 """
 from __future__ import annotations
@@ -27,8 +28,8 @@ from matplotlib.patches import Patch, Rectangle
 import pandas as pd
 
 from biomat_mcdm.indices import stiffness_ratio
-from biomat_mcdm.io import DATA
-from biomat_mcdm.pipeline import METODOS, fmt_pt
+from biomat_mcdm.io import DATA, build_problem
+from biomat_mcdm.pipeline import METODOS, fmt_pt, rank_all_methods
 
 RESULTS = Path(__file__).resolve().parents[1] / "results"
 NOTA = "Preliminar: dados em verificação"
@@ -459,13 +460,72 @@ def gravar(fig: plt.Figure, nome: str, pasta: Path) -> list[Path]:
 
 
 def todas(rk: pd.DataFrame, pt: pd.DataFrame, mc: pd.DataFrame, data_dir: Path = DATA) -> dict[str, plt.Figure]:
-    """As seis figuras, por nome de ficheiro."""
+    """As sete figuras, por nome de ficheiro."""
     return {"fig_a_rigidez_haste": fig_rigidez(*dados_rigidez(data_dir)),
             "fig_b_posicoes": fig_posicoes(rk, pt),
             "fig_c_monte_carlo": fig_monte_carlo(mc),
             "fig_c2_monte_carlo_completo": fig_monte_carlo_completo(mc),
             "fig_d_vencedor_eta": fig_vencedor_eta(rk),
-            "fig_e_resumo": fig_resumo(dados_resumo(rk, mc))}
+            "fig_e_resumo": fig_resumo(dados_resumo(rk, mc)),
+            "fig_f_semiquantitativos": fig_semiquantitativos(data_dir)}
+
+
+def dados_semiquantitativos(caso: str, data_dir: Path = DATA) -> tuple[pd.DataFrame, pd.DataFrame, list[float]]:
+    """Matriz de valores de um caso semiquantitativo (cenário A) e a nota de 0 a 1 de cada célula.
+
+    Em linguagem simples: para cada critério, 1 é o melhor material e 0 o pior (benefício: o
+    maior; custo: o menor; alvo: o mais perto do alvo). As linhas seguem a posição no TOPSIS.
+    Devolve (valores, notas, pesos), com as colunas pela ordem dos critérios.
+    """
+    p = build_problem(caso, "A", data_dir)
+    ordem = rank_all_methods(p).sort_values("pos_TOPSIS")["material"].tolist()
+    valores = pd.DataFrame(p.X, index=p.alternatives, columns=p.criteria).loc[ordem]
+    notas = valores.copy()
+    for j, (c, t, alvo) in enumerate(zip(p.criteria, p.types, p.targets)):
+        x = valores[c]
+        d = (x - alvo).abs() if t == "target" else (-x if t == "cost" else x)
+        if t == "target":
+            d = -d
+        amp = d.max() - d.min()
+        notas[c] = (d - d.min()) / amp if amp > 0 else 1.0
+    return valores, notas, list(p.weights)
+
+
+def rotulo_criterio(c: str, peso: float) -> str:
+    """Nome curto do critério, em duas linhas, com o peso."""
+    c = (c.replace(" (ordinal 1-5)", " (ord.)").replace("Custo relativo de material e fabrico (1-5, 5 = mais caro)",
+                                                         "Custo relativo (ord.)")
+         .replace("Compatibilidade", "Compat.").replace("Evidência clínica de osteointegração", "Osteointegração")
+         .replace("Resistência à corrosão em meio oral", "Corrosão em meio oral")
+         .replace("Maquinabilidade / fabricabilidade", "Maquinabilidade").replace("Segurança iónica / risco ALTR", "Segurança iónica"))
+    return "\n".join(textwrap.wrap(c, 13, break_long_words=False)) + f"\n({fmt_pt(peso, 2)})"
+
+
+def fig_semiquantitativos(data_dir: Path = DATA) -> plt.Figure:
+    casos = {"Par articular": "Prótese da anca | Par articular", "Implante dentário": "Implante dentário"}
+    dados = {k: dados_semiquantitativos(v, data_dir) for k, v in casos.items()}
+    fig, eixos = plt.subplots(len(dados), 1, figsize=(17, 12),
+                              gridspec_kw={"height_ratios": [len(d[0]) + 1.6 for d in dados.values()]})
+    cmap = LinearSegmentedColormap.from_list("nota", ["#f3f2ef", "#1f5fb0"])
+    for ax, (nome, (val, nota, pesos)) in zip(eixos, dados.items()):
+        ax.imshow(nota.to_numpy(float), cmap=cmap, vmin=0, vmax=1, aspect="auto")
+        for i in range(val.shape[0]):
+            for j in range(val.shape[1]):
+                v = val.iat[i, j]
+                txt = f"{v:g}".replace(".", ",") if abs(v) >= 0.01 else fmt_pt(v, 4)
+                ax.text(j, i, txt, ha="center", va="center", fontsize=F_EIXO - 1,
+                        color=cor_texto(cmap(float(nota.iat[i, j]))))
+        ax.set_xticks(range(val.shape[1]), [rotulo_criterio(c, w) for c, w in zip(val.columns, pesos)],
+                      fontsize=F_EIXO - 4)
+        ax.xaxis.tick_top()
+        ax.set_yticks(range(val.shape[0]), [curto(m) for m in val.index])
+        limpar(ax)
+        ax.set_title(nome, fontsize=F_EIXO + 1, color=TEXTO, loc="left", fontweight="bold", pad=62)
+    cabecalho(fig, "Semiquantitativos: as escalas ordinais pesam mais de metade; o ranking é só uma indicação",
+              "Valor de cada material por critério (cenário A; peso entre parênteses). Cor: do pior (claro) ao melhor "
+              "(escuro) em cada critério;\nlinhas pela posição no TOPSIS. Par articular: desgaste em mm/ano, "
+              "dureza em HV; implante dentário: módulo em GPa e K_IC em MPa·m^0,5.", topo=0.90)
+    return fig
 
 
 def main() -> None:

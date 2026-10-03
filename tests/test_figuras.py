@@ -126,9 +126,20 @@ def test_figuras_gravam_png_e_svg(saida, tmp_path):
     rk, mc, pt = saida
     figs = fg.todas(rk, pt, mc)
     assert list(figs) == ["fig_a_rigidez_haste", "fig_b_posicoes", "fig_c_monte_carlo",
-                          "fig_c2_monte_carlo_completo", "fig_d_vencedor_eta", "fig_e_resumo"]
+                          "fig_c2_monte_carlo_completo", "fig_d_vencedor_eta", "fig_e_resumo",
+                          "fig_f_semiquantitativos"]
     for nome, fig in figs.items():
         caminhos = fg.gravar(fig, nome, tmp_path)
         assert [c.suffix for c in caminhos] == [".png", ".svg"]
         assert all(c.stat().st_size > 0 for c in caminhos)
     assert plt.get_fignums() == []
+
+
+def test_semiquantitativos_notas_de_0_a_1_e_ordem_do_topsis():
+    val, nota, pesos = fg.dados_semiquantitativos("Implante dentário")
+    assert val.index[0] == "Ti cp grau 4"
+    assert ((nota >= 0) & (nota <= 1)).all().all() and sum(pesos) == pytest.approx(1)
+    j = "Evidência clínica de osteointegração (ordinal 1-5)"
+    assert nota.loc["Ti cp grau 4", j] == 1 and nota.loc["PEEK", j] == 0
+    m = "Módulo de Young"  # alvo 15 GPa: o PEEK (3,5) é o mais perto
+    assert nota[m].idxmax() == "PEEK"
