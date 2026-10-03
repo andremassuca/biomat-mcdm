@@ -103,7 +103,7 @@ Células a verificar: 39 (0 mudam o vencedor com ±20 %).
 | 2 | A | Vidro bioativo 45S5 poroso | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 5,0000 | 0,025 | 0,029 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
 | 3 | B | Quitosano/HA (liofilizado) | Bioatividade (ordinal 1-5) | ordinal | 3,0000 | 0,022 | 0,022 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
 | 4 | A | Compósito PCL/β-TCP (impressão 3D) | Resistência à compressão (scaffold) | quantitativo | 4,3000 | 0,020 | 0,020 | não | Kawai T et al. J Orthop Res 2018;36:1002-1011; Wong WS et al. Cureus 2025;17:e86272 |
-| 5 | A | Compósito PCL/β-TCP (impressão 3D) | Imprimibilidade 3D (ordinal 1-5) | ordinal | 5,0000 | 0,019 | 0,019 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
+| 5 | A | Compósito PCL/β-TCP (impressão 3D) | Imprimibilidade 3D (ordinal 1-5) | ordinal | 5,0000 | 0,020 | 0,020 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
 | 6 | A | PCL | Compatibilidade com esterilização (ordinal 1-5) | ordinal | 3,0000 | 0,019 | 0,029 | não | ISO 11137 (radiação) / ISO 11135 (EtO); Kurtz 2016 para UHMWPE: confirmar |
 | 7 | A | PCL | Imprimibilidade 3D (ordinal 1-5) | ordinal | 5,0000 | 0,018 | 0,018 | não | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |
 | 8 | A | PCL | Resistência à compressão (scaffold) | quantitativo | 6,0000 | 0,018 | 0,024 | não | Woodruff MA, Hutmacher DW. Prog Polym Sci 2010;35:1217-1256 (PCL) |

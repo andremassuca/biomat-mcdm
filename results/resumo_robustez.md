@@ -202,8 +202,8 @@ Vencedor no cenário A: TOPSIS Compósito PCL/β-TCP (impressão 3D); WASPAS Com
 
 | Material | TOPSIS | WASPAS | VIKOR |
 |---|---|---|---|
-| Compósito PCL/β-TCP (impressão 3D) | 95,9 % | 100,0 % | 99,6 % |
-| β-TCP poroso | 4,1 % | 0,0 % | 0,4 % |
+| Compósito PCL/β-TCP (impressão 3D) | 95,7 % | 100,0 % | 99,6 % |
+| β-TCP poroso | 4,3 % | 0,0 % | 0,4 % |
 | Hidroxiapatite (HA) porosa | 0,0 % | 0,0 % | 0,0 % |
 | PCL | 0,0 % | 0,0 % | 0,0 % |
 | Vidro bioativo 45S5 poroso | 0,0 % | 0,0 % | 0,0 % |

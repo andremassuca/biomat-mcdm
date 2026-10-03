@@ -1,4 +1,4 @@
-# Scaffold ósseo: export de dados (commit 3ec4143, 03/10/2026)
+# Scaffold ósseo: export de dados (commit 65551f3, 03/10/2026)
 
 Gerado por scripts/exportar_caso.py a partir de data/, src/ e results/. Só dados.
 
@@ -89,7 +89,7 @@ Referência de tecido (tecido.csv, osso trabecular):
 | Quitosano/HA (liofilizado) | Imprimibilidade 3D (ordinal 1-5) | - | 2 | 2 | 2 |  | Bergonzi C et al. Sci Rep 2019;9:362 | https://doi.org/10.1038/s41598-018-36613-8 | Verificado |
 | Vidro bioativo 45S5 poroso | Imprimibilidade 3D (ordinal 1-5) | - | 2 | 2 | 2 |  | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |  | A verificar |
 | β-TCP poroso | Imprimibilidade 3D (ordinal 1-5) | - | 2 | 2 | 2 |  | Escala ordinal definida no trabalho (rubrica em LEIA-ME): justificar com literatura |  | A verificar |
-| Compósito PCL/β-TCP (impressão 3D) | Módulo de compressão (scaffold) | MPa | 35,7 | 22,2 | 51,5 |  | Reichert JC et al. Int Orthop 2011;35:1229-1236; Wang Y et al. Heliyon 2024;10:e26071 (Tabela 3); Kawai T et al. J Orthop Res 2018;36:1002-1011 | https://doi.org/10.1007/s00264-010-1146-x | Verificado |
+| Compósito PCL/β-TCP (impressão 3D) | Módulo de compressão (scaffold) | MPa | 23,1 | 22,2 | 51,5 |  | Reichert JC et al. Int Orthop 2011;35:1229-1236; Kawai T et al. J Orthop Res 2018;36:1002-1011 | https://doi.org/10.1007/s00264-010-1146-x | Verificado |
 | Hidroxiapatite (HA) porosa | Módulo de compressão (scaffold) | MPa | 1750 | 500 | 3000 |  | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |  | A verificar |
 | PCL | Módulo de compressão (scaffold) | MPa | 50 | 20 | 80 |  | Woodruff MA, Hutmacher DW. Prog Polym Sci 2010;35:1217-1256 (PCL) |  | A verificar |
 | PLGA 50:50 | Módulo de compressão (scaffold) | MPa | 35 | 10 | 60 |  | Rezwan K et al. Biomaterials 2006;27:3413-3431 (scaffolds ósseos) |  | A verificar |
@@ -132,13 +132,13 @@ Critérios: Resistência à compressão (scaffold); Módulo de compressão (scaf
 
 | Material | TOPSIS C (pos.) | WASPAS Q (pos.) | VIKOR P, menor = melhor (pos.) |
 |---|---|---|---|
-| Compósito PCL/β-TCP (impressão 3D) | 0,628 (1) | 0,746 (1) | 0 (1) |
-| β-TCP poroso | 0,577 (2) | 0,64 (3) | 0,48 (2) |
+| Compósito PCL/β-TCP (impressão 3D) | 0,628 (1) | 0,745 (1) | 0 (1) |
+| β-TCP poroso | 0,577 (2) | 0,641 (3) | 0,479 (2) |
 | Vidro bioativo 45S5 poroso | 0,537 (3) | 0,575 (4) | 0,697 (4) |
-| PCL | 0,525 (4) | 0,648 (2) | 0,684 (3) |
-| Hidroxiapatite (HA) porosa | 0,436 (5) | 0,463 (5) | 1 (5) |
+| PCL | 0,525 (4) | 0,648 (2) | 0,683 (3) |
+| Hidroxiapatite (HA) porosa | 0,436 (5) | 0,464 (5) | 1 (5) |
 
-ΔC 1.º-2.º (TOPSIS) = 0,052 (regra: < 0,01 = empate)
+ΔC 1.º-2.º (TOPSIS) = 0,051 (regra: < 0,01 = empate)
 
 ### Cenário B
 
@@ -146,11 +146,11 @@ Critérios: Resistência à compressão (scaffold); Módulo de compressão (scaf
 
 | Material | TOPSIS C (pos.) | WASPAS Q (pos.) | VIKOR P, menor = melhor (pos.) |
 |---|---|---|---|
-| Compósito PCL/β-TCP (impressão 3D) | 0,676 (1) | 0,746 (1) | 0 (1) |
-| β-TCP poroso | 0,59 (2) | 0,651 (3) | 0,406 (2) |
-| PCL | 0,558 (3) | 0,667 (2) | 0,632 (4) |
-| Vidro bioativo 45S5 poroso | 0,554 (4) | 0,596 (5) | 0,578 (3) |
-| PLLA | 0,516 (5) | 0,625 (4) | 0,752 (5) |
+| Compósito PCL/β-TCP (impressão 3D) | 0,676 (1) | 0,745 (1) | 0 (1) |
+| β-TCP poroso | 0,59 (2) | 0,651 (3) | 0,404 (2) |
+| PCL | 0,558 (3) | 0,667 (2) | 0,631 (4) |
+| Vidro bioativo 45S5 poroso | 0,554 (4) | 0,596 (5) | 0,576 (3) |
+| PLLA | 0,516 (5) | 0,625 (4) | 0,751 (5) |
 | Hidroxiapatite (HA) porosa | 0,47 (6) | 0,466 (7) | 0,862 (6) |
 | Quitosano/HA (liofilizado) | 0,453 (7) | 0,411 (8) | 0,981 (7) |
 | PLGA 50:50 | 0,424 (8) | 0,498 (6) | 1 (8) |
@@ -210,8 +210,8 @@ Vencedor no cenário A: TOPSIS Compósito PCL/β-TCP (impressão 3D); WASPAS Com
 
 | Material | TOPSIS | WASPAS | VIKOR |
 |---|---|---|---|
-| Compósito PCL/β-TCP (impressão 3D) | 95,9 % | 100,0 % | 99,6 % |
-| β-TCP poroso | 4,1 % | 0,0 % | 0,4 % |
+| Compósito PCL/β-TCP (impressão 3D) | 95,7 % | 100,0 % | 99,6 % |
+| β-TCP poroso | 4,3 % | 0,0 % | 0,4 % |
 | Hidroxiapatite (HA) porosa | 0,0 % | 0,0 % | 0,0 % |
 | PCL | 0,0 % | 0,0 % | 0,0 % |
 | Vidro bioativo 45S5 poroso | 0,0 % | 0,0 % | 0,0 % |
@@ -294,6 +294,8 @@ Células a verificar: 39 (0 mudam o vencedor com ±20 %).
   Everolimus-Eluting Bioresorbable Coronary Scaffolds: The ABSORB III Trial. J Am Coll Cardiol 2017;70:2852-2862,
   Three-year outcomes of bioresorbable vascular scaffolds versus second-generation drug-eluting stents. Medicine
   bioresorbable scaffold. J Thorac Dis 2017;9(Suppl 9):S903-S913, doi:10.21037/jtd.2017.06.34 (revisão, texto
+- Não encontrada: a referência "Chua 2025" do rascunho do chat (sem registo na Crossref com esse autor e tema); substituída a 3 out 2026 por Lodewijks et al. Cureus 2024;16(8):e66256, doi:10.7759/cureus.66256 (defeitos tibiais muito grandes tratados com PCL/TCP impresso; confirmado na Crossref), na discussão (8.5) e no caso do scaffold.
+- Heliyon 2025, "Editor Note" sobre Wang Y et al. Heliyon 2024;10:e26071 (doi:10.1016/j.heliyon.2025.e44205), usado no módulo do PCL/β-TCP: conteúdo não lido (página com acesso bloqueado); verificar se é correção ou manifestação de preocupação.
 - [ ] Estatuto clínico dos 8 materiais do scaffold (Clínico (substituto ósseo) / Clínico (uso limitado) / Investigação), proposto a 28 set 2026; fonte a verificar indicada na coluna notas de data/materiais.csv (Rezwan et al. 2006, Bose et al. 2012, Hench 1991, Woodruff & Hutmacher 2010, Athanasiou et al. 1996, base 510(k) da FDA; PCL/β-TCP e quitosano/HA sem fonte).
 
 leia_me.md:
