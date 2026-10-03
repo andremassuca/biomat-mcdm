@@ -19,9 +19,9 @@ REFERENCIAS = RAIZ / "relatorio" / "referencias.md"
 TEXTOS = ["resumo_rascunho.md", "introducao_rascunho.md", "metodos_rascunho.md", "validacao_rascunho.md",
           "caso_anca_rascunho.md", "caso_stent_rascunho.md", "caso_scaffold_rascunho.md",
           "caso_dentario_rascunho.md", "discussao_rascunho.md", "conclusao_rascunho.md",
-          "anexo_a_equacoes.md", "glossario.md"]
+          "anexo_a_equacoes.md", "glossario.md", "tabelas/comparacao_estudos.md"]
 
-_NOME = r"(?:(?:Le|De|Van|van|de) )?[A-ZÁÉÍÓÚÂÊÔÃÕÇÅÖÜ][\w'’\-]+"
+_NOME = r"(?:(?:Le|De|Van) )?[A-ZÁÉÍÓÚÂÊÔÃÕÇÅÖÜ][\w'’\-]+"
 CITACAO = re.compile(rf"\b(?P<nome>{_NOME})(?P<meio> et al\.,?| e {_NOME}| & {_NOME})?,? (?P<ano>(?:19|20)\d\d)\b")
 ENTRADA = re.compile(r"^- \[(?P<chave>[^\]]+)\] (?P<texto>.+)$")
 

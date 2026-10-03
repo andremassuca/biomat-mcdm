@@ -942,17 +942,36 @@ As escolhas do modelo coincidem, em geral, com a prática clínica atual, o que 
 - **Scaffold:** os substitutos ósseos sintéticos mais usados na clínica são fosfatos de cálcio, como o β-TCP e a hidroxiapatite, e os compósitos impressos começam a ter uso clínico (Lodewijks et al. [36]; Lodewijks et al. [37]). O modelo coloca o compósito à frente quando o suporte mecânico conta, e o β-TCP quando só contam o suporte celular e a degradação.
 - **Implante dentário:** o titânio comercialmente puro continua a ser a referência, e a zircónia é uma alternativa sobretudo estética, como no modelo.
 
-## 8.6 Enquadramento regulamentar e disponibilidade
+## 8.6 Comparação com estudos anteriores
+
+A Tabela 12 compara este trabalho com estudos publicados de seleção de materiais para implantes por métodos multicritério. Os critérios-alvo já tinham sido usados antes (Petković et al. [4]; Hafezalkotob e Hafezalkotob [71]), mas três aspetos distinguem este trabalho:
+- **Verificação dos dados:** os estudos analisados usam valores de revisões ou de estudos anteriores, sem indicar verificação na fonte original. Aqui, os valores com mais influência no resultado foram verificados em fontes primárias, com regras explícitas para a forma do produto e para a porosidade.
+- **Robustez:** os estudos analisados limitam-se a variar os pesos ou o esquema de pesos. Aqui combinou-se a simulação de Monte Carlo das propriedades e dos pesos com vários cenários de sensibilidade, o que permitiu separar os resultados sólidos (haste femoral) dos frágeis (stent).
+- **Validação da implementação:** nenhum dos estudos analisados reproduz numericamente um resultado publicado. Aqui, a implementação foi validada contra Petković et al. (2025), e essa reprodução revelou uma incoerência nos dados do artigo.
+
+Na pesquisa efetuada (Crossref e PubMed), não se encontraram estudos de seleção do material de stents coronários por métodos multicritério, o que torna esse caso uma aplicação nova destes métodos.
+
+**Tabela 12.** Comparação com estudos publicados de seleção de materiais para implantes por métodos multicritério ("não indicado": informação não encontrada no texto lido).
+
+| Estudo | Dispositivo | Materiais e critérios | Métodos | Critérios-alvo | Verificação dos dados | Robustez | Validação da implementação |
+|---|---|---|---|---|---|---|---|
+| Petković et al. [4] | placa de fixação óssea; corpo da haste femoral | 15 materiais metálicos; 10 critérios em cada caso | TOPSIS, VIKOR e WASPAS estendidos | sim (módulo de Young, alvo de 14 GPa) | valores da literatura, sem verificação indicada na fonte original | nível de confiança η de 0,7 a 1 | dois casos de estudo e concordância qualitativa com a literatura; sem reprodução numérica |
+| Bahraminasab e Jahan [72] | componente femoral da prótese total do joelho | não indicado | VIKOR abrangente | não indicado | não indicado | sensibilidade dos pesos | não indicado |
+| Hafezalkotob e Hafezalkotob [71] | componente femoral da prótese da anca e do joelho | anca: 11 materiais, 9 critérios | MULTIMOORA com critérios-alvo e dados em intervalos | sim (densidade e módulo de Young) | matriz de um estudo anterior, sem verificação na fonte original | não indicado | comparação das ordenações com outros métodos publicados |
+| Kumar et al. [73] | componente femoral da prótese total do joelho | 11 materiais, 8 critérios | WSM, WPM, WASPAS, EDAS e TOPSIS, combinados | não indicado | não indicado | troca do esquema de pesos (desvio-padrão, entropia, AHP difuso) | não indicado |
+| Este trabalho | haste femoral, par articular, stent coronário, scaffold ósseo, implante dentário | 4 a 8 materiais e 7 a 11 critérios por caso | TOPSIS, WASPAS e VIKOR; consenso de Borda | sim (haste, scaffold, implante dentário e tempo de reabsorção do stent) | 93 dos 300 valores verificados em fontes primárias; regras da forma e da porosidade | Monte Carlo das propriedades e dos pesos; η de 0 a 1; cenários Q, T, C-custo, P-foco e O-orçamento | reprodução numérica do caso 2 de Petković et al. [4] |
+
+## 8.7 Enquadramento regulamentar e disponibilidade
 
 Em Portugal e na União Europeia, os dispositivos estudados estão sujeitos ao Regulamento (UE) 2017/745 relativo aos dispositivos médicos, aplicado em Portugal pelo INFARMED como autoridade competente. Pelas regras de classificação do anexo VIII, as próteses totais da anca e os stents coronários são dispositivos de classe III, os implantes dentários de classe IIb e os substitutos ósseos total ou maioritariamente absorvidos de classe III (regra 8 do anexo VIII). Os dispositivos de classe III exigem avaliação por um organismo notificado, investigação clínica na maioria dos casos e acompanhamento clínico depois da comercialização. O fabricante tem ainda de manter um sistema de gestão da qualidade segundo a ISO 13485 e um processo de gestão do risco segundo a ISO 14971.
 
 Isto tem uma consequência direta para a seleção: um material sem historial clínico no dispositivo em causa, mesmo com melhores propriedades, implica anos de ensaios e de investigação clínica antes de poder ser usado. Foi por isso que os resultados se separaram num cenário A, só com materiais em uso clínico, e num cenário B, que inclui materiais em investigação. Nos Estados Unidos, o percurso equivalente passa pela FDA: os implantes dentários endósseos são de classe II e entram em regra por notificação prévia (510(k); 21 CFR 872.3640), e os dispositivos de classe III, como os stents com eluição de fármaco, por aprovação pré-comercialização (PMA; por exemplo, o XIENCE V, P070015). Quanto à disponibilidade, os materiais propostos para a haste, o par articular, o stent e o implante dentário são usados em dispositivos comercializados na União Europeia, enquanto os compósitos PCL/β-TCP impressos têm, por agora, uso clínico limitado (Lodewijks et al. [37]; Lodewijks et al. [36]).
 
-## 8.7 Material ou dispositivo?
+## 8.8 Material ou dispositivo?
 
-Várias propriedades decisivas são do dispositivo e não do material. A espessura dos struts depende do desenho do stent, e a rigidez de uma haste depende também da sua arquitetura. Um cálculo simples ilustra o alcance desta ideia: pela relação de Gibson e Ashby para materiais celulares, uma estrutura porosa de Ti-6Al-4V com cerca de 60 % de porosidade teria um módulo próximo do osso cortical: com E = E_s (1 − p)², constante C = 1 e E_s = 105,5 GPa (valor típico do Ti-6Al-4V ELI na base), o alvo de 17 GPa obtém-se com p = 59,9 %, e a 60 % de porosidade o módulo é 16,9 GPa (Gibson e Ashby [71], cap. 5). A solução para o stress shielding pode não ser outra liga, mas a mesma liga estruturada, por exemplo por fabrico aditivo.
+Várias propriedades decisivas são do dispositivo e não do material. A espessura dos struts depende do desenho do stent, e a rigidez de uma haste depende também da sua arquitetura. Um cálculo simples ilustra o alcance desta ideia: pela relação de Gibson e Ashby para materiais celulares, uma estrutura porosa de Ti-6Al-4V com cerca de 60 % de porosidade teria um módulo próximo do osso cortical: com E = E_s (1 − p)², constante C = 1 e E_s = 105,5 GPa (valor típico do Ti-6Al-4V ELI na base), o alvo de 17 GPa obtém-se com p = 59,9 %, e a 60 % de porosidade o módulo é 16,9 GPa (Gibson e Ashby [74], cap. 5). A solução para o stress shielding pode não ser outra liga, mas a mesma liga estruturada, por exemplo por fabrico aditivo.
 
-## 8.8 Limitações
+## 8.9 Limitações
 
 - Os valores vêm de estudos diferentes, com métodos de ensaio e formas de produto diferentes; as regras da forma e da porosidade reduzem, mas não eliminam, essa heterogeneidade.
 - Alguns critérios são ordinais, com rubricas definidas neste trabalho; foram mantidos minoritários no peso e testados num cenário sem ordinais.
@@ -960,7 +979,7 @@ Várias propriedades decisivas são do dispositivo e não do material. A espessu
 - Os métodos de normalização dependem do mínimo e do máximo de cada critério, o que pode causar reversão de ranking ao acrescentar ou retirar materiais; observou-se um caso no scaffold.
 - Parte dos valores continua "A verificar", embora, na haste e no scaffold, nenhum dos restantes mude o vencedor com uma variação de ±20 %; no stent, três ainda mudam (alongamento e tração do Pt-Cr e σy/E do L605).
 
-## 8.9 Trabalho futuro
+## 8.10 Trabalho futuro
 
 - Perfis de doente (idade, atividade, osteoporose, alergias, obesidade) que alterem pesos, alvos e exclusões.
 - Custo ao longo da vida, com as taxas de revisão dos registos de artroplastia.
@@ -972,7 +991,7 @@ Várias propriedades decisivas são do dispositivo e não do material. A espessu
 A análise multicritério com critérios-alvo permitiu escolher materiais para cinco componentes implantáveis de forma explícita e reprodutível, e, sobretudo, distinguir as escolhas sólidas das que dependem de dados incertos ou de prioridades.
 
 Principais conclusões:
-- **Haste femoral:** Ti-6Al-4V ELI, com um resultado muito robusto (1.º lugar com os três métodos e em pelo menos 99,99 % das iterações do Monte Carlo). Continua cerca de 6 vezes mais rígido do que o osso cortical; uma estrutura porosa da mesma liga, com cerca de 60 % de porosidade, teria um módulo próximo do osso cortical (pela relação de Gibson e Ashby, o alvo de 17 GPa obtém-se com 59,9 % de porosidade; secção 8.7).
+- **Haste femoral:** Ti-6Al-4V ELI, com um resultado muito robusto (1.º lugar com os três métodos e em pelo menos 99,99 % das iterações do Monte Carlo). Continua cerca de 6 vezes mais rígido do que o osso cortical; uma estrutura porosa da mesma liga, com cerca de 60 % de porosidade, teria um módulo próximo do osso cortical (pela relação de Gibson e Ashby, o alvo de 17 GPa obtém-se com 59,9 % de porosidade; secção 8.8).
 - **Par articular:** cerâmica-cerâmica (ZTA/ZTA) como melhor resposta ao desgaste e à libertação de partículas, sobretudo em doentes jovens e ativos, e cabeça de ZTA contra polietileno altamente reticulado como alternativa com menor risco de fratura e de ruído; o par metal-metal foi excluído por segurança.
 - **Stent coronário:** platina-crómio como escolha de referência, por ser o mais robusto à incerteza dos dados e o mais radiopaco, e cobalto-crómio L605 como alternativa praticamente equivalente; o 1.º lugar do Pt-Cr deve ser confirmado com a fonte primária das suas propriedades mecânicas. O aço 316L de primeira geração ficou em último entre os permanentes.
 - **Scaffold ósseo:** compósito PCL/β-TCP impresso, estável face aos pesos mas sensível à incerteza dos dados. O β-TCP puro mantém-se uma alternativa quando a resistência mecânica é pouco exigida.
@@ -1060,9 +1079,12 @@ Como trabalho futuro propõe-se:
 68. Lamb JN, Sayers A, Wilkinson JM, Pandit H, Whitehouse MR. The association between implant design, age, sex and the rate of major reoperation in patients undergoing primary total hip replacement: A retrospective study of UK National Joint Registry and Hospital Episodes Statistics data. PLoS Med. 2025;22(11):e1004538. doi:10.1371/journal.pmed.1004538.
 69. Brami P, Fischer Q, Pham V, Seret G, Varenne O, Picard F. Evolution of Coronary Stent Platforms: A Brief Overview of Currently Used Drug-Eluting Stents. J Clin Med. 2023;12(21):6711. doi:10.3390/jcm12216711.
 70. Macaya-Ten F, Gonzalo N, Escaned, and J, Macaya C. Inception of the coronary stent: a story of successful collaboration between innovative scientists and the biotechnology industry. REC Interv Cardiol. 2024. doi:10.24875/RECICE.M24000463.
-71. Gibson LJ, Ashby MF. Cellular Solids. 2.ª ed. Cambridge University Press; 1997. doi:10.1017/CBO9781139878326.
+71. Hafezalkotob A, Hafezalkotob A. Interval MULTIMOORA method with target values of attributes based on interval distance and preference degree: biomaterials selection. J Ind Eng Int. 2017;13(2):181-198. doi:10.1007/s40092-016-0176-4.
+72. Bahraminasab M, Jahan A. Material selection for femoral component of total knee replacement using comprehensive VIKOR. Mater Des. 2011;32(8-9):4471-4477. doi:10.1016/j.matdes.2011.03.046.
+73. Kumar R, Dubey R, Singh S, Singh S, Prakash C, Nirsanametla Y, et al. Multiple-Criteria Decision-Making and Sensitivity Analysis for Selection of Materials for Knee Implant Femoral Component. Materials (Basel). 2021;14(8):2084. doi:10.3390/ma14082084.
+74. Gibson LJ, Ashby MF. Cellular Solids. 2.ª ed. Cambridge University Press; 1997. doi:10.1017/CBO9781139878326.
 
-# Normas citadas
+# Normas e legislação citadas
 
 - ASTM F67-24
 - ASTM F136

@@ -97,6 +97,10 @@ def tabela_gerada(nome: str, num: Numerador) -> str:
     chave, tipo = nome.rsplit("_", 1)
     if tipo == "robustez":
         return corpo
+    if nome == "comparacao_estudos":
+        n = num.nova_tabela()
+        return (f"**Tabela {n}.** Comparação com estudos publicados de seleção de materiais para implantes por métodos "
+                f"multicritério (\"não indicado\": informação não encontrada no texto lido).\n\n{corpo}")
     n = num.nova_tabela()
     if tipo == "criterios":
         legenda = f"Critérios, tipo, alvo, peso e justificação: {NOMES_TABELA[chave]}."
@@ -133,6 +137,9 @@ def bloco_figuras(nomes: list[str], num: Numerador) -> str:
 
 
 def substituir_marcadores(texto: str, num: Numerador) -> str:
+    # "Tabela [n]" no texto refere-se à primeira tabela incluída a seguir no mesmo bloco.
+    if "Tabela [n]" in texto:
+        texto = texto.replace("Tabela [n]", f"Tabela {num.tabela + 1}")
     texto = INCLUIR.sub(lambda m: tabela_gerada(m["nome"], num), texto)
     # Figuras seguidas no mesmo bloco: uma só frase de chamada no início.
     return BLOCO_FIGURAS.sub(lambda m: bloco_figuras(FIGURA.findall(m.group(0)), num) + "\n\n", texto)
@@ -216,7 +223,7 @@ def montar() -> str:
     anexo_b = "\n".join(l for l in ler("tabelas/anexo_b_resumo.md").splitlines() if not l.startswith("<!--"))
     anexo_a, resto = fim.split("\n\n# Glossário", 1)
     partes = [YAML.format(abstract="\n".join("  " + l for l in resumo.splitlines())), texto,
-              "# Referências\n\n" + lista, "# Normas citadas\n\n" + lista_normas,
+              "# Referências\n\n" + lista, "# Normas e legislação citadas\n\n" + lista_normas,
               anexo_a, anexo_b, "# Glossário" + resto]
     return "\n\n".join(partes) + "\n"
 

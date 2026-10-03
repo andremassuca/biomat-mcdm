@@ -26,7 +26,7 @@ P3. Implante dentário centrado na osteointegração e na corrosão. Feito: crit
 P4. Textos dos problemas críticos nos quatro casos, Q3/Q6/Q8 do dentário e conclusões. Feito.
 P5. Montagem do relatório. Feito (3 out): RELATORIO.md (scripts/montar_relatorio.py) e RELATORIO_v0.pdf (pandoc + Tectonic). Para regenerar: run_all.py, figuras.py, tabelas_relatorio.py, montar_relatorio.py e depois pandoc relatorio/RELATORIO.md -o relatorio/RELATORIO_v0.pdf --pdf-engine=D:/LAB/.tools/tectonic/tectonic.exe --resource-path=relatorio. Versão 1 (3 out): RELATORIO_v1.pdf com 54 páginas, anexo B só com a contagem por estado (tabela completa no .xlsx e em relatorio/tabelas/anexo_b_dados.md) e nenhuma marca por confirmar no texto. Falta: revisão do André.
 4b. Textos: introdução, conclusões, resumo, caso do implante dentário, declaração e glossário. Gravados; falta verificar cada número e alinhar o implante dentário com a base.
-5. Estrutura do relatório (proposta do Claude Code, a aprovar antes de montar): relatorio/RELATORIO.md, lista única de referências e scripts/verificar_referencias.py.
+5. Estrutura do relatório (feita): relatorio/RELATORIO.md, lista única de referências e scripts/verificar_referencias.py.
 6. Implante dentário: passou para P3.
 7. Cenário de orçamento, ranking de consenso e perfis de doente.
 8. Apoio aos métodos: tabelas de critérios, figura dos pesos e figura do exemplo dos três métodos.
@@ -45,7 +45,7 @@ Depois de 8 out: custo ao longo da vida e margem de segurança à fadiga; aplica
 Nada: está tudo no repositório.
 
 ## Decisões pendentes
-- Stent: o texto do caso (Monte Carlo, "43 a 62 %" e "8 a 12 %") e a discussão ("o L605 ganha em cerca de metade das iterações", "L605 mais robusto") e as conclusões ("o L605 é a escolha de referência, por ser mais robusto à incerteza dos dados") têm os números anteriores à regra da forma revista; pedir ao chat a frase nova com os valores de 2 out.
+- Stent: o texto do caso (Monte Carlo, "43 a 62 %" e "8 a 12 %") e a discussão ("o L605 ganha em cerca de metade das iterações", "L605 mais robusto") e as conclusões ("o L605 é a escolha de referência, por ser mais robusto à incerteza dos dados") têm os números anteriores à regra da forma revista.
 - Métodos e glossário: a frase da regra da forma ("as outras formas só alargam o intervalo") ficou desatualizada.
 - Métodos: o cenário de teto de orçamento e o anexo das equações estão no texto mas ainda não existem (tarefas 5 e 7); os perfis de doente da discussão também não (tarefa 7).
 - Gibson e Ashby: edição e página da referência.

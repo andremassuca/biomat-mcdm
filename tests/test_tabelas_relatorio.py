@@ -59,7 +59,7 @@ def test_nota_pesos_so_quando_nao_somam_1():
 
 def test_gerar_escreve_tres_ficheiros_por_caso(tmp_path):
     feitos = tr.gerar(tmp_path)
-    assert len(feitos) == 3 * len(tr.CASOS) + 2  # mais o anexo B completo e o resumido
+    assert len(feitos) == 3 * len(tr.CASOS) + 3  # mais os dois anexos B e a comparação com estudos
     texto = (tmp_path / "par_resultados.md").read_text(encoding="utf-8")
     assert "SEMIQUANTITATIVO" in texto and texto.startswith("<!-- gerado")
 

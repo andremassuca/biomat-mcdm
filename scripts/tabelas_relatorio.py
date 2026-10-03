@@ -231,6 +231,37 @@ def anexo_b_resumo(data_dir: Path = DATA) -> str:
         "**Tabela B.1.** Número de valores da base de dados por caso e por estado.", "", md(tab)])
 
 
+# Comparação com estudos anteriores: só o que foi lido em cada artigo (texto completo ou resumo).
+ESTUDOS = [
+    ("Petković et al. 2025", "placa de fixação óssea; corpo da haste femoral", "15 materiais metálicos; 10 critérios em cada caso",
+     "TOPSIS, VIKOR e WASPAS estendidos", "sim (módulo de Young, alvo de 14 GPa)",
+     "valores da literatura, sem verificação indicada na fonte original", "nível de confiança η de 0,7 a 1",
+     "dois casos de estudo e concordância qualitativa com a literatura; sem reprodução numérica"),
+    ("Bahraminasab e Jahan 2011", "componente femoral da prótese total do joelho", "não indicado", "VIKOR abrangente",
+     "não indicado", "não indicado", "sensibilidade dos pesos", "não indicado"),
+    ("Hafezalkotob e Hafezalkotob 2017", "componente femoral da prótese da anca e do joelho", "anca: 11 materiais, 9 critérios",
+     "MULTIMOORA com critérios-alvo e dados em intervalos", "sim (densidade e módulo de Young)",
+     "matriz de um estudo anterior, sem verificação na fonte original", "não indicado",
+     "comparação das ordenações com outros métodos publicados"),
+    ("Kumar et al. 2021", "componente femoral da prótese total do joelho", "11 materiais, 8 critérios",
+     "WSM, WPM, WASPAS, EDAS e TOPSIS, combinados", "não indicado", "não indicado",
+     "troca do esquema de pesos (desvio-padrão, entropia, AHP difuso)", "não indicado"),
+    ("Este trabalho", "haste femoral, par articular, stent coronário, scaffold ósseo, implante dentário",
+     "4 a 8 materiais e 7 a 11 critérios por caso", "TOPSIS, WASPAS e VIKOR; consenso de Borda",
+     "sim (haste, scaffold, implante dentário e tempo de reabsorção do stent)",
+     "93 dos 300 valores verificados em fontes primárias; regras da forma e da porosidade",
+     "Monte Carlo das propriedades e dos pesos; η de 0 a 1; cenários Q, T, C-custo, P-foco e O-orçamento",
+     "reprodução numérica do caso 2 de Petković et al. 2025"),
+]
+COLUNAS_ESTUDOS = ["Estudo", "Dispositivo", "Materiais e critérios", "Métodos", "Critérios-alvo",
+                   "Verificação dos dados", "Robustez", "Validação da implementação"]
+
+
+def tabela_estudos() -> pd.DataFrame:
+    """Tabela da secção "Comparação com estudos anteriores" (última linha: este trabalho)."""
+    return pd.DataFrame(ESTUDOS, columns=COLUNAS_ESTUDOS)
+
+
 def gerar(destino: Path = DESTINO, data_dir: Path = DATA, results: Path = RESULTS) -> list[Path]:
     """Escreve as três tabelas de cada caso; devolve os caminhos."""
     destino.mkdir(parents=True, exist_ok=True)
@@ -245,7 +276,8 @@ def gerar(destino: Path = DESTINO, data_dir: Path = DATA, results: Path = RESULT
             p = destino / f"{chave}_{nome}.md"
             p.write_text(f"<!-- gerado por scripts/tabelas_relatorio.py; não editar à mão -->\n{texto}\n", encoding="utf-8")
             feitos.append(p)
-    for nome, texto in (("anexo_b_dados", anexo_b(data_dir)), ("anexo_b_resumo", anexo_b_resumo(data_dir))):
+    for nome, texto in (("anexo_b_dados", anexo_b(data_dir)), ("anexo_b_resumo", anexo_b_resumo(data_dir)),
+                        ("comparacao_estudos", md(tabela_estudos()))):
         p = destino / f"{nome}.md"
         p.write_text("<!-- gerado por scripts/tabelas_relatorio.py; não editar à mão -->\n" + texto + "\n",
                      encoding="utf-8")

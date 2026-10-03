@@ -33,7 +33,7 @@ def test_relatorio_montado_sem_marcadores_e_com_referencias_numeradas():
     texto = mr.montar()
     assert "<!--" not in texto
     corpo, resto = texto.split("\n# Referências\n", 1)
-    refs = re.findall(r"^(\d+)\. ", resto.split("\n# Normas citadas")[0], flags=re.M)
+    refs = re.findall(r"^(\d+)\. ", resto.split("\n# Normas e legislação citadas")[0], flags=re.M)
     citados = {int(n) for n in re.findall(r"\[(\d+)\]", corpo)}
     assert citados == set(range(1, len(refs) + 1))
     for sec in ("# 1. Introdução", "# 4. Prótese total da anca", "# 7. Implante dentário", "# 9. Conclusões",
