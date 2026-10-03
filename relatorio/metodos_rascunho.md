@@ -72,6 +72,7 @@ O resultado foi testado em várias frentes:
 - **Monte Carlo das propriedades:** 10 000 repetições (semente 42), com cada valor sorteado uniformemente entre o mínimo e o máximo da base. Os valores de uma única fonte, sem intervalo, variaram ±10 % à volta do típico.
 - **Monte Carlo dos pesos:** pesos perturbados ±20 %.
 - **Concordância entre métodos:** coeficiente de correlação de Spearman entre as ordenações.
+- **Consenso entre métodos:** calculou-se também um ranking de consenso pela contagem de Borda. Cada método atribui a cada material (m − posição) pontos, sendo m o número de materiais, e os materiais ordenam-se pela soma; em caso de empate, prevalece a posição no TOPSIS. O consenso apresenta-se ao lado dos três métodos e não os substitui, porque a discordância entre eles é, ela própria, informação sobre a robustez do resultado.
 - **Regra de empate:** duas posições consecutivas cujo C do TOPSIS difere menos de 0,01 consideram-se empatadas.
 
 ## 2.9 Validação da implementação

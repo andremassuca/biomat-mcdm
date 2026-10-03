@@ -96,3 +96,12 @@ sobre o 2.º ($P_{(2)} - P_{(1)} \ge 1/(m-1)$) e seja também o melhor em $S$ ou
 - **P-foco:** os pesos dos critérios ligados ao problema crítico de cada dispositivo são multiplicados por
   2 e todos os pesos são renormalizados.
 - **Concordância entre métodos:** coeficiente de correlação de Spearman entre as ordenações.
+
+## A.7 Consenso de Borda
+
+Com $p_i^{(k)}$ a posição do material $i$ no método $k \in \{\text{TOPSIS}, \text{WASPAS}, \text{VIKOR}\}$ e $m$ o
+número de materiais, os pontos de Borda são
+
+$$ B_i = \sum_{k} \left( m - p_i^{(k)} \right) $$
+
+Os materiais ordenam-se por $B_i$ decrescente; em caso de empate, prevalece a posição no TOPSIS.
