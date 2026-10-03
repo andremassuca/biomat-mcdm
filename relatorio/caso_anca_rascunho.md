@@ -58,6 +58,7 @@ Os principais mecanismos de falha são:
 - **Pares metal-metal.** Produzem partículas e iões de Co e Cr em quantidade. Estão associados a reações adversas aos detritos metálicos (pseudotumores) (Chalmers et al. 2016), o que levou, por exemplo, à recolha do sistema DePuy ASR em 2010 (MHRA, MDA/2010/069).
 - **Fratura por fadiga da haste.** É rara com as ligas atuais, mas possível em hastes subdimensionadas ou com defeitos de fabrico. É especialmente relevante em peças produzidas por fabrico aditivo sem pós-processamento (questão 9).
 - **Fratura das cabeças cerâmicas.** É rara, mas grave quando ocorre. Num registo nacional, a fratura levou à revisão em cerca de 0,01 % das cabeças de ZTA, contra 0,15 % das de alumina (Hallan et al. 2020). O registo só conta fraturas que levaram a revisão.
+- **Fratura ou lascagem do liner cerâmico**, incluindo durante a inserção na taça, e **ruído (squeaking)**, relatado em cerca de 3 % das ancas com cerâmicas de 4.ª geração (Zhao et al. 2018). São os riscos próprios do par cerâmica-cerâmica. No registo norueguês, a fratura do liner levou à revisão em cerca de 0,14 % das ancas cerâmica-cerâmica (Hallan et al. 2020).
 - **Oxidação do polietileno reticulado.** A reticulação por radiação deixa radicais livres que, com o tempo, oxidam o material e o tornam frágil. Por isso se usa recozimento, refusão ou a adição de vitamina E como antioxidante.
 
 ## 7. Resposta do organismo
@@ -92,6 +93,7 @@ Propõe-se por isso o **ZTA/ZTA** como escolha de referência para o problema do
 - **Haste em Ti-6Al-4V ELI:** fabrico convencional por forjamento a quente e maquinagem, seguido de tratamento de superfície. O fabrico aditivo (fusão em leito de pó por laser ou feixe de eletrões) permite hastes com zonas porosas de rigidez reduzida, mas exige prensagem isostática a quente (HIP) para eliminar porosidade interna. Em Ti-6Al-4V produzido por feixe de eletrões, a resistência à fadiga a 10^7 ciclos foi cerca de 200-250 MPa no estado de fabrico e 550-600 MPa após HIP (Hrabe et al. 2017, NIST; ensaio de tração-tração com R = 0,1). Segundo os autores, o valor baixo no estado de fabrico deve-se em parte a defeitos do processo usado.
 - **Superfície para fixação não cimentada:** jateamento abrasivo para criar rugosidade e revestimento de hidroxiapatite por projeção de plasma, ou camada porosa de titânio.
 - **Cabeça cerâmica:** prensagem do pó, sinterização e HIP para máxima densidade, seguidas de retificação e polimento até rugosidade muito baixa.
+- **Liner cerâmico:** o mesmo processo da cabeça (prensagem do pó, sinterização e prensagem isostática a quente, retificação e polimento até rugosidade muito baixa), com um encaixe cónico preciso na taça metálica acetabular.
 - **Inserto de polietileno:** consolidação do pó por moldagem ou extrusão, reticulação por radiação gama ou feixe de eletrões, estabilização (vitamina E incorporada ou tratamento térmico), maquinagem final e esterilização.
 
 ## 10. Testes antes da utilização clínica
@@ -100,6 +102,7 @@ Propõe-se por isso o **ZTA/ZTA** como escolha de referência para o problema do
 - **Fadiga da haste:** ISO 7206-4:2010 (haste) e ISO 7206-6:2013 (zona do colo).
 - **Resistência da cabeça:** ISO 7206-10:2018 (carga estática em cabeças modulares).
 - **Desgaste do par articular:** ensaio em simulador de anca segundo a ISO 14242-1:2014 (condições de ensaio) e a ISO 14242-2:2016 (medição).
+- **Fixação do liner na taça:** forças de desmontagem do liner (push-out, pull-out e lever-out) segundo a ASTM F1820-22.
 - **Corrosão:** polarização potenciodinâmica (ASTM F2129-25) e corrosão por fretting na junção modular (ASTM F1875-26).
 - **Ressonância magnética:** ensaios de força, binário, aquecimento e artefactos (ASTM F2052-21, F2213-25, F2182-19e2, F2119-24).
 - **Esterilização:** validação segundo ISO 11137 (radiação) ou ISO 11135 (óxido de etileno), consoante o componente.
@@ -118,7 +121,7 @@ Propõe-se por isso o **ZTA/ZTA** como escolha de referência para o problema do
 - Ensaios eletroquímicos (polarização, EIS), para o comportamento à corrosão.
 - Rugosidade (perfilometria ou AFM) e ângulo de contacto, para a superfície de osseointegração.
 
-**Cabeça cerâmica:**
+**Cabeça e liner cerâmicos:**
 - Densidade.
 - Dureza.
 - Tenacidade à fratura.

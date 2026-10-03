@@ -146,6 +146,10 @@ Caso de estudo 2 (haste da prótese da anca), TOPSIS; testes em tests/test_repro
     doi:10.1097/CORR.0000000000001272 (registo norueguês, 1997-2017, mediana 6,3 anos):
     fratura com revisão em 0,15 % das cabeças de alumina (IC 95 % 0,11 a 0,20) e 0,01 % das
     de AMC/BIOLOX delta (IC 95 % 0,002 a 0,09); HR ajustado 14,1. Só conta fraturas com revisão.
+    Liners (confirmado no texto completo a 3 out 2026, secção de resultados): fratura do liner em
+    8 doentes com CoC (seis de alumina, um de AMC, um de zircónia), incidência global de 0,14 %
+    (CeramTec 0,08 %; Morgan 0,24 %); poucos casos para análise estatística. PDF em
+    helse-bergen.no (Nasjonal kompetansetjeneste for leddproteser og hoftebrudd).
   - Zhao CC, Qu GX, Yan SG, Cai XZ. J Orthop Surg Res 2018;13:133, doi:10.1186/s13018-018-0841-y
     (meta-análise, CoC de 4.ª geração, 14 estudos): squeaking em cerca de 3 % (I² = 87 %).
 - Apoio, só resumo:
