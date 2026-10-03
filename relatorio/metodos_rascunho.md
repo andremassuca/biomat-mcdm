@@ -40,7 +40,7 @@ Todos os valores estão numa base de dados única (ficheiros CSV). Cada valor te
 Os valores de partida vieram de revisões. Os valores com mais influência no resultado foram verificados em fontes primárias (normas, artigos com ensaio, fichas técnicas de fabricantes e de fornecedores); os restantes ficam marcados "A verificar" (83 das 295 linhas da base estão verificadas). A ordem de verificação seguiu a influência de cada valor no resultado: cada valor foi variado ±20 % com os restantes fixos, e verificaram-se primeiro os que mudavam o vencedor.
 
 Usaram-se três regras para manter os valores comparáveis:
-- **Regra da forma:** quando uma propriedade depende da forma do produto (tubo, fita, fio, chapa), o valor típico é o da forma usada no dispositivo; as outras formas só alargam o intervalo.
+- **Regra da forma:** quando uma propriedade depende da forma do produto (tubo, fita, fio, chapa), o mínimo e o máximo cobrem só a forma usada no dispositivo; os valores de outras formas ficam registados nas notas, mas não entram no cálculo. Quando a forma do dispositivo tem um único valor, aplica-se uma incerteza de ±10 %.
 - **Regra da porosidade:** nos scaffolds, as propriedades mecânicas usam-se à porosidade típica do material (±10 pontos percentuais); o típico é a mediana das fontes dentro dessa janela.
 - **Materiais permanentes num critério de reabsorção:** recebem o pior valor observado entre os reabsorvíveis do mesmo caso, como valor de modelação.
 

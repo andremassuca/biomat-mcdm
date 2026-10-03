@@ -14,4 +14,4 @@
 - **Osteocondução / osteoprodução:** guiar o crescimento do osso / estimular a formação de osso novo.
 - **Reestenose:** novo estreitamento de uma artéria depois da colocação de um stent.
 - **Strut:** cada uma das hastes que formam a malha do stent.
-- **Regra da forma / regra da porosidade:** regras deste trabalho para comparar valores de fontes diferentes (forma do produto usada no dispositivo; propriedades mecânicas à porosidade típica do material).
+- **Regra da forma / regra da porosidade:** regras deste trabalho para comparar valores de fontes diferentes (intervalo só com a forma do produto usada no dispositivo, com ±10 % quando essa forma tem um único valor; propriedades mecânicas à porosidade típica do material).

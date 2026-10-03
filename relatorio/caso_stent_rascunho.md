@@ -59,10 +59,12 @@ O dispositivo a substituir é o stent de aço 316L, de primeira geração. Os se
 
 As duas ligas de nova geração, **cobalto-crómio L605** e **platina-crómio**, ficaram praticamente empatadas:
 - No cenário A (só materiais em uso clínico), o Pt-Cr fica em 1.º lugar com o TOPSIS e o VIKOR, e o L605 com o WASPAS; a diferença é pequena (ΔC = 0,024).
-- No cenário B (inclui bioabsorvíveis), o L605 fica em 1.º com os três métodos, mas com uma diferença para o Pt-Cr abaixo do limiar que definimos como empate (ΔC = 0,002).
-- Na análise de Monte Carlo, o L605 fica em 1.º lugar em cerca de 43 a 62 % das iterações, contra 8 a 12 % do Pt-Cr. O L605 é mais robusto à incerteza dos dados. O 1.º lugar do Pt-Cr depende sobretudo do alongamento e da resistência à tração do Pt-Cr, ainda só confirmados em fontes secundárias.
+- No cenário B (inclui bioabsorvíveis), o L605 fica em 1.º com os três métodos, empatado com o Pt-Cr (ΔC = 0,002, abaixo do limiar de empate).
+- Na análise de Monte Carlo, o Pt-Cr fica em 1.º lugar em 57 a 70 % das iterações, contra 27 a 42 % do L605 e menos de 10 % do MP35N.
 
-Propõe-se assim o **L605** como escolha de referência, pela robustez do resultado, e o **Pt-Cr** como alternativa equivalente quando a prioridade é a visibilidade radiológica com struts muito finos. Face ao 316L, ambas permitem struts de cerca de 74-81 µm com resistência radial suficiente, são mais radiopacas e têm menos níquel. O MP35N fica em 3.º: tem o maior teor de níquel (33-37 %) e, nos dispositivos atuais, struts ligeiramente mais espessos.
+Propõe-se assim o **Pt-Cr** como escolha de referência: é o mais robusto à incerteza dos dados e o mais radiopaco, o que permite struts finos bem visíveis em fluoroscopia. O **L605** é uma alternativa praticamente equivalente. Uma ressalva: o módulo, a resistência à tração e o alongamento do Pt-Cr ainda só foram confirmados em fontes secundárias, por isso o 1.º lugar deve ser confirmado com a fonte primária (O'Brien et al. 2010).
+
+Face ao 316L, ambas permitem struts de cerca de 74-81 µm com resistência radial suficiente, são mais radiopacas e têm menos níquel. O MP35N fica em 3.º: tem o maior teor de níquel (33-37 %) e, nos dispositivos atuais, struts ligeiramente mais espessos.
 
 No WASPAS, o 316L volta a ganhar quando o custo tem peso elevado ou quando os pesos são tirados sobretudo dos dados (η até 0,2); o TOPSIS e o VIKOR mantêm o L605 nesses casos. Na haste observou-se algo semelhante, mas no TOPSIS: quando o custo domina, o aço torna-se competitivo com alguns métodos.
 

@@ -1,4 +1,4 @@
-# Stent vascular: export de dados (commit f9a66da, 03/10/2026)
+# Stent vascular: export de dados (commit 9caad93, 03/10/2026)
 
 Gerado por scripts/exportar_caso.py a partir de data/, src/ e results/. Só dados.
 

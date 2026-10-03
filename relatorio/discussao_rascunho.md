@@ -4,7 +4,7 @@
 
 Os três casos quantitativos dão conclusões com graus de confiança muito diferentes, e essa diferença é, em si, um resultado:
 - **Haste femoral:** o Ti-6Al-4V ELI ficou em 1.º lugar com os três métodos, nos dois cenários e em pelo menos 99,99 % das iterações do Monte Carlo. A conclusão é robusta à incerteza dos dados e dos pesos.
-- **Stent:** o cobalto-crómio L605 e o platina-crómio ficaram praticamente empatados. O vencedor depende do método e do cenário, e no Monte Carlo o L605 ganha em cerca de metade das iterações. Os dois são equivalentes, com o L605 mais robusto e o Pt-Cr preferível quando a visibilidade radiológica com struts finos é prioritária.
+- **Stent:** o platina-crómio e o cobalto-crómio L605 ficaram praticamente empatados nos rankings determinísticos, mas o Pt-Cr é claramente mais robusto à incerteza dos dados (1.º em 57 a 70 % das iterações do Monte Carlo). A ressalva é que esse resultado assenta em propriedades do Pt-Cr ainda só confirmadas em fontes secundárias.
 - **Scaffold:** o compósito PCL/β-TCP impresso passou para 1.º lugar depois da verificação dos dados, com os três métodos e nos dois cenários (ΔC = 0,052 em A e 0,085 em B), sobretudo porque a resistência à compressão do β-TCP poroso, à porosidade relevante, é muito inferior ao valor de partida. O resultado é estável nos pesos (1.º lugar em cerca de 96 a 100 % das iterações com pesos ±20 %) mas sensível aos dados: no Monte Carlo das propriedades, o β-TCP fica em 1.º em mais iterações do que o compósito com o TOPSIS (52 % contra 39 %), embora não com o WASPAS (25 % contra 68 %) nem com o VIKOR (39 % contra 46 %).
 
 ## 8.2 A verificação dos dados mudou as conclusões
@@ -16,6 +16,8 @@ Os valores de partida vinham sobretudo de revisões. A verificação em fontes p
 - o vencedor do scaffold.
 
 A lição metodológica é que um método multicritério não é mais fiável do que os dados que recebe. Duas regras foram essenciais para comparar valores de fontes diferentes: usar a forma do produto que o dispositivo realmente usa (tubo, fita, fio) e, nos scaffolds, comparar as propriedades mecânicas à mesma porosidade.
+
+No stent, uma primeira versão dos dados incluía, nos intervalos, valores de formas de produto que o stent não usa (fio e barra). Isso fazia parecer o L605 e o MP35N mais robustos do que são; com os intervalos restritos à forma do dispositivo (tubo ou fita), o mais robusto passou a ser o Pt-Cr. É um exemplo de como a definição da incerteza, e não só o valor típico, pode mudar a conclusão.
 
 ## 8.3 Porque é que os métodos discordam
 
