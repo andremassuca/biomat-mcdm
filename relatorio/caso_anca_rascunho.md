@@ -8,7 +8,45 @@ O problema concentra-se nas superfícies que deslizam (o par articular) e na jun
 
 O par cerâmica-cerâmica (ZTA/ZTA) ficou em 1.º lugar com os três métodos, e manteve-se em 1.º quando o peso dos critérios ligados ao problema foi duplicado. É a resposta proposta, com a cabeça de ZTA contra polietileno altamente reticulado como alternativa. Na haste, o Ti-6Al-4V ELI mantém-se em 1.º também com este foco, e a escolha de uma cabeça cerâmica elimina a libertação de Co e Cr por corrosão por fretting na junção.
 
-## 1. Função do dispositivo
+## Candidatos e critérios
+
+### Haste femoral
+
+<!-- incluir: tabelas/haste_criterios.md -->
+
+### Par articular (semiquantitativo)
+
+<!-- incluir: tabelas/par_criterios.md -->
+
+## Resultados
+
+### Haste femoral
+
+<!-- incluir: tabelas/haste_resultados.md -->
+
+### Par articular (semiquantitativo)
+
+<!-- incluir: tabelas/par_resultados.md -->
+
+## Robustez
+
+### Haste femoral
+
+<!-- incluir: tabelas/haste_robustez.md -->
+
+### Par articular (semiquantitativo)
+
+<!-- incluir: tabelas/par_robustez.md -->
+
+<!-- figura: fig_a_rigidez_haste -->
+<!-- figura: fig_b_posicoes -->
+<!-- figura: fig_c_monte_carlo -->
+<!-- figura: fig_d_vencedor_eta -->
+<!-- figura: fig_f_semiquantitativos -->
+
+## Resposta às questões do enunciado
+
+### 1. Função do dispositivo
 
 A prótese total da anca substitui a articulação coxofemoral quando esta está destruída por artrose, necrose avascular da cabeça do fémur ou fratura do colo do fémur. O objetivo é eliminar a dor e devolver ao doente uma mobilidade próxima da normal. O dispositivo tem dois subsistemas com exigências diferentes:
 - A haste femoral, inserida no canal medular do fémur, transmite ao osso as cargas do corpo. Pode ser fixada com cimento ósseo (PMMA) ou sem cimento, por osseointegração.
@@ -16,7 +54,7 @@ A prótese total da anca substitui a articulação coxofemoral quando esta está
 
 Por isso, a seleção de material é feita em separado. Na haste o que conta é a resistência à fadiga e a compatibilidade de rigidez com o osso. No par articular o que conta é o desgaste e a produção de partículas.
 
-## 2. Propriedades mecânicas necessárias
+### 2. Propriedades mecânicas necessárias
 
 Na marcha a cerca de 4 km/h, a força de contacto na anca é, em média, cerca de 2,4 vezes o peso corporal, e a subir e descer escadas cerca de 2,5 a 2,6 vezes (Bergmann et al. 2001). Em tropeções, as forças podem ser muito superiores (mais de 8 vezes o peso corporal; Bergmann et al. 2004). Um doente com prótese da anca faz, em média, cerca de 1,9 milhões de ciclos de marcha por ano (Silva et al. 2002), pelo que a haste tem de resistir a dezenas de milhões de ciclos ao longo da sua vida útil.
 
@@ -32,7 +70,7 @@ No par articular, as propriedades determinantes são diferentes:
 - Tenacidade à fratura suficiente, sobretudo nas cabeças cerâmicas, em que a fratura é rara mas catastrófica.
 - Baixo coeficiente de atrito.
 
-## 3. Propriedades químicas e físicas relevantes
+### 3. Propriedades químicas e físicas relevantes
 
 - **Resistência à corrosão.** Os fluidos corporais contêm cloretos e são um meio agressivo. Os metais usados resistem porque formam um filme passivo de óxido: TiO2 nas ligas de titânio, Cr2O3 no aço e nas ligas Co-Cr. A estabilidade desse filme, e a sua capacidade de se refazer depois de ser riscado, determina a libertação de iões.
 - **Densidade.** Tem uma relevância secundária no desempenho, mas as ligas de titânio (cerca de 4,4-4,5 g/cm³) são quase metade do aço e das ligas Co-Cr (cerca de 8 g/cm³).
@@ -40,7 +78,7 @@ No par articular, as propriedades determinantes são diferentes:
 - **Comportamento magnético.** Os doentes com prótese da anca são geralmente idosos e fazem frequentemente ressonância magnética. Materiais não ferromagnéticos e de baixa suscetibilidade magnética (ligas de titânio) produzem menos artefactos de imagem do que as ligas Co-Cr e o aço: em hastes femorais num fantoma, a de titânio teve pontuações de artefacto 3 a 4 vezes mais baixas (Månsson et al. 2015).
 - **No polietileno do inserto:** o grau de reticulação e a resistência à oxidação, que determinam o desgaste a longo prazo.
 
-## 4. Biocompatibilidade
+### 4. Biocompatibilidade
 
 A biocompatibilidade é um critério eliminatório: um material que não cumpra os ensaios da série ISO 10993 não é candidato. No trabalho foi tratada como critério estrito na fase de triagem. A avaliação foi qualitativa, com base no historial clínico e na normalização de cada liga para uso em implantes, porque não foram feitos ensaios ISO 10993 neste trabalho. Nenhum candidato foi eliminado.
 
@@ -50,7 +88,7 @@ Dentro dos materiais aprovados, há diferenças relevantes na natureza dos iões
 - O Ti-6Al-4V contém alumínio e vanádio; o vanádio é citotóxico em forma iónica. Foi esta a motivação para desenvolver ligas β sem vanádio, como o Ti-13Nb-13Zr e o Ti-35Nb-7Zr-5Ta, com elementos considerados biocompatíveis (Nb, Zr, Ta).
 - Na prática clínica, o Ti-6Al-4V tem décadas de bom desempenho em hastes, porque o filme de TiO2 mantém a libertação iónica muito baixa.
 
-## 5. Bioinerte, bioativo ou biodegradável
+### 5. Bioinerte, bioativo ou biodegradável
 
 A haste deve ser **bioinerte e permanente**. Suporta carga durante toda a vida do doente, por isso um material biodegradável está excluído à partida.
 
@@ -58,7 +96,7 @@ Nas hastes não cimentadas, a superfície é tornada **bioativa** para promover 
 
 No par articular, a cerâmica (alumina ou compósito alumina-zircónia) e o polietileno são bioinertes. O objetivo é que libertem o mínimo possível de partículas.
 
-## 6. Riscos de corrosão, desgaste ou degradação
+### 6. Riscos de corrosão, desgaste ou degradação
 
 Os principais mecanismos de falha são:
 - **Desgaste do par articular e osteólise.** O desgaste do polietileno produz partículas submicrométricas que desencadeiam uma resposta inflamatória crónica (questão 7). Essa resposta reabsorve o osso à volta do implante e acaba por causar o descolamento asséptico, a principal causa de revisão a longo prazo.
@@ -69,7 +107,7 @@ Os principais mecanismos de falha são:
 - **Fratura ou lascagem do liner cerâmico**, incluindo durante a inserção na taça, e **ruído (squeaking)**, relatado em cerca de 3 % das ancas com cerâmicas de 4.ª geração (Zhao et al. 2018). São os riscos próprios do par cerâmica-cerâmica. No registo norueguês, a fratura do liner levou à revisão em cerca de 0,14 % das ancas cerâmica-cerâmica (Hallan et al. 2020).
 - **Oxidação do polietileno reticulado.** A reticulação por radiação deixa radicais livres que, com o tempo, oxidam o material e o tornam frágil. Por isso se usa recozimento, refusão ou a adição de vitamina E como antioxidante.
 
-## 7. Resposta do organismo
+### 7. Resposta do organismo
 
 Após a implantação, a superfície do material é coberta de proteínas em segundos. É essa camada, e não o material em si, que as células "veem". Segue-se uma resposta inflamatória aguda, própria de qualquer cirurgia.
 
@@ -79,7 +117,7 @@ A longo prazo, a resposta mais importante é a resposta às partículas de desga
 
 Paralelamente, o stress shielding altera a distribuição de cargas no fémur. Como o osso se adapta às cargas que recebe (lei de Wolff), o fémur proximal perde densidade, o que compromete o suporte do implante e dificulta uma futura cirurgia de revisão.
 
-## 8. Vantagem face aos materiais atuais
+### 8. Vantagem face aos materiais atuais
 
 Para a haste, propõe-se a **liga Ti-6Al-4V ELI** (ASTM F136). Na análise multicritério (TOPSIS, WASPAS e VIKOR, com critérios-alvo segundo Petković et al. 2025), ficou em 1.º lugar nos cenários A e B com os três métodos, depois da verificação das propriedades mecânicas nas fontes. O 2.º lugar depende do método: no cenário A, o TOPSIS coloca o Co-Cr-Mo forjado, enquanto o WASPAS e o VIKOR colocam o Ti-13Nb-13Zr.
 
@@ -96,7 +134,7 @@ Para o par articular, a análise semiquantitativa coloca o par cerâmica-cerâmi
 
 Propõe-se por isso o **ZTA/ZTA** como escolha de referência para o problema do desgaste, sobretudo em doentes jovens e ativos, em que o desgaste acumulado ao longo de décadas pesa mais. Como alternativa, propõe-se uma **cabeça de ZTA contra polietileno altamente reticulado (HXLPE)**, com menor risco de fratura e de ruído e também sem iões metálicos no par. O polietileno altamente reticulado desgasta-se muito menos do que o convencional (cerca de 0,016 contra 0,077 mm/ano; Higuchi et al. 2019, por radiografia; Teeter et al. 2017, por radiostereometria), e a cabeça cerâmica elimina a libertação de Co e Cr na junção modular. As duas soluções evitam as reações adversas aos detritos metálicos; por isso o par metal-metal foi eliminado na triagem. A diferença de desgaste entre CoC e MoM (cerca de 0,004 e 0,005 mm/ano) está abaixo da resolução da radiografia simples.
 
-## 9. Fabrico
+### 9. Fabrico
 
 - **Haste em Ti-6Al-4V ELI:** fabrico convencional por forjamento a quente e maquinagem, seguido de tratamento de superfície. O fabrico aditivo (fusão em leito de pó por laser ou feixe de eletrões) permite hastes com zonas porosas de rigidez reduzida, mas exige prensagem isostática a quente (HIP) para eliminar porosidade interna. Em Ti-6Al-4V produzido por feixe de eletrões, a resistência à fadiga a 10^7 ciclos foi cerca de 200-250 MPa no estado de fabrico e 550-600 MPa após HIP (Hrabe et al. 2017, NIST; ensaio de tração-tração com R = 0,1). Segundo os autores, o valor baixo no estado de fabrico deve-se em parte a defeitos do processo usado.
 - **Superfície para fixação não cimentada:** jateamento abrasivo para criar rugosidade e revestimento de hidroxiapatite por projeção de plasma, ou camada porosa de titânio.
@@ -104,7 +142,7 @@ Propõe-se por isso o **ZTA/ZTA** como escolha de referência para o problema do
 - **Liner cerâmico:** o mesmo processo da cabeça (prensagem do pó, sinterização e prensagem isostática a quente, retificação e polimento até rugosidade muito baixa), com um encaixe cónico preciso na taça metálica acetabular.
 - **Inserto de polietileno:** consolidação do pó por moldagem ou extrusão, reticulação por radiação gama ou feixe de eletrões, estabilização (vitamina E incorporada ou tratamento térmico), maquinagem final e esterilização.
 
-## 10. Testes antes da utilização clínica
+### 10. Testes antes da utilização clínica
 
 - **Biocompatibilidade:** série ISO 10993 (citotoxicidade, sensibilização, irritação, toxicidade sistémica, genotoxicidade, implantação).
 - **Fadiga da haste:** ISO 7206-4:2010 (haste) e ISO 7206-6:2013 (zona do colo).
@@ -116,7 +154,7 @@ Propõe-se por isso o **ZTA/ZTA** como escolha de referência para o problema do
 - **Esterilização:** validação segundo ISO 11137 (radiação) ou ISO 11135 (óxido de etileno), consoante o componente.
 - **Clínica:** ensaios pré-clínicos em animal e investigação clínica. Depois da colocação no mercado, seguimento em registos de artroplastia.
 
-## 11. Propriedades que caracterizam cada material face à aplicação
+### 11. Propriedades que caracterizam cada material face à aplicação
 
 **Haste (Ti-6Al-4V ELI):**
 - Ensaio de tração, para medir o módulo de Young, a tensão de cedência e a tensão de rotura.
