@@ -18,11 +18,11 @@ Prótese da anca | Par articular,Compatibilidade com esterilização (ordinal 1-
 Prótese da anca | Par articular,Compatibilidade com RM (ordinal 1-5),Benefício,,-,0.05,
 Prótese da anca | Par articular,"Custo relativo de material e fabrico (1-5, 5 = mais caro)",Custo,,-,0.1,
 Implante dentário,Resistência/fadiga do sistema implante-pilar (ISO 14801),Estrito,Cumpre para a geometria,-,,Tração (metais) e flexão (cerâmicos) não são comparáveis
-Implante dentário,Módulo de Young,Alvo,15,GPa,0.2,SEMIQUANTITATIVO (ordinais > 50 %). Osso mandibular ~10-20 GPa
+Implante dentário,Módulo de Young,Alvo,15,GPa,0.15,SEMIQUANTITATIVO (ordinais > 50 %). Osso mandibular ~10-20 GPa
 Implante dentário,Tenacidade à fratura (K_IC),Benefício,,MPa·m^0.5,0.15,Fratura (relevante para Y-TZP)
 Implante dentário,Evidência clínica de osteointegração (ordinal 1-5),Benefício,,-,0.25,Função principal
-Implante dentário,Estética (ordinal 1-5),Benefício,,-,0.15,Sombra cinzenta em gengiva fina
-Implante dentário,Densidade,Custo,,g/cm³,0.05,
+Implante dentário,Resistência à corrosão em meio oral (ordinal 1-5),Benefício,,-,0.15,"Problema crítico do docente (2 out 2026): fluoretos em meio ácido, tribocorrosão na ligação implante-pilar, envelhecimento da Y-TZP"
+Implante dentário,Estética (ordinal 1-5),Benefício,,-,0.1,Sombra cinzenta em gengiva fina
 Implante dentário,Compatibilidade com RM (ordinal 1-5),Benefício,,-,0.05,
 Implante dentário,"Custo relativo de material e fabrico (1-5, 5 = mais caro)",Custo,,-,0.1,
 Implante dentário,Maquinabilidade / fabricabilidade (ordinal 1-5),Benefício,,-,0.05,

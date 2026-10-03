@@ -52,7 +52,14 @@ Par articular e implante dentário ficam SEMIQUANTITATIVOS (ordinais > 50 % do p
 ## Alterações v0.9 (3 out 2026): problemas críticos do professor
 - Novo problemas_criticos.csv: para cada caso, os critérios que respondem ao problema crítico indicado pelo professor (2 out 2026), com ligação direta ou indireta e justificação. Folha Problemas_criticos no .xlsx.
 - Novo parâmetro fator_foco_problema = 2 (valor de desenho) e novo cenário P-foco: peso dos critérios de ligação direta x2, restantes renormalizados; sensibilidade com direta + indireta; no par articular, só como sensibilidade semiquantitativa.
-- Implante dentário: a corrosão ainda não é critério (a acrescentar).
+- Implante dentário: a corrosão passa a critério na v0.10.
+
+## Alterações v0.10 (3 out 2026): implante dentário centrado na osteointegração e na corrosão
+- Novo critério "Resistência à corrosão em meio oral (ordinal 1-5)", de benefício, peso 0,15 (problema crítico do docente); para lhe dar peso: estética 0,15 → 0,10, módulo 0,20 → 0,15 e a densidade deixa de ser critério do dentário (a propriedade fica na base).
+- Corrosão: Ti grau 4 = 3, Ti-6Al-4V ELI = 3, Ti-Zr = 3 (4 como sensibilidade), Y-TZP = 4, PEEK = 5.
+- Osteointegração com fontes e rubrica nova; Ti-6Al-4V ELI 4 → 2 (sem estudos clínicos dedicados no corpo do implante dentário).
+- Estado "Verificado" com a nota "só resumo; nota segundo a rubrica do leia_me" (decisão do André).
+- Peso ordinal do dentário: 0,70 (antes 0,60); o caso continua SEMIQUANTITATIVO: ranking e P-foco só como indicação (results/semiquantitativos.csv).
 
 ## Legenda
 - min e max alimentam o Monte Carlo (distribuição entre mín. e máx.); nas propriedades dependentes da forma, só com valores da forma do dispositivo (regra da forma, v0.8).
@@ -71,7 +78,8 @@ Estrito = triagem passa/falha · Benefício = maior é melhor · Custo = menor �
 ## Rubricas ordinais (1-5): justificar cada nota no relatório com uma referência
 - Corrosão: 5 = camada passiva estável sem libertação relevante; 3 = suscetível a picadas/fendas in vivo; 1 = corrosão clinicamente problemática
 - Segurança iónica/ALTR: 5 = sem contacto metal-metal; 4 = risco na junção cabeça-cone; 1 = libertação de iões Co/Cr com ALTR documentada
-- Osteointegração: 5 = padrão-ouro com décadas de dados; 3 = dados clínicos a médio prazo; 1 = bioinerte com fraca aposição óssea
+- Osteointegração (implante dentário; revista a 3 out 2026, pelo tipo e duração da evidência clínica do corpo do implante): 5 = coortes com 10 anos ou mais e milhares de implantes, mais meta-análises a 10 anos; 4 = ensaios aleatorizados ou meta-análises com centenas de implantes e pelo menos um estudo a 10 anos; 3 = meta-análises a 1-5 anos ou coortes de 10 anos pequenas e heterogéneas; 2 = uso clínico sem estudos clínicos dedicados (só equivalência em estudos animais); 1 = só evidência pré-clínica. Fontes por material na coluna referencia e em NOTAS_METODOLOGICAS.md.
+- Corrosão em meio oral (implante dentário, 3 out 2026): 5 = inerte em meio oral (sem corrosão eletroquímica nem degradação com efeito documentado); 4 = sem corrosão eletroquímica, mas com degradação lenta documentada em meio húmido ou oral (envelhecimento, absorção de água); 3 = metal passivo estável em saliva, atacado só em condições agressivas (fluoreto em meio ácido, tribocorrosão), com libertação de iões ou partículas documentada; 2 = metal atacado em condições orais comuns ou com acoplamento galvânico relevante; 1 = sem filme protetor estável.
 - Estética: 5 = cor de dente; 3 = neutro; 2 = sombra cinzenta possível
 - Bioatividade (classificação de Hench): 5 = classe A, osteoprodutivo (ex.: vidro 45S5); 4 = classe B, osteocondutor com ligação química ao osso (HA, β-TCP); 3 = osteocondutor sem ligação química, ou compósito com fase bioativa minoritária; 2 = pouca interação; 1 = bioinerte ou sem osteocondução. Fonte: Hench LL. Bioactive ceramics: theory and clinical applications. Bioceramics 1994;7:3-14 (original não lido); classes A e B lidas em Bramhill J, Ross S, Ross G. Int J Environ Res Public Health 2017;14:66, doi:10.3390/ijerph14010066 (revisão, texto completo).
 - Imprimibilidade 3D: 5 = extrusão direta fácil; 3 = possível com limitações; 2 = requer técnicas especiais (robocasting, liofilização)

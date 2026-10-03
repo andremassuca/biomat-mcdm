@@ -1,4 +1,4 @@
-# Scaffold ósseo: export de dados (commit dfccec4, 03/10/2026)
+# Scaffold ósseo: export de dados (commit 3ec4143, 03/10/2026)
 
 Gerado por scripts/exportar_caso.py a partir de data/, src/ e results/. Só dados.
 

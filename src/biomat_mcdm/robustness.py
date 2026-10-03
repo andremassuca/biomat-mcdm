@@ -184,3 +184,19 @@ def com_foco(problem: DecisionProblem, criterios: list[str], fator: float = 2.0)
     w = problem.weights.copy()
     w[idx] *= fator
     return replace(problem, weights=w / w.sum())
+
+
+def com_valor(problem: DecisionProblem, material: str, criterio: str, valor: float) -> DecisionProblem:
+    """Sensibilidade de um valor: fixa o valor de um material num critério (mín. = máx. = típico).
+
+    Em linguagem simples: troca uma nota ou um valor da matriz para ver se o resultado muda,
+    sem mexer nos dados da base.
+    """
+    i, j = problem.alternatives.index(material), problem.criteria.index(criterio)
+    X_min, X_max = problem.X_min.copy(), problem.X_max.copy()
+    X_min[i, j] = X_max[i, j] = valor
+    X_tip = None
+    if problem.X_tipico is not None:
+        X_tip = problem.X_tipico.copy()
+        X_tip[i, j] = valor
+    return replace(problem, X_min=X_min, X_max=X_max, X_tipico=X_tip)

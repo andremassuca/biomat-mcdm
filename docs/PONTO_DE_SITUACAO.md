@@ -22,7 +22,9 @@ Para o relatório, até 8 out:
 4. Textos: rascunhos de métodos, validação, discussão e caso do scaffold; verificação de cada número; números do stent; cálculo de Gibson-Ashby. Feito.
 P1. Mapa problema crítico → critérios. Feito (relatorio/apoio/problemas_criterios.md).
 P2. Cenário P-foco. Feito: só o scaffold muda (β-TCP 1.º no TOPSIS e no VIKOR com a leitura literal; PCL/β-TCP mantém-se com a leitura ampla e no WASPAS).
-P3. Implante dentário centrado na osteointegração e na corrosão (antiga tarefa 6, antecipada): tabela de apoio, fontes primárias e critério de corrosão. É a próxima tarefa.
+P3. Implante dentário centrado na osteointegração e na corrosão. Feito: critério de corrosão (0,15), osteointegração com fontes (Ti-6Al-4V 4 → 2); Ti cp grau 4 em 1.º em todas as versões (relatorio/apoio/dentario_apoio.md).
+P4. Textos dos problemas críticos nos quatro casos, Q3/Q6/Q8 do dentário e conclusões. A seguir.
+P5. Montagem do relatório (pedido de 3 out): estrutura por caso com tabelas geradas (scripts/tabelas_relatorio.py), heatmap dos semiquantitativos, promessas sem trabalho (orçamento e Borda se < 1 h; perfis para trabalho futuro), anexos A e B, referências e verificar_referencias.py, RELATORIO.md e PDF.
 4b. Textos: introdução, conclusões, resumo, caso do implante dentário, declaração e glossário. Gravados; falta verificar cada número e alinhar o implante dentário com a base.
 5. Estrutura do relatório (proposta do Claude Code, a aprovar antes de montar): relatorio/RELATORIO.md, lista única de referências e scripts/verificar_referencias.py.
 6. Implante dentário: passou para P3.

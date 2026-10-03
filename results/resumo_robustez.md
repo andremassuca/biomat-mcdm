@@ -216,13 +216,22 @@ Vencedor no cenário A: TOPSIS Compósito PCL/β-TCP (impressão 3D); WASPAS Com
 - P-foco, direta, TOPSIS: Compósito PCL/β-TCP (impressão 3D) → β-TCP poroso
 - P-foco, direta, VIKOR: Compósito PCL/β-TCP (impressão 3D) → β-TCP poroso
 
-## Par articular (SEMIQUANTITATIVO: ordinais > 50 % do peso; só sensibilidade)
+## Par articular (SEMIQUANTITATIVO: ordinais > 50 % do peso; só indicação)
 
 | Cenário | Variante | TOPSIS | WASPAS | VIKOR |
 |---|---|---|---|---|
 | A | A | ZTA / ZTA (CoC) | ZTA / ZTA (CoC) | ZTA / ZTA (CoC) |
 | P-foco | direta | ZTA / ZTA (CoC) | ZTA / ZTA (CoC) | ZTA / ZTA (CoC) |
 | P-foco | direta + indireta | ZTA / ZTA (CoC) | ZTA / ZTA (CoC) | ZTA / ZTA (CoC) |
+
+## Implante dentário (SEMIQUANTITATIVO: ordinais > 50 % do peso; só indicação)
+
+| Cenário | Variante | TOPSIS | WASPAS | VIKOR |
+|---|---|---|---|---|
+| A | A | Ti cp grau 4 | Ti cp grau 4 | Ti cp grau 4 |
+| P-foco | direta | Ti cp grau 4 | Ti cp grau 4 | Ti cp grau 4 |
+| P-foco | direta + indireta | Ti cp grau 4 | Ti cp grau 4 | Ti cp grau 4 |
+| Valor | Ti-Zr: corrosão 4 | Ti cp grau 4 | Ti cp grau 4 | Ti cp grau 4 |
 
 ## Cenários
 

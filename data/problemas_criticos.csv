@@ -7,6 +7,7 @@ Prótese da anca | Par articular,Desgaste e libertação de partículas,Compatib
 Prótese da anca | Haste femoral,Desgaste e libertação de partículas,Resistência à corrosão (ordinal 1-5),direta,Libertação iónica da haste
 Implante dentário,Integração com o osso,Evidência clínica de osteointegração (ordinal 1-5),direta,Função principal do implante
 Implante dentário,Integração com o osso,Módulo de Young,indireta,Transferência de carga ao osso e perda óssea marginal
+Implante dentário,Corrosão,Resistência à corrosão em meio oral (ordinal 1-5),direta,Critério acrescentado para o problema crítico
 Stent vascular,Resistência mecânica,Índice material de recuo elástico σy/E (proxy),direta,Recuo elástico depois da expansão
 Stent vascular,Resistência mecânica,Alongamento na rotura,direta,Expansão sem fratura
 Stent vascular,Resistência mecânica,Resistência à tração,direta,Resistência radial e fadiga pulsátil

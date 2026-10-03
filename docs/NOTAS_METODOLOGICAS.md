@@ -288,6 +288,14 @@ astm.org e iso.org não abriram.
   vigor das outras normas do mesmo parágrafo: ASTM F2129-25, F2052-21, F2213-25, F2182-19e2 e F2119-24; ISO
   10993-4:2017; ISO 11135:2014.
 
+## Implante dentário: fontes da osteointegração e da corrosão (3 out 2026)
+- Pesquisa com dois subagentes; 37 DOIs confirmados na Crossref ou no Europe PMC. Quase tudo lido só no resumo (estado "Verificado" com a nota "só resumo", decisão do André); texto completo só em Müller 2015 e Roehling 2026 (financiamento), Kurtz e Devine 2007 e Grandin 2012.
+- Osteointegração (sobrevivência clínica): Adell 1990 (Ti cp, 15 anos); Howe 2019 (meta-análise, 10 anos); Müller 2024 (RCT TiZr vs Ti grau IV, 10 anos, patrocínio Straumann); Altuna 2016 (TiZr); Pieralli 2017 e Roehling 2018 (zircónia, 1-5 anos); Roehling 2026 (zircónia de uma peça, 10 anos, financiado pela Straumann); Herber 2025 e Steyer 2021 (outros sistemas de zircónia, 62-80 %); Morton 2018 (consenso ITI); Shah 2016 e Johansson 1998 (Ti-6Al-4V); Najeeb 2016 e Mishra 2019 (PEEK, só pré-clínico). BIC em animal sem diferença clara entre Ti, TiZr e zircónia (Gottlow 2012; Gahlert 2012; Manzano 2014).
+- Corrosão: Nakagawa 1999 e 2001, Matono 2006, Huang 2003 (fluoretos); Apaza-Bedoya 2017, Stimmelmayr 2012, Corne 2019, Taher 2003 (ligação implante-pilar, galvânica); Safioti 2017, Olmedo 2013, Mombelli 2018 (partículas de Ti e peri-implantite: associação, sem causalidade provada); Chevalier 2006 e 2009, Lughi 2010, Kocjan 2021, Kohal 2025 (envelhecimento da Y-TZP); Kurtz e Devine 2007, Liebermann 2016 (PEEK); Akimoto 2018, Santos 2023, Grandin 2012 (Ti-Zr).
+- Por confirmar: limiar de pH e fluoreto no texto completo de Nakagawa 1999; Ti-6Al-4V vs Ti cp com fluoreto (só resumo de Nakagawa 2001); Roxolid sem dados com fluoreto nem ensaio eletroquímico com a composição comercial; unidades de Safioti 2017; grau do Ti cp em Adell 1990; conflitos de interesse de Roehling 2018, Altuna 2016, Gottlow 2012, Kohal 2025, Corne 2019 e Kocjan 2021; séries clínicas com Ti-6Al-4V identificada no corpo do implante.
+- Peso ordinal do dentário passa a 0,70: o caso continua semiquantitativo (indicação, não resultado).
+- Tabela de apoio: relatorio/apoio/dentario_apoio.md.
+
 ## Valores a verificar (fora de data/materiais.csv)
 Os valores de propriedades "A verificar" estão na base e serão listados por
 scripts/listar_por_verificar.py (tarefa 12). Aqui ficam os que não estão nessa coluna:

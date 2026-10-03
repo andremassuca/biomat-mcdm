@@ -83,10 +83,13 @@ def test_p_foco_aumenta_o_peso_do_problema_e_soma_1():
     assert di.weights[k] > d.weights[k]
 
 
-def test_par_articular_semiquantitativo_a_parte():
-    par = ra.par_articular_linhas()
-    assert set(par["caso"]) == {"Par articular"}
+def test_semiquantitativos_a_parte():
+    sq = ra.semiquantitativos_linhas()
+    assert set(sq["caso"]) == {"Par articular", "Implante dentário"}
+    par = sq[sq["caso"] == "Par articular"]
     assert set(zip(par["cenario"], par["variante"])) == {("A", "A"), ("P-foco", "direta"),
                                                          ("P-foco", "direta + indireta")}
-    texto = "\n".join(ra.par_articular_md(par))
-    assert "SEMIQUANTITATIVO" in texto
+    dent = sq[sq["caso"] == "Implante dentário"]
+    assert ("Valor", "Ti-Zr: corrosão 4") in set(zip(dent["cenario"], dent["variante"]))
+    texto = "\n".join(ra.semiquantitativos_md(sq))
+    assert texto.count("SEMIQUANTITATIVO") == 2

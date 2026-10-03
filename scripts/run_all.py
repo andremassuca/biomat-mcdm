@@ -9,7 +9,7 @@ Gera:
   results/monte_carlo.csv         % de 1.º, 2.º e 3.º lugar e posição média (MC propriedades e W pesos)
   results/spearman.csv            concordância entre métodos por cenário e variante
   results/resumo_robustez.md      resumo por caso
-  results/semiquantitativos.csv   par articular: cenário A e P-foco (sensibilidade semiquantitativa)
+  results/semiquantitativos.csv   par articular e implante dentário: cenário A, P-foco e sensibilidades (indicação)
 Uso: python scripts/run_all.py [--n-iter 10000] [--seed 42]
 """
 from __future__ import annotations
@@ -23,7 +23,7 @@ import pandas as pd
 from biomat_mcdm.io import (DATA, DecisionProblem, build_problem, criterios_do_problema, load_parametros,
                             load_tissue)
 from biomat_mcdm.pipeline import METODOS, fmt_pt, rank_all_methods
-from biomat_mcdm.robustness import (com_alvo, com_eta, com_foco, com_peso, monte_carlo, pct_posicao,
+from biomat_mcdm.robustness import (com_alvo, com_eta, com_foco, com_peso, com_valor, monte_carlo, pct_posicao,
                                     pct_primeiro, posicoes, rank_agreement, sem_ordinais)
 
 RESULTS = Path(__file__).resolve().parents[1] / "results"
@@ -44,7 +44,11 @@ T_SCAFFOLD = {"Resistência à compressão (scaffold)": ("Osso trabecular", "Res
 FATORES_DEGRADACAO = (0.5, 2.0)
 # P-foco: resultado principal só com as ligações diretas; sensibilidade com direta + indireta.
 LIGACOES_FOCO = {"direta": ("direta",), "direta + indireta": ("direta", "indireta")}
-PAR = "Prótese da anca | Par articular"  # semiquantitativo: só sensibilidade, à parte
+# Semiquantitativos (ordinais > 50 % do peso): só indicação, à parte dos casos quantitativos.
+SEMIQUANTITATIVOS = {"Par articular": "Prótese da anca | Par articular", "Implante dentário": "Implante dentário"}
+# Sensibilidade de um valor ordinal: (rótulo, material, critério, valor).
+SENSIBILIDADE_VALOR = {"Implante dentário": [("Ti-Zr: corrosão 4", "Ti-Zr (~15% Zr)",
+                                              "Resistência à corrosão em meio oral (ordinal 1-5)", 4.0)]}
 
 
 def aplica(casos: str, caso: str) -> bool:
@@ -99,22 +103,34 @@ def variantes_foco(nome: str, base: DecisionProblem, data_dir: Path = DATA) -> l
             for rot, lig in LIGACOES_FOCO.items()]
 
 
-def par_articular_linhas(data_dir: Path = DATA) -> pd.DataFrame:
-    """Par articular (semiquantitativo): posições no cenário A e nas duas versões do P-foco."""
-    base = build_problem(PAR, BASE, data_dir)
-    linhas = ranking_linhas("Par articular", BASE, BASE, base)
-    for var, p in variantes_foco(PAR, base, data_dir):
-        linhas += ranking_linhas("Par articular", "P-foco", var, p)
+def semiquantitativos_linhas(data_dir: Path = DATA) -> pd.DataFrame:
+    """Casos semiquantitativos: posições no cenário A, nas duas versões do P-foco e nas
+    sensibilidades de valores (SENSIBILIDADE_VALOR).
+
+    Em linguagem simples: corre os três métodos no par articular e no implante dentário só
+    como indicação, porque a maior parte do peso está em escalas ordinais.
+    """
+    linhas = []
+    for caso, nome in SEMIQUANTITATIVOS.items():
+        base = build_problem(nome, BASE, data_dir)
+        linhas += ranking_linhas(caso, BASE, BASE, base)
+        for var, p in variantes_foco(nome, base, data_dir):
+            linhas += ranking_linhas(caso, "P-foco", var, p)
+        for rot, material, criterio, valor in SENSIBILIDADE_VALOR.get(caso, []):
+            linhas += ranking_linhas(caso, "Valor", rot, com_valor(base, material, criterio, valor))
     return pd.DataFrame(linhas)
 
 
-def par_articular_md(par: pd.DataFrame) -> list[str]:
-    """Secção do resumo com o par articular, assinalada como semiquantitativa."""
-    L = ["## Par articular (SEMIQUANTITATIVO: ordinais > 50 % do peso; só sensibilidade)", "",
-         "| Cenário | Variante | " + " | ".join(METODOS) + " |", "|---|---|---|---|---|"]
-    for (c, v), g in par.groupby(["cenario", "variante"], sort=False):
-        L.append(f"| {c} | {v} | " + " | ".join(vencedores(g[g["metodo"] == m]) for m in METODOS) + " |")
-    return L + [""]
+def semiquantitativos_md(sq: pd.DataFrame) -> list[str]:
+    """Secções do resumo com os casos semiquantitativos, assinaladas como tal."""
+    L = []
+    for caso, g0 in sq.groupby("caso", sort=False):
+        L += [f"## {caso} (SEMIQUANTITATIVO: ordinais > 50 % do peso; só indicação)", "",
+              "| Cenário | Variante | " + " | ".join(METODOS) + " |", "|---|---|---|---|---|"]
+        for (c, v), g in g0.groupby(["cenario", "variante"], sort=False):
+            L.append(f"| {c} | {v} | " + " | ".join(vencedores(g[g["metodo"] == m]) for m in METODOS) + " |")
+        L.append("")
+    return L
 
 
 def ranking_linhas(caso: str, cenario: str, variante: str, p: DecisionProblem) -> list[dict]:
@@ -175,7 +191,7 @@ def vencedores(g: pd.DataFrame) -> str:
 
 
 def resumo_md(rk: pd.DataFrame, mc: pd.DataFrame, sp: pd.DataFrame, cen: pd.DataFrame,
-              n_iter: int, seed: int, par: pd.DataFrame | None = None) -> str:
+              n_iter: int, seed: int, sq: pd.DataFrame | None = None) -> str:
     """Resumo por caso: vencedores, Monte Carlo, Spearman e onde o vencedor muda."""
     L = [f"# Resumo da robustez ({AVISO})", "",
          f"η = 1 no resultado principal; sensibilidades a partir do cenário {BASE}. "
@@ -212,8 +228,8 @@ def resumo_md(rk: pd.DataFrame, mc: pd.DataFrame, sp: pd.DataFrame, cen: pd.Data
         L += ["### Onde o vencedor muda (face ao cenário " + BASE + ")", ""]
         L += muda if muda else ["- Em nenhum cenário de sensibilidade."]
         L.append("")
-    if par is not None and not par.empty:
-        L += par_articular_md(par)
+    if sq is not None and not sq.empty:
+        L += semiquantitativos_md(sq)
     L += ["## Cenários", ""] + [f"- **{k}**: {v}" for k, v in desc.items()] + [""]
     return "\n".join(L)
 
@@ -246,9 +262,9 @@ def main() -> None:
     mc.to_csv(RESULTS / "monte_carlo.csv", index=False)
     sp.to_csv(RESULTS / "spearman.csv", index=False)
     pontuacao_linhas().to_csv(RESULTS / "pontuacoes.csv", index=False)
-    par = par_articular_linhas()
-    par.to_csv(RESULTS / "semiquantitativos.csv", index=False)
-    texto = resumo_md(rk, mc, sp, cen, a.n_iter, a.seed, par)
+    sq = semiquantitativos_linhas()
+    sq.to_csv(RESULTS / "semiquantitativos.csv", index=False)
+    texto = resumo_md(rk, mc, sp, cen, a.n_iter, a.seed, sq)
     (RESULTS / "resumo_robustez.md").write_text(texto, encoding="utf-8")
     print(texto)
 
