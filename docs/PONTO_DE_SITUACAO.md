@@ -23,8 +23,8 @@ Para o relatório, até 8 out:
 P1. Mapa problema crítico → critérios. Feito (relatorio/apoio/problemas_criterios.md).
 P2. Cenário P-foco. Feito: só o scaffold muda (β-TCP 1.º no TOPSIS e no VIKOR com a leitura literal; PCL/β-TCP mantém-se com a leitura ampla e no WASPAS).
 P3. Implante dentário centrado na osteointegração e na corrosão. Feito: critério de corrosão (0,15), osteointegração com fontes (Ti-6Al-4V 4 → 2); Ti cp grau 4 em 1.º em todas as versões (relatorio/apoio/dentario_apoio.md).
-P4. Textos dos problemas críticos nos quatro casos, Q3/Q6/Q8 do dentário e conclusões. A seguir.
-P5. Montagem do relatório (pedido de 3 out): estrutura por caso com tabelas geradas (scripts/tabelas_relatorio.py), heatmap dos semiquantitativos, promessas sem trabalho (orçamento e Borda se < 1 h; perfis para trabalho futuro), anexos A e B, referências e verificar_referencias.py, RELATORIO.md e PDF.
+P4. Textos dos problemas críticos nos quatro casos, Q3/Q6/Q8 do dentário e conclusões. Feito.
+P5. Montagem do relatório. Feito (3 out): RELATORIO.md (scripts/montar_relatorio.py) e RELATORIO_v0.pdf (pandoc + Tectonic). Para regenerar: run_all.py, figuras.py, tabelas_relatorio.py, montar_relatorio.py e depois pandoc relatorio/RELATORIO.md -o relatorio/RELATORIO_v0.pdf --pdf-engine=D:/LAB/.tools/tectonic/tectonic.exe --resource-path=relatorio. Por decidir: formato do anexo B (76 páginas na versão 0); 16 marcas por confirmar no texto (scaffold 6, dentário 10).
 4b. Textos: introdução, conclusões, resumo, caso do implante dentário, declaração e glossário. Gravados; falta verificar cada número e alinhar o implante dentário com a base.
 5. Estrutura do relatório (proposta do Claude Code, a aprovar antes de montar): relatorio/RELATORIO.md, lista única de referências e scripts/verificar_referencias.py.
 6. Implante dentário: passou para P3.

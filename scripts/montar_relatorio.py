@@ -184,8 +184,8 @@ toc-title: "Índice"
 documentclass: article
 fontsize: 11pt
 geometry: margin=2.3cm
-mainfont: "Libertinus Serif"
-mathfont: "Libertinus Math"
+mainfont: "Cambria"
+mathfont: "Cambria Math"
 linestretch: 1.15
 colorlinks: true
 abstract: |
