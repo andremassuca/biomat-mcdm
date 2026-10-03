@@ -24,7 +24,7 @@ def test_gerar_tem_as_seccoes(caso):
     for s in ("## 1. Candidatos", "## 2. Critérios", "## 3. Valores", "## 4. Rankings", "## 5. Robustez",
               "## 6. Triagem", "## 8. Notas", "## 9. Apoio"):
         assert s in texto
-    assert "—" not in texto
+    assert chr(0x2014) not in texto  # travessão
 
 
 def test_dividir_respeita_o_limite_e_repete_cabecalho():

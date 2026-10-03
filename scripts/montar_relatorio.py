@@ -2,7 +2,7 @@
 
 Ordem: capa (metadados YAML), resumo, índice (gerado pelo pandoc), 1 Introdução (com a Tabela 1, resumo
 dos casos), 2 Métodos, 3 Validação, 4-7 Casos (anca, stent, scaffold, implante dentário), 8 Discussão,
-9 Conclusões, Referências, Normas citadas, Anexos A e B (B: só a contagem por estado), Glossário e Declaração.
+9 Conclusões, Referências, Normas citadas, Anexos A e B (B: só a contagem por estado) e Glossário.
 - Os marcadores <!-- incluir: tabelas/x.md --> e <!-- figura: fig_x --> são substituídos pelas tabelas
   de relatorio/tabelas/ e pelas figuras de results/figures/, numeradas pela ordem em que aparecem.
 - As citações "Apelido (et al.) ano" passam a "Apelido (et al.) [n]", pela ordem da primeira citação, e a
@@ -46,7 +46,7 @@ LEGENDAS = {
 INCLUIR = re.compile(r"<!-- incluir: tabelas/(?P<nome>[\w]+)\.md -->")
 FIGURA = re.compile(r"<!-- figura: ([\w]+) -->")
 BLOCO_FIGURAS = re.compile(r"(?:<!-- figura: [\w]+ -->\s*)+")
-NORMA = re.compile(r"\b(?:ISO|ASTM)\s(?:F?\d[\w.\-]*(?::\d{4})?(?:\(\d{4}\))?(?:e\d)?)"
+NORMA = re.compile(r"Regulamento \(UE\) 2017/745|\b(?:ISO|ASTM)\s(?:F?\d[\w.\-]*(?::\d{4})?(?:\(\d{4}\))?(?:e\d)?)"
                    r"(?:,\s(?:F\d[\w.\-]*))*")
 
 
@@ -205,7 +205,7 @@ def montar() -> str:
     corpo += [disc, ler("conclusao_rascunho.md")]
     texto = "\n\n".join(substituir_marcadores(c, num) for c in corpo)
     anexo_a = ler("anexo_a_equacoes.md")
-    fim = "\n\n".join([anexo_a, ler("glossario.md"), ler("declaracao_ia_rascunho.md")])
+    fim = "\n\n".join([anexo_a, ler("glossario.md")])
     refs = vr.ler_referencias()
     numerado, ordem = vr.numerar(texto + "\n\n" + fim, refs)
     texto, fim = numerado.split("\n\n# Anexo A", 1)

@@ -41,3 +41,8 @@ def test_relatorio_montado_sem_marcadores_e_com_referencias_numeradas():
         assert sec in texto
     figs = re.findall(r"\*\*Figura (\d+)\.\*\*", texto)
     assert figs == [str(i) for i in range(1, len(figs) + 1)]
+
+
+def test_relatorio_sem_travessoes():
+    texto = mr.montar()
+    assert chr(0x2014) not in texto and chr(0x2013) not in texto  # travessão e meia-risca

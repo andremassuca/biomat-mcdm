@@ -942,11 +942,17 @@ As escolhas do modelo coincidem, em geral, com a prática clínica atual, o que 
 - **Scaffold:** os substitutos ósseos sintéticos mais usados na clínica são fosfatos de cálcio, como o β-TCP e a hidroxiapatite, e os compósitos impressos começam a ter uso clínico (Lodewijks et al. [36]; Lodewijks et al. [37]). O modelo coloca o compósito à frente quando o suporte mecânico conta, e o β-TCP quando só contam o suporte celular e a degradação.
 - **Implante dentário:** o titânio comercialmente puro continua a ser a referência, e a zircónia é uma alternativa sobretudo estética, como no modelo.
 
-## 8.6 Material ou dispositivo?
+## 8.6 Enquadramento regulamentar e disponibilidade
+
+Em Portugal e na União Europeia, os dispositivos estudados estão sujeitos ao Regulamento (UE) 2017/745 relativo aos dispositivos médicos, aplicado em Portugal pelo INFARMED como autoridade competente. Pelas regras de classificação do anexo VIII, as próteses totais da anca e os stents coronários são dispositivos de classe III, os implantes dentários de classe IIb e os substitutos ósseos total ou maioritariamente absorvidos de classe III (regra 8 do anexo VIII). Os dispositivos de classe III exigem avaliação por um organismo notificado, investigação clínica na maioria dos casos e acompanhamento clínico depois da comercialização. O fabricante tem ainda de manter um sistema de gestão da qualidade segundo a ISO 13485 e um processo de gestão do risco segundo a ISO 14971.
+
+Isto tem uma consequência direta para a seleção: um material sem historial clínico no dispositivo em causa, mesmo com melhores propriedades, implica anos de ensaios e de investigação clínica antes de poder ser usado. Foi por isso que os resultados se separaram num cenário A, só com materiais em uso clínico, e num cenário B, que inclui materiais em investigação. Nos Estados Unidos, o percurso equivalente passa pela FDA: os implantes dentários endósseos são de classe II e entram em regra por notificação prévia (510(k); 21 CFR 872.3640), e os dispositivos de classe III, como os stents com eluição de fármaco, por aprovação pré-comercialização (PMA; por exemplo, o XIENCE V, P070015). Quanto à disponibilidade, os materiais propostos para a haste, o par articular, o stent e o implante dentário são usados em dispositivos comercializados na União Europeia, enquanto os compósitos PCL/β-TCP impressos têm, por agora, uso clínico limitado (Lodewijks et al. [37]; Lodewijks et al. [36]).
+
+## 8.7 Material ou dispositivo?
 
 Várias propriedades decisivas são do dispositivo e não do material. A espessura dos struts depende do desenho do stent, e a rigidez de uma haste depende também da sua arquitetura. Um cálculo simples ilustra o alcance desta ideia: pela relação de Gibson e Ashby para materiais celulares, uma estrutura porosa de Ti-6Al-4V com cerca de 60 % de porosidade teria um módulo próximo do osso cortical: com E = E_s (1 − p)², constante C = 1 e E_s = 105,5 GPa (valor típico do Ti-6Al-4V ELI na base), o alvo de 17 GPa obtém-se com p = 59,9 %, e a 60 % de porosidade o módulo é 16,9 GPa (Gibson e Ashby [71], cap. 5). A solução para o stress shielding pode não ser outra liga, mas a mesma liga estruturada, por exemplo por fabrico aditivo.
 
-## 8.7 Limitações
+## 8.8 Limitações
 
 - Os valores vêm de estudos diferentes, com métodos de ensaio e formas de produto diferentes; as regras da forma e da porosidade reduzem, mas não eliminam, essa heterogeneidade.
 - Alguns critérios são ordinais, com rubricas definidas neste trabalho; foram mantidos minoritários no peso e testados num cenário sem ordinais.
@@ -954,7 +960,7 @@ Várias propriedades decisivas são do dispositivo e não do material. A espessu
 - Os métodos de normalização dependem do mínimo e do máximo de cada critério, o que pode causar reversão de ranking ao acrescentar ou retirar materiais; observou-se um caso no scaffold.
 - Parte dos valores continua "A verificar", embora, na haste e no scaffold, nenhum dos restantes mude o vencedor com uma variação de ±20 %; no stent, três ainda mudam (alongamento e tração do Pt-Cr e σy/E do L605).
 
-## 8.8 Trabalho futuro
+## 8.9 Trabalho futuro
 
 - Perfis de doente (idade, atividade, osteoporose, alergias, obesidade) que alterem pesos, alvos e exclusões.
 - Custo ao longo da vida, com as taxas de revisão dos registos de artroplastia.
@@ -966,7 +972,7 @@ Várias propriedades decisivas são do dispositivo e não do material. A espessu
 A análise multicritério com critérios-alvo permitiu escolher materiais para cinco componentes implantáveis de forma explícita e reprodutível, e, sobretudo, distinguir as escolhas sólidas das que dependem de dados incertos ou de prioridades.
 
 Principais conclusões:
-- **Haste femoral:** Ti-6Al-4V ELI, com um resultado muito robusto (1.º lugar com os três métodos e em pelo menos 99,99 % das iterações do Monte Carlo). Continua cerca de 6 vezes mais rígido do que o osso cortical; uma estrutura porosa da mesma liga, com cerca de 60 % de porosidade, teria um módulo próximo do osso cortical (pela relação de Gibson e Ashby, o alvo de 17 GPa obtém-se com 59,9 % de porosidade; secção 8.6).
+- **Haste femoral:** Ti-6Al-4V ELI, com um resultado muito robusto (1.º lugar com os três métodos e em pelo menos 99,99 % das iterações do Monte Carlo). Continua cerca de 6 vezes mais rígido do que o osso cortical; uma estrutura porosa da mesma liga, com cerca de 60 % de porosidade, teria um módulo próximo do osso cortical (pela relação de Gibson e Ashby, o alvo de 17 GPa obtém-se com 59,9 % de porosidade; secção 8.7).
 - **Par articular:** cerâmica-cerâmica (ZTA/ZTA) como melhor resposta ao desgaste e à libertação de partículas, sobretudo em doentes jovens e ativos, e cabeça de ZTA contra polietileno altamente reticulado como alternativa com menor risco de fratura e de ruído; o par metal-metal foi excluído por segurança.
 - **Stent coronário:** platina-crómio como escolha de referência, por ser o mais robusto à incerteza dos dados e o mais radiopaco, e cobalto-crómio L605 como alternativa praticamente equivalente; o 1.º lugar do Pt-Cr deve ser confirmado com a fonte primária das suas propriedades mecânicas. O aço 316L de primeira geração ficou em último entre os permanentes.
 - **Scaffold ósseo:** compósito PCL/β-TCP impresso, estável face aos pesos mas sensível à incerteza dos dados. O β-TCP puro mantém-se uma alternativa quando a resistência mecânica é pouco exigida.
@@ -985,7 +991,7 @@ Como trabalho futuro propõe-se:
 # Referências
 
 1. Ashby MF. Materials Selection in Mechanical Design. 5.ª ed. Oxford: Butterworth-Heinemann (Elsevier); 2017. ISBN 978-0-08-100599-6.
-2. Jahan A, Ismail MY, Sapuan SM, Mustapha F. Material screening and choosing methods – A review. Mater Des. 2010;31(2):696-705. doi:10.1016/j.matdes.2009.08.013.
+2. Jahan A, Ismail MY, Sapuan SM, Mustapha F. Material screening and choosing methods: A review. Mater Des. 2010;31(2):696-705. doi:10.1016/j.matdes.2009.08.013.
 3. Jahan A, Bahraminasab M, Edwards KL. A target-based normalization technique for materials selection. Mater Des. 2012;35:647-654. doi:10.1016/j.matdes.2011.09.005.
 4. Petković DL, Madić MJ, Mitković MM. Development of a Decision Support System for Biomaterial Selection Based on MCDM Methods. Appl Sci. 2025;15(16):9198. doi:10.3390/app15169198.
 5. Silva M, Shepherd EF, Jackson WO, Dorey FJ, Schmalzried TP. Average patient walking activity approaches 2 million cycles per year: pedometers under-record walking activity. J Arthroplasty. 2002;17(6):693-697. doi:10.1054/arth.2002.32699.
@@ -1002,7 +1008,7 @@ Como trabalho futuro propõe-se:
 16. Zhao CC, Qu GX, Yan SG, Cai XZ. Squeaking in fourth-generation ceramic-on-ceramic total hip replacement and the relationship with prosthesis brands: meta-analysis and systematic review. J Orthop Surg Res. 2018;13(1):133. doi:10.1186/s13018-018-0841-y.
 17. Higuchi Y, Seki T, Morita D, Komatsu D, Takegami Y, Ishiguro N. Comparison of Wear Rate between Ceramic-on-Ceramic, Metal on Highly Cross-linked Polyethylene, and Metal-on-Metal Bearings. Rev Bras Ortop (Sao Paulo). 2019;54(03):295-302. doi:10.1055/s-0039-1691762.
 18. Teeter MG, Yuan X, Somerville LE, MacDonald SJ, McCalden RW, Naudie DD. Thirteen-year wear rate comparison of highly crosslinked and conventional polyethylene in total hip arthroplasty: long-term follow-up of a prospective randomized controlled trial. Can J Surg. 2017;60(3):212-216. doi:10.1503/cjs.005216.
-19. Hrabe N, Gnäupel-Herold T, Quinn T. Fatigue properties of a titanium alloy (Ti–6Al–4V) fabricated via electron beam melting (EBM): Effects of internal defects and residual stress. Int J Fatigue. 2017;94:202-210. doi:10.1016/j.ijfatigue.2016.04.022.
+19. Hrabe N, Gnäupel-Herold T, Quinn T. Fatigue properties of a titanium alloy (Ti-6Al-4V) fabricated via electron beam melting (EBM): Effects of internal defects and residual stress. Int J Fatigue. 2017;94:202-210. doi:10.1016/j.ijfatigue.2016.04.022.
 20. U.S. Food and Drug Administration. Non-Clinical Engineering Tests and Recommended Labeling for Intravascular Stents and Associated Delivery Systems: guidance for industry and FDA staff. Silver Spring (MD): FDA; 18 abr 2010. Disponível em: https://www.fda.gov/media/71639/download
 21. Kastrati A, Mehilli J, Dirschinger J, Dotzer F, Schühlen H, Neumann FJ, et al. Intracoronary stenting and angiographic results: strut thickness effect on restenosis outcome (ISAR-STEREO) trial. Circulation. 2001;103(23):2816-2821. doi:10.1161/01.CIR.103.23.2816.
 22. Köster R, Vieluf D, Kiehn M, Sommerauer M, Kähler J, Baldus S, et al. Nickel and molybdenum contact allergies in patients with coronary in-stent restenosis. Lancet. 2000;356(9245):1895-1897. doi:10.1016/S0140-6736(00)03262-1.
@@ -1084,11 +1090,14 @@ Como trabalho futuro propõe-se:
 - ISO 11135
 - ISO 11137
 - ISO 13356:2015
+- ISO 13485
 - ISO 13781:2017
 - ISO 14242-1:2014
 - ISO 14242-2:2016
 - ISO 14801:2016
+- ISO 14971
 - ISO 25539-2:2020
+- Regulamento (UE) 2017/745
 
 # Anexo A. Equações dos métodos
 
@@ -1200,7 +1209,7 @@ Os materiais ordenam-se por $B_i$ decrescente; em caso de empate, prevalece a po
 
 # Anexo B. Base de dados
 
-A base de dados completa, com o valor, a fonte, o estado e as notas de cada uma das 300 linhas, é entregue em anexo digital (data/base_dados_biomateriais.xlsx) e está no repositório do projeto.
+A base de dados completa, com o valor, a fonte, o estado e as notas de cada uma das 300 linhas, é entregue em anexo digital (base_dados_biomateriais.xlsx).
 
 Estados: "Verificado" (confirmado na fonte indicada), "Verificado (fornecedor)" (ficha técnica de fornecedor), "Verificado (derivado)" (calculado a partir de valores publicados na fonte), "Verificado (composição química)" (deduzido da composição do material) e "A verificar" (valor de partida ainda não confirmado na fonte original).
 
@@ -1231,13 +1240,3 @@ Estados: "Verificado" (confirmado na fonte indicada), "Verificado (fornecedor)" 
 - **Reestenose:** novo estreitamento de uma artéria depois da colocação de um stent.
 - **Strut:** cada uma das hastes que formam a malha do stent.
 - **Regra da forma / regra da porosidade:** regras deste trabalho para comparar valores de fontes diferentes (intervalo só com a forma do produto usada no dispositivo, com ±10 % quando essa forma tem um único valor; propriedades mecânicas à porosidade típica do material).
-
-# Declaração de uso de ferramentas de inteligência artificial
-
-Neste trabalho foram usadas ferramentas de inteligência artificial (Claude, da Anthropic, em conversa e no ambiente de programação Claude Code), com o conhecimento do docente. Foram usadas para:
-- escrever e testar o código de análise;
-- pesquisar e verificar fontes bibliográficas e normas;
-- gerar figuras e tabelas;
-- redigir rascunhos do texto.
-
-Todas as decisões metodológicas (critérios, pesos, regras de verificação dos dados, escolha das fontes e interpretação dos resultados) foram tomadas ou aprovadas pelo autor. O autor reviu e corrigiu todo o texto e é responsável pelo conteúdo final. O registo detalhado de cada tarefa apoiada por estas ferramentas, e do que o autor fez ou reviu em cada uma, está disponível no repositório do projeto (docs/REGISTO_APOIO_IA.md).

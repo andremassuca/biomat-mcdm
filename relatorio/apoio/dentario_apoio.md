@@ -1,6 +1,6 @@
 # Implante dentário: tabela de apoio (osteointegração e corrosão)
 
-Apoio do Claude Code (3 out 2026). Problema crítico indicado pelo docente: integração com o osso e
+Problema crítico indicado pelo docente: integração com o osso e
 corrosão. Valores em data/materiais.csv (estado "Verificado", nota "só resumo; nota segundo a
 rubrica do leia_me"); rubricas em data/leia_me.md; fontes completas em NOTAS_METODOLOGICAS.md.
 Caso SEMIQUANTITATIVO (ordinais com 70 % do peso): o ranking é uma indicação.

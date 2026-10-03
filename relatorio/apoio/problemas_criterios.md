@@ -1,6 +1,6 @@
 # Problemas críticos do professor e critérios da análise
 
-Apoio do Claude Code (3 out 2026). Fonte do mapa: data/problemas_criticos.csv. Resultados:
+Fonte do mapa: data/problemas_criticos.csv. Resultados:
 results/resumo_robustez.md (cenário P-foco) e results/semiquantitativos.csv (par articular).
 
 Problemas críticos indicados pelo professor (2 out 2026):

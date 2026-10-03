@@ -80,4 +80,4 @@ def test_anexo_b_resumo_conta_por_caso_e_no_total():
     assert t.loc["Total", "Total"] == len(m)
     assert t.loc["Stent vascular", "Total"] == (m["caso"] == "Stent vascular").sum()
     texto = tr.anexo_b_resumo()
-    assert "anexo digital (data/base_dados_biomateriais.xlsx)" in texto and f"{len(m)} linhas" in texto
+    assert "anexo digital (base_dados_biomateriais.xlsx)." in texto and f"{len(m)} linhas" in texto

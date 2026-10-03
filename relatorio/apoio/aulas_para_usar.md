@@ -1,6 +1,6 @@
 # Aulas da UC para citar no relatório
 
-Apoio do Claude Code (3 out 2026): só referências e resumos por palavras nossas; os ficheiros das
+Só referências e resumos por palavras nossas; os ficheiros das
 aulas estão em docs/aulas/ (fora do Git). "p." é a página do PDF, que nestas apresentações coincide
 com o número impresso no slide.
 

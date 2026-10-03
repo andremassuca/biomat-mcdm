@@ -223,8 +223,7 @@ def anexo_b_resumo(data_dir: Path = DATA) -> str:
     return "\n".join([
         "# Anexo B. Base de dados", "",
         "A base de dados completa, com o valor, a fonte, o estado e as notas de cada uma das "
-        f"{int(t.loc['Total', 'Total'])} linhas, é entregue em anexo digital (data/base_dados_biomateriais.xlsx) e "
-        "está no repositório do projeto.", "",
+        f"{int(t.loc['Total', 'Total'])} linhas, é entregue em anexo digital (base_dados_biomateriais.xlsx).", "",
         "Estados: \"Verificado\" (confirmado na fonte indicada), \"Verificado (fornecedor)\" (ficha técnica de "
         "fornecedor), \"Verificado (derivado)\" (calculado a partir de valores publicados na fonte), \"Verificado "
         "(composição química)\" (deduzido da composição do material) e \"A verificar\" (valor de partida ainda não "

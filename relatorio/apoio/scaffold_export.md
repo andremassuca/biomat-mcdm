@@ -1,4 +1,4 @@
-# Scaffold ósseo: export de dados (commit 75756a8, 03/10/2026)
+# Scaffold ósseo: export de dados (commit 31f1953, 03/10/2026)
 
 Gerado por scripts/exportar_caso.py a partir de data/, src/ e results/. Só dados.
 
@@ -298,7 +298,7 @@ Células a verificar: 39 (0 mudam o vencedor com ±20 %).
   Everolimus-Eluting Bioresorbable Coronary Scaffolds: The ABSORB III Trial. J Am Coll Cardiol 2017;70:2852-2862,
   Three-year outcomes of bioresorbable vascular scaffolds versus second-generation drug-eluting stents. Medicine
   bioresorbable scaffold. J Thorac Dis 2017;9(Suppl 9):S903-S913, doi:10.21037/jtd.2017.06.34 (revisão, texto
-- Não encontrada: a referência "Chua 2025" do rascunho do chat (sem registo na Crossref com esse autor e tema); substituída a 3 out 2026 por Lodewijks et al. Cureus 2024;16(8):e66256, doi:10.7759/cureus.66256 (defeitos tibiais muito grandes tratados com PCL/TCP impresso; confirmado na Crossref), na discussão (8.5) e no caso do scaffold.
+- Não encontrada: a referência "Chua 2025" de um rascunho anterior (sem registo na Crossref com esse autor e tema); substituída a 3 out 2026 por Lodewijks et al. Cureus 2024;16(8):e66256, doi:10.7759/cureus.66256 (defeitos tibiais muito grandes tratados com PCL/TCP impresso; confirmado na Crossref), na discussão (8.5) e no caso do scaffold.
 - Heliyon 2025, "Editor Note" sobre Wang Y et al. Heliyon 2024;10:e26071 (doi:10.1016/j.heliyon.2025.e44205): conteúdo não confirmado (página da revista com acesso bloqueado; sem correção, manifestação de preocupação ou retratação associada no PubMed (PMID 38468962), no PMC (PMC10925999) nem na Crossref, incluindo os dados do Retraction Watch, consultados a 3 out 2026). A Tabela 3 do artigo dá uma resistência à compressão (27,9 MPa) quase igual ao módulo (48,2 MPa), pouco plausível num scaffold poroso. Decisão do André: retirado da base; módulo do PCL/β-TCP com a mediana das três fontes restantes (típico 35,7 → 23,1 MPa; mín. e máx. iguais). Efeito: rankings e ΔC iguais; pontuações do WASPAS e do VIKOR mudam na 3.ª casa; MC das propriedades igual; W pesos ±20 %: compósito 95,9 → 95,7 % no TOPSIS. Se a revista esclarecer que é só uma correção, pode voltar.
 - [ ] Estatuto clínico dos 8 materiais do scaffold (Clínico (substituto ósseo) / Clínico (uso limitado) / Investigação), proposto a 28 set 2026; fonte a verificar indicada na coluna notas de data/materiais.csv (Rezwan et al. 2006, Bose et al. 2012, Hench 1991, Woodruff & Hutmacher 2010, Athanasiou et al. 1996, base 510(k) da FDA; PCL/β-TCP e quitosano/HA sem fonte).
 
