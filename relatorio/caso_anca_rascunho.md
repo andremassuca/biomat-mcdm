@@ -1,5 +1,13 @@
 # Caso 1: Prótese total da anca
 
+## Problema crítico e resposta
+
+**Problema indicado pelo docente: desgaste e libertação de partículas.**
+
+O problema concentra-se nas superfícies que deslizam (o par articular) e na junção modular entre a cabeça e a haste. Na análise, os critérios que lhe respondem diretamente são a taxa de desgaste (peso 0,35), a segurança iónica (0,25, também critério eliminatório, que exclui o par metal-metal) e a compatibilidade galvânica entre a cabeça e o cone (0,15).
+
+O par cerâmica-cerâmica (ZTA/ZTA) ficou em 1.º lugar com os três métodos, e manteve-se em 1.º quando o peso dos critérios ligados ao problema foi duplicado. É a resposta proposta, com a cabeça de ZTA contra polietileno altamente reticulado como alternativa. Na haste, o Ti-6Al-4V ELI mantém-se em 1.º também com este foco, e a escolha de uma cabeça cerâmica elimina a libertação de Co e Cr por corrosão por fretting na junção.
+
 ## 1. Função do dispositivo
 
 A prótese total da anca substitui a articulação coxofemoral quando esta está destruída por artrose, necrose avascular da cabeça do fémur ou fratura do colo do fémur. O objetivo é eliminar a dor e devolver ao doente uma mobilidade próxima da normal. O dispositivo tem dois subsistemas com exigências diferentes:

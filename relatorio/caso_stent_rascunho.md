@@ -1,5 +1,13 @@
 # Caso 3: Stent vascular coronário
 
+## Problema crítico e resposta
+
+**Problema indicado pelo docente: resistência mecânica e biocompatibilidade.**
+
+A resistência mecânica corresponde, na análise, ao índice de recuo elástico (σy/E), ao alongamento na rotura, à resistência à tração e ao módulo de Young. A biocompatibilidade corresponde sobretudo à espessura dos struts, o critério de maior peso, porque struts mais finos estão associados a menos reestenose e trombose. Em conjunto, estes critérios somam cerca de 65 % do peso.
+
+O platina-crómio ficou em 1.º lugar com o TOPSIS e o VIKOR, e o cobalto-crómio L605 com o WASPAS, e este resultado mantém-se quando o peso dos critérios ligados ao problema é duplicado. O Pt-Cr é o mais robusto à incerteza dos dados (1.º em 57 a 70 % das iterações do Monte Carlo). O teor de níquel, relevante para a biocompatibilidade em doentes alérgicos, é discutido na questão 3.
+
 ## 1. Função do dispositivo
 
 O stent coronário é uma malha metálica tubular implantada por cateter numa artéria coronária estreitada por aterosclerose. Depois da angioplastia com balão, o stent é expandido contra a parede da artéria e funciona como andaime: mantém o lúmen aberto, impede o recuo elástico da parede e fixa as dissecções provocadas pela dilatação. Nos stents atuais, a malha serve também de suporte a um revestimento que liberta um fármaco antiproliferativo (stents com eluição de fármaco), para reduzir a reestenose.

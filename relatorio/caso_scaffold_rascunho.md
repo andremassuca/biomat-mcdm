@@ -1,5 +1,13 @@
 # Caso 4: Scaffold para regeneração óssea
 
+## Problema crítico e resposta
+
+**Problema indicado pelo docente: suporte celular e degradação controlada.**
+
+Os critérios que respondem diretamente ao problema são a porosidade e a bioatividade (suporte celular) e o tempo de degradação (degradação controlada), com 45 % do peso no total. A imprimibilidade e as propriedades mecânicas contribuem de forma indireta.
+
+O resultado depende da leitura do problema. Com a leitura literal (só porosidade, bioatividade e degradação, com o peso duplicado), o β-TCP poroso passa a 1.º com o TOPSIS e o VIKOR: é mais bioativo (nota 4, contra 3 do compósito) e degrada-se em cerca de 12 meses, mais perto do alvo de 9 meses do que o compósito (cerca de 18). Com a leitura ampla, que inclui o suporte mecânico enquanto o osso se forma, o compósito PCL/β-TCP impresso mantém o 1.º lugar. A resposta proposta é, por isso, o compósito para defeitos que suportam carga, e o β-TCP poroso quando a prioridade é só o suporte celular e a reabsorção.
+
 ## 1. Função do dispositivo
 
 Um scaffold ósseo preenche um defeito ósseo demasiado grande para cicatrizar sozinho (defeito de tamanho crítico), por exemplo depois de um trauma, da remoção de um tumor ou de uma infeção. Funciona como uma estrutura temporária: dá suporte às células, permite a entrada de vasos sanguíneos e guia a formação de osso novo. Idealmente, degrada-se à medida que o osso novo o substitui, sem deixar material permanente.

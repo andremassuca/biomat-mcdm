@@ -7,7 +7,7 @@ Principais conclusões:
 - **Par articular:** cerâmica-cerâmica (ZTA/ZTA) como melhor resposta ao desgaste e à libertação de partículas, sobretudo em doentes jovens e ativos, e cabeça de ZTA contra polietileno altamente reticulado como alternativa com menor risco de fratura e de ruído; o par metal-metal foi excluído por segurança.
 - **Stent coronário:** platina-crómio como escolha de referência, por ser o mais robusto à incerteza dos dados e o mais radiopaco, e cobalto-crómio L605 como alternativa praticamente equivalente; o 1.º lugar do Pt-Cr deve ser confirmado com a fonte primária das suas propriedades mecânicas. O aço 316L de primeira geração ficou em último entre os permanentes.
 - **Scaffold ósseo:** compósito PCL/β-TCP impresso, estável face aos pesos mas sensível à incerteza dos dados. O β-TCP puro mantém-se uma alternativa quando a resistência mecânica é pouco exigida.
-- **Implante dentário:** titânio [confirmar a variante após a tabela de apoio] como referência, pela evidência clínica de osteointegração, e zircónia (Y-TZP) como alternativa em gengiva fina ou quando a estética é prioritária.
+- **Implante dentário:** titânio comercialmente puro de grau 4 como referência (1.º em todas as versões da análise semiquantitativa, pela evidência clínica de osteointegração), Ti-Zr como alternativa em implantes de diâmetro reduzido (Müller et al. 2024) e zircónia Y-TZP quando a estética é prioritária ou há suspeita de hipersensibilidade ao titânio.
 
 Três lições metodológicas destacam-se:
 1. Um método multicritério não é mais fiável do que os seus dados: a verificação em fontes primárias mudou valores decisivos e, no scaffold, o próprio vencedor.
